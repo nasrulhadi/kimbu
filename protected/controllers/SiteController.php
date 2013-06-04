@@ -29,7 +29,13 @@ class SiteController extends Controller
 	{
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
-		$this->render('index');
+        if (!Yii::app()->user->isGuest) {
+            $model = new User;
+            $this->setPageTitle('Beranda - ' . Yii::app()->name);
+            $this->render('index', array('model' => $model));
+        }else {
+            $this->redirect(array('login'));
+        }
 	}
 
 	/**
@@ -72,19 +78,38 @@ class SiteController extends Controller
 		$this->render('contact',array('model'=>$model));
 	}
 
+    public function actionRegister()
+    {
+        $this->layout = '//layouts/blankLayout';
+        
+        $model = new User();
+        if(isset($_POST['User']))
+        {
+            $model->attributes=$_POST['User'];
+            if($model->validate())
+            {
+                $model->setAttribute('PASSWORD', md5($model->PASSWORD));
+                $model->setAttribute('CPASSWORD', md5($model->CPASSWORD));
+                if($model->save())
+                {
+                    Yii::app()->user->setFlash('login','Selamat! Register telah berhasil. Silahkan masuk ke dalam sistem kami.');
+                    $this->redirect(Yii::app()->createUrl('./site/login'));
+                }
+            }
+        }
+        
+        $this->render('register', array('model'=>$model));
+    }
+    
+    
 	/**
 	 * Displays the login page
 	 */
 	public function actionLogin()
 	{
+        $this->layout = '//layouts/blankLayout';
+        
 		$model=new LoginForm;
-
-		// if it is ajax validation request
-		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
-		{
-			echo CActiveForm::validate($model);
-			Yii::app()->end();
-		}
 
 		// collect user input data
 		if(isset($_POST['LoginForm']))
