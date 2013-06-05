@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title><?php echo CHtml::encode(Yii::app()->name); ?></title>
+        <title><?php echo CHtml::encode($this->pageTitle); ?></title>
         
         <?php $baseUrl = Yii::app()->theme->baseUrl; ?>
         
@@ -76,7 +76,7 @@
                 <div class="main_content">
                     
                     <!-- BREADCRUMBS -->
-                        <nav>
+                    <nav>
                         <div id="jCrumbs" class="breadCrumb module">
                             <ul>
                                 <li>
@@ -97,14 +97,14 @@
                     <!-- END BREADCRUMBS -->
                     
                     <!-- CONTENT -->
-                    <?php echo $content; ?>
+                        <?php echo $content; ?>
                     <!-- END CONTENT -->
                 </div>
             </div>
             
 			<!-- SIDEBAR -->
+            <a href="javascript:void(0)" class="sidebar_switch on_switch ttip_r" title="Hide Sidebar">Sidebar switch</a>
             <div class="sidebar">
-
                 <div class="antiScroll">
                     <div class="antiscroll-inner">
                         <div class="antiscroll-content">
@@ -178,8 +178,7 @@
                                             <div class="accordion-inner">
                                                 <ul class="nav nav-list">
                                                     <li class="nav-header">Manajemen User</li>
-                                                    <li class="<?php echo ($this->ID==="pegawai")?"active":"";?>"><?php echo CHtml::link('Pegawai', array('/pengaturan/pegawai')); ?></li>
-                                                    <li class="<?php echo ($this->ID==="akun")?"active":"";?>"><?php echo CHtml::link('Akun User', array('/pengaturan/akun')); ?></li>
+                                                    <li class="<?php echo ($this->ID==="user")?"active":"";?>"><?php echo CHtml::link('Akun User', array('/pengaturan/user')); ?></li>
                                                     <li class="nav-header">System</li>
                                                     <li><?php echo CHtml::link('Backup Database', array('/pengaturan/backup')); ?></li>
                                                     <li><?php echo CHtml::link('Website', array('/pengaturan/website')); ?></li>
@@ -220,33 +219,73 @@
             
             <script src="<?php echo $baseUrl; ?>/js/jquery.min.js"></script>
             <script src="<?php echo $baseUrl; ?>/js/jquery-migrate.min.js"></script>
-			<!-- smart resize event -->
-			<script src="<?php echo $baseUrl; ?>/js/jquery.debouncedresize.min.js"></script>
-			<!-- hidden elements width/height -->
-			<script src="<?php echo $baseUrl; ?>/js/jquery.actual.min.js"></script>
-			<!-- js cookie plugin -->
-			<script src="<?php echo $baseUrl; ?>/js/jquery_cookie.min.js"></script>
-			<!-- main bootstrap js -->
-			<script src="<?php echo $baseUrl; ?>/bootstrap/js/bootstrap.min.js"></script>
-             <!-- bootstrap plugins -->
-			<script src="<?php echo $baseUrl; ?>/js/bootstrap.plugins.min.js"></script>
-			<!-- tooltips -->
-			<script src="<?php echo $baseUrl; ?>/lib/qtip2/jquery.qtip.min.js"></script>
-			<!-- jBreadcrumbs -->
-			<script src="<?php echo $baseUrl; ?>/lib/jBreadcrumbs/js/jquery.jBreadCrumb.1.1.min.js"></script>
-			<!-- sticky messages -->
-            <script src="<?php echo $baseUrl; ?>/lib/sticky/sticky.min.js"></script>
-			<!-- fix for ios orientation change -->
-			<script src="<?php echo $baseUrl; ?>/js/ios-orientationchange-fix.js"></script>
-			<!-- scrollbar -->
-			<script src="<?php echo $baseUrl; ?>/lib/antiscroll/antiscroll.js"></script>
-			<script src="<?php echo $baseUrl; ?>/lib/antiscroll/jquery-mousewheel.js"></script>
-			<!-- lightbox -->
+            <!-- smart resize event -->
+            <script src="<?php echo $baseUrl; ?>/js/jquery.debouncedresize.min.js"></script>
+            <!-- hidden elements width/height -->
+            <script src="<?php echo $baseUrl; ?>/js/jquery.actual.min.js"></script>
+            <!-- js cookie plugin -->
+            <script src="<?php echo $baseUrl; ?>/js/jquery_cookie.min.js"></script>
+            <!-- main bootstrap js -->
+            <script src="<?php echo $baseUrl; ?>/bootstrap/js/bootstrap.min.js"></script>
+            <!-- bootstrap plugins -->
+            <script src="<?php echo $baseUrl; ?>/js/bootstrap.plugins.min.js"></script>
+            <!-- tooltips -->
+            <script src="<?php echo $baseUrl; ?>/lib/qtip2/jquery.qtip.min.js"></script>
+            <!-- jBreadcrumbs -->
+            <script src="<?php echo $baseUrl; ?>/lib/jBreadcrumbs/js/jquery.jBreadCrumb.1.1.min.js"></script>
+            <!-- lightbox -->
             <script src="<?php echo $baseUrl; ?>/lib/colorbox/jquery.colorbox.min.js"></script>
-			<!-- mobile nav -->
-			<script src="<?php echo $baseUrl; ?>/js/selectNav.js"></script>
+            <!-- fix for ios orientation change -->
+            <script src="<?php echo $baseUrl; ?>/js/ios-orientationchange-fix.js"></script>
+            <!-- scrollbar -->
+            <script src="<?php echo $baseUrl; ?>/lib/antiscroll/antiscroll.js"></script>
+            <script src="<?php echo $baseUrl; ?>/lib/antiscroll/jquery-mousewheel.js"></script>
+            <!-- to top -->
+            <script src="<?php echo $baseUrl; ?>/lib/UItoTop/jquery.ui.totop.min.js"></script>
+            <!-- mobile nav -->
+            <script src="<?php echo $baseUrl; ?>/js/selectNav.js"></script>
             <!-- common functions -->
-			<script src="<?php echo $baseUrl; ?>/js/gebo_common.js"></script>
+            <script src="<?php echo $baseUrl; ?>/js/gebo_common.js"></script>
+
+            <script src="<?php echo $baseUrl; ?>/lib/jquery-ui/jquery-ui-1.10.0.custom.min.js"></script>
+            <!-- touch events for jquery ui-->
+            <script src="<?php echo $baseUrl; ?>/js/forms/jquery.ui.touch-punch.min.js"></script>
+            <!-- multi-column layout -->
+            <script src="<?php echo $baseUrl; ?>/js/jquery.imagesloaded.min.js"></script>
+            <script src="<?php echo $baseUrl; ?>/js/jquery.wookmark.js"></script>
+            <!-- responsive table -->
+            <script src="<?php echo $baseUrl; ?>/js/jquery.mediaTable.min.js"></script>
+            <!-- small charts -->
+            <script src="<?php echo $baseUrl; ?>/js/jquery.peity.min.js"></script>
+            <!-- calendar -->
+            <script src="<?php echo $baseUrl; ?>/lib/fullcalendar/fullcalendar.min.js"></script>
+            <!-- sortable/filterable list -->
+            <script src="<?php echo $baseUrl; ?>/lib/list_js/list.min.js"></script>
+            <script src="<?php echo $baseUrl; ?>/lib/list_js/plugins/paging/list.paging.js"></script>
+
+            <!-- colorbox -->
+            <script src="<?php echo $baseUrl; ?>/lib/colorbox/jquery.colorbox.min.js"></script>
+            <!-- datatable -->
+            <script src="<?php echo $baseUrl; ?>/lib/datatables/jquery.dataTables.min.js"></script>
+            <!-- additional sorting for datatables -->
+            <script src="<?php echo $baseUrl; ?>/lib/datatables/jquery.dataTables.sorting.js"></script>
+            <!-- datatables bootstrap integration -->
+            <script src="<?php echo $baseUrl; ?>/lib/datatables/jquery.dataTables.bootstrap.min.js"></script>
+            <!-- tables functions -->
+            <script src="<?php echo $baseUrl; ?>/js/gebo_tables.js"></script>
+
+            <!-- CLEditor -->
+            <script src="<?php echo $baseUrl; ?>/lib/CLEditor/jquery.cleditor.js"></script>
+            <script src="<?php echo $baseUrl; ?>/lib/CLEditor/jquery.cleditor.icon.min.js"></script>
+            <!-- date library -->
+            <script src="<?php echo $baseUrl; ?>/lib/moment_js/moment.min.js"></script>
+            <!-- chat functions -->
+            <script src="<?php echo $baseUrl; ?>/js/gebo_chat.js"></script>
+
+            <!-- enhanced select (chosen) -->
+            <script src="<?php echo $baseUrl; ?>/lib/chosen/chosen.jquery.min.js"></script>
+            <!-- form functions -->
+            <script src="<?php echo $baseUrl; ?>/js/gebo_choosen.js"></script>
 	
     
 			<script>

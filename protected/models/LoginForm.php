@@ -50,7 +50,7 @@ class LoginForm extends CFormModel
 		{
 			$this->_identity=new UserIdentity($this->username,$this->password);
 			if(!$this->_identity->authenticate())
-				$this->addError('error','<div class="alert alert-info alert-login"><strong><italic>Username</italic></strong> atau <strong>Password<strong> anda salah.</div>');
+				$this->addError('error','<div class="alert alert-error alert-login"><strong>Username</strong> atau <strong>Password</strong> anda salah.</div>');
 		}
 	}
 

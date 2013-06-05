@@ -101,8 +101,27 @@ class SiteController extends Controller
         $this->render('register', array('model'=>$model));
     }
     
-    
-	/**
+    public function actionLupaPassword()
+    {
+        $this->layout = '//layouts/blankLayout';
+        
+        $model = new User();
+        if(isset($_POST['User']))
+        {
+            $model->attributes = $_POST['User'];
+            //if($model->validate())
+            //{
+                $model->sendEmailUser();
+                Yii::app()->user->setFlash('info',MyFormatter::alertSuccess('Silahkan dicek pada Email Anda.'));
+                $this->redirect('index');
+            //}
+        }
+        $this->render('register',array(
+            'model'=>$model,
+        ));
+    }
+
+        /**
 	 * Displays the login page
 	 */
 	public function actionLogin()
