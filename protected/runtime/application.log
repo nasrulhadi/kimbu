@@ -5438,3 +5438,626 @@ Stack trace:
 #29 {main}
 REQUEST_URI=/kimbu/pengaturan/user
 ---
+2013/06/06 00:37:32 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "register".' in C:\xampp\htdocs\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('register', Array, true)
+#1 C:\xampp\htdocs\kimbu\protected\controllers\SiteController.php(101): CController->render('register', Array)
+#2 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionRegister()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('register')
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/register')
+#8 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/kimbu/site/register
+HTTP_REFERER=http://localhost/kimbu/site/login
+---
+2013/06/06 00:51:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "lupapassword".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('lupapassword')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('lupapassword')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/lupaPasswo...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/kimbu/site/lupaPassword
+HTTP_REFERER=http://localhost/kimbu/site/login
+---
+2013/06/06 01:11:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "lupapassword".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('lupapassword')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('lupapassword')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/lupaPasswo...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/kimbu/site/lupaPassword
+HTTP_REFERER=http://localhost/kimbu/site/login
+---
+2013/06/06 02:20:01 [error] [exception.CException] exception 'CException' with message 'Property "CActiveForm.type" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWidgetFactory.php(161): CComponent->__set('type', 'horizontal-form')
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(UserController), 'CActiveForm', Array)
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(189): CBaseController->createWidget('CActiveForm', Array)
+#3 C:\xampp\htdocs\kimbu\protected\modules\pengaturan\views\user\_form.php(13): CBaseController->beginWidget('CActiveForm', Array)
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#7 C:\xampp\htdocs\kimbu\protected\modules\pengaturan\views\user\create.php(15): CController->renderPartial('_form', Array)
+#8 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#9 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#12 C:\xampp\htdocs\kimbu\protected\modules\pengaturan\controllers\UserController.php(78): CController->render('create', Array)
+#13 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): UserController->actionCreate()
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#23 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('pengaturan/user...')
+#24 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#25 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/kimbu/pengaturan/user/create
+---
+2013/06/06 05:15:04 [error] [php] Undefined variable: model (C:\xampp\htdocs\kimbu\protected\modules\pengaturan\views\user\index.php:21)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): UserController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): UserController->renderPartial()
+#2 C:\xampp\htdocs\kimbu\protected\modules\pengaturan\controllers\UserController.php(127): UserController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): UserController->actionIndex()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): UserController->run()
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\kimbu\index.php(13): CWebApplication->run()
+REQUEST_URI=/kimbu/pengaturan/user/index
+in C:\xampp\htdocs\kimbu\protected\modules\pengaturan\views\user\index.php (21)
+in C:\xampp\htdocs\kimbu\protected\modules\pengaturan\controllers\UserController.php (127)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/06 05:21:06 [error] [php] Undefined variable: model (C:\xampp\htdocs\kimbu\protected\modules\pengaturan\views\user\index.php:21)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): UserController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): UserController->renderPartial()
+#2 C:\xampp\htdocs\kimbu\protected\modules\pengaturan\controllers\UserController.php(127): UserController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): UserController->actionIndex()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): UserController->run()
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\kimbu\index.php(13): CWebApplication->run()
+REQUEST_URI=/kimbu/pengaturan/user/index
+in C:\xampp\htdocs\kimbu\protected\modules\pengaturan\views\user\index.php (21)
+in C:\xampp\htdocs\kimbu\protected\modules\pengaturan\controllers\UserController.php (127)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/06 05:21:08 [error] [php] Undefined variable: model (C:\xampp\htdocs\kimbu\protected\modules\pengaturan\views\user\index.php:21)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): UserController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): UserController->renderPartial()
+#2 C:\xampp\htdocs\kimbu\protected\modules\pengaturan\controllers\UserController.php(127): UserController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): UserController->actionIndex()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): UserController->run()
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\kimbu\index.php(13): CWebApplication->run()
+REQUEST_URI=/kimbu/pengaturan/user/index
+in C:\xampp\htdocs\kimbu\protected\modules\pengaturan\views\user\index.php (21)
+in C:\xampp\htdocs\kimbu\protected\modules\pengaturan\controllers\UserController.php (127)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/06 05:21:08 [error] [php] Undefined variable: model (C:\xampp\htdocs\kimbu\protected\modules\pengaturan\views\user\index.php:21)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): UserController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): UserController->renderPartial()
+#2 C:\xampp\htdocs\kimbu\protected\modules\pengaturan\controllers\UserController.php(127): UserController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): UserController->actionIndex()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): UserController->run()
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\kimbu\index.php(13): CWebApplication->run()
+REQUEST_URI=/kimbu/pengaturan/user/index
+in C:\xampp\htdocs\kimbu\protected\modules\pengaturan\views\user\index.php (21)
+in C:\xampp\htdocs\kimbu\protected\modules\pengaturan\controllers\UserController.php (127)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/06 05:21:08 [error] [php] Undefined variable: model (C:\xampp\htdocs\kimbu\protected\modules\pengaturan\views\user\index.php:21)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): UserController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): UserController->renderPartial()
+#2 C:\xampp\htdocs\kimbu\protected\modules\pengaturan\controllers\UserController.php(127): UserController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): UserController->actionIndex()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): UserController->run()
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\kimbu\index.php(13): CWebApplication->run()
+REQUEST_URI=/kimbu/pengaturan/user/index
+in C:\xampp\htdocs\kimbu\protected\modules\pengaturan\views\user\index.php (21)
+in C:\xampp\htdocs\kimbu\protected\modules\pengaturan\controllers\UserController.php (127)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/06 05:21:09 [error] [php] Undefined variable: model (C:\xampp\htdocs\kimbu\protected\modules\pengaturan\views\user\index.php:21)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): UserController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): UserController->renderPartial()
+#2 C:\xampp\htdocs\kimbu\protected\modules\pengaturan\controllers\UserController.php(127): UserController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): UserController->actionIndex()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): UserController->run()
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\kimbu\index.php(13): CWebApplication->run()
+REQUEST_URI=/kimbu/pengaturan/user/index
+in C:\xampp\htdocs\kimbu\protected\modules\pengaturan\views\user\index.php (21)
+in C:\xampp\htdocs\kimbu\protected\modules\pengaturan\controllers\UserController.php (127)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/06 05:35:19 [error] [php] Undefined variable: dataProvider (C:\xampp\htdocs\kimbu\protected\modules\pengaturan\views\user\index.php:39)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): UserController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): UserController->renderPartial()
+#2 C:\xampp\htdocs\kimbu\protected\modules\pengaturan\controllers\UserController.php(130): UserController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): UserController->actionIndex()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): UserController->run()
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\kimbu\index.php(13): CWebApplication->run()
+REQUEST_URI=/kimbu/pengaturan/user/index
+in C:\xampp\htdocs\kimbu\protected\modules\pengaturan\views\user\index.php (39)
+in C:\xampp\htdocs\kimbu\protected\modules\pengaturan\controllers\UserController.php (130)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/06 06:33:48 [error] [exception.CException] exception 'CException' with message 'Property "User.PHOTO" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('PHOTO')
+#1 C:\xampp\htdocs\kimbu\protected\modules\pengaturan\views\user\view.php(17): CActiveRecord->__get('PHOTO')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#6 C:\xampp\htdocs\kimbu\protected\modules\pengaturan\controllers\UserController.php(55): CController->render('view', Array)
+#7 [internal function]: UserController->actionView('1')
+#8 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#9 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#19 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('pengaturan/user...')
+#20 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/kimbu/pengaturan/user/view/id/1
+---
+2013/06/06 06:34:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "file/photo/tidakadafoto.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('file/photo/tida...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/file/photo/tidakadafoto.jpg
+HTTP_REFERER=http://localhost/kimbu/pengaturan/user/view/id/1
+---
+2013/06/06 06:34:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "file/photo/tidakadafoto.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('file/photo/tida...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/file/photo/tidakadafoto.jpg
+HTTP_REFERER=http://localhost/kimbu/pengaturan/user/view/id/1
+---
+2013/06/06 06:35:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "file/photo/tidakadafoto.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('file/photo/tida...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/file/photo/tidakadafoto.jpg
+HTTP_REFERER=http://localhost/kimbu/pengaturan/user/view/id/1
+---
+2013/06/06 06:36:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "file/photo/tidakadafoto.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('file/photo/tida...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/file/photo/tidakadafoto.jpg
+HTTP_REFERER=http://localhost/kimbu/pengaturan/user/view/id/1
+---
+2013/06/06 06:37:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "file/photo/tidakadafoto.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('file/photo/tida...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/file/photo/tidakadafoto.jpg
+HTTP_REFERER=http://localhost/kimbu/pengaturan/user/view/id/1
+---
+2013/06/06 06:41:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "file/photo/tidakadafoto.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('file/photo/tida...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/file/photo/tidakadafoto.jpg
+HTTP_REFERER=http://localhost/kimbu/pengaturan/user/view/id/1
+---
+2013/06/06 06:42:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "file/photo/tidakadafoto.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('file/photo/tida...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/file/photo/tidakadafoto.jpg
+HTTP_REFERER=http://localhost/kimbu/pengaturan/user/view/id/1
+---
+2013/06/06 06:42:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "file/photo/tidakadafoto.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('file/photo/tida...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/file/photo/tidakadafoto.jpg
+HTTP_REFERER=http://localhost/kimbu/pengaturan/user/view/id/1
+---
+2013/06/06 06:42:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "file/photo/tidakadafoto.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('file/photo/tida...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/file/photo/tidakadafoto.jpg
+HTTP_REFERER=http://localhost/kimbu/pengaturan/user/view/id/1
+---
+2013/06/06 06:43:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "file/photo/tidakadafoto.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('file/photo/tida...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/file/photo/tidakadafoto.jpg
+HTTP_REFERER=http://localhost/kimbu/pengaturan/user/view/id/1
+---
+2013/06/06 06:44:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "file/photo/tidakadafoto.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('file/photo/tida...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/file/photo/tidakadafoto.jpg
+HTTP_REFERER=http://localhost/kimbu/pengaturan/user/view/id/1
+---
+2013/06/06 06:46:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "file/photo/tidakadafoto.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('file/photo/tida...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/file/photo/tidakadafoto.jpg
+HTTP_REFERER=http://localhost/kimbu/pengaturan/user/view/id/1
+---
+2013/06/06 06:46:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "file/photo/tidakadafoto.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('file/photo/tida...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/file/photo/tidakadafoto.jpg
+HTTP_REFERER=http://localhost/kimbu/pengaturan/user/view/id/1
+---
+2013/06/06 06:49:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "file/photo/tidakadafoto.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('file/photo/tida...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/file/photo/tidakadafoto.jpg
+HTTP_REFERER=http://localhost/kimbu/pengaturan/user/view/id/1
+---
+2013/06/06 06:49:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "file/photo/tidakadafoto.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('file/photo/tida...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/file/photo/tidakadafoto.jpg
+HTTP_REFERER=http://localhost/kimbu/pengaturan/user/view/id/1
+---
+2013/06/06 06:49:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "file/photo/tidakadafoto.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('file/photo/tida...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/file/photo/tidakadafoto.jpg
+HTTP_REFERER=http://localhost/kimbu/pengaturan/user/view/id/1
+---
+2013/06/06 06:53:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "file/photo/tidakadafoto.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('file/photo/tida...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/file/photo/tidakadafoto.jpg
+HTTP_REFERER=http://localhost/kimbu/pengaturan/user/view/id/1
+---
+2013/06/06 06:53:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "file/photo/tidakadafoto.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('file/photo/tida...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/file/photo/tidakadafoto.jpg
+HTTP_REFERER=http://localhost/kimbu/pengaturan/user/view/id/1
+---
+2013/06/06 06:54:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "file/photo/tidakadafoto.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('file/photo/tida...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/file/photo/tidakadafoto.jpg
+HTTP_REFERER=http://localhost/kimbu/pengaturan/user/view/id/1
+---
+2013/06/06 06:56:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "file/photo/tidakadafoto.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('file/photo/tida...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/file/photo/tidakadafoto.jpg
+HTTP_REFERER=http://localhost/kimbu/pengaturan/user/view/id/1
+---
+2013/06/06 07:02:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "file/photo/tidakadafoto.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('file/photo/tida...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/file/photo/tidakadafoto.jpg
+HTTP_REFERER=http://localhost/kimbu/pengaturan/user/view/id/2
+---
+2013/06/06 07:03:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "file/photo/tidakadafoto.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('file/photo/tida...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/file/photo/tidakadafoto.jpg
+HTTP_REFERER=http://localhost/kimbu/pengaturan/user/view/id/2
+---
+2013/06/07 04:36:24 [error] [php] include(Berita.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\xampp\htdocs\yii\framework\YiiBase.php:421)
+Stack trace:
+#0 C:\xampp\htdocs\kimbu\protected\controllers\SiteController.php(108): spl_autoload_call()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionForgot()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#5 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\kimbu\index.php(13): CWebApplication->run()
+REQUEST_URI=/kimbu/site/forgot
+in C:\xampp\htdocs\kimbu\protected\controllers\SiteController.php (108)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/07 09:07:11 [error] [php] Array to string conversion (C:\xampp\htdocs\yii\framework\db\CDbCommand.php:274)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\schema\CDbCommandBuilder.php(100): CMysqlCommandBuilder->bindValues()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1296): CMysqlCommandBuilder->createFindCommand()
+#2 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1402): User->query()
+#3 C:\xampp\htdocs\kimbu\protected\controllers\SiteController.php(115): User->find()
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionForgot()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\kimbu\index.php(13): CWebApplication->run()
+REQUEST_URI=/kimbu/site/forgot
+in C:\xampp\htdocs\kimbu\protected\controllers\SiteController.php (115)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/07 09:10:43 [error] [php] Array to string conversion (C:\xampp\htdocs\yii\framework\db\CDbCommand.php:274)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\schema\CDbCommandBuilder.php(100): CMysqlCommandBuilder->bindValues()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1296): CMysqlCommandBuilder->createFindCommand()
+#2 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1402): User->query()
+#3 C:\xampp\htdocs\kimbu\protected\controllers\SiteController.php(115): User->find()
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionForgot()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\kimbu\index.php(13): CWebApplication->run()
+REQUEST_URI=/kimbu/site/forgot
+in C:\xampp\htdocs\kimbu\protected\controllers\SiteController.php (115)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/07 09:26:11 [error] [exception.CException] exception 'CException' with message 'Property "CEmailValidator.0" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\validators\CValidator.php(189): CComponent->__set('0', 'required')
+#1 C:\xampp\htdocs\yii\framework\base\CModel.php(286): CValidator::createValidator('email', Object(User), 'EMAIL', Array)
+#2 C:\xampp\htdocs\yii\framework\base\CModel.php(260): CModel->createValidators()
+#3 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1964): CModel->getValidators('EMAIL')
+#4 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1257): CHtml::activeInputField('text', Object(User), 'EMAIL', Array)
+#5 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(657): CHtml::activeTextField(Object(User), 'EMAIL', Array)
+#6 C:\xampp\htdocs\kimbu\protected\views\site\forgot.php(44): CActiveForm->textField(Object(User), 'EMAIL', Array)
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#8 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('forgot', Array, true)
+#11 C:\xampp\htdocs\kimbu\protected\controllers\SiteController.php(129): CController->render('forgot', Array)
+#12 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionForgot()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('forgot')
+#17 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/forgot')
+#18 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/kimbu/site/forgot
+---
+2013/06/07 10:08:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "pengaturan/profil/update".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('pengaturan/prof...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/pengaturan/profil/update
+HTTP_REFERER=http://localhost/kimbu/site/
+---
+2013/06/07 12:00:29 [error] [php] Array to string conversion (C:\xampp\htdocs\yii\framework\db\CDbCommand.php:274)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\schema\CDbCommandBuilder.php(100): CMysqlCommandBuilder->bindValues()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1296): CMysqlCommandBuilder->createFindCommand()
+#2 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1402): User->query()
+#3 C:\xampp\htdocs\kimbu\protected\controllers\SiteController.php(115): User->find()
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionForgot()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\kimbu\index.php(13): CWebApplication->run()
+REQUEST_URI=/kimbu/site/forgot
+in C:\xampp\htdocs\kimbu\protected\controllers\SiteController.php (115)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/07 12:03:08 [error] [exception.CDbException] exception 'CDbException' with message 'Table "user" does not have a column named "select".' in C:\xampp\htdocs\yii\framework\db\schema\CDbCommandBuilder.php:591
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1464): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), Array, '', Array, '`t`.')
+#1 C:\xampp\htdocs\kimbu\protected\controllers\SiteController.php(115): CActiveRecord->findByAttributes(Array)
+#2 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionForgot()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('forgot')
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/forgot')
+#8 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/kimbu/site/forgot
+HTTP_REFERER=http://localhost/kimbu/site/forgot
+---
+2013/06/07 12:04:29 [error] [exception.CDbException] exception 'CDbException' with message 'Table "user" does not have a column named "condition".' in C:\xampp\htdocs\yii\framework\db\schema\CDbCommandBuilder.php:591
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1464): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), Array, '', Array, '`t`.')
+#1 C:\xampp\htdocs\kimbu\protected\controllers\SiteController.php(114): CActiveRecord->findByAttributes(Array)
+#2 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionForgot()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('forgot')
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/forgot')
+#8 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/kimbu/site/forgot
+HTTP_REFERER=http://localhost/kimbu/site/forgot
+---
+2013/06/07 12:04:51 [error] [exception.CDbException] exception 'CDbException' with message 'Table "user" does not have a column named "params".' in C:\xampp\htdocs\yii\framework\db\schema\CDbCommandBuilder.php:591
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1464): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), Array, '', Array, '`t`.')
+#1 C:\xampp\htdocs\kimbu\protected\controllers\SiteController.php(114): CActiveRecord->findByAttributes(Array)
+#2 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionForgot()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('forgot')
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/forgot')
+#8 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/kimbu/site/forgot
+HTTP_REFERER=http://localhost/kimbu/site/forgot
+---
+2013/06/07 12:06:40 [error] [php] Undefined offset: 0 (C:\xampp\htdocs\yii\framework\db\schema\CDbCommandBuilder.php:684)
+Stack trace:
+#0 C:\xampp\htdocs\kimbu\protected\controllers\SiteController.php(114): User->findByAttributes()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionForgot()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#5 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\kimbu\index.php(13): CWebApplication->run()
+REQUEST_URI=/kimbu/site/forgot
+in C:\xampp\htdocs\kimbu\protected\controllers\SiteController.php (114)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/07 19:32:31 [error] [php] Undefined offset: 0 (C:\xampp\htdocs\yii\framework\db\schema\CDbCommandBuilder.php:684)
+Stack trace:
+#0 C:\xampp\htdocs\kimbu\protected\controllers\SiteController.php(118): User->findByAttributes()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionForgot()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#5 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\kimbu\index.php(13): CWebApplication->run()
+REQUEST_URI=/kimbu/site/forgot
+in C:\xampp\htdocs\kimbu\protected\controllers\SiteController.php (118)
+in C:\xampp\htdocs\kimbu\index.php (13)

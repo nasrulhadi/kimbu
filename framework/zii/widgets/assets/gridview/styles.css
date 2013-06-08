@@ -1,0 +1,204 @@
+.grid-view-loading
+{
+	background:url(loading.gif) no-repeat;
+}
+
+.grid-view
+{
+	padding: 15px 0;
+}
+.grid-view table.items
+{
+	background: white;
+	border-collapse: collapse;
+	width: 100%;
+	border: 1px #D0E3EF solid;
+}
+
+.grid-view table.items th, .grid-view table.items td
+{
+	font-size: 0.9em;
+	border: 1px #DDD solid;
+	padding: 0.3em;
+	padding:8px;
+}
+
+.grid-view table.items th
+{
+	color: white;
+	/*background: url("bg.gif") repeat-x scroll left top white;*/
+	background-color:#09F;
+	background-image:url(../../../images/blue_stripe.png);
+	text-align: center;
+	padding:10px;
+	border:1px solid #09F;
+	border-right:1px solid #FFF;
+}
+.grid-view table.items th:last-child
+{
+	border-right:1px solid #09F;
+}
+
+.grid-view table.items th a
+{
+	color: #EEE;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.grid-view table.items th a:hover
+{
+	color: #FFF;
+}
+
+.grid-view table.items th a.asc
+{
+	background:url(up.gif) right center no-repeat;
+	padding-right: 10px;
+}
+
+.grid-view table.items th a.desc
+{
+	background:url(down.gif) right center no-repeat;
+	padding-right: 10px;
+}
+.grid-view table.items tr.even
+{
+	background: #F8F8F8;
+	background:#F4F4F4;
+}
+
+.grid-view table.items tr.odd
+{
+	background: #E5F1F4;
+	background: #F8F8F8;
+}
+
+.grid-view table.items tr.selected
+{
+	background: #BCE774;
+	background:#CCC;
+}
+
+.grid-view table.items tbody tr:hover
+{
+	background: #EEE;
+}
+
+.grid-view .link-column img
+{
+	border: 0;
+}
+
+.grid-view .button-column
+{
+	text-align: right;
+}
+.grid-view .button-column img
+{
+	border:0;
+	opacity:0.6;
+}
+
+.grid-view .button-column img:hover
+{
+	opacity:1;
+}
+
+.grid-view .checkbox-column
+{
+	width: 15px;
+}
+
+.grid-view .summary
+{
+	margin: 0 0 5px 0;
+	text-align: right;
+}
+
+.grid-view .pager
+{
+	margin: 5px 0 0 0;
+	text-align: right;
+}
+
+.grid-view .empty
+{
+	font-style: italic;
+}
+
+.grid-view .filters
+{
+	background-color:#EEE;
+}
+.grid-view .filters td
+{
+	text-align:left;
+}
+.grid-view .filters input
+{
+	
+	min-width:0px;
+	min-width:40px;
+	width:90%;
+	border: 1px solid #ccc;
+	padding:5px;
+	border-radius:0px;
+}
+.grid-view .filters select
+{
+	width:100%;
+	border: 1px solid #ccc;
+	padding:5px;
+	border-radius:0px;
+}
+
+.grid-view .button-column a
+{
+	padding:2px 4px 4px 4px;
+	/*color:#666;
+	border:1px solid #CCC;
+	border-radius:2px;
+	text-decoration:none;
+	
+	background-color: #FFF;
+	background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#F2F2F2));
+	background: -webkit-linear-gradient(top, #FFF,#F2F2F2);
+	background: -moz-linear-gradient(top , #FFF,#F2F2F2);
+	background: -ms-linear-gradient(top, #FFF,#F2F2F2);
+	background: -o-linear-gradient(top, #FFF,#F2F2F2);*/
+	
+}
+.grid-view .button-column a:hover
+{
+/*	color:#333;
+	background-color:#EEE;*/
+}
+.grid-view .button-column a[title=Rekomendasikan]
+{
+	padding-left:20px;
+	background-image:url(../../../images/icon/success.png);
+	background-repeat:no-repeat;
+	background-position:2px center;
+}
+.grid-view .button-column a[title=Hapus]
+{
+	padding-left:20px;
+	background-image:url(../../../images/icon/gridview/trash_16.png);
+	background-repeat:no-repeat;
+	background-position:2px center;
+}
+.grid-view .button-column a[title=Detail]
+{
+	padding-left:20px;
+	background-image:url(../../../images/icon/gridview/info_16.png);
+	background-repeat:no-repeat;
+	background-position:2px center;
+}
+.grid-view .button-column a[title=Edit]
+{
+	padding-left:20px;
+	background-image:url(../../../images/icon/gridview/pencil_16.png);
+	background-repeat:no-repeat;
+	background-position:2px center;
+}

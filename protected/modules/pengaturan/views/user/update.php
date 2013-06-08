@@ -3,8 +3,9 @@
 /* @var $model User */
 
 $this->breadcrumbs=array(
-	'Users'=>array('index'),
-	$model->ID_USER=>array('view','id'=>$model->ID_USER),
+    'Dashboard'=>array('/'),
+	'Manajemen User'=>array('index'),
+	$model->NAMA=>array('view','id'=>$model->ID_USER),
 	'Update',
 );
 
@@ -16,6 +17,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Update User <?php echo $model->ID_USER; ?></h1>
+<h3 class="heading">Update User | <?php echo $model->NAMA; ?></h3>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

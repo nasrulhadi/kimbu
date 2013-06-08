@@ -6,7 +6,7 @@
         <title><?php echo CHtml::encode($this->pageTitle); ?></title>
         
         <?php $baseUrl = Yii::app()->theme->baseUrl; ?>
-        
+        <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" type="text/css" />
         <!-- Bootstrap framework -->
             <link rel="stylesheet" href="<?php echo $baseUrl; ?>/bootstrap/css/bootstrap.min.css" />
             <link rel="stylesheet" href="<?php echo $baseUrl; ?>/bootstrap/css/bootstrap-responsive.min.css" />

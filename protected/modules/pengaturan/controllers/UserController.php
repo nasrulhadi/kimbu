@@ -69,9 +69,14 @@ class UserController extends Controller
 		if(isset($_POST['User']))
 		{
 			$model->attributes=$_POST['User'];
+            $model->setAttribute('PASSWORD', $model->generatePassword());
 			if($model->save())
+            {
+                $model->sendEmailUser();
+                Yii::app()->user->setFlash('info',MyFormatter::alertSuccess('Silahkan dicek pada Email Anda.'));
 				$this->redirect(array('view','id'=>$model->ID_USER));
-		}
+            }
+        }
 
 		$this->render('create',array(
 			'model'=>$model,
@@ -121,9 +126,23 @@ class UserController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('User');
-		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
+//		$dataProvider=new CActiveDataProvider('User');
+//        $model=new User('search');
+//		$model->unsetAttributes();  // clear any default values
+//		if(isset($_GET['User']))
+//			$model->attributes=$_GET['User'];
+//        
+//		$this->render('index',array(
+//			'dataProvider'=>$dataProvider,
+//            'model'=>$model,
+//		));
+        $model=new User('search');
+		$model->unsetAttributes();  // clear any default values
+		if(isset($_GET['User']))
+			$model->attributes=$_GET['User'];
+
+		$this->render('admin',array(
+			'model'=>$model,
 		));
 	}
 

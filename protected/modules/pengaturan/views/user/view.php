@@ -3,36 +3,38 @@
 /* @var $model User */
 
 $this->breadcrumbs=array(
-	'Users'=>array('index'),
-	$model->ID_USER,
-);
-
-$this->menu=array(
-	array('label'=>'List User', 'url'=>array('index')),
-	array('label'=>'Create User', 'url'=>array('create')),
-	array('label'=>'Update User', 'url'=>array('update', 'id'=>$model->ID_USER)),
-	array('label'=>'Delete User', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->ID_USER),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage User', 'url'=>array('admin')),
+	'Dashboard'=>array('/'),
+    'Manajemen User'=>array('index'),
+	$model->NAMA,
 );
 ?>
 
-<h1>View User #<?php echo $model->ID_USER; ?></h1>
+<h3 class="heading">Detil User | <?php echo $model->NAMA; ?></h3>
 
-<?php $this->widget('zii.widgets.CDetailView', array(
-	'data'=>$model,
-	'attributes'=>array(
-		'ID_USER',
-		'ID_DIVISI',
-		'USERNAME',
-		'PASSWORD',
-		'NAMA',
-		'EMAIL',
-		'TLP',
-		'HP',
-		'FOTO',
-		'TYPE',
-		'TANGGAL_DIBUAT',
-		'TERAKHIR_LOGIN',
-		'STATUS',
-	),
-)); ?>
+<div class="row-fluid">
+    <div class="span3">
+        <h4 class="heading">Foto User</h4>
+        <div class="profilethumb">
+            <?php echo $model->displayPicture($model->FOTO);?>
+        </div>
+        
+    </div>
+    <div class="span9">
+        <h4 class="heading">Identitas Peserta</h4>
+        <?php $this->widget('zii.widgets.CDetailView', array(
+            'htmlOptions'=>array('class'=>'table table-striped table-bordered'),
+            'data'=>$model,
+            'attributes'=>array(
+                'NAMA',
+                'ID_DIVISI',
+                'USERNAME',
+                'PASSWORD',
+                'EMAIL',
+                'TLP',
+                'HP',
+                'STATUS',
+            ),
+        )); ?>
+        <br>
+    </div>
+</div>

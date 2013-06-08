@@ -51,7 +51,8 @@ class User extends CActiveRecord
 		return array(
 			array('ID_DIVISI, TYPE, TERAKHIR_LOGIN, STATUS', 'numerical', 'integerOnly'=>true),
 			array('USERNAME, PASSWORD, NAMA, EMAIL, TLP, HP, FOTO', 'length', 'max'=>45),
-            array('USERNAME, PASSWORD', 'required'),
+            //array('USERNAME, PASSWORD, NAMA', 'required'),
+            array('EMAIL', 'email'),
 			array('TANGGAL_DIBUAT', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
@@ -121,6 +122,20 @@ class User extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+    
+    public function generatePassword()
+    {
+        $password = substr(md5(microtime()),3,6);
+        return $password;
+    }
+    
+    public function displayPicture($pictureName)
+    {
+        if($pictureName==null || $pictureName=='')
+            echo '<img src="'.Yii::app()->theme->baseUrl.'/img/profilethumb.png" alt="" class="img-polaroid" />';
+        else
+            echo '<img src="'.Yii::app()->request->baseUrl.'/file/photo/'.$pictureName.'" alt="" class="img-polaroid"/>';
+    }
     
     //send email forgot password
     public function sendEmailUser()
@@ -214,7 +229,7 @@ class User extends CActiveRecord
                                 <td height="50" width="600">&nbsp;</td>
                             </tr>
                             <tr>
-                                <td height="90" style="color:#999999" width="600">{perusahaan_logo}</td>
+                                <td height="90" style="color:#999999" width="600">Kimbu - Administrator</td>
                             </tr>
                             <tr>
                                 <td bgcolor="#FFFFFF" height="200" style="background:whitesmoke; border:1px solid #e0e0e0; font-family:Helvetica,Arial,sans-serif" valign="top" width="600">
@@ -227,13 +242,13 @@ class User extends CActiveRecord
                                             <td width="560">
                                             <h4>Reset Password</h4>
 
-                                            <p style="font-size:12px; font-family:Helvetica,Arial,sans-serif">Hallo, {user_by_email}</p>
+                                            <p style="font-size:12px; font-family:Helvetica,Arial,sans-serif">Hallo, '. $this->EMAIL .'</p>
 
-                                            <p style="font-size:12px; line-height:20px; font-family:Helvetica,Arial,sans-serif">Permintaan reset password berhasil, berikut adalah Password baru Anda.<br /><br />Username : {username_by_email}<br />Password : {new_generate_password}<br /><br />Perlu diingat, setelah Login menggunakan password baru ini, Anda <strong>DIWAJIBKAN</strong> untuk mengubah password di halaman <strong>Profile User</strong> <span style="font-style:italic;color:#999999;">(pojok kanan atas)</span>.
+                                            <p style="font-size:12px; line-height:20px; font-family:Helvetica,Arial,sans-serif">Permintaan reset password berhasil, berikut adalah Password baru Anda.<br /><br />Password : ' . $this->PASSWORD . '<br /><br />Perlu diingat, setelah Login menggunakan password baru ini, Anda <strong>DIWAJIBKAN</strong> untuk mengubah password di halaman <strong>Profile User</strong> <span style="font-style:italic;color:#999999;">(pojok kanan atas)</span>.
                                             <br />
                                             <br />
                                             Salam,<br />
-                                            {admin_divisi_perusahaan}</p>
+                                            Admin - Kimbu</p>
                                             </td>
                                         </tr>
                                         <tr>
@@ -247,7 +262,7 @@ class User extends CActiveRecord
                                 <td height="10" width="600">&nbsp;</td>
                             </tr>
                             <tr>
-                                <td align="right"><span style="font-size:10px; color:#999999; font-family:Helvetica,Arial,sans-serif">{perusahaan}</span></td>
+                                <td align="right"><span style="font-size:10px; color:#999999; font-family:Helvetica,Arial,sans-serif">Kimbu</span></td>
                             </tr>
                         </tbody>
                     </table>
@@ -258,7 +273,7 @@ class User extends CActiveRecord
         </body>
         </html>
         ';
-        $subject = "Kimbu | Reset Password";
+        $subject = "[Kimbu] Permintaan untuk Reset Password";
         // To send HTML mail, the Content-type header must be set
         $headers = 'MIME-Version: 1.0' . "\r\n";
         $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";

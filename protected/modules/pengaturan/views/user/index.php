@@ -12,8 +12,9 @@ $this->breadcrumbs=array(
 <h3 class="heading">Pengaturan User</h3>
 <div class="row-fluid">
     <div class="span12">
-        <div class="pull-right" style="margin-bottom: 20px;">
-            <?php echo CHtml::link('Buat Pegawai', array('/pengaturan/pegawai/create'), array('class' => 'btn btn-warning')); ?>
+        <div class="pull-left" style="margin-bottom: 20px;">
+            <?php echo CHtml::link('<span class="icon-plus icon-white"></span> Buat User', array('/pengaturan/user/create'), array('class' => 'btn btn-primary')); ?>
+            <?php echo CHtml::link('<span class="icon-search"></span> Pencarian','#',array('class'=>'btn search-button')); ?>
         </div>
         <div class="clearfix""></div>
         <table class="table table-bordered table-striped table_vam" id="user">

@@ -28,12 +28,13 @@
     </head>
     <body class="ptrn_a">
         <div class="login_box">
-            <?php echo @Yii::app()->user->getFlash('info');?>
+            
             <?php $form = $this->beginWidget('CActiveForm',array(
                 'id'=>'login_form',
                 'enableAjaxValidation'=>false,
             )) ?>
-                <div class="top_b">Sign in to Kimbu Admin</div>    
+                <div class="top_b">Sign in to Kimbu Admin</div>
+                
                 <?php echo $form->error($model, 'error'); ?>
                 
                 <div class="cnt_b">
@@ -53,7 +54,7 @@
                 </div>
                 <div class="btm_b clearfix">
                     <?php echo CHtml::submitButton('Sign In',array('class'=>'btn btn-inverse pull-right')); ?>
-                    <span class="link_reg"><a href="#pass_form">Lupa password?</a></span>
+                    <span class="link_reg"><a href="<?php echo Yii::app()->request->baseUrl?>/site/forgot">Lupa password?</a></span>
                 </div>
             <?php $this->endWidget();?>
         </div>

@@ -101,22 +101,29 @@ class SiteController extends Controller
         $this->render('register', array('model'=>$model));
     }
     
-    public function actionLupaPassword()
+    public function actionForgot()
     {
         $this->layout = '//layouts/blankLayout';
         
         $model = new User();
         if(isset($_POST['User']))
         {
+            $record = User::model()->findByAttributes(array(
+                //'condition'=>'EMAIL=:email',
+                'EMAIL'=>$_POST['User']['EMAIL']
+            ));
             $model->attributes = $_POST['User'];
-            //if($model->validate())
-            //{
+            //$model->attributes = $_GET['User'];
+            //$model->setAttribute('NAMA', $model->NAMA);
+            $model->setAttribute('PASSWORD', $model->generatePassword());
+            if($model->save())
+            {
                 $model->sendEmailUser();
                 Yii::app()->user->setFlash('info',MyFormatter::alertSuccess('Silahkan dicek pada Email Anda.'));
-                $this->redirect('index');
-            //}
+                $this->refresh();
+            }
         }
-        $this->render('register',array(
+        $this->render('forgot',array(
             'model'=>$model,
         ));
     }
