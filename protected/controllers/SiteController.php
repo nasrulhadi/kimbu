@@ -108,20 +108,18 @@ class SiteController extends Controller
         $model = new User();
         if(isset($_POST['User']))
         {
-            $record = User::model()->findByAttributes(array(
-                //'condition'=>'EMAIL=:email',
-                'EMAIL'=>$_POST['User']['EMAIL']
-            ));
-            $model->attributes = $_POST['User'];
-            //$model->attributes = $_GET['User'];
-            //$model->setAttribute('NAMA', $model->NAMA);
-            $model->setAttribute('PASSWORD', $model->generatePassword());
-            if($model->save())
-            {
+//            $record = User::model()->findByAttributes(array(
+//                //'condition'=>'EMAIL=:email',
+//                'EMAIL'=>$_POST['User']['EMAIL']
+//            ));
+//            $model->attributes = $_POST['User'];
+              $model->setAttribute('PASSWORD', $model->generatePassword());
+//            if($model->save())
+//            {
                 $model->sendEmailUser();
                 Yii::app()->user->setFlash('info',MyFormatter::alertSuccess('Silahkan dicek pada Email Anda.'));
                 $this->refresh();
-            }
+//            }
         }
         $this->render('forgot',array(
             'model'=>$model,
