@@ -21,6 +21,7 @@ return array(
 
 	'modules'=>array(
 		'pengaturan',
+		'interaksi',
 		
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
@@ -63,7 +64,7 @@ return array(
 			'connectionString' => 'mysql:host=localhost;dbname=kimbu_db',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => '',
+			'password' => 'root',
 			'charset' => 'utf8',
 		),
 		
