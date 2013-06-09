@@ -10,7 +10,7 @@ $this->breadcrumbs=array(
 ?>
 
 <h3 class="heading">Detil User | <?php echo $model->NAMA; ?></h3>
-
+<?php echo @Yii::app()->user->getFlash('info');?>
 <div class="row-fluid">
     <div class="span3">
         <h4 class="heading">Foto User</h4>
@@ -32,7 +32,11 @@ $this->breadcrumbs=array(
                 'EMAIL',
                 'TLP',
                 'HP',
-                'STATUS',
+                array(
+                    'name'=>'STATUS',
+                    'type'=>'statusAktif',
+                    'value'=>$model->STATUS,
+                )
             ),
         )); ?>
         <br>

@@ -8,6 +8,7 @@
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'user-form',
+    'htmlOptions'=>array('enctype'=>'multipart/form-data'),
 	'enableAjaxValidation'=>false,
 )); ?>
 
@@ -44,9 +45,23 @@
 		<?php echo $form->textField($model,'HP',array('size'=>45,'maxlength'=>45)); ?>
 		<?php echo $form->error($model,'HP'); ?>
 	</div>
-
+    
+    <div class="row compactRadioGroup">
+		<?php echo $form->labelEx($model,'STATUS'); ?><br>
+		<?php echo $form->radioButtonList($model,'STATUS',array(User::STATUS_AKTIF=>'Aktif', User::STATUS_NON_AKTIF=>'Tidak Aktif'),array(
+            'separator'=>'',
+        )); ?>
+		<?php echo $form->error($model,'STATUS'); ?>
+	</div>
+    
+    <div class="row">
+		<?php echo $form->labelEx($model,'FOTO'); ?>
+		<?php echo $form->fileField($model,'FOTO'); ?>
+		<?php echo $form->error($model,'FOTO'); ?>
+	</div>
+    
 	<div class="form-actions">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Buat User' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Buat User' : 'Save',array('class' => 'btn btn-primary')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

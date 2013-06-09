@@ -63,17 +63,16 @@ class UserController extends Controller
 	{
 		$model=new User;
 
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
 		if(isset($_POST['User']))
 		{
 			$model->attributes=$_POST['User'];
+            $model->FOTO = CUploadedFile::getInstance($model, 'FOTO');
             $model->setAttribute('PASSWORD', $model->generatePassword());
 			if($model->save())
             {
-                $model->sendEmailUser();
-                Yii::app()->user->setFlash('info',MyFormatter::alertSuccess('Silahkan dicek pada Email Anda.'));
+                $imagesPath = realpath(Yii::app()->basePath . '/../file/foto/');
+                $model->FOTO->saveAs($imagesPath . '/' . $model->FOTO);
+                Yii::app()->user->setFlash('info',MyFormatter::alertSuccess('<strong>Selamat!</strong> Data telah berhasil disimpan.'));
 				$this->redirect(array('view','id'=>$model->ID_USER));
             }
         }

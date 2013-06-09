@@ -28,6 +28,10 @@ class User extends CActiveRecord
     public $username;
     public $password;
     
+    //STATUS USER
+    const STATUS_AKTIF=1;
+    const STATUS_NON_AKTIF=2;
+    
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
@@ -50,13 +54,13 @@ class User extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('ID_DIVISI, TYPE, TERAKHIR_LOGIN, STATUS', 'numerical', 'integerOnly'=>true),
-			array('USERNAME, PASSWORD, NAMA, EMAIL, TLP, HP, FOTO', 'length', 'max'=>45),
-            //array('USERNAME, PASSWORD, NAMA', 'required'),
+            array('USERNAME, PASSWORD, NAMA, STATUS, EMAIL', 'required'),
             array('EMAIL', 'email'),
 			array('TANGGAL_DIBUAT', 'safe'),
+            array('FOTO','file','types'=>'jpg, jpeg, png'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('ID_USER, ID_DIVISI, USERNAME, PASSWORD, NAMA, EMAIL, TLP, HP, FOTO, TYPE, TANGGAL_DIBUAT, TERAKHIR_LOGIN, STATUS', 'safe', 'on'=>'search'),
+			array('USERNAME, NAMA, EMAIL, STATUS', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -78,7 +82,7 @@ class User extends CActiveRecord
 	{
 		return array(
 			'ID_USER' => 'Id User',
-			'ID_DIVISI' => 'Id Divisi',
+			'ID_DIVISI' => 'Divisi',
 			'USERNAME' => 'Username',
 			'PASSWORD' => 'Password',
 			'NAMA' => 'Nama',
@@ -134,10 +138,156 @@ class User extends CActiveRecord
         if($pictureName==null || $pictureName=='')
             echo '<img src="'.Yii::app()->theme->baseUrl.'/img/profilethumb.png" alt="" class="img-polaroid" />';
         else
-            echo '<img src="'.Yii::app()->request->baseUrl.'/file/photo/'.$pictureName.'" alt="" class="img-polaroid"/>';
+            echo '<img src="'.Yii::app()->request->baseUrl.'/file/foto/'.$pictureName.'" alt="" class="img-polaroid"/>';
     }
     
-    //send email forgot password
+    public function sendEmail()
+    {
+        $to = 'phe@localhost';
+        $message = '
+        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+        <html xmlns="http://www.w3.org/1999/xhtml">
+        <head>
+            <title></title>
+            <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+            <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+            <style type="text/css">#outlook a {padding:0;} 
+                body{width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0;} 
+                .ExternalClass {width:100%;}
+                .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;}
+                #backgroundTable {margin:0; padding:0; width:100% !important; line-height: 100% !important;}
+                img {outline:none; text-decoration:none; -ms-interpolation-mode: bicubic;} 
+                a img {border:none;} 
+                .image_fix {display:block;}
+                p {margin: 1em 0;}
+                h1, h2, h3, h4, h5, h6 {color: black !important;}
+
+                h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {color: blue !important;}
+
+                h1 a:active, h2 a:active,  h3 a:active, h4 a:active, h5 a:active, h6 a:active {
+                color: red !important;
+                }
+
+                h1 a:visited, h2 a:visited,  h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited {
+                color: purple !important;
+                }
+
+                table td {border-collapse: collapse;}
+            table { border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; }
+                a {color: #0058A8;}
+
+                @media only screen and (max-device-width: 480px) {
+
+                    a[href^="tel"], a[href^="sms"] {
+                                text-decoration: none;
+                                color: blue; 
+                                pointer-events: none;
+                                cursor: default;
+                            }
+
+                    .mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+                                text-decoration: default;
+                                color: orange !important;
+                                pointer-events: auto;
+                                cursor: default;
+                            }
+
+                }
+
+                @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+                    a[href^="tel"], a[href^="sms"] {
+                                text-decoration: none;
+                                color: blue; 
+                                pointer-events: none;
+                                cursor: default;
+                            }
+
+                    .mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+                                text-decoration: default;
+                                color: orange !important;
+                                pointer-events: auto;
+                                cursor: default;
+                            }
+                }
+
+                @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+                }
+                @media only screen and (-webkit-device-pixel-ratio:.75){
+                }
+                @media only screen and (-webkit-device-pixel-ratio:1){
+                }
+                @media only screen and (-webkit-device-pixel-ratio:1.5){
+                }
+            </style>
+        </head>
+        <body>
+        <table align="center" border="0" cellpadding="0" cellspacing="0" id="backgroundTable">
+            <tbody>
+                <tr>
+                    <td valign="top">
+                    <table align="center" border="0" cellpadding="0" cellspacing="0">
+                        <tbody>
+                            <tr>
+                                <td height="50" width="600">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td height="90" style="color:#999999" width="600">Kimbu - Administrator</td>
+                            </tr>
+                            <tr>
+                                <td bgcolor="#FFFFFF" height="200" style="background:whitesmoke; border:1px solid #e0e0e0; font-family:Helvetica,Arial,sans-serif" valign="top" width="600">
+                                <table align="center" border="0" cellpadding="0" cellspacing="0">
+                                    <tbody>
+                                        <tr>
+                                            <td height="10" width="560">&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td width="560">
+                                            <h4>Reset Password</h4>
+
+                                            <p style="font-size:12px; font-family:Helvetica,Arial,sans-serif">Hallo, {user_by_email}</p>
+
+                                            <p style="font-size:12px; line-height:20px; font-family:Helvetica,Arial,sans-serif">Beberapa saat yang lalu system telah menerima permintaan untuk mereset Password Anda. <br />Klik link dibawah ini <strong>JIKA</strong> Anda ingin mereset Password, dan Password baru akan dikirimkan beberapa saat kemudian.<br /><br />
+                                            <a href=" '. Yii::app()->baseUrl() .' " style="color: #0eb6ce; text-decoration: none;">{link_to_reset}</a><br />
+                                            <br />
+                                            Salam,<br />
+                                            Kimbu</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td height="10" width="560">&nbsp;</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td height="10" width="600">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td align="right"><span style="font-size:10px; color:#999999; font-family:Helvetica,Arial,sans-serif">{perusahaan}</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        </body>
+        </html>
+
+        ';
+        $subject = "[Kimbu] Permintaan untuk Reset Password";
+        // To send HTML mail, the Content-type header must be set
+        $headers = 'MIME-Version: 1.0' . "\r\n";
+        $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+        $headers .= 'From: ' . Yii::app()->params['adminEmail'] . "\r\n";
+        if(mail($to, $subject, $message, $headers))
+            return true;
+        else
+            return false;
+    }
+
+        //send email forgot password
     public function sendEmailUser()
     {
         //$to = $this->EMAIL;

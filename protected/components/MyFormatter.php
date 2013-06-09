@@ -20,5 +20,13 @@ class MyFormatter extends CFormatter
     {
         return '<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button>'.$message.'</div>';
     }
+    
+    public function formatStatusAktif($value)
+    {
+        if($value==User::STATUS_AKTIF)
+            return '<span class="label label-warning">Active</span>';
+        else
+            return '<span class="label label-danger">Disabled</span>';
+    }
 }
 ?>

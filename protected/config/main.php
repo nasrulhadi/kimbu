@@ -33,6 +33,9 @@ return array(
 
 	// application components
 	'components'=>array(
+        'format'=>array(
+			'class'=>'MyFormatter'
+		),
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,

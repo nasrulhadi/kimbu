@@ -24,7 +24,7 @@
             <link rel="stylesheet" href="<?php echo $baseUrl; ?>/lib/colorbox/colorbox.css" />	
 
         <!-- gebo color theme-->
-            <link rel="stylesheet" href="<?php echo $baseUrl; ?>/css/green.css" id="link_theme" />
+            <link rel="stylesheet" href="<?php echo $baseUrl; ?>/css/eastern_blue.css" id="link_theme" />
         <!-- main styles -->
             <link rel="stylesheet" href="<?php echo $baseUrl; ?>/css/style.css" />
 			
@@ -44,7 +44,7 @@
 			document.documentElement.className += 'js';
 		</script>
     </head>
-    <body class="ptrn_c menu_hover">
+    <body class="ptrn_c">
 		<div id="loading_layer" style="display:none"><img src="<?php echo $baseUrl; ?>/img/ajax_loader.gif" alt="" /></div>
 				
 		<div id="maincontainer" class="clearfix">
@@ -57,9 +57,9 @@
                             <ul class="nav user_menu pull-right">
                                 <li class="divider-vertical hidden-phone hidden-tablet"></li>
                                 <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="<?php echo $baseUrl; ?>/img/user_avatar.png" alt="" class="user_avatar" /> <?php echo ucwords(strtolower(Yii::app()->user->name)); ?> <b class="caret"></b></a>
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo ucwords(strtolower(Yii::app()->user->name)); ?> <b class="caret"></b></a>
                                     <ul class="dropdown-menu">
-                                        <li><?php echo CHtml::link('Profil Saya', array('/pengaturan/profil/update')); ?></li>
+                                        <li><?php echo CHtml::link('Profil Saya', array('/pengaturan/profile')); ?></li>
                                         <li class="divider"></li>
                                         <li><?php echo CHtml::link('Log Out', array('/site/logout')); ?></li>
                                     </ul>

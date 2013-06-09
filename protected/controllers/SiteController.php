@@ -113,10 +113,10 @@ class SiteController extends Controller
 //                'EMAIL'=>$_POST['User']['EMAIL']
 //            ));
 //            $model->attributes = $_POST['User'];
-              $model->setAttribute('PASSWORD', $model->generatePassword());
+            $model->setAttribute('PASSWORD', $model->generatePassword());
 //            if($model->save())
 //            {
-                $model->sendEmailUser();
+                $model->sendEmail();
                 Yii::app()->user->setFlash('info',MyFormatter::alertSuccess('Silahkan dicek pada Email Anda.'));
                 $this->refresh();
 //            }
@@ -125,8 +125,33 @@ class SiteController extends Controller
             'model'=>$model,
         ));
     }
+    
+    public function actionForgotPassword()
+    {
+        $this->layout = '//layouts/blankLayout';
+        
+        //$model = new User();
+        if(isset($_POST['User']))
+        {
+            $model = User::model()->findByAttributes(array(
+                //'condition'=>'EMAIL=:email',
+                'EMAIL'=>$_POST['User']['EMAIL']
+            ));
+//            $model->attributes = $_POST['User'];
+            $model->setAttribute('PASSWORD', $model->generatePassword());
+//            if($model->save())
+//            {
+                $model->sendEmailUser();
+                //Yii::app()->user->setFlash('info',MyFormatter::alertSuccess('Silahkan dicek pada Email Anda.'));
+                //$this->refresh();
+//            }
+        }
+        $this->render('forgot',array(
+            'model'=>$model,
+        ));
+    }
 
-        /**
+    /**
 	 * Displays the login page
 	 */
 	public function actionLogin()
