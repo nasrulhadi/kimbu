@@ -20,8 +20,10 @@
             <link rel="stylesheet" href="<?php echo $baseUrl; ?>/lib/sticky/sticky.css" />    
         <!-- splashy icons -->
             <link rel="stylesheet" href="<?php echo $baseUrl; ?>/img/splashy/splashy.css" />
-		<!-- colorbox -->
-            <link rel="stylesheet" href="<?php echo $baseUrl; ?>/lib/colorbox/colorbox.css" />	
+	<!-- colorbox -->
+            <link rel="stylesheet" href="<?php echo $baseUrl; ?>/lib/colorbox/colorbox.css" />
+        <!-- CLEditor -->
+            <link rel="stylesheet" href="<?php echo $baseUrl; ?>/lib/CLEditor/jquery.cleditor.css" />
 
         <!-- gebo color theme-->
             <link rel="stylesheet" href="<?php echo $baseUrl; ?>/css/eastern_blue.css" id="link_theme" />
@@ -498,8 +500,8 @@
             <script src="<?php echo $baseUrl; ?>/lib/chosen/chosen.jquery.min.js"></script>
             <!-- form functions -->
             <script src="<?php echo $baseUrl; ?>/js/gebo_choosen.js"></script>
+
 	
-    
 			<script>
 				$(document).ready(function() {
 					//* show all elements & remove preloader
