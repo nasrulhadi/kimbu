@@ -20,6 +20,7 @@ class UserIdentity extends CUserIdentity
             $this->setState('isLogin', true);
             $this->setState('id', $users->ID_USER);
             $this->setState('name',$users->NAMA);
+            $this->setState('type', $users->TYPE);
 			$this->errorCode=self::ERROR_NONE;
         }
 		return !$this->errorCode;

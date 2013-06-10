@@ -23,20 +23,20 @@ class UserController extends Controller
 	 * This method is used by the 'accessControl' filter.
 	 * @return array access control rules
 	 */
-	public function accessRules()
+    public function accessRules()
 	{
 		return array(
-			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
-				'users'=>array('*'),
-			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array(
+                    'create',
+                    'update',
+                    'delete',
+                    'ubahpassword',
+                    'index',
+                    'view',
+                ),
 				'users'=>array('@'),
-			),
-			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
+                //'roles'=>array(WebUser::ROLE_SUPER_ADMIN),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -67,13 +67,20 @@ class UserController extends Controller
 		{
 			$model->attributes=$_POST['User'];
             $model->FOTO = CUploadedFile::getInstance($model, 'FOTO');
-            $model->setAttribute('PASSWORD', $model->generatePassword());
-			if($model->save())
+            //$model->setAttribute('PASSWORD', $model->generatePassword());
+			if($model->validate())
             {
+                //menyimpan file foto
                 $imagesPath = realpath(Yii::app()->basePath . '/../file/foto/');
                 $model->FOTO->saveAs($imagesPath . '/' . $model->FOTO);
-                Yii::app()->user->setFlash('info',MyFormatter::alertSuccess('<strong>Selamat!</strong> Data telah berhasil disimpan.'));
-				$this->redirect(array('view','id'=>$model->ID_USER));
+                //set password
+                $model->setAttribute('PASSWORD', md5($model->PASSWORD));
+                $model->setAttribute('REPEAT', md5($model->REPEAT));
+                if($model->save())
+                {
+                    Yii::app()->user->setFlash('info',MyFormatter::alertSuccess('<strong>Selamat!</strong> Data telah berhasil disimpan.'));
+                    $this->redirect(array('view','id'=>$model->ID_USER));
+                }
             }
         }
 
@@ -187,4 +194,30 @@ class UserController extends Controller
 			Yii::app()->end();
 		}
 	}
+    
+    //fungsi ubah password user
+    public function actionUbahPassword()
+    {
+        $model = new UbahPasswordForm;
+        if(isset($_POST['UbahPasswordForm']))
+        {
+            $model->attributes = $_POST['UbahPasswordForm'];
+            if($model->validate())
+            {
+                if($model->cekOldPassword($model->OLD))
+                {
+                    if($model->savePassword($model->NEW))
+                    {
+                        Yii::app()->user->setFlash('info', MyFormatter::alertSuccess('<strong>Selamat!</strong> Password telah berhasil diubah.'));
+                        $this->redirect(array('index'));
+                    }
+                    else
+                        Yii::app()->user->setFlash('info', MyFormatter::alertError('<strong>Error!</strong> Password gagal diubah.'));
+                }
+                else
+                    Yii::app()->user->setFlash('info', MyFormatter::alertError('<strong>Error!</strong> Password lama salah.'));
+            }
+        }
+        $this->render('ubahpassword/ubahpassword', array('model' => $model));
+    }
 }

@@ -2,6 +2,8 @@
 /* @var $this UserController */
 /* @var $model User */
 
+$this->pageTitle=Yii::app()->name . ' - Buat User';
+
 $this->breadcrumbs=array(
     'Dashboard'=>array('/'),
 	'Manajemen User'=>array('index'),

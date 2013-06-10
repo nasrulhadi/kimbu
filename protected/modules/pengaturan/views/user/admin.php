@@ -2,14 +2,11 @@
 /* @var $this UserController */
 /* @var $model User */
 
+$this->pageTitle=Yii::app()->name . ' - Manajemen User';
+
 $this->breadcrumbs=array(
 	'Dashboard'=>array('/'),
     'Manajemen User',
-);
-
-$this->menu=array(
-	array('label'=>'List User', 'url'=>array('index')),
-	array('label'=>'Create User', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -47,7 +44,13 @@ $('.search-form form').submit(function(){
 		'NAMA',
         'DIVISI',
 		'USERNAME',
+        array(
+            'name'=>'TYPE',
+            'type'=>'role',
+            'value'=>$model->TYPE,
+        ),
 		'EMAIL',
+        'TLP',
         array(
             'name' => 'STATUS',
             'type' => 'statusAktif',

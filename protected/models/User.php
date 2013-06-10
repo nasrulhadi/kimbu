@@ -27,6 +27,7 @@ class User extends CActiveRecord
 	 */
     public $username;
     public $password;
+    public $REPEAT;
     
     //STATUS USER
     const STATUS_AKTIF=1;
@@ -54,10 +55,16 @@ class User extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('ID_DIVISI, TYPE, TERAKHIR_LOGIN, STATUS', 'numerical', 'integerOnly'=>true),
-            array('USERNAME, PASSWORD, NAMA, STATUS, EMAIL', 'required'),
+            array('USERNAME, PASSWORD, NAMA, TYPE', 'required'),
+            array('USERNAME', 'unique'),
+            array('USERNAME', 'length', 'max'=>20),
+            array('PASSWORD', 'length', 'min'=>6, 'max'=>255),
+            array('EMAIL', 'length', 'max'=>20),
             array('EMAIL', 'email'),
+            array('TLP, HP', 'length', 'max'=>15),
 			array('TANGGAL_DIBUAT', 'safe'),
             array('FOTO','file','types'=>'jpg, jpeg, png'),
+            array('REPEAT', 'compare', 'compareAttribute'=>'PASSWORD'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('USERNAME, NAMA, EMAIL, STATUS', 'safe', 'on'=>'search'),
@@ -85,12 +92,13 @@ class User extends CActiveRecord
 			'ID_DIVISI' => 'Divisi',
 			'USERNAME' => 'Username',
 			'PASSWORD' => 'Password',
+            'REPEAT' => 'Konfirmasi Password',
 			'NAMA' => 'Nama',
 			'EMAIL' => 'Email',
 			'TLP' => 'No. Telepon',
 			'HP' => 'Hp',
 			'FOTO' => 'Foto',
-			'TYPE' => 'Type',
+			'TYPE' => 'Hak Akses',
 			'TANGGAL_DIBUAT' => 'Tanggal Dibuat',
 			'TERAKHIR_LOGIN' => 'Terakhir Login',
 			'STATUS' => 'Status',
@@ -127,12 +135,25 @@ class User extends CActiveRecord
 		));
 	}
     
+    //buat options hak akses user 
+    public function optionsRoles()
+    {
+        return array(
+            WebUser::ROLE_SUPER_ADMIN=>'Administrator',
+            WebUser::ROLE_ADMIN=>'Admin Perusahaan',
+            WebUser::ROLE_SURVEYOR=>'Surveyor',
+            WebUser::ROLE_CLIENT=>'Client',
+        );
+    }
+    
+    //generate random passowrd 5 char
     public function generatePassword()
     {
         $password = substr(md5(microtime()),3,6);
         return $password;
     }
     
+    //menampilkan foto
     public function displayPicture($pictureName)
     {
         if($pictureName==null || $pictureName=='')
@@ -141,6 +162,7 @@ class User extends CActiveRecord
             echo '<img src="'.Yii::app()->request->baseUrl.'/file/foto/'.$pictureName.'" alt="" class="img-polaroid"/>';
     }
     
+    //mengirim reset password ke email user
     public function sendEmail()
     {
         $to = 'phe@localhost';

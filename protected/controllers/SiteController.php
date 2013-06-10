@@ -29,11 +29,20 @@ class SiteController extends Controller
 	{
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
-        if (!Yii::app()->user->isGuest) {
-            $model = new User;
-            $this->setPageTitle('Beranda - ' . Yii::app()->name);
-            $this->render('index', array('model' => $model));
-        }else {
+        if (!WebUser::isGuest() && WebUser::isRoot()) {
+                $this->redirect(array('/root'));
+        }
+        elseif (!WebUser::isGuest() && WebUser::isAdmin()) {
+                $this->redirect(array('/admincs'));
+        }
+        elseif (!WebUser::isGuest() && WebUser::isSurveyor()) {
+                $this->redirect(array('/surveyor'));
+        }
+        elseif (!WebUser::isGuest() && WebUser::isClient()) {
+                $this->redirect(array('/client'));
+        }
+        else
+        {
             $this->redirect(array('login'));
         }
 	}

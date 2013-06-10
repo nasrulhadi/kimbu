@@ -18,7 +18,7 @@ class ProfileController extends Controller
                     'ubahpassword',
                 ),
 				'users'=>array('@'),
-                'roles'=>array(WebUser::ROLE_ADMIN),
+                'roles'=>array(WebUser::ROLE_SUPER_ADMIN),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -74,7 +74,7 @@ class ProfileController extends Controller
                 if ($model->cekOldPassword($model->OLD)) {
                     if ($model->savePassword($model->NEW)) {
                         Yii::app()->user->setFlash('info', MyFormatter::alertSuccess('<strong>Selamat!</strong> Password telah berhasil diubah.'));
-                        $this->redirect(array('index'));
+                        $this->refresh();
                     }
                     else
                         Yii::app()->user->setFlash('info', MyFormatter::alertError('<strong>Error!</strong> Password gagal diubah.'));

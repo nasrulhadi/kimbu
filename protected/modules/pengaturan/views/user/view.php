@@ -2,6 +2,8 @@
 /* @var $this UserController */
 /* @var $model User */
 
+$this->pageTitle=Yii::app()->name . ' - Detil User';
+
 $this->breadcrumbs=array(
 	'Dashboard'=>array('/'),
     'Manajemen User'=>array('index'),
@@ -20,7 +22,7 @@ $this->breadcrumbs=array(
         
     </div>
     <div class="span9">
-        <h4 class="heading">Identitas Peserta</h4>
+        <h4 class="heading">Identitas User</h4>
         <?php $this->widget('zii.widgets.CDetailView', array(
             'htmlOptions'=>array('class'=>'table table-striped table-bordered'),
             'data'=>$model,
@@ -28,7 +30,16 @@ $this->breadcrumbs=array(
                 'NAMA',
                 'ID_DIVISI',
                 'USERNAME',
-                'PASSWORD',
+                array(
+                    'name'=>'PASSWORD',
+                    'type'=>'raw',
+                    'value'=>CHtml::link('Ubah Password?',array('./user/ubahpassword')),
+                ),
+                array(
+                    'name'=>'TYPE',
+                    'type'=>'role',
+                    'value'=>$model->TYPE,
+                ),
                 'EMAIL',
                 'TLP',
                 'HP',

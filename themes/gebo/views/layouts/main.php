@@ -57,11 +57,11 @@
                             <ul class="nav user_menu pull-right">
                                 <li class="divider-vertical hidden-phone hidden-tablet"></li>
                                 <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo ucwords(strtolower(Yii::app()->user->name)); ?> <b class="caret"></b></a>
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="icon-user icon-white"></span> <?php echo ucwords(strtolower(Yii::app()->user->name)); ?> <b class="caret"></b></a>
                                     <ul class="dropdown-menu">
-                                        <li><?php echo CHtml::link('Profil Saya', array('/pengaturan/profile')); ?></li>
+                                        <li><?php echo CHtml::link('<span class="icon-edit"></span> Profile', array('/pengaturan/profile')); ?></li>
                                         <li class="divider"></li>
-                                        <li><?php echo CHtml::link('Log Out', array('/site/logout')); ?></li>
+                                        <li><?php echo CHtml::link('<span class="icon-off"></span> Log Out', array('/site/logout')); ?></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -122,74 +122,286 @@
                                         $getModule = null;
                                     }
                                     ?>
-
-                                    <div class="accordion-group">
-                                        <div class="accordion-heading">
-                                            <a href="#collapseTwo" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
-                                                <i class=" icon-briefcase"></i> Dashboard
-                                            </a>
+                                    <?php 
+                                        if(!WebUser::isGuest())
+                                        {
+                                    ?>
+                                    
+                                    <!-- role super admin -->
+                                    <?php
+                                        if(WebUser::isRoot())
+                                        {
+                                    ?>
+                                        <div class="accordion-group">
+                                            <div class="accordion-heading">
+                                                <a href="#collapseOne" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+                                                    <i class=" icon-home"></i> Dashboard
+                                                </a>
+                                            </div>
+                                            <div class="accordion-body collapse" id="collapseOne">
+                                                <div class="accordion-inner">
+                                                    <ul class="nav nav-list">
+                                                        <li><?php echo CHtml::link('Rencana Telaah / SPT', array('/rencanaPD/rencanaTelaah')); ?></li>
+                                                        <li><?php echo CHtml::link('Penugasan', array('/rencanaPD/penugasan')); ?></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="accordion-body collapse" id="collapseTwo">
-                                            <div class="accordion-inner">
-                                                <ul class="nav nav-list">
-                                                    <li><?php echo CHtml::link('Rencana Telaah / SPT', array('/rencanaPD/rencanaTelaah')); ?></li>
-                                                    <li><?php echo CHtml::link('Penugasan', array('/rencanaPD/penugasan')); ?></li>
-                                                </ul>
+                                        <div class="accordion-group">
+                                            <div class="accordion-heading">
+                                                <a href="#collapseTwo" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+                                                    <i class="icon-folder-open"></i> Divisi
+                                                </a>
+                                            </div>
+                                            <div class="accordion-body collapse" id="collapseTwo">
+                                                <div class="accordion-inner">
+                                                    <ul class="nav nav-list">
+                                                        <li><?php echo CHtml::link('Rencana SPPD', array('/terbitkanSPT/SPPD')); ?></li>
+                                                    </ul>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-group">
+                                            <div class="accordion-heading">
+                                                <a href="#collapseThree" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+                                                    <i class="icon-tags"></i> Perusahaan
+                                                </a>
+                                            </div>
+                                            <div class="accordion-body collapse" id="collapseThree">
+                                                <div class="accordion-inner">
+                                                    <ul class="nav nav-list">
+                                                        <li><?php echo CHtml::link('Rincian', array('/uangMuka/index')); ?></li>
+                                                    </ul>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-group">
+                                            <div class="accordion-heading">
+                                                <a href="#collapseFive" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+                                                    <i class="icon-tasks"></i> Survey
+                                                </a>
+                                            </div>
+                                            <div class="accordion-body collapse" id="collapseFive">
+                                                <div class="accordion-inner">
+                                                    <ul class="nav nav-list">
+                                                        <li><?php echo CHtml::link('Rincian', array('/uangMuka/index')); ?></li>
+                                                    </ul>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-group">
+                                            <div class="accordion-heading">
+                                                <a href="#collapseSix" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+                                                    <i class="icon-wrench"></i> Pengaturan
+                                                </a>
+                                            </div>
+                                            <div class="accordion-body collapse <?php echo ($getModule==="pengaturan")?"in":"";?>" id="collapseSix">
+                                                <div class="accordion-inner">
+                                                    <ul class="nav nav-list">
+                                                        <li class="nav-header">Manajemen User</li>
+                                                        <li class="<?php echo ($this->ID==="user")?"active":"";?>"><?php echo CHtml::link('Akun User', array('/pengaturan/user')); ?></li>
+                                                        <li class="nav-header">System</li>
+                                                        <li><?php echo CHtml::link('Backup Database', array('/pengaturan/backup')); ?></li>
+                                                        <li><?php echo CHtml::link('Website', array('/pengaturan/website')); ?></li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="accordion-group">
-                                        <div class="accordion-heading">
-                                            <a href="#collapseThree" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
-                                                <i class="icon-folder-open"></i> Divisi
-                                            </a>
-                                        </div>
-                                        <div class="accordion-body collapse" id="collapseThree">
-                                            <div class="accordion-inner">
-                                                <ul class="nav nav-list">
-                                                    <li><?php echo CHtml::link('Rencana SPPD', array('/terbitkanSPT/SPPD')); ?></li>
-                                                </ul>
+                                    <?php } ?>
+                                
+                                    <!-- role admin perusahaan -->
+                                    <?php
+                                        if(WebUser::isAdmin())
+                                        {
+                                    ?>
+                                        <div class="accordion-group">
+                                            <div class="accordion-heading">
+                                                <a href="#collapseOne" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+                                                    <i class="icon-folder-open"></i> Divisi
+                                                </a>
+                                            </div>
+                                            <div class="accordion-body collapse" id="collapseOne">
+                                                <div class="accordion-inner">
+                                                    <ul class="nav nav-list">
+                                                        <li><?php echo CHtml::link('Rencana SPPD', array('/terbitkanSPT/SPPD')); ?></li>
+                                                    </ul>
 
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-group">
+                                            <div class="accordion-heading">
+                                                <a href="#collapseTwo" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+                                                    <i class="icon-user"></i> User
+                                                </a>
+                                            </div>
+                                            <div class="accordion-body collapse" id="collapseTwo">
+                                                <div class="accordion-inner">
+                                                    <ul class="nav nav-list">
+                                                        <li><?php echo CHtml::link('Rincian', array('/uangMuka/index')); ?></li>
+                                                    </ul>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-group">
+                                            <div class="accordion-heading">
+                                                <a href="#collapseThree" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+                                                    <i class="icon-tasks"></i> Survey
+                                                </a>
+                                            </div>
+                                            <div class="accordion-body collapse" id="collapseThree">
+                                                <div class="accordion-inner">
+                                                    <ul class="nav nav-list">
+                                                        <li><?php echo CHtml::link('Rincian', array('/uangMuka/index')); ?></li>
+                                                    </ul>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-group">
+                                            <div class="accordion-heading">
+                                                <a href="#collapseFour" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+                                                    <i class="icon-cog"></i> Grafik
+                                                </a>
+                                            </div>
+                                            <div class="accordion-body collapse" id="collapseFour">
+                                                <div class="accordion-inner">
+                                                    <ul class="nav nav-list">
+                                                        <li><?php echo CHtml::link('Rincian', array('/uangMuka/index')); ?></li>
+                                                    </ul>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-group">
+                                            <div class="accordion-heading">
+                                                <a href="#collapseFive" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+                                                    <i class="icon-comment"></i> Interaksi
+                                                </a>
+                                            </div>
+                                            <div class="accordion-body collapse" id="collapseFive">
+                                                <div class="accordion-inner">
+                                                    <ul class="nav nav-list">
+                                                        <li><?php echo CHtml::link('Rincian', array('/uangMuka/index')); ?></li>
+                                                    </ul>
+
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="accordion-group">
-                                        <div class="accordion-heading">
-                                            <a href="#collapseFour" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
-                                                <i class="icon-leaf"></i> Perusahaan
-                                            </a>
-                                        </div>
-                                        <div class="accordion-body collapse" id="collapseFour">
-                                            <div class="accordion-inner">
-                                                <ul class="nav nav-list">
-                                                    <li><?php echo CHtml::link('Rincian', array('/uangMuka/index')); ?></li>
-                                                </ul>
+                                    <?php } ?>
+                            
+                                    <!-- role surveyor -->
+                                    <?php
+                                        if(WebUser::isSurveyor())
+                                        {
+                                    ?>
+                                        <div class="accordion-group">
+                                            <div class="accordion-heading">
+                                                <a href="#collapseOne" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+                                                    <i class="icon-folder-open"></i> Divisi
+                                                </a>
+                                            </div>
+                                            <div class="accordion-body collapse" id="collapseOne">
+                                                <div class="accordion-inner">
+                                                    <ul class="nav nav-list">
+                                                        <li><?php echo CHtml::link('Rencana SPPD', array('/terbitkanSPT/SPPD')); ?></li>
+                                                    </ul>
 
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-group">
+                                            <div class="accordion-heading">
+                                                <a href="#collapseTwo" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+                                                    <i class="icon-tasks"></i> Survey
+                                                </a>
+                                            </div>
+                                            <div class="accordion-body collapse" id="collapseTwo">
+                                                <div class="accordion-inner">
+                                                    <ul class="nav nav-list">
+                                                        <li><?php echo CHtml::link('Rincian', array('/uangMuka/index')); ?></li>
+                                                    </ul>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-group">
+                                            <div class="accordion-heading">
+                                                <a href="#collapseThree" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+                                                    <i class="icon-comment"></i> Interaksi
+                                                </a>
+                                            </div>
+                                            <div class="accordion-body collapse" id="collapseThree">
+                                                <div class="accordion-inner">
+                                                    <ul class="nav nav-list">
+                                                        <li><?php echo CHtml::link('Rincian', array('/uangMuka/index')); ?></li>
+                                                    </ul>
+
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="accordion-group">
-                                        <div class="accordion-heading">
-                                            <a href="#collapseEight" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
-                                                <i class="icon-wrench"></i> Pengaturan
-                                            </a>
+                                    <?php } ?>
+                        
+                                    <!-- role client user -->
+                                    <?php
+                                        if(WebUser::isClient())
+                                        {
+                                    ?>
+                                        <div class="accordion-group">
+                                            <div class="accordion-heading">
+                                                <a href="#collapseOne" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+                                                    <i class="icon-folder-open"></i> Divisi
+                                                </a>
+                                            </div>
+                                            <div class="accordion-body collapse" id="collapseOne">
+                                                <div class="accordion-inner">
+                                                    <ul class="nav nav-list">
+                                                        <li><?php echo CHtml::link('Rencana SPPD', array('/terbitkanSPT/SPPD')); ?></li>
+                                                    </ul>
+
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="accordion-body collapse <?php echo ($getModule==="pengaturan")?"in":"";?>" id="collapseEight">
-                                            <div class="accordion-inner">
-                                                <ul class="nav nav-list">
-                                                    <li class="nav-header">Manajemen User</li>
-                                                    <li class="<?php echo ($this->ID==="user")?"active":"";?>"><?php echo CHtml::link('Akun User', array('/pengaturan/user')); ?></li>
-                                                    <li class="nav-header">System</li>
-                                                    <li><?php echo CHtml::link('Backup Database', array('/pengaturan/backup')); ?></li>
-                                                    <li><?php echo CHtml::link('Website', array('/pengaturan/website')); ?></li>
-                                                    <li class="divider"></li>
-                                                    <li><?php echo CHtml::link('Download Panduan', array('/pengaturan/panduan')); ?></li>
-                                                </ul>
+                                        <div class="accordion-group">
+                                            <div class="accordion-heading">
+                                                <a href="#collapseTwo" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+                                                    <i class="icon-barcode"></i> Lihat Survey
+                                                </a>
+                                            </div>
+                                            <div class="accordion-body collapse" id="collapseTwo">
+                                                <div class="accordion-inner">
+                                                    <ul class="nav nav-list">
+                                                        <li><?php echo CHtml::link('Rincian', array('/uangMuka/index')); ?></li>
+                                                    </ul>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-group">
+                                            <div class="accordion-heading">
+                                                <a href="#collapseThree" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+                                                    <i class="icon-signal"></i> Lihat Grafik
+                                                </a>
+                                            </div>
+                                            <div class="accordion-body collapse" id="collapseThree">
+                                                <div class="accordion-inner">
+                                                    <ul class="nav nav-list">
+                                                        <li><?php echo CHtml::link('Rincian', array('/uangMuka/index')); ?></li>
+                                                    </ul>
+
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-
+                                    <?php } ?>
+                                <?php } ?>
                                 <div class="push"></div>
                             </div>
 

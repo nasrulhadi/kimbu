@@ -50,7 +50,7 @@ $this->breadcrumbs=array(
                 </tr>
                 <tr>
                     <td>Status</td>
-                    <td><?php echo ($model->STATUS==User::STATUS_AKTIF)?'<span class="label label-info">Active</span>':'<span class="label label-error">Disabled</span>'?></td>
+                    <td><?php echo ($model->STATUS==User::STATUS_AKTIF)?'<span class="label label-warning">Active</span>':'<span class="label label-error">Disabled</span>'?></td>
                 </tr>
                 </table>
             </div>

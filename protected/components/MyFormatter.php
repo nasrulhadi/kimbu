@@ -28,5 +28,19 @@ class MyFormatter extends CFormatter
         else
             return '<span class="label label-danger">Disabled</span>';
     }
+    
+    public function formatRole($value)
+    {
+        if($value==WebUser::ROLE_SUPER_ADMIN)
+            return '<span class="label label-danger">Administrator</span>';
+        else if($value==WebUser::ROLE_ADMIN)
+            return '<span class="label label-danger">Admin Perusahaan</span>';
+        else if($value==WebUser::ROLE_SURVEYOR)
+            return '<span class="label label-danger">Surveyor</span>';
+        else if($value==WebUser::ROLE_CLIENT)
+            return '<span class="label label-danger">Client User</span>';
+        else
+            return '<span class="label label-danger">Unknown</span>';
+    }
 }
 ?>

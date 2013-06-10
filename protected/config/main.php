@@ -22,6 +22,10 @@ return array(
 	'modules'=>array(
 		'pengaturan',
 		'interaksi',
+        'root',
+        'admincs',
+        'surveyor',
+        'client',
 		
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
@@ -48,9 +52,11 @@ return array(
             'showScriptName'=>false,
             'caseSensitive'=>false,
 			'rules'=>array(
-				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
-				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
-				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+                '<controller:\w+>/<id:\d+>' => '<controller>/view',
+                '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
+                '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
+                //biar bisa bikin url kayak gini => module/controller/action/parameter
+                '<module:\w+>/<controller:\w+>/<action:\w+>/<id:\d+>' => '<module>/<controller>/<action>',
 			),
 		),
 		
@@ -64,7 +70,7 @@ return array(
 			'connectionString' => 'mysql:host=localhost;dbname=kimbu_db',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => 'root',
+			'password' => '',
 			'charset' => 'utf8',
 		),
 		
