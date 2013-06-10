@@ -15,7 +15,7 @@ class ChatController extends Controller
 	{
 		return array(
 			'accessControl', // perform access control for CRUD operations
-			'postOnly + delete', // we only allow deletion via POST request
+			//'postOnly + delete', // we only allow deletion via POST request
 		);
 	}
 
@@ -27,17 +27,9 @@ class ChatController extends Controller
 	public function accessRules()
 	{
 		return array(
-			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
-				'users'=>array('*'),
-			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('index','view','create','update','coba','delete'),
 				'users'=>array('@'),
-			),
-			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -64,14 +56,33 @@ class ChatController extends Controller
 	{
 		$model=new Chat;
 
-		// Uncomment the following line if AJAX validation is needed
+                // Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
 		if(isset($_POST['Chat']))
 		{
-			$model->attributes=$_POST['Chat'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->ID_CHAT));
+                        if(count($_POST['Chat']['DIBUAT_OLEH']) >= 1 || $_POST['Chat']['NAMA'] != "")
+                        {
+                                $model->NAMA = $_POST['Chat']['NAMA'];
+                                $model->DIBUAT_OLEH = Yii::app()->user->getState('idUser');
+                                $model->DIBUAT_TANGGAL = date("Y-m-d H:i:s");
+                                $model->TERAKHIR_UPDATE = null;
+                                $model->STATUS = 1;
+                                $model->save();
+
+                                for($i=0;$i<=count($_POST['Chat']['DIBUAT_OLEH'])-1;$i++){
+                                    $modelUser = new ChatUser;
+                                    $modelUser->ID_CHAT = $model->ID_CHAT;
+                                    $modelUser->ID_USER = $_POST['Chat']['DIBUAT_OLEH'][$i];
+                                    $modelUser->STATUS = 1;
+                                    $modelUser->save();
+                                }
+                        }else{
+                                Yii::app()->user->setFlash('pesanError','<strong>Error</strong>. Nama Ruang tidak boleh kosong dan User harus dipilih (salah satu)');
+				$this->redirect(array('create'));
+                        }
+			
+                        $this->redirect(array('view','id'=>$model->ID_CHAT));
 		}
 
 		$this->render('create',array(
@@ -95,7 +106,8 @@ class ChatController extends Controller
 		{
 			$model->attributes=$_POST['Chat'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->ID_CHAT));
+                                Yii::app()->user->setFlash('pesanSukses','Update Nama Obrolan Berhasil');
+				$this->redirect(array('update','id'=>$model->ID_CHAT));
 		}
 
 		$this->render('update',array(
@@ -110,11 +122,16 @@ class ChatController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		$this->loadModel($id)->delete();
+		$model=$this->loadModel($id);
 
-		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+
+		$model->setAttribute('STATUS', 1);
+			if($model->save())
+                                Yii::app()->user->setFlash('pesanSukses','Hapus Obrolan Berhasil');
+				$this->redirect(array('index'));
+		
 	}
 
 	/**
@@ -122,7 +139,12 @@ class ChatController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Chat');
+		$criteria = new CDbCriteria();
+                $criteria->condition = "STATUS = :statusUser AND DIBUAT_OLEH = :userOnline";
+                $criteria->params = array(':userOnline' => Yii::app()->user->getState('idUser'),
+                                          ':statusUser' => 1);
+
+                $dataProvider=new CActiveDataProvider('Chat', array('criteria' => $criteria));
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -170,4 +192,20 @@ class ChatController extends Controller
 			Yii::app()->end();
 		}
 	}
+        
+        public function actionCoba() 
+        {
+                $this->layout = '//layouts/blankLayout';
+                $username = 'rico';
+                $Criteria = new CDbCriteria();
+                $Criteria->condition = "USERNAME = :username";
+                $Criteria->params = array(':username' => $username);
+                $UserOut = User::model()->find($Criteria);
+                
+                echo $UserOut->NAMA;
+                
+                
+                $UserOut->setAttribute('TLP', '081222');
+                $UserOut->save();
+        }
 }

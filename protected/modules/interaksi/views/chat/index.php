@@ -8,6 +8,12 @@ $this->breadcrumbs=array(
 ?>
 
 <h3 class="heading">Obrolan</h3>
+<?php if (Yii::app()->user->hasFlash('pesanSukses')){ ?>
+    <div class="alert alert-success">
+        <a class="close" data-dismiss="alert">×</a>
+        <?php echo Yii::app()->user->getFlash('pesanSukses'); ?>
+    </div>
+<?php } ?>
 <div class="row-fluid">
     <div class="span12">
         <div class="pull-right" style="margin-bottom: 20px;">
@@ -20,8 +26,7 @@ $this->breadcrumbs=array(
                     <th>No.</th>
                     <th>Nama Ruang</th>
                     <th>Jumlah User</th>
-                    <th>Status</th>
-                    <th>Tanggal dibuat</th>
+                    <th>Obrolan Terakhir</th>
                     <th>Pilihan</th>
                 </tr>
             </thead>

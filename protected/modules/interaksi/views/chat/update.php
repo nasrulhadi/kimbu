@@ -1,21 +1,22 @@
 <?php
-/* @var $this ChatController */
-/* @var $model Chat */
-
 $this->breadcrumbs=array(
-	'Chats'=>array('index'),
-	$model->ID_CHAT=>array('view','id'=>$model->ID_CHAT),
-	'Update',
+    'Dashboard'=>array('/'),
+    'Interaksi'=>array('/interaksi'),
+    'Obrolan'=>array('/interaksi/chat'),
+    'Update'
 );
 
-$this->menu=array(
-	array('label'=>'List Chat', 'url'=>array('index')),
-	array('label'=>'Create Chat', 'url'=>array('create')),
-	array('label'=>'View Chat', 'url'=>array('view', 'id'=>$model->ID_CHAT)),
-	array('label'=>'Manage Chat', 'url'=>array('admin')),
-);
 ?>
 
-<h1>Update Chat <?php echo $model->ID_CHAT; ?></h1>
-
-<?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
+<h3 class="heading">Ubah Nama Obrolan</h3>
+<?php if (Yii::app()->user->hasFlash('pesanSukses')){ ?>
+    <div class="alert alert-success">
+        <a class="close" data-dismiss="alert">×</a>
+        <?php echo Yii::app()->user->getFlash('pesanSukses'); ?>
+    </div>
+<?php } ?>
+<div class="row-fluid">
+    <div class="span12">
+        <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
+    </div>
+</div>

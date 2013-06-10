@@ -433,4 +433,19 @@ class User extends CActiveRecord
         else
             return false;
     }
+    
+    public static function getUserList() 
+    {
+        $criteria = new CDbCriteria;
+        $criteria->condition = "ID_DIVISI = :divisi";
+        $criteria->params = array('divisi' => Yii::app()->user->getState('idDivisi'));
+        $criteria->order = "NAMA ASC";
+        $model = User::model()->findAll($criteria);
+
+        $data = CHtml::listData($model, 'ID_USER', function($model) {
+                        return ucwords($model->NAMA). " (" . $model->USERNAME . ")";
+                    });
+
+        return $data;
+    }
 }
