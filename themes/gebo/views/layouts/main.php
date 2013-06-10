@@ -183,10 +183,10 @@
                                                     <i class="icon-comment"></i> Interaksi
                                                 </a>
                                             </div>
-                                            <div class="accordion-body collapse" id="collapseTwo">
+                                            <div class="accordion-body collapse <?php echo $getModule==="interaksi"?"in":""; ?>" id="collapseTwo">
                                                 <div class="accordion-inner">
                                                     <ul class="nav nav-list">
-                                                        <li><?php echo CHtml::link('Chat', array('#')); ?></li>
+                                                        <li <?php echo $this->ID==="chat"?"class='active'":""; ?>><?php echo CHtml::link('Chat', array('/interaksi/chat')); ?></li>
                                                     </ul>
 
                                                 </div>
