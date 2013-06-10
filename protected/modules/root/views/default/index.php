@@ -24,5 +24,3 @@ $baseUrl = Yii::app()->theme->baseUrl;
         </ul>
     </div>
 </div>
-
-<?php echo Yii::app()->user->type;?>

@@ -8678,3 +8678,22 @@ Stack trace:
 REQUEST_URI=/kimbu/admincs
 HTTP_REFERER=http://localhost/kimbu/site/login
 ---
+2013/06/10 08:16:02 [error] [php] include(UserIdentity.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\xampp\htdocs\yii\framework\YiiBase.php:421)
+Stack trace:
+#0 C:\xampp\htdocs\kimbu\protected\models\LoginForm.php(51): spl_autoload_call()
+#1 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate()
+#2 C:\xampp\htdocs\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute()
+#3 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CInlineValidator->validate()
+#4 C:\xampp\htdocs\kimbu\protected\controllers\SiteController.php(177): LoginForm->validate()
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\kimbu\index.php(13): CWebApplication->run()
+REQUEST_URI=/kimbu/site/login
+in C:\xampp\htdocs\kimbu\protected\models\LoginForm.php (51)
+in C:\xampp\htdocs\kimbu\protected\controllers\SiteController.php (177)
+in C:\xampp\htdocs\kimbu\index.php (13)
