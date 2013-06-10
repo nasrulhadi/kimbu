@@ -18,7 +18,6 @@ class UserIdentity extends CUserIdentity
 		else
         {
             $this->setState('isLogin', true);
-            $this->setState('id', $users->ID_USER);
             $this->setState('name',$users->NAMA);
             $this->setState('type', $users->TYPE);
             $this->setState('idUser',$users->ID_USER);

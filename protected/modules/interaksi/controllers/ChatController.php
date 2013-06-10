@@ -140,13 +140,20 @@ class ChatController extends Controller
 	public function actionIndex()
 	{
 		$criteria = new CDbCriteria();
-                $criteria->condition = "STATUS = :statusUser AND DIBUAT_OLEH = :userOnline";
-                $criteria->params = array(':userOnline' => Yii::app()->user->getState('idUser'),
-                                          ':statusUser' => 1);
+        $criteria->condition = "STATUS = :statusUser AND DIBUAT_OLEH = :userOnline";
+        $criteria->params = array(':userOnline' => Yii::app()->user->getState('idUser'),
+                                  ':statusUser' => 1);
 
-                $dataProvider=new CActiveDataProvider('Chat', array('criteria' => $criteria));
+        $dataProvider=new CActiveDataProvider('Chat', array('criteria' => $criteria));
+        
+        $model=new Chat('search');
+		$model->unsetAttributes();  // clear any default values
+		if(isset($_GET['Chat']))
+			$model->attributes=$_GET['Chat'];
+        
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
+            'model'=>$model,
 		));
 	}
 
