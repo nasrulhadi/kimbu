@@ -57,6 +57,8 @@ return array(
                 '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
                 //biar bisa bikin url kayak gini => module/controller/action/parameter
                 '<module:\w+>/<controller:\w+>/<action:\w+>/<id:\d+>' => '<module>/<controller>/<action>',
+                //biar bisa ngirim parameter kayak gini => controller/param1/nilaiparam1/param2/nilaiparam2
+                '<controller:\w+>/<action:\w+>/<param1:\d+>/<param2:\d+>' => '<controller>/<action>',
 			),
 		),
 		

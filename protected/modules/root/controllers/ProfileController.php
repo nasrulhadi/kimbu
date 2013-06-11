@@ -32,7 +32,7 @@ class ProfileController extends Controller
 	 */
 	public function actionIndex()
 	{
-        $id=Yii::app()->user->id;
+        $id=Yii::app()->user->idUser;
 		$this->render('index',array(
 			'model'=>$this->loadModel($id),
 		));
@@ -45,7 +45,7 @@ class ProfileController extends Controller
 	 */
 	public function actionSetting()
 	{
-        $id=Yii::app()->user->id;
+        $id=Yii::app()->user->idUser;
 		$model=$this->loadModel($id);
 
 		// Uncomment the following line if AJAX validation is needed

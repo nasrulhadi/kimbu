@@ -117,11 +117,6 @@ class SiteController extends Controller
         $model = new User();
         if(isset($_POST['User']))
         {
-//            $record = User::model()->findByAttributes(array(
-//                //'condition'=>'EMAIL=:email',
-//                'EMAIL'=>$_POST['User']['EMAIL']
-//            ));
-//            $model->attributes = $_POST['User'];
             $model->setAttribute('PASSWORD', $model->generatePassword());
 //            if($model->save())
 //            {
@@ -139,23 +134,23 @@ class SiteController extends Controller
     {
         $this->layout = '//layouts/blankLayout';
         
-        //$model = new User();
-        if(isset($_POST['User']))
-        {
-            $model = User::model()->findByAttributes(array(
-                //'condition'=>'EMAIL=:email',
-                'EMAIL'=>$_POST['User']['EMAIL']
-            ));
-//            $model->attributes = $_POST['User'];
-            $model->setAttribute('PASSWORD', $model->generatePassword());
-//            if($model->save())
-//            {
-                $model->sendEmailUser();
-                //Yii::app()->user->setFlash('info',MyFormatter::alertSuccess('Silahkan dicek pada Email Anda.'));
-                //$this->refresh();
-//            }
-        }
-        $this->render('forgot',array(
+        $model = new User();
+//        if(isset($_POST['User']))
+//        {
+//            $model = User::model()->findByAttributes(array(
+//                //'condition'=>'EMAIL=:email',
+//                'EMAIL'=>$_POST['User']['EMAIL']
+//            ));
+////            $model->attributes = $_POST['User'];
+//            $model->setAttribute('PASSWORD', $model->generatePassword());
+////            if($model->save())
+////            {
+//                $model->sendEmailUser();
+//                //Yii::app()->user->setFlash('info',MyFormatter::alertSuccess('Silahkan dicek pada Email Anda.'));
+//                //$this->refresh();
+////            }
+//        }
+        $this->render('_index',array(
             'model'=>$model,
         ));
     }
@@ -175,6 +170,11 @@ class SiteController extends Controller
 			$model->attributes=$_POST['LoginForm'];
 			// validate user input and redirect to the previous page if valid
 			if($model->validate() && $model->login())
+                //mengupdate login terakkhir user
+                $userid = Yii::app ()->user->idUser;
+                $timestamp = date('Y-m-d H:i:s');
+                User::model()->updateByPk($userid, array('TERAKHIR_LOGIN'=>$timestamp));
+                
 				$this->redirect(Yii::app()->user->returnUrl);
 		}
 		// display the login form

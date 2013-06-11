@@ -55,7 +55,7 @@ class User extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('ID_DIVISI, TYPE, TERAKHIR_LOGIN, STATUS', 'numerical', 'integerOnly'=>true),
-            array('USERNAME, PASSWORD, NAMA, TYPE', 'required'),
+            array('USERNAME, PASSWORD, NAMA, TYPE, ID_DIVISI', 'required'),
             array('USERNAME', 'unique'),
             array('USERNAME', 'length', 'max'=>20),
             array('PASSWORD', 'length', 'min'=>6, 'max'=>255),
@@ -79,6 +79,8 @@ class User extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+            'Divisi' => array(self::BELONGS_TO, 'Divisi', 'ID_DIVISI'),
+            'Perusahaan' => array(self::HAS_MANY, 'Perusahaan', 'ID_DIVISI')
 		);
 	}
 
@@ -269,7 +271,7 @@ class User extends CActiveRecord
                                             <p style="font-size:12px; font-family:Helvetica,Arial,sans-serif">Hallo, {user_by_email}</p>
 
                                             <p style="font-size:12px; line-height:20px; font-family:Helvetica,Arial,sans-serif">Beberapa saat yang lalu system telah menerima permintaan untuk mereset Password Anda. <br />Klik link dibawah ini <strong>JIKA</strong> Anda ingin mereset Password, dan Password baru akan dikirimkan beberapa saat kemudian.<br /><br />
-                                            <a href=" '. Yii::app()->baseUrl() .' " style="color: #0eb6ce; text-decoration: none;">{link_to_reset}</a><br />
+                                            <a href="http://localhost/kimbu/site/forgotpassword" style="display:inline-block;background-color:#cb0000;margin-top:10px;padding-bottom:8px;padding-right:10px;padding-top:8px;padding-left:10px;border-radius:4px;color:#fff;text-decoration:none">Reset Password Akun Anda</a><br />
                                             <br />
                                             Salam,<br />
                                             Kimbu</p>

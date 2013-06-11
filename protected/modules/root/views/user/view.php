@@ -19,7 +19,6 @@ $this->breadcrumbs=array(
         <div class="profilethumb">
             <?php echo $model->displayPicture($model->FOTO);?>
         </div>
-        
     </div>
     <div class="span9">
         <h4 class="heading">Identitas User</h4>
@@ -28,7 +27,13 @@ $this->breadcrumbs=array(
             'data'=>$model,
             'attributes'=>array(
                 'NAMA',
-                'ID_DIVISI',
+                array(
+                    'name'=>'DIVISI',
+                    'value'=>$model->Divisi->NAMA,
+                ),
+                array(
+                    'name'=>'PERUSAHAAN'
+                ),
                 'USERNAME',
                 array(
                     'name'=>'PASSWORD',

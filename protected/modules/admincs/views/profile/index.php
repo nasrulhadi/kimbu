@@ -3,15 +3,25 @@
 /* @var $model User */
 
 $this->breadcrumbs=array(
+    'Dashboard'=>('/'),
 	'Profile'
 );
 ?>
 
-<h3 class="heading">Profile</h3>
+<h3 class="heading">Profile | <?php echo $model->NAMA; ?></h3>
 <?php echo @Yii::app()->user->getFlash('info');?>
 <div class="row-fluid">
-    <div class="span6">
-<!--        <h4 class="widgettitle nomargin">Identitas<?php //echo CHtml::link('Edit Profile',array('profile/setting'),array('class'=>'showhide'));?></h4>-->
+    <div class="span3">
+        <div class="w-box">
+            <div class="w-box-header">Foto User</div>
+            <div class="w-box-content cnt_a">
+                <div class="profilethumb">
+                    <?php echo $model->displayPicture($model->FOTO);?>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="span9">
         <div class="w-box">
             <div class="w-box-header">
                 Identitas
@@ -28,14 +38,16 @@ $this->breadcrumbs=array(
                     <td><?php echo $model->TLP;?></td>
                 </tr>
                 <tr>
+                    <td>No. Handphone</td>
+                    <td><?php echo $model->HP;?></td>
+                </tr>
+                <tr>
                     <td>Email</td>
                     <td><?php echo $model->EMAIL;?></td>
                 </tr>
             </table>
             </div>
         </div>
-    </div>
-    <div class="span6">
         <div class="w-box">
             <div class="w-box-header">Informasi Akun</div>
             <div class="w-box-content cnt_a">

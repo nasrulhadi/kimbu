@@ -22,6 +22,16 @@
 		<?php echo $form->error($model,'NAMA'); ?>
 	</div>
     
+    <div class="row">
+		<?php echo $form->labelEx($model,'ID_DIVISI'); ?>
+		<?php echo $form->dropDownList($model,'ID_DIVISI', Divisi::getAll(),array(
+            //'class'=>'uniformselect',
+            'prompt'=>'Pilih Divisi',
+            'style'=>'width:250px;'
+            )); ?>
+		<?php echo $form->error($model,'KODE_PERGURUAN_TINGGI'); ?>
+	</div>
+    
 	<div class="row">
 		<?php echo $form->labelEx($model,'USERNAME'); ?>
 		<?php echo $form->textField($model,'USERNAME',array('size'=>45,'maxlength'=>45)); ?>

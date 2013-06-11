@@ -61,7 +61,8 @@
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="icon-user icon-white"></span> <?php echo ucwords(strtolower(Yii::app()->user->name)); ?> <b class="caret"></b></a>
                                     <ul class="dropdown-menu">
-                                        <li><?php echo CHtml::link('<span class="icon-edit"></span> Profile', array('/pengaturan/profile')); ?></li>
+                                        <li><?php echo CHtml::link('<span class="icon-edit"></span> Profile', array('./profile')); ?></li>
+                                        
                                         <li class="divider"></li>
                                         <li><?php echo CHtml::link('<span class="icon-off"></span> Log Out', array('/site/logout')); ?></li>
                                     </ul>
@@ -136,17 +137,17 @@
                                     ?>
                                         <div class="accordion-group">
                                             <div class="accordion-heading">
-                                                <a href="#collapseSix" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+                                                <a href="#collapseOne" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
                                                     <i class="icon-wrench"></i> Pengaturan
                                                 </a>
                                             </div>
-                                            <div class="accordion-body collapse <?php echo ($getModule==="pengaturan")?"in":"";?>" id="collapseSix">
+                                            <div class="accordion-body collapse <?php echo ($getModule==="root")?"in":"";?>" id="collapseOne">
                                                 <div class="accordion-inner">
                                                     <ul class="nav nav-list">
-                                                        <li><?php echo CHtml::link('Perusahaan', array('#')); ?></li>
+                                                        <li class="<?php echo ($this->ID==="perusahaan")?"active":"";?>"><?php echo CHtml::link('Perusahaan', array('./perusahaan')); ?></li>
                                                         <li><?php echo CHtml::link('Divisi', array('#')); ?></li>
                                                         <li><?php echo CHtml::link('Survei', array('#')); ?></li>
-                                                        <li class="<?php echo ($this->ID==="user")?"active":"";?>"><?php echo CHtml::link('User', array('/pengaturan/user')); ?></li>
+                                                        <li class="<?php echo ($this->ID==="user")?"active":"";?>"><?php echo CHtml::link('User', array('./user')); ?></li>
                                                         
                                                     </ul>
                                                 </div>
