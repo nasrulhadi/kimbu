@@ -468,8 +468,10 @@ class User extends CActiveRecord
     public static function getUserList() 
     {
         $criteria = new CDbCriteria;
-        $criteria->condition = "ID_DIVISI = :divisi";
-        $criteria->params = array('divisi' => Yii::app()->user->getState('idDivisi'));
+        $criteria->condition = "ID_DIVISI = :divisi AND ID_USER != :userAktif";
+        $criteria->params = array('divisi'=>Yii::app()->user->getState('idDivisi'),
+                                  'userAktif'=>Yii::app()->user->getState('idUser')
+                            );
         $criteria->order = "NAMA ASC";
         $model = User::model()->findAll($criteria);
 

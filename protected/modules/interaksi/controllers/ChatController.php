@@ -43,7 +43,7 @@ class ChatController extends Controller
 	 */
 	public function actionView($id)
 	{
-		$this->render('view',array(
+                $this->render('view',array(
 			'model'=>$this->loadModel($id),
 		));
 	}
@@ -55,7 +55,8 @@ class ChatController extends Controller
 	public function actionCreate()
 	{
 		$model=new Chat;
-
+                $modelUserAktif = new ChatUser;
+                
                 // Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
@@ -69,13 +70,18 @@ class ChatController extends Controller
                                 $model->TERAKHIR_UPDATE = null;
                                 $model->STATUS = 1;
                                 $model->save();
+                                
+                                $modelUserAktif->ID_CHAT = $model->ID_CHAT;
+                                $modelUserAktif->ID_USER = Yii::app()->user->getState('idUser');
+                                $modelUserAktif->STATUS = 1;
+                                $modelUserAktif->save();
 
                                 for($i=0;$i<=count($_POST['Chat']['DIBUAT_OLEH'])-1;$i++){
-                                    $modelUser = new ChatUser;
-                                    $modelUser->ID_CHAT = $model->ID_CHAT;
-                                    $modelUser->ID_USER = $_POST['Chat']['DIBUAT_OLEH'][$i];
-                                    $modelUser->STATUS = 1;
-                                    $modelUser->save();
+                                    $modelUserOnline = new ChatUser;
+                                    $modelUserOnline->ID_CHAT = $model->ID_CHAT;
+                                    $modelUserOnline->ID_USER = $_POST['Chat']['DIBUAT_OLEH'][$i];
+                                    $modelUserOnline->STATUS = 1;
+                                    $modelUserOnline->save();
                                 }
                         }else{
                                 Yii::app()->user->setFlash('pesanError','<strong>Error</strong>. Nama Ruang tidak boleh kosong dan User harus dipilih (salah satu)');

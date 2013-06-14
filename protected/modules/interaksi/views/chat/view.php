@@ -47,39 +47,24 @@ $this->breadcrumbs = array(
                 </div>
                 <div class="span4 chat_sidebar">
                     <div class="chat_heading clearfix">
-                        User online 2
+                        User Dalam Obrolan
                     </div>
                     <ul class="chat_user_list">
-                        <li class="online active chat_you">
-                            <a href="javascript:void(0)">
-                                <img src="<?php echo Yii::app()->baseUrl."/images/30x30.gif";?>" alt="" />
-                                Johny Smith <span>(you)</span>
-                            </a>
-                        </li>
-                        <li class="online active">
-                            <a href="#">
-                                <img src="<?php echo Yii::app()->baseUrl."/images/30x30.gif";?>" alt="" />
-                                Summer Throssell
-                            </a>
-                        </li>
-                        <li class="online">
-                            <a href="#">
-                                <img src="<?php echo Yii::app()->baseUrl."/images/30x30.gif";?>" alt="" />
-                                Declan Pamphlett
-                            </a>
-                        </li>
-                        <li class="offline">
-                            <a href="#">
-                                <img src="<?php echo Yii::app()->baseUrl."/images/30x30.gif";?>" alt="" />
-                                Erin Church
-                            </a>
-                        </li>
-                        <li class="online">
-                            <a href="#">
-                                <img src="<?php echo Yii::app()->baseUrl."/images/30x30.gif";?>" alt="" />
-                                Koby Auld
-                            </a>
-                        </li>
+                        <?php
+                        $dataProvider=new CActiveDataProvider('ChatUser', array(
+                            'criteria'=>array(
+                                'condition'=>'ID_CHAT = :idChatUser AND STATUS = 1',
+                                'params'=>array('idChatUser'=>$model->ID_CHAT),
+                                'order'=>'ID_CHAT_USER ASC',
+                            ),
+                        ));
+
+                        $this->widget('zii.widgets.CListView', array(
+                            'dataProvider'=>$dataProvider,
+                            'itemView'=>'_userOnline',   // refers to the partial view named '_post'
+                            'template'=>'{items}',
+                        ));
+                        ?>
                     </ul>
                 </div>
             </div>
