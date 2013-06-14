@@ -10,6 +10,7 @@
 	'id'=>'user-form',
     'htmlOptions'=>array('enctype'=>'multipart/form-data'),
 	'enableAjaxValidation'=>false,
+
 )); ?>
 
 	<p class="note">Isian dengan tanda <span class="required">*</span> harus diisi.</p>
@@ -45,12 +46,14 @@
 	<div class="row">
 		<?php echo $form->labelEx($model,'PASSWORD'); ?>
 		<?php echo $form->passwordField($model,'PASSWORD',array('size'=>60,'maxlength'=>255)); ?>
+        <span class="help-block">Tuliskan password Anda</span></br>
 		<?php echo $form->error($model,'PASSWORD'); ?>
 	</div>
     
     <div class="row">
 		<?php echo $form->labelEx($model,'REPEAT'); ?>
 		<?php echo $form->passwordField($model,'REPEAT',array('size'=>60,'maxlength'=>255)); ?>
+        <span class="help-block">Ulangi password Anda</span></br>
 		<?php echo $form->error($model,'REPEAT'); ?>
 	</div>
     <?php
@@ -96,7 +99,7 @@
 	</div>
     
 	<div class="form-actions">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Buat User' : 'Simpan Perubahan',array('class' => 'btn btn-primary')); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Buat User' : 'Simpan Perubahan',array('class' => 'btn btn-gebo')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

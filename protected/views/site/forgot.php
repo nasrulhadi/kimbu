@@ -30,18 +30,20 @@
     <body class="ptrn_a">
         <div class="login_box">
             <?php $form = $this->beginWidget('CActiveForm',array(
-                'id'=>'pass_form',
+                'id'=>'email_form',
                 'enableAjaxValidation'=>false,
                 'htmlOptions'=>array('style="display:none"'),
             )) ?>
                 <div class="top_b">Lupa password?</div>
-                    <?php echo @Yii::app()->user->getFlash('info');?>
-                    <?php //echo $form->errorSummary($model); ?>
-                    <div class="alert alert-info alert-login">
+                
+                <?php echo @Yii::app()->user->getFlash('info');?>
+                
+                <div class="alert alert-info alert-login">
                         <div style="text-align: center">Masukkan email Anda yang aktif dan kami akan mengirim email untuk mereset password akun Anda.</div>
                 </div>
+                
                 <div class="cnt_b">
-                    <div class="formRow clearfix">
+                    <div class="formRow">
                         <div class="input-prepend">
                             <span class="add-on">@</span>
                                 <?php echo $form->textField($model,'EMAIL',array('placeholder'=>'Konfirmasi Email')) ?>
@@ -55,7 +57,7 @@
             <?php $this->endWidget();?>
             
             <div class="links_b links_btm clearfix">
-                <span class="linkform" style="display:none">Never mind, <a href="#login_form">send me back to the sign-in screen</a></span>
+                <span class="linkform"><a href="<?php echo Yii::app()->request->baseUrl?>/site/login">Kembali Login</a></span>
             </div>
         </div>
         
@@ -95,13 +97,12 @@
                 });
                 
                 //* validation
-                $('#login_form').validate({
+                $('#email_form').validate({
                     onkeyup: false,
                     errorClass: 'error',
                     validClass: 'valid',
                     rules: {
-                        "LoginForm[username]": { required: true, minlength: 3 },
-                        "LoginForm[password]": { required: true, minlength: 3 }
+                        "User[EMAIL]": { required: true }
                     },
                     highlight: function(element) {
                         $(element).closest('div').addClass("f_error");

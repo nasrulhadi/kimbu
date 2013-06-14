@@ -61,55 +61,6 @@ class SiteController extends Controller
 		}
 	}
 
-	/**
-	 * Displays the contact page
-	 */
-	public function actionContact()
-	{
-		$model=new ContactForm;
-		if(isset($_POST['ContactForm']))
-		{
-			$model->attributes=$_POST['ContactForm'];
-			if($model->validate())
-			{
-				$name='=?UTF-8?B?'.base64_encode($model->name).'?=';
-				$subject='=?UTF-8?B?'.base64_encode($model->subject).'?=';
-				$headers="From: $name <{$model->email}>\r\n".
-					"Reply-To: {$model->email}\r\n".
-					"MIME-Version: 1.0\r\n".
-					"Content-type: text/plain; charset=UTF-8";
-
-				mail(Yii::app()->params['adminEmail'],$subject,$model->body,$headers);
-				Yii::app()->user->setFlash('contact','Thank you for contacting us. We will respond to you as soon as possible.');
-				$this->refresh();
-			}
-		}
-		$this->render('contact',array('model'=>$model));
-	}
-
-    public function actionRegister()
-    {
-        $this->layout = '//layouts/blankLayout';
-        
-        $model = new User();
-        if(isset($_POST['User']))
-        {
-            $model->attributes=$_POST['User'];
-            if($model->validate())
-            {
-                $model->setAttribute('PASSWORD', md5($model->PASSWORD));
-                $model->setAttribute('CPASSWORD', md5($model->CPASSWORD));
-                if($model->save())
-                {
-                    Yii::app()->user->setFlash('login','Selamat! Register telah berhasil. Silahkan masuk ke dalam sistem kami.');
-                    $this->redirect(Yii::app()->createUrl('./site/login'));
-                }
-            }
-        }
-        
-        $this->render('register', array('model'=>$model));
-    }
-    
     public function actionForgot()
     {
         $this->layout = '//layouts/blankLayout';
@@ -117,11 +68,14 @@ class SiteController extends Controller
         $model = new User();
         if(isset($_POST['User']))
         {
-            $model->setAttribute('PASSWORD', $model->generatePassword());
+            $model->attributes = $_POST['User'];
 //            if($model->save())
 //            {
+                //$id = 1;
+               // User::model()->updateByPk($id, array('PASSWORD'=>$model->generatePassword()));
+                
                 $model->sendEmail();
-                Yii::app()->user->setFlash('info',MyFormatter::alertSuccess('Silahkan dicek pada Email Anda.'));
+                Yii::app()->user->setFlash('info',MyFormatter::alertForgot('Silahkan dicek pada Email Anda.'));
                 $this->refresh();
 //            }
         }
@@ -130,26 +84,27 @@ class SiteController extends Controller
         ));
     }
     
-    public function actionForgotPassword()
+    public function actionForgotPassword($id)
     {
         $this->layout = '//layouts/blankLayout';
         
-        $model = new User();
+        $kode = substr($id, -1);
+        $model = User::model()->findByPk($kode);
+        
 //        if(isset($_POST['User']))
 //        {
-//            $model = User::model()->findByAttributes(array(
-//                //'condition'=>'EMAIL=:email',
-//                'EMAIL'=>$_POST['User']['EMAIL']
-//            ));
-////            $model->attributes = $_POST['User'];
-//            $model->setAttribute('PASSWORD', $model->generatePassword());
-////            if($model->save())
-////            {
-//                $model->sendEmailUser();
-//                //Yii::app()->user->setFlash('info',MyFormatter::alertSuccess('Silahkan dicek pada Email Anda.'));
-//                //$this->refresh();
-////            }
+//            $model->attributes = $_POST['User'];
+            //$model->setAttribute('PASSWORD', $model->generatePassword());
+            //if($model->save())
+            //{
+                $tes = $model->generatePassword();
+                User::model()->updateByPk($kode, array('PASSWORD'=>md5($tes)));
+                $model->sendEmailUser($tes);
+            //}
 //        }
+        
+        //$model->setAttribute('PASSWORD', $model->generatePassword());
+        
         $this->render('_index',array(
             'model'=>$model,
         ));
@@ -170,12 +125,15 @@ class SiteController extends Controller
 			$model->attributes=$_POST['LoginForm'];
 			// validate user input and redirect to the previous page if valid
 			if($model->validate() && $model->login())
-                //mengupdate login terakkhir user
-                $userid = Yii::app ()->user->idUser;
-                $timestamp = date('Y-m-d H:i:s');
-                User::model()->updateByPk($userid, array('TERAKHIR_LOGIN'=>$timestamp));
-                
-				$this->redirect(Yii::app()->user->returnUrl);
+                if(Yii::app()->user->isLogin)
+                {
+                    //mengupdate login terakkhir user
+                    $userid = Yii::app ()->user->idUser;
+                    $timestamp = date('Y-m-d H:i:s');
+                    User::model()->updateByPk($userid, array('TERAKHIR_LOGIN'=>$timestamp));
+
+                    $this->redirect(Yii::app()->user->returnUrl);
+                }
 		}
 		// display the login form
 		$this->render('login',array('model'=>$model));

@@ -35,8 +35,8 @@
             )) ?>
                 <div class="top_b">Lupa password?</div>
                 <div class="cnt_b">
-                    <div class="alert alert-error alert-login" style="text-align: justify">
-                        Reset password sukses dan telah dikirimkan ke <strong><?php $model->EMAIL; ?></strong>. Silahkan di cek pada email Anda.
+                    <div class="alert alert-error alert-login">
+                        Reset password sukses dan telah dikirimkan ke <strong><?php echo $model->EMAIL; ?></strong>. Silahkan di cek pada email Anda.
                     </div>
                 </div>
                 <div class="btm_b clearfix">

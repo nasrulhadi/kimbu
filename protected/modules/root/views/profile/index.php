@@ -14,12 +14,12 @@ $this->breadcrumbs=array(
     <div class="span3">
         <div class="w-box">
             <div class="w-box-header">Foto User</div>
-            <div class="w-box-content cnt_a">
-                <div class="profilethumb">
+            
+                
+        </div>
+        <div class="profilethumb">
                     <?php echo $model->displayPicture($model->FOTO);?>
                 </div>
-            </div>
-        </div>
     </div>
     <div class="span9">
         <div class="w-box">
