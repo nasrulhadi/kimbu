@@ -102,7 +102,7 @@
                     errorClass: 'error',
                     validClass: 'valid',
                     rules: {
-                        "User[EMAIL]": { required: true }
+                        "User[EMAIL]": { required: true, email: true }
                     },
                     highlight: function(element) {
                         $(element).closest('div').addClass("f_error");
