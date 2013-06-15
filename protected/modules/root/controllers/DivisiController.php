@@ -1,13 +1,7 @@
 <?php
 
-class PerusahaanController extends Controller
+class DivisiController extends Controller
 {
-	/**
-	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
-	 * using two-column layout. See 'protected/views/layouts/column2.php'.
-	 */
-	//public $layout='//layouts/column2';
-
 	/**
 	 * @return array action filters
 	 */
@@ -62,27 +56,27 @@ class PerusahaanController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Perusahaan;
+		$model=new Divisi;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Perusahaan']))
+		if(isset($_POST['Divisi']))
 		{
-			$model->attributes=$_POST['Perusahaan'];
-            $model->LOGO = CUploadedFile::getInstance($model, 'LOGO');
+			$model->attributes=$_POST['Divisi'];
+			$model->LOGO = CUploadedFile::getInstance($model, 'LOGO');
 			if($model->validate())
             {
                 //menyimpan file logo
-                $imagesPath = realpath(Yii::app()->basePath . '/../file/logo/perusahaan');
+                $imagesPath = realpath(Yii::app()->basePath . '/../file/logo/divisi');
                 $model->LOGO->saveAs($imagesPath . '/' . $model->LOGO);
                 if($model->save())
                 {
                     Yii::app()->user->setFlash('info',MyFormatter::alertSuccess('<strong>Selamat!</strong> Data telah berhasil disimpan.'));
-                    $this->redirect(array('view','id'=>$model->ID_PERUSAHAAN));
+                    $this->redirect(array('view','id'=>$model->ID_DIVISI));
                 }
             }
-        }
+		}
 
 		$this->render('create',array(
 			'model'=>$model,
@@ -101,17 +95,11 @@ class PerusahaanController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Perusahaan']))
+		if(isset($_POST['Divisi']))
 		{
-			$model->attributes=$_POST['Perusahaan'];
+			$model->attributes=$_POST['Divisi'];
 			if($model->save())
-            {
-                //mengupdate login terakhir user
-                $timestamp = date('Y-m-d H:i:s');
-                Perusahaan::model()->updateByPk($id, array('TERAKHIR_UPDATE'=>$timestamp));
-                Yii::app()->user->setFlash('info',MyFormatter::alertInfo('<strong>Selamat!</strong> Perubahan data telah berhasil disimpan.'));
-				$this->redirect(array('view','id'=>$model->ID_PERUSAHAAN));
-            }
+				$this->redirect(array('view','id'=>$model->ID_DIVISI));
 		}
 
 		$this->render('update',array(
@@ -138,10 +126,10 @@ class PerusahaanController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$model=new Perusahaan('search');
+		$model=new Divisi('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Perusahaan']))
-			$model->attributes=$_GET['Perusahaan'];
+		if(isset($_GET['Divisi']))
+			$model->attributes=$_GET['Divisi'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -153,10 +141,10 @@ class PerusahaanController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Perusahaan('search');
+		$model=new Divisi('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Perusahaan']))
-			$model->attributes=$_GET['Perusahaan'];
+		if(isset($_GET['Divisi']))
+			$model->attributes=$_GET['Divisi'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -167,12 +155,12 @@ class PerusahaanController extends Controller
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return Perusahaan the loaded model
+	 * @return Divisi the loaded model
 	 * @throws CHttpException
 	 */
 	public function loadModel($id)
 	{
-		$model=Perusahaan::model()->findByPk($id);
+		$model=Divisi::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -180,11 +168,11 @@ class PerusahaanController extends Controller
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param Perusahaan $model the model to be validated
+	 * @param Divisi $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='perusahaan-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='divisi-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();

@@ -94,5 +94,7 @@ class MyFormatter extends CFormatter
 		
 		return substr($date[2],0,2).' '.$bulan.' '.$date[0];
 	}
+    
+    
 }
 ?>

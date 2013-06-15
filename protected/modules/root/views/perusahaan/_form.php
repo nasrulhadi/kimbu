@@ -64,8 +64,8 @@
 		<?php echo $form->error($model,'KETERANGAN'); ?>
 	</div>
 
-	<div class="form-actions">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save',array('class' => 'btn btn-primary')); ?>
+	<div class="row">
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Submit' : 'Simpan',array('class' => 'btn btn-primary')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

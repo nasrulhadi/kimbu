@@ -30,7 +30,7 @@
             'prompt'=>'Pilih Divisi',
             'style'=>'width:250px;'
             )); ?>
-		<?php echo $form->error($model,'KODE_PERGURUAN_TINGGI'); ?>
+		<?php echo $form->error($model,'ID_DIVISI'); ?>
 	</div>
     
 	<div class="row">

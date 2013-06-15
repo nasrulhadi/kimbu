@@ -145,7 +145,7 @@
                                                 <div class="accordion-inner">
                                                     <ul class="nav nav-list">
                                                         <li class="<?php echo ($this->ID==="perusahaan")?"active":"";?>"><?php echo CHtml::link('Perusahaan', array('./perusahaan')); ?></li>
-                                                        <li><?php echo CHtml::link('Divisi', array('#')); ?></li>
+                                                        <li class="<?php echo ($this->ID==="divisi")?"active":"";?>"><?php echo CHtml::link('Divisi', array('./divisi')); ?></li>
                                                         <li><?php echo CHtml::link('Survei', array('#')); ?></li>
                                                         <li class="<?php echo ($this->ID==="user")?"active":"";?>"><?php echo CHtml::link('User', array('./user')); ?></li>
                                                         

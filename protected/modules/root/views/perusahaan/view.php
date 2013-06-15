@@ -13,13 +13,13 @@ $this->breadcrumbs=array(
 <?php echo @Yii::app()->user->getFlash('info');?>
 <div class="row-fluid">
     <div class="span3">
-        <h4 class="heading">Logo Perusahaan</h4>
+        <h4>Logo Perusahaan</h4></br>
         <div class="profilethumb">
             <?php echo $model->displayPicture($model->LOGO);?>
         </div>
     </div>
     <div class="span9">
-        <h4 class="heading">Identitas Perusahaan</h4>
+        <h4>Identitas Perusahaan</h4></br>
             <?php $this->widget('zii.widgets.CDetailView', array(
                 'htmlOptions'=>array('class'=>'table table-striped table-bordered'),
                 'data'=>$model,
@@ -28,11 +28,14 @@ $this->breadcrumbs=array(
                     'EMAIL',
                     'TLP',
                     'FAX',
-                    'LOGO',
                     'ALAMAT',
                     'KOTA',
                     'KETERANGAN',
-                    'TERAKHIR_UPDATE',
+                    array(
+                        'name'=>'TERAKHIR_UPDATE',
+                        'type'=>'dateFormat',
+                        'value'=>$model->TERAKHIR_UPDATE,
+                    ),
                 ),
             )); ?>
     </div>

@@ -39,7 +39,9 @@ class Divisi extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('ID_PERUSAHAAN', 'numerical', 'integerOnly'=>true),
-			array('NAMA, LOGO', 'length', 'max'=>45),
+            array('NAMA, ID_PERUSAHAAN', 'required'),
+			array('NAMA', 'length', 'max'=>45),
+            array('LOGO', 'file', 'types'=>'jpeg, jpg, png', 'allowEmpty' => true),
 			array('KETERANGAN', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
@@ -55,7 +57,8 @@ class Divisi extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-            'Mdivisi' => array(self::HAS_MANY, 'User', 'ID_DIVISI')
+            'Mdivisi' => array(self::HAS_MANY, 'User', 'ID_DIVISI'),
+            'Perusahaan' => array(self::BELONGS_TO, 'Perusahaan', 'ID_PERUSAHAAN')
 		);
 	}
 
@@ -66,8 +69,8 @@ class Divisi extends CActiveRecord
 	{
 		return array(
 			'ID_DIVISI' => 'Id Divisi',
-			'ID_PERUSAHAAN' => 'Id Perusahaan',
-			'NAMA' => 'Nama',
+			'ID_PERUSAHAAN' => 'Perusahaan',
+			'NAMA' => 'Nama Divisi',
 			'KETERANGAN' => 'Keterangan',
 			'LOGO' => 'Logo',
 		);
@@ -95,7 +98,16 @@ class Divisi extends CActiveRecord
 		));
 	}
     
-    //buat dapat list data dari administrator
+    //menampilkan logo Divisi
+    public function displayPicture($pictureName)
+    {
+        if($pictureName==null || $pictureName=='')
+            echo '<img src="'.Yii::app()->theme->baseUrl.'/img/profilethumb.png" alt="" class="img-polaroid" />';
+        else
+            echo '<img src="'.Yii::app()->request->baseUrl.'/file/logo/divisi/'.$pictureName.'" alt="" class="img-polaroid"/>';
+    }
+    
+    //mengambil semua list data DIVISI
     public static function getAll()
     {
         $criteria=new CDbCriteria;

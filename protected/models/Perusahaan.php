@@ -43,10 +43,11 @@ class Perusahaan extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('NAMA, EMAIL, TLP, FAX, LOGO, KOTA', 'length', 'max'=>45),
+			array('NAMA, EMAIL, TLP, FAX, KOTA', 'length', 'max'=>45),
 			array('ALAMAT, KETERANGAN, TERAKHIR_UPDATE', 'safe'),
-            array('NAMA','required'),
-            array('LOGO','file','types'=>'jpeg, jpg, png','allowEmpty'=>true),
+            array('NAMA, EMAIL', 'required'),
+            array('EMAIL', 'email'),
+            array('LOGO', 'file', 'types'=>'jpeg, jpg, png', 'allowEmpty'=>true),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('ID_PERUSAHAAN, NAMA, EMAIL, TLP, FAX, LOGO, ALAMAT, KOTA, KETERANGAN, TERAKHIR_UPDATE', 'safe', 'on'=>'search'),
@@ -110,12 +111,22 @@ class Perusahaan extends CActiveRecord
 		));
 	}
     
-    //menampilkan logo
+    //menampilkan logo perusahaan
     public function displayPicture($pictureName)
     {
         if($pictureName==null || $pictureName=='')
             echo '<img src="'.Yii::app()->theme->baseUrl.'/img/profilethumb.png" alt="" class="img-polaroid" />';
         else
-            echo '<img src="'.Yii::app()->request->baseUrl.'/file/foto/'.$pictureName.'" alt="" class="img-polaroid"/>';
+            echo '<img src="'.Yii::app()->request->baseUrl.'/file/logo/perusahaan/'.$pictureName.'" alt="" class="img-polaroid"/>';
+    }
+    
+    //mengambil semua list data PERUSAHAAN
+    public static function getAll()
+    {
+        $criteria=new CDbCriteria;
+        $criteria->order = 'NAMA ASC';
+        $model = Perusahaan::model()->findAll($criteria);
+        $data = CHtml::listData($model,'ID_PERUSAHAAN','NAMA');
+        return $data;
     }
 }
