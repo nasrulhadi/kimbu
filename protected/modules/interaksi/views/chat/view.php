@@ -24,15 +24,21 @@ $this->breadcrumbs = array(
                             <div class="chat_msg_body"></div>
                         </div>
 
-                        <div class="chat_msg clearfix">
-                            <div class="chat_msg_heading"><span class="chat_msg_date">12:44</span><span class="chat_user_name">Summer Throssell</span></div>
-                            <div class="chat_msg_body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at porta odio. Sed non consectetur neque. Donec nec enim eget ligula tristique scelerisque.</div>
-                        </div>
+                        <?php
+                        $dataProvider=new CActiveDataProvider('ChatPesan', array(
+                            'criteria'=>array(
+                                'condition'=>'ID_CHAT = :idChat AND STATUS = 1',
+                                'params'=>array('idChat'=>$model->ID_CHAT),
+                            ),
+                        ));
 
-                        <div class="chat_msg clearfix">
-                            <div class="chat_msg_heading"><span class="chat_msg_date">12:46</span><span class="chat_user_name">Johny Smith</span></div>
-                            <div class="chat_msg_body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at porta odio. Sed non consectetur neque. Donec nec enim eget ligula tristique scelerisque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at porta odio. Sed non consectetur neque. Donec nec enim eget ligula tristique scelerisque.</div>
-                        </div>
+                        $this->widget('zii.widgets.CListView', array(
+                            'dataProvider'=>$dataProvider,
+                            'itemView'=>'_userChat',
+                            'template'=>'{items}',
+                            'emptyText'=>''
+                        ));
+                        ?>
 
                     </div>
 
@@ -42,7 +48,8 @@ $this->breadcrumbs = array(
                             <a href="#" class="btn btn-mini send_msg">Send</a><a href="javascript:void(0)" class="btn btn-mini enter_msg active" data-toggle="button"><i class="icon-adt_enter"></i></a>
                         </div>
 
-                        <input type="hidden" name="chat_user" id="chat_user" value="Johny Smith" />
+                        <input type="hidden" name="chat_user" id="chat_user" value="<?php echo Yii::app()->user->name; ?>" />
+                        <input type="hidden" name="chat_id" id="chat_id" value="<?php echo $model->ID_CHAT; ?>" />
                     </div>
                 </div>
                 <div class="span4 chat_sidebar">
@@ -61,7 +68,7 @@ $this->breadcrumbs = array(
 
                         $this->widget('zii.widgets.CListView', array(
                             'dataProvider'=>$dataProvider,
-                            'itemView'=>'_userOnline',   // refers to the partial view named '_post'
+                            'itemView'=>'_userOnline',
                             'template'=>'{items}',
                         ));
                         ?>

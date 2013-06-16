@@ -28,7 +28,7 @@ class ChatController extends Controller
 	{
 		return array(
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('index','view','create','update','coba','delete'),
+				'actions'=>array('index','view','create','update','coba','delete','setmsg','getmsg'),
 				'users'=>array('@'),
 			),
 			array('deny',  // deny all users
@@ -73,6 +73,7 @@ class ChatController extends Controller
                                 
                                 $modelUserAktif->ID_CHAT = $model->ID_CHAT;
                                 $modelUserAktif->ID_USER = Yii::app()->user->getState('idUser');
+                                $modelUserAktif->NOTIFIKASI = 0;
                                 $modelUserAktif->STATUS = 1;
                                 $modelUserAktif->save();
 
@@ -80,6 +81,7 @@ class ChatController extends Controller
                                     $modelUserOnline = new ChatUser;
                                     $modelUserOnline->ID_CHAT = $model->ID_CHAT;
                                     $modelUserOnline->ID_USER = $_POST['Chat']['DIBUAT_OLEH'][$i];
+                                    $modelUserOnline->NOTIFIKASI = 1;
                                     $modelUserOnline->STATUS = 1;
                                     $modelUserOnline->save();
                                 }
@@ -220,5 +222,31 @@ class ChatController extends Controller
                 
                 $UserOut->setAttribute('TLP', '081222');
                 $UserOut->save();
+        }
+        
+        
+        public function actionSetmsg($id)
+        {
+                $modelUserOnline = new ChatPesan;
+                
+                if(isset($_POST['text'])){
+                    
+                        $text = $_POST['text'];
+                        $modelUserOnline->ID_CHAT = $id;
+                        $modelUserOnline->ID_USER = Yii::app()->user->getState('idUser');
+                        $modelUserOnline->PESAN = $_POST['text'];
+                        $modelUserOnline->STATUS = 1;
+                        $modelUserOnline->save();
+                }
+        }
+        
+        public function actionGetmsg($id)
+        {
+                $model = ChatUser::model()->findByPk($id);
+                
+                $this->layout = '//layouts/blankLayout';
+                $this->renderPartial('chatmsg',array(
+			'model'=>$model,
+		));
         }
 }
