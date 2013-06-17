@@ -15,6 +15,13 @@ class WebUser extends CWebUser {
     const ROLE_SURVEYOR='3';
     const ROLE_CLIENT='4';
     
+    // module 
+    const MODULE_ADMIN = 'root';
+    const MODULE_ADMIN_CS = 'admincs';
+    const MODULE_SURVEYOR = 'surveyor';
+    const MODULE_CLIENT = 'client';
+
+
     /**
      * this method is used for checking user right access
      * @param <string> $operation
@@ -49,6 +56,21 @@ class WebUser extends CWebUser {
     public static function isGuest()
     {
         return Yii::app()->user->isGuest;
+    }
+    
+    public static function getModuleByRole()
+    {
+        if(WebUser::isRoot())        {
+            return WebUser::MODULE_ADMIN;
+        }elseif (WebUser::isAdmin()) {
+            return WebUser::MODULE_ADMIN_CS;
+        }elseif (WebUser::isSurveyor()) {
+            return WebUser::MODULE_SURVEYOR;
+        }elseif (WebUser::isClient()) {
+            return WebUser::MODULE_CLIENT;
+        }else {
+            return NULL;
+        }
     }
 }
 ?>
