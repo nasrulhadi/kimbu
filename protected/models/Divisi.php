@@ -39,7 +39,7 @@ class Divisi extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('ID_PERUSAHAAN', 'numerical', 'integerOnly'=>true),
-            array('NAMA, ID_PERUSAHAAN', 'required'),
+            array('NAMA, ID_PERUSAHAAN', 'required', 'message'=>'{attribute} harus diisi'),
 			array('NAMA', 'length', 'max'=>45),
             array('LOGO', 'file', 'types'=>'jpeg, jpg, png', 'allowEmpty' => true),
 			array('KETERANGAN', 'safe'),
@@ -101,7 +101,7 @@ class Divisi extends CActiveRecord
     //menampilkan logo Divisi
     public function displayPicture($pictureName)
     {
-        if($pictureName==null || $pictureName=='')
+        if($pictureName==null || $pictureName=='tidakadalogo.jpg')
             echo '<img src="'.Yii::app()->theme->baseUrl.'/img/profilethumb.png" alt="" class="img-polaroid" />';
         else
             echo '<img src="'.Yii::app()->request->baseUrl.'/file/logo/divisi/'.$pictureName.'" alt="" class="img-polaroid"/>';

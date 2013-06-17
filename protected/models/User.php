@@ -54,8 +54,8 @@ class User extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('ID_DIVISI, TYPE, TERAKHIR_LOGIN, STATUS', 'numerical', 'integerOnly'=>true),
-            array('USERNAME, PASSWORD, NAMA, TYPE, ID_DIVISI', 'required'),
+			array('ID_DIVISI, TYPE, STATUS', 'numerical', 'integerOnly'=>true),
+            array('NAMA, ID_DIVISI, USERNAME, PASSWORD, TYPE', 'required', 'message'=>'{attribute} harus diisi'),
             array('USERNAME', 'unique'),
             array('USERNAME', 'length', 'max'=>20),
             array('PASSWORD', 'length', 'min'=>6, 'max'=>255),
@@ -64,7 +64,7 @@ class User extends CActiveRecord
             array('TLP, HP', 'length', 'max'=>15),
 			array('TANGGAL_DIBUAT', 'safe'),
             array('FOTO', 'file', 'types'=>'jpg, jpeg, png', 'allowEmpty' => true),
-            array('REPEAT', 'compare', 'compareAttribute'=>'PASSWORD'),
+            //array('REPEAT', 'compare', 'compareAttribute'=>'PASSWORD'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('USERNAME, NAMA, EMAIL, STATUS', 'safe', 'on'=>'search'),
@@ -95,7 +95,7 @@ class User extends CActiveRecord
 			'USERNAME' => 'Username',
 			'PASSWORD' => 'Password',
             'REPEAT' => 'Konfirmasi Password',
-			'NAMA' => 'Nama',
+			'NAMA' => 'Nama Lengkap',
 			'EMAIL' => 'Email',
 			'TLP' => 'No. Telepon',
 			'HP' => 'Hp',
@@ -158,7 +158,7 @@ class User extends CActiveRecord
     //menampilkan foto
     public function displayPicture($pictureName)
     {
-        if($pictureName==null || $pictureName=='')
+        if($pictureName==null || $pictureName=='tidakadafoto.jpg')
             echo '<img src="'.Yii::app()->theme->baseUrl.'/img/profilethumb.png" alt="" class="img-polaroid" />';
         else
             echo '<img src="'.Yii::app()->request->baseUrl.'/file/foto/'.$pictureName.'" alt="" class="img-polaroid"/>';

@@ -9,7 +9,7 @@
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'perusahaan-form',
 	'enableAjaxValidation'=>false,
-    'htmlOptions' => array('enctype' => 'multipart/form-data'),
+    'htmlOptions' => array('enctype' => 'multipart/form-data', 'class'=>'form-horizontal'),
 )); ?>
 
 	<p class="note">Isian dengan tanda <span class="required">*</span> harus diisi.</p>
@@ -65,7 +65,7 @@
 	</div>
 
 	<div class="row">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Submit' : 'Simpan',array('class' => 'btn btn-primary')); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Submit' : 'Simpan',array('class' => 'btn btn-gebo')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

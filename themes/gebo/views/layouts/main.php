@@ -20,7 +20,7 @@
             <link rel="stylesheet" href="<?php echo $baseUrl; ?>/lib/sticky/sticky.css" />    
         <!-- splashy icons -->
             <link rel="stylesheet" href="<?php echo $baseUrl; ?>/img/splashy/splashy.css" />
-	<!-- colorbox -->
+        <!-- colorbox -->
             <link rel="stylesheet" href="<?php echo $baseUrl; ?>/lib/colorbox/colorbox.css" />
         <!-- CLEditor -->
             <link rel="stylesheet" href="<?php echo $baseUrl; ?>/lib/CLEditor/jquery.cleditor.css" />
@@ -210,7 +210,7 @@
                                             <div class="accordion-body collapse" id="collapseOne">
                                                 <div class="accordion-inner">
                                                     <ul class="nav nav-list">
-                                                        <li><?php echo CHtml::link('Survei', array('#')); ?></li>
+                                                        <li class="<?php echo ($this->ID==="survei")?"active":"";?>"><?php echo CHtml::link('Survei', array('#')); ?></li>
                                                     </ul>
 
                                                 </div>
@@ -331,8 +331,6 @@
             <script src="<?php echo $baseUrl; ?>/lib/list_js/list.min.js"></script>
             <script src="<?php echo $baseUrl; ?>/lib/list_js/plugins/paging/list.paging.js"></script>
 
-            <!-- colorbox -->
-            <script src="<?php echo $baseUrl; ?>/lib/colorbox/jquery.colorbox.min.js"></script>
             <!-- datatable -->
             <script src="<?php echo $baseUrl; ?>/lib/datatables/jquery.dataTables.min.js"></script>
             <!-- additional sorting for datatables -->
@@ -354,8 +352,15 @@
             <script src="<?php echo $baseUrl; ?>/lib/chosen/chosen.jquery.min.js"></script>
             <!-- form functions -->
             <script src="<?php echo $baseUrl; ?>/js/gebo_choosen.js"></script>
-
-	
+            
+            <!-- colorbox -->
+            <script src="<?php echo $baseUrl; ?>/lib/colorbox/jquery.colorbox.min.js"></script>
+            <!-- gallery functions -->
+            <script src="<?php echo $baseUrl; ?>/js/gebo_gallery.js"></script>
+            <!-- multi-column layout -->
+            <script src="<?php echo $baseUrl; ?>/js/jquery.imagesloaded.min.js"></script>
+            <script src="<?php echo $baseUrl; ?>/js/jquery.wookmark.js"></script>
+            
 			<script>
 				$(document).ready(function() {
 					//* show all elements & remove preloader

@@ -2,15 +2,15 @@
 /* @var $this DivisiController */
 /* @var $model Divisi */
 
-$this->pageTitle=Yii::app()->name . ' - Buat Divisi';
+$this->pageTitle=Yii::app()->name . ' - Tambah Divisi';
 
 $this->breadcrumbs=array(
 	'Dashboard'=>array('/'),
 	'Manajemen Divisi'=>array('index'),
-    'Buat Divisi Baru'
+    'Tambah Divisi'
 );
 ?>
 
-<h3 class="heading">Buat Divisi</h3>
+<h3 class="heading">Tambah Divisi</h3>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

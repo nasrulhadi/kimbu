@@ -32,7 +32,7 @@ class UbahPasswordForm extends CFormModel
 	
 	public function cekOldPassword($password)
 	{
-		$model=User::model()->findByPk(Yii::app()->user->id);
+		$model=User::model()->findByPk(Yii::app()->user->idUser);
 		if(md5($password)!=$model->PASSWORD)
 			return false;
 		else
@@ -41,7 +41,7 @@ class UbahPasswordForm extends CFormModel
 	
 	public function savePassword($password)
 	{
-		$model=User::model()->findByPk(Yii::app()->user->id);
+		$model=User::model()->findByPk(Yii::app()->user->idUser);
 		$model->setAttribute('PASSWORD',md5($password));
 		if($model->save())
 			return true;

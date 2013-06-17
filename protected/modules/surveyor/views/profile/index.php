@@ -12,14 +12,17 @@ $this->breadcrumbs=array(
 <?php echo @Yii::app()->user->getFlash('info');?>
 <div class="row-fluid">
     <div class="span3">
-        <div class="w-box">
+<!--        <div class="w-box">
             <div class="w-box-header">Foto User</div>
             <div class="w-box-content cnt_a">
                 <div class="profilethumb">
-                    <?php echo $model->displayPicture($model->FOTO);?>
+                    <?php //echo $model->displayPicture($model->FOTO);?>
                 </div>
             </div>
-        </div>
+        </div>-->
+        <h4>Foto User</h4></br>
+            <a href="<?php echo Yii::app()->request->baseUrl; ?>/file/foto/<?php echo $model->FOTO; ?>" rel="gallery" class="cboxElement"><?php echo $model->displayPicture($model->FOTO);?></a>
+            
     </div>
     <div class="span9">
         <div class="w-box">

@@ -62,7 +62,11 @@
     
     <div class="row">
 		<?php echo $form->labelEx($model,'TYPE'); ?>
-		<?php echo $form->dropDownList($model,'TYPE',$model->optionsRoles()); ?>
+		<?php echo $form->dropDownList($model,'TYPE',$model->optionsRoles(),array(
+            //'class'=>'uniformselect',
+            'prompt'=>'Pilih Hak Akses',
+            'style'=>'width:250px;'
+            )); ?>
 		<?php echo $form->error($model,'TYPE'); ?>
 	</div>
 
@@ -84,6 +88,12 @@
 		<?php echo $form->error($model,'HP'); ?>
 	</div>
     
+    <div class="row">
+		<?php echo $form->labelEx($model,'FOTO'); ?>
+		<?php echo $form->fileField($model,'FOTO'); ?>
+		<?php echo $form->error($model,'FOTO'); ?>
+	</div>
+    
     <div class="row compactRadioGroup">
 		<?php echo $form->labelEx($model,'STATUS'); ?><br>
 		<?php echo $form->radioButtonList($model,'STATUS',array(User::STATUS_AKTIF=>'Aktif', User::STATUS_NON_AKTIF=>'Tidak Aktif'),array(
@@ -92,14 +102,8 @@
 		<?php echo $form->error($model,'STATUS'); ?>
 	</div>
     
-    <div class="row">
-		<?php echo $form->labelEx($model,'FOTO'); ?>
-		<?php echo $form->fileField($model,'FOTO'); ?>
-		<?php echo $form->error($model,'FOTO'); ?>
-	</div>
-    
-	<div class="form-actions">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Buat User' : 'Simpan Perubahan',array('class' => 'btn btn-gebo')); ?>
+	<div class="row">
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Simpan' : 'Simpan Perubahan',array('class' => 'btn btn-gebo')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

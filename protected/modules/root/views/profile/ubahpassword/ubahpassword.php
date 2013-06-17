@@ -5,6 +5,7 @@
 
 $this->pageTitle=Yii::app()->name . ' - Ubah Password';
 $this->breadcrumbs=array(
+    'Dashboard'=>array('./'),
     'Profile'=>array('index'),
 	'Ubah Password'
 );

@@ -7,10 +7,10 @@ $this->pageTitle=Yii::app()->name . ' - Buat Perusahaan';
 $this->breadcrumbs=array(
     'Dashboard'=>'/',
 	'Manajemen Perusahaan'=>array('index'),
-	'Buat Perusahaan',
+	'Tambah Perusahaan',
 );
 ?>
 
-<h3 class="heading">Buat Perusahaan</h3>
+<h3 class="heading">Tambah Perusahaan</h3>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

@@ -2,20 +2,16 @@
 /* @var $this DivisiController */
 /* @var $model Divisi */
 
-$this->breadcrumbs=array(
-	'Divisis'=>array('index'),
-	$model->ID_DIVISI=>array('view','id'=>$model->ID_DIVISI),
-	'Update',
-);
+$this->pageTitle=Yii::app()->name . ' - Edit Divisi';
 
-$this->menu=array(
-	array('label'=>'List Divisi', 'url'=>array('index')),
-	array('label'=>'Create Divisi', 'url'=>array('create')),
-	array('label'=>'View Divisi', 'url'=>array('view', 'id'=>$model->ID_DIVISI)),
-	array('label'=>'Manage Divisi', 'url'=>array('admin')),
+$this->breadcrumbs=array(
+    'Dashboard'=>array('./'),
+	'Manajemen Divisi'=>array('index'),
+	$model->NAMA=>array('view','id'=>$model->ID_DIVISI),
+	'Edit Divisi',
 );
 ?>
 
-<h1>Update Divisi <?php echo $model->ID_DIVISI; ?></h1>
+<h3 class="heading">Edit Divisi | <?php echo $model->NAMA; ?></h3>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

@@ -26,7 +26,7 @@ $('.search-form form').submit(function(){
 <h3 class="heading">Manajemen Perusahaan</h3>
 
 <div class="pull-left" style="margin-bottom: 20px;">
-    <?php echo CHtml::link('<span class="icon-plus icon-white"></span> Buat Perusahaan', array('/root/perusahaan/create'), array('class' => 'btn btn-gebo')); ?>
+    <?php echo CHtml::link('<span class="icon-plus icon-white"></span> Tambah Perusahaan', array('/root/perusahaan/create'), array('class' => 'btn btn-gebo')); ?>
     <?php echo CHtml::link('<span class="icon-search"></span> Pencarian','#',array('class'=>'btn search-button')); ?>
 </div>
 </br>
