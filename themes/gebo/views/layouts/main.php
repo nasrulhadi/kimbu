@@ -207,10 +207,10 @@
                                                     <i class="icon-folder-open"></i> Divisi
                                                 </a>
                                             </div>
-                                            <div class="accordion-body collapse" id="collapseOne">
+                                            <div class="accordion-body collapse <?php echo ($this->ID==="survei")?"in":"";?>" id="collapseOne">
                                                 <div class="accordion-inner">
                                                     <ul class="nav nav-list">
-                                                        <li class="<?php echo ($this->ID==="survei")?"active":"";?>"><?php echo CHtml::link('Survei', array('#')); ?></li>
+                                                        <li class="<?php echo ($this->ID==="survei")?"active":"";?>"><?php echo CHtml::link('Survei', array('/surveyor/survei')); ?></li>
                                                     </ul>
 
                                                 </div>
@@ -225,7 +225,7 @@
                                             <div class="accordion-body collapse" id="collapseTwo">
                                                 <div class="accordion-inner">
                                                     <ul class="nav nav-list">
-                                                        <li><?php echo CHtml::link('Chat', array('#')); ?></li>
+                                                        <li><?php echo CHtml::link('Chat', array('/interaksi/chat')); ?></li>
                                                     </ul>
 
                                                 </div>
@@ -345,9 +345,10 @@
             <script src="<?php echo $baseUrl; ?>/lib/CLEditor/jquery.cleditor.icon.min.js"></script>
             <!-- date library -->
             <script src="<?php echo $baseUrl; ?>/lib/moment_js/moment.min.js"></script>
+            <?php if($this->ID=="chat"){ ?>
             <!-- chat functions -->
             <script src="<?php echo $baseUrl; ?>/js/gebo_chat.js"></script>
-
+            <?php } ?>
             <!-- enhanced select (chosen) -->
             <script src="<?php echo $baseUrl; ?>/lib/chosen/chosen.jquery.min.js"></script>
             <!-- form functions -->

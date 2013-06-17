@@ -21,7 +21,9 @@ $('.search-form form').submit(function(){
 
 <h3 class="heading">Obrolan</h3>
 <div class="pull-left" style="margin-bottom: 20px;">
+    <?php if(WebUser::isAdmin()) { ?>
     <?php echo CHtml::link('<span class="icon-plus icon-white"></span> Buat Topik', array('/interaksi/chat/create'), array('class' => 'btn btn-gebo')); ?>
+    <?php } ?>
     <?php echo CHtml::link('<span class="icon-search"></span> Pencarian', '#', array('class' => 'btn search-button')); ?>
 </div>
 </br>
