@@ -12,16 +12,12 @@ $this->breadcrumbs=array(
 <?php echo @Yii::app()->user->getFlash('info');?>
 <div class="row-fluid">
     <div class="span3">
-<!--        <div class="w-box">
-            <div class="w-box-header">Foto User</div>
-            <div class="w-box-content cnt_a">
-                <div class="profilethumb">
-                    <?php //echo $model->displayPicture($model->FOTO);?>
-                </div>
-            </div>
-        </div>-->
-        <h4>Foto User</h4></br>
-            <a href="<?php echo Yii::app()->request->baseUrl; ?>/file/foto/<?php echo $model->FOTO; ?>" rel="gallery" class="cboxElement"><?php echo $model->displayPicture($model->FOTO);?></a>
+        <h4 class="heading">Foto User</h4>
+<!--            <a href="<?php //echo Yii::app()->request->baseUrl; ?>/file/foto/<?php //echo $model->FOTO; ?>" rel="gallery" class="cboxElement"><?php //echo $model->displayPicture($model->FOTO);?></a>-->
+        <div class="profilethumb">
+            <a href="<?php echo Yii::app()->createUrl('surveyor/profile/editfoto');?>" data-toggle="modal" onclick="showOnModal(jQuery(this).attr('href'))" style="display: inline;"><i class="icon-folder-open icon-white"></i> Ubah Foto</a>
+            <?php echo $model->displayPicture($model->FOTO);?>
+        </div>    
             
     </div>
     <div class="span9">
@@ -72,3 +68,43 @@ $this->breadcrumbs=array(
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+function showOnModal(url)
+{
+    event.preventDefault()
+    jQuery('#unggahFoto').removeData("modal");
+    jQuery('#unggahFoto').modal({remote: url});
+}
+jQuery(document).ready(function(){
+
+	jQuery('.profilethumb').hover(function(){
+		jQuery(this).find('a').fadeIn();
+	},function(){
+		jQuery(this).find('a').fadeOut();
+	});
+	
+	jQuery('.taglist a').click(function(){
+		return false;
+	});
+	jQuery('.taglist a span').click(function(){
+		jQuery(this).parent().remove();
+		return false;
+	});
+	
+});
+</script>
+
+<div aria-hidden="false" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" class="modal hide fade in" id="unggahFoto">
+    <div class="modal-header">
+        <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+        <h3 id="myModalLabel"><span id="modalTitle">Unggah Foto</span></h3>
+    </div>
+    <div class="modal-body">
+        <div id="modalContent"></div>
+    </div>
+    <div class="modal-footer">
+        <button data-dismiss="modal" class="btn">Tutup</button>
+    </div>
+    
+</div><!--#myModal-->

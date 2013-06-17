@@ -29,7 +29,7 @@ $this->breadcrumbs=array(
                             <i class="icon-cog"></i> <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><?php echo CHtml::link('<span class="icon-plus"></span> Edit',array('perusahaan/update/'.$model->ID_PERUSAHAAN));?></li>
+                            <li><?php echo CHtml::link('<span class="icon-edit"></span> Edit',array('perusahaan/update/'.$model->ID_PERUSAHAAN));?></li>
                         </ul>
                     </div>
                 </div>

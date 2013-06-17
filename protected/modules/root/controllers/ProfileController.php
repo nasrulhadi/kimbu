@@ -111,7 +111,7 @@ class ProfileController extends Controller
                     //mengambil value dari fileupload
                     $model->FOTO = CUploadedFile::getInstance($model, 'FOTO');
                     if ($model->FOTO) {
-                        $fullImgName = $model->NAMA.'-foto-'.$model->FOTO;
+                        $fullImgName = $model->ID_USER.'-foto-'.$model->FOTO;
                         //mengcopy file ke drive server
                         $model->FOTO->saveAs(Yii::app()->basePath . '/../file/foto/' . $fullImgName);
                         $model->setAttribute('FOTO', $fullImgName); //memberikan nama lampiran sesuai dengan nama file yang diupload
