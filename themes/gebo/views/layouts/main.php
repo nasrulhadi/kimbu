@@ -61,7 +61,7 @@
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="icon-user icon-white"></span> <?php echo ucwords(strtolower(Yii::app()->user->name)); ?> <b class="caret"></b></a>
                                     <ul class="dropdown-menu">
-                                        <li><?php echo CHtml::link('<span class="icon-edit"></span> Profile', array('./profile')); ?></li>
+                                        <li><?php echo CHtml::link('<span class="icon-edit"></span> Profile', array('/'.WebUser::getModuleByRole().'/profile')); ?></li>
                                         
                                         <li class="divider"></li>
                                         <li><?php echo CHtml::link('<span class="icon-off"></span> Log Out', array('/site/logout')); ?></li>

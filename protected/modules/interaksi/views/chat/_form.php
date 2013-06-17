@@ -10,7 +10,7 @@ $form = $this->beginWidget('CActiveForm', array(
     <?php echo $form->errorSummary($model); ?>
     
     <div class="control-group">
-        <label for="Chat_NAMA" class="control-label">Nama Ruang</label>
+        <label for="Chat_NAMA" class="control-label">Nama Topik</label>
         <div class="controls">
             <?php echo $form->textField($model, 'NAMA', array('size' => 40, 'maxlength' => 40, 'class' => 'input-xlarge')); ?>
             <?php echo $form->error($model, 'NAMA'); ?>

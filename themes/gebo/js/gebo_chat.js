@@ -104,20 +104,15 @@ gebo_chat = {
 };
 
 function loadMsg() {
-    var oldscrollHeight = $(".msg_window").attr("scrollHeight") - 20;
     var chat_id = $('#chat_id').val();
     $.ajax({
         url: "../getmsg/" + chat_id,
         cache: false,
         success: function(html) {
             $(".msg_window").html(html);				
-//            var newscrollHeight = $(".msg_window").attr("scrollHeight") - 20;
-//            if (newscrollHeight > oldscrollHeight) {
-//                $(".msg_window").animate({scrollTop: newscrollHeight}, 'normal');
-//            }
-            $('.msg_window').stop().animate({
-                scrollTop: $(".msg_window").offset().top
-            }, 2000);
+//            $('.msg_window').stop().animate({
+//                scrollTop: $(".msg_window").offset().top
+//            }, 2000);
         },
     });
 }

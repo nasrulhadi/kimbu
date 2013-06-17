@@ -242,7 +242,7 @@ class ChatController extends Controller
         
         public function actionGetmsg($id)
         {
-                $model = ChatUser::model()->findByPk($id);
+                $model = Chat::model()->findByPk($id);
                 
                 $this->layout = '//layouts/blankLayout';
                 $this->renderPartial('chatmsg',array(

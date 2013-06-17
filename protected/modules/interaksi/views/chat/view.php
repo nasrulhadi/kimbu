@@ -15,7 +15,7 @@ $this->breadcrumbs = array(
             <div class="row-fluid">
                 <div class="span8 chat_content">
                     <div class="chat_heading clearfix">
-                        <?php echo ucwords($model->NAMA); ?>
+                        Topik : <?php echo ucwords($model->NAMA); ?>
                     </div>
 
                     <div class="msg_window">
@@ -23,23 +23,21 @@ $this->breadcrumbs = array(
                             <div class="chat_msg_heading"><span class="chat_msg_date"></span><span class="chat_user_name"></span></div>
                             <div class="chat_msg_body"></div>
                         </div>
-
+                        
                         <?php
-                        $dataProvider=new CActiveDataProvider('ChatPesan', array(
-                            'criteria'=>array(
-                                'condition'=>'ID_CHAT = :idChat AND STATUS = 1',
-                                'params'=>array('idChat'=>$model->ID_CHAT),
+                        $dataProvider = new CActiveDataProvider('ChatPesan', array(
+                            'criteria' => array(
+                                'condition' => 'ID_CHAT = :idChat AND STATUS = 1',
+                                'params' => array(':idChat' => $model->ID_CHAT),
                             ),
+                            'pagination'=>false,
                         ));
 
-                        $this->widget('zii.widgets.CListView', array(
-                            'dataProvider'=>$dataProvider,
-                            'itemView'=>'_userChat',
-                            'template'=>'{items}',
-                            'emptyText'=>''
-                        ));
+                        $getListMsg = $dataProvider->getData();
+                        foreach ($getListMsg as $i => $item)
+                            Yii::app()->controller->renderPartial('_userChat', array('index' => $i, 'data' => $item, 'widget' => $this));
                         ?>
-
+                            
                     </div>
 
                     <div class="chat_editor_box">
@@ -52,27 +50,32 @@ $this->breadcrumbs = array(
                         <input type="hidden" name="chat_id" id="chat_id" value="<?php echo $model->ID_CHAT; ?>" />
                     </div>
                 </div>
-                <div class="span4 chat_sidebar">
-                    <div class="chat_heading clearfix">
-                        User Dalam Obrolan
-                    </div>
-                    <ul class="chat_user_list">
-                        <?php
-                        $dataProvider=new CActiveDataProvider('ChatUser', array(
-                            'criteria'=>array(
-                                'condition'=>'ID_CHAT = :idChatUser AND STATUS = 1',
-                                'params'=>array('idChatUser'=>$model->ID_CHAT),
-                                'order'=>'ID_CHAT_USER ASC',
-                            ),
-                        ));
+                <div class="span4">
+                    <div class="chat_sidebar">
+                        <div class="chat_heading clearfix">
+                            User Dalam Obrolan
+                        </div>
+                        <ul class="chat_user_list clearfix">
+                            <?php
+                            $dataProvider = new CActiveDataProvider('ChatUser', array(
+                                'criteria' => array(
+                                    'condition' => 'ID_CHAT = :idChatUser AND STATUS = 1',
+                                    'params' => array('idChatUser' => $model->ID_CHAT),
+                                    'order' => 'ID_CHAT_USER ASC',
+                                ),
+                            ));
 
-                        $this->widget('zii.widgets.CListView', array(
-                            'dataProvider'=>$dataProvider,
-                            'itemView'=>'_userOnline',
-                            'template'=>'{items}',
-                        ));
-                        ?>
-                    </ul>
+                            $this->widget('zii.widgets.CListView', array(
+                                'dataProvider' => $dataProvider,
+                                'itemView' => '_userOnline',
+                                'template' => '{items}',
+                            ));
+                            ?>
+                        </ul>
+                    </div>
+                    <div style="margin-top: 20px">
+                        <?php echo CHtml::link('<span class="icon-remove icon-white"></span> Keluar dan Hapus Obrolan', array('keluar', 'id' => $model->ID_CHAT), array('class' => 'btn btn-danger')); ?>
+                    </div>
                 </div>
             </div>
         </div>
