@@ -14,22 +14,36 @@ class SurveiController extends Controller
 		$survei = Survei::model()->findByPk($id);
 	
 		if(!empty($_POST)){
+		
 			$respon = new Respon;
 			$respon->ID_SURVEI = $survei->ID_SURVEI;
 			$respon->NAMA = Yii::app()->user->name;
 			$respon->save();
 			$respon->ID_RESPON;
-			foreach($_POST as $used_form){
-				foreach($used_form as $question_id=>$detail_respon){
+			
+			foreach($survei->surveiForms as $used_form){
+				foreach($used_form->surveiPertanyaans as $question){
 					$respon_detail = new ResponDetail;
-					$respon_detail->RESPON = json_encode($detail_respon);
-					$respon_detail->ID_PERTANYAAN = $question_id;
+					if($question->TYPE!=SurveiPertanyaan::UPLOAD){
+						if(isset($_POST[$used_form->ID_SURVEI_FORM][$question->ID_SURVEI_PERTANYAAN])){
+							$respon_detail->RESPON = json_encode($_POST[$used_form->ID_SURVEI_FORM][$question->ID_SURVEI_PERTANYAAN]);
+						}
+					}
+					else{
+					$upload_data = CUploadedFile::getInstanceByName($used_form->ID_SURVEI_FORM.'['.$question->ID_SURVEI_PERTANYAAN.']');
+					if(!is_null($upload_data)){
+							$inputFileName = Yii::app()->basePath.'/../file/survei/'.$upload_data->getName();
+							$upload_data->saveAs($inputFileName);
+							$respon_detail->RESPON = json_encode(Yii::app()->baseUrl.'file/survei/'.$upload_data->getName());
+						}
+					}
+					$respon_detail->ID_PERTANYAAN = $question->ID_SURVEI_PERTANYAAN;
 					$respon_detail->ID_RESPON = $respon->ID_RESPON;
 					$respon_detail->save();
 				
 				}
 			}
-			$this->redirect('index');
+			$this->redirect(Yii::app()->createUrl('surveyor/survei/detailsurvei/'.$id));
 		}
 		
 		$this->render('input',array('model'=>$survei));

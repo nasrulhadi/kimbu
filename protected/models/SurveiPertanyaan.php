@@ -24,6 +24,7 @@ class SurveiPertanyaan extends CActiveRecord
 	const RADIO = 3;
 	const CHECKBOX = 4;
 	const DROPDOWN = 5;
+	const UPLOAD = 6;
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.

@@ -11,6 +11,7 @@ $this->breadcrumbs=array(
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'survei-form',
 	'enableAjaxValidation'=>false,
+	 'htmlOptions'=>array('enctype'=>'multipart/form-data'),
 )); ?>
 
 	    <div class="w-box">

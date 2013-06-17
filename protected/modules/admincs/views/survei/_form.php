@@ -36,6 +36,9 @@
 			case SurveiPertanyaan::DROPDOWN:
 				echo CHtml::dropDownList($model->ID_SURVEI_FORM.'['.$pertanyaan->ID_SURVEI_PERTANYAAN.']','',CHtml::ListData($pertanyaan->surveiPilihanJawabans,'ID_SURVEI_JAWABAN','JAWABAN'));
 				break;
+			case SurveiPertanyaan::UPLOAD:
+				echo CHtml::FileField($model->ID_SURVEI_FORM.'['.$pertanyaan->ID_SURVEI_PERTANYAAN.']');
+				break;
 		}
 	?>
 	</td>
