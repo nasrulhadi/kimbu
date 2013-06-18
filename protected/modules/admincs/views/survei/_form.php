@@ -39,6 +39,20 @@
 			case SurveiPertanyaan::UPLOAD:
 				echo CHtml::FileField($model->ID_SURVEI_FORM.'['.$pertanyaan->ID_SURVEI_PERTANYAAN.']');
 				break;
+			case SurveiPertanyaan::RADIO_FIELD:
+				$options = array();
+				foreach($pertanyaan->surveiPilihanJawabans as $jawaban){
+					$options[$jawaban->ID_SURVEI_JAWABAN] = str_replace('{input}',CHtml::TextField($model->ID_SURVEI_FORM.'['.$pertanyaan->ID_SURVEI_PERTANYAAN.'][\'FIELD\']'),$jawaban->JAWABAN); 
+				}
+				echo CHtml::radioButtonList($model->ID_SURVEI_FORM.'['.$pertanyaan->ID_SURVEI_PERTANYAAN.'][\'RADIO\']','',$options);
+				break;
+			case SurveiPertanyaan::CHECKBOX_FIELD:
+				$options = array();
+				foreach($pertanyaan->surveiPilihanJawabans as $jawaban){
+					$options[$jawaban->ID_SURVEI_JAWABAN] = str_replace('{input}',CHtml::TextField($model->ID_SURVEI_FORM.'['.$pertanyaan->ID_SURVEI_PERTANYAAN.'][\'FIELD\'][]'),$jawaban->JAWABAN); 
+				}
+				echo CHtml::checkBoxList($model->ID_SURVEI_FORM.'['.$pertanyaan->ID_SURVEI_PERTANYAAN.'][\'CHECKBOX\']','',$options);
+				break;
 		}
 	?>
 	</td>
