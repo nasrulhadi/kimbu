@@ -166,11 +166,11 @@
                                                     <i class="icon-folder-open"></i> <?php echo Yii::app()->user->divisi; ?>
                                                 </a>
                                             </div>
-                                            <div class="accordion-body collapse" id="collapseOne">
+                                            <div class="accordion-body collapse <?php echo ($this->ID==="survei")?"in":"";?>" id="collapseOne">
                                                 <div class="accordion-inner">
                                                     <ul class="nav nav-list">
                                                         <li><?php echo CHtml::link('User', array('#')); ?></li>
-                                                        <li><?php echo CHtml::link('Survei', array('#')); ?></li>
+                                                        <li class="<?php echo ($this->ID==="survei")?"active":"";?>"><?php echo CHtml::link('Survei', array('/admincs/survei')); ?></li>
                                                         <li><?php echo CHtml::link('Grafik', array('#')); ?></li>
                                                     </ul>
 

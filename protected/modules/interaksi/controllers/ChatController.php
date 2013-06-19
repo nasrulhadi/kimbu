@@ -235,6 +235,7 @@ class ChatController extends Controller
                         $modelUserOnline->ID_CHAT = $id;
                         $modelUserOnline->ID_USER = Yii::app()->user->getState('idUser');
                         $modelUserOnline->PESAN = $_POST['text'];
+                        $modelUserOnline->TANGGAL_DIBUAT = date("Y-m-d H:i:s");
                         $modelUserOnline->STATUS = 1;
                         $modelUserOnline->save();
                 }

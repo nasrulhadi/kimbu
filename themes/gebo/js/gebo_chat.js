@@ -76,7 +76,7 @@ gebo_chat = {
         if (tr_msg != "") {
             var msg_cloned = $('.msg_clone').clone();
             $('.msg_window').append(msg_cloned);
-            msg_cloned.find('.chat_msg_date').html(moment().format('HH:mm'));
+            //msg_cloned.find('.chat_msg_date').html(moment().format('HH:mm'));
             msg_cloned.find('.chat_msg_body').html(tr_msg);
             msg_cloned.find('.chat_user_name').html(chat_user);
             msg_cloned.removeClass('msg_clone').show();
@@ -113,8 +113,8 @@ function loadMsg() {
 //            $('.msg_window').stop().animate({
 //                scrollTop: $(".msg_window").offset().top
 //            }, 2000);
-        },
+        }
     });
 }
 
-setInterval(loadMsg, 8000);
+setInterval(loadMsg, 10000);
