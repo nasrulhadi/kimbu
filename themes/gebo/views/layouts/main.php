@@ -163,7 +163,7 @@
                                         <div class="accordion-group">
                                             <div class="accordion-heading">
                                                 <a href="#collapseOne" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
-                                                    <i class="icon-folder-open"></i> Divisi
+                                                    <i class="icon-folder-open"></i> <?php echo Yii::app()->user->divisi; ?>
                                                 </a>
                                             </div>
                                             <div class="accordion-body collapse" id="collapseOne">
@@ -203,17 +203,15 @@
                                         <div class="accordion-group">
                                             <div class="accordion-heading">
                                                 <a href="#collapseOne" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
-                                                    <i class="icon-folder-open"></i> Teamwork Activasion
+                                                    <i class="icon-folder-open"></i> <?php echo Yii::app()->user->divisi; ?>
                                                 </a>
                                             </div>
                                             <div class="accordion-body collapse <?php echo ($this->ID==="survei")?"in":"";?>" id="collapseOne">
                                                 <div class="accordion-inner">
                                                     <ul class="nav nav-list">
-                                                        <li class="nav-header">Survey</li>
-<!--                                                        <li class="<?php //echo ($this->ID==="survei")?"active":"";?>"><?php// echo CHtml::link('Survey Toko', array('#')); ?></li>
-                                                        <li class="<?php //echo ($this->ID==="survei")?"active":"";?>"><?php// echo CHtml::link('Survey End User', array('#')); ?></li>-->
-
-                                                        <li class="<?php echo ($this->ID==="survei")?"active":"";?>"><?php echo CHtml::link('Survei', array('/surveyor/survei')); ?></li>
+                                                        <li class="nav-header">Survei</li>
+                                                       <li class="<?php echo ($this->ID==="survei")?"active":"";?>"><?php echo CHtml::link('Survei Toko', array('/surveyor/survei')); ?></li>
+                                                        <li class="<?php echo ($this->ID==="surveipublic")?"active":"";?>"><?php echo CHtml::link('Survei End User', array('#')); ?></li>
                                                     </ul>
 
                                                 </div>
@@ -225,10 +223,10 @@
                                                     <i class="icon-comment"></i> Interaksi
                                                 </a>
                                             </div>
-                                            <div class="accordion-body collapse" id="collapseTwo">
+                                            <div class="accordion-body collapse <?php echo ($getModule==="interaksi")?"in":"";?>" id="collapseTwo">
                                                 <div class="accordion-inner">
                                                     <ul class="nav nav-list">
-                                                        <li><?php echo CHtml::link('Chat', array('/interaksi/chat')); ?></li>
+                                                        <li class="<?php echo ($this->ID==="chat")?"active":"";?>"><?php echo CHtml::link('Chat', array('/interaksi/chat')); ?></li>
                                                     </ul>
 
                                                 </div>
