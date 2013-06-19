@@ -12,22 +12,12 @@
 )); ?>
 
 	<div class="row">
-		<?php echo $form->label($model,'NAMA'); ?>
-		<?php echo $form->textField($model,'NAMA',array('size'=>45,'maxlength'=>45)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'DIBUAT_OLEH'); ?>
-		<?php echo $form->textField($model,'DIBUAT_OLEH'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'STATUS'); ?>
-		<?php echo $form->textField($model,'STATUS'); ?>
+		<?php echo $form->labelEx($model,'STATUS'); ?><br>
+		<?php echo $form->dropDownList($model,'STATUS',array(User::STATUS_AKTIF=>'Aktif', User::STATUS_NON_AKTIF=>'Tidak Aktif')); ?>
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton('Search'); ?>
+		<?php echo CHtml::submitButton('Tampilkan Hasil', array('class'=>'btn btn-warning')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

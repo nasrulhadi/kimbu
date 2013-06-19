@@ -9,7 +9,6 @@ class UserIdentity extends CUserIdentity
 {
 	public function authenticate()
 	{
-        //$users = User::model()->findByAttributes(array('USERNAME'=>$th));
         $users = User::model()->findByAttributes(array('USERNAME'=>$this->username));
         $criteria = new CDbCriteria;
         $criteria->condition = 'ID_DIVISI=:iddivisi';
@@ -26,7 +25,8 @@ class UserIdentity extends CUserIdentity
             $this->setState('type', $users->TYPE);
             $this->setState('idUser',$users->ID_USER);
             $this->setState('idDivisi', $users->ID_DIVISI);
-            $this->setState('divisi', $record->NAMA);
+            $this->setState('divisi', $users->Divisi->NAMA);
+            $this->setState('perusahaan', $record->Perusahaan->NAMA);
             $this->setState('email', $users->EMAIL);
 			$this->errorCode=self::ERROR_NONE;
         }

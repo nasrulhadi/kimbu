@@ -55,7 +55,7 @@
                 <div class="navbar navbar-fixed-top">
                     <div class="navbar-inner">
                         <div class="container-fluid">
-                            <?php echo CHtml::link('<i class="icon-home icon-white"></i> ' . Yii::app()->user->divisi, array('/'), array('class' => 'brand')); ?>
+                            <?php echo CHtml::link('<i class="icon-home icon-white"></i> ' . Yii::app()->user->perusahaan . ' - ' . ucwords(strtolower(Yii::app()->user->divisi)), array('/'), array('class' => 'brand')); ?>
                             <ul class="nav user_menu pull-right">
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="icon-user icon-white"></span> <?php echo ucwords(strtolower(Yii::app()->user->name)); ?> <b class="caret"></b></a>
@@ -210,9 +210,6 @@
                                                 <div class="accordion-inner">
                                                     <ul class="nav nav-list">
                                                         <li class="nav-header">Survey</li>
-<!--                                                        <li class="<?php //echo ($this->ID==="survei")?"active":"";?>"><?php// echo CHtml::link('Survey Toko', array('#')); ?></li>
-                                                        <li class="<?php //echo ($this->ID==="survei")?"active":"";?>"><?php// echo CHtml::link('Survey End User', array('#')); ?></li>-->
-
                                                         <li class="<?php echo ($this->ID==="survei")?"active":"";?>"><?php echo CHtml::link('Survei', array('/surveyor/survei')); ?></li>
                                                     </ul>
 

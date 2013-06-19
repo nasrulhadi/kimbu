@@ -63,11 +63,7 @@ $('.search-form form').submit(function(){
             'type' => 'statusAktif',
             'value' => $model->STATUS,
         ),
-        array(
-            'name' => 'TERAKHIR_LOGIN',
-            'type' => 'dateFormat',
-            'value' => $model->TERAKHIR_LOGIN,
-        ),
+        'TERAKHIR_LOGIN',
 		array(
 			'class'=>'MyCButtonColumn',
 		),
