@@ -855,6 +855,4 @@
 			.sidebar_right .sidebar_switch {left:auto;right:50%;margin-left:0;margin-right:-836px}
 		}
         
-        .profilethumb { display: inline-block; position: relative; overflow: hidden; margin-bottom: 20px; }
-        .profilethumb a { display: none; font-size: 11px; position: absolute; top: 5px; right: 5px; padding: 2px 7px; background: #333; color: #fff; }
-        .profilethumb a:hover { text-decoration: none; background: #444; }
+    

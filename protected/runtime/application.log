@@ -3619,3 +3619,696 @@ Stack trace:
 REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080511
 HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
 ---
+2013/06/19 09:38:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080512
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:38:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080513
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:38:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080514
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:39:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080515
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:39:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080516
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:39:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080517
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:39:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080518
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:39:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080519
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:39:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080520
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:39:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080521
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:40:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080522
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:40:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080523
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:40:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080524
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:40:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080525
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:40:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080526
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:40:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080527
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:40:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080528
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:40:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080529
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:41:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080530
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:41:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080531
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:41:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080532
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:41:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080533
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:41:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080534
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:41:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080535
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:41:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080536
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:42:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080537
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:42:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080538
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:42:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080539
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:42:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080540
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:42:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080541
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:42:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080542
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:42:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080543
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:42:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080544
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:43:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080545
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:43:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080546
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:43:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080547
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:43:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080548
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:43:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080549
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:43:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080550
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:43:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080551
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:44:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080552
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:44:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080553
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:44:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080554
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:44:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080555
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:44:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080556
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:44:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080557
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:44:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080558
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:44:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080559
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:45:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080560
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:45:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080561
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:45:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080562
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:45:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080563
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:45:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080564
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:45:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080565
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:45:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080566
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:46:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080567
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:46:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080568
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:46:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080569
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:46:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080570
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:46:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080571
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:46:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080572
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:46:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080573
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:46:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080574
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:47:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080575
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:47:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080576
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:47:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080577
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:47:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080578
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:47:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080579
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:47:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080580
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:47:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080581
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:48:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080582
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:48:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080583
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:48:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080584
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:48:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080585
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:48:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080586
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:48:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080587
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---
+2013/06/19 09:48:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/getmsg/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/getmsg/undefined?_=1371627080588
+HTTP_REFERER=http://localhost/kimbu/admincs/profile/index
+---

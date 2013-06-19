@@ -74,7 +74,11 @@ $this->breadcrumbs = array(
                         </ul>
                     </div>
                     <div style="margin-top: 20px">
-                        <?php echo CHtml::link('<span class="icon-remove icon-white"></span> Keluar dan Hapus Obrolan', array('keluar', 'id' => $model->ID_CHAT), array('class' => 'btn btn-danger')); ?>
+                        <?php if($model->DIBUAT_OLEH == Yii::app()->user->getState('isUser')){ ?>
+                        <?php echo CHtml::link('<span class="icon-remove icon-white"></span> Keluar dan Hapus Obrolan', array('#'), array('class' => 'btn btn-danger')); ?>
+                        <?php }else{ ?>
+                        <?php echo CHtml::link('<span class="icon-remove icon-white"></span> Keluar Obrolan', array('#'), array('class' => 'btn btn-danger')); ?>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
