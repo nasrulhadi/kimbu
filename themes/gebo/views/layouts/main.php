@@ -55,9 +55,8 @@
                 <div class="navbar navbar-fixed-top">
                     <div class="navbar-inner">
                         <div class="container-fluid">
-                            <?php echo CHtml::link('<i class="icon-home icon-white"></i> ' . Yii::app()->name, array('/'), array('class' => 'brand')); ?>
+                            <?php echo CHtml::link('<i class="icon-home icon-white"></i> ' . Yii::app()->user->divisi, array('/'), array('class' => 'brand')); ?>
                             <ul class="nav user_menu pull-right">
-                                <li class="divider-vertical hidden-phone hidden-tablet"></li>
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="icon-user icon-white"></span> <?php echo ucwords(strtolower(Yii::app()->user->name)); ?> <b class="caret"></b></a>
                                     <ul class="dropdown-menu">
@@ -204,13 +203,15 @@
                                         <div class="accordion-group">
                                             <div class="accordion-heading">
                                                 <a href="#collapseOne" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
-                                                    <i class="icon-folder-open"></i> Divisi
+                                                    <i class="icon-folder-open"></i> Teamwork Activasion
                                                 </a>
                                             </div>
                                             <div class="accordion-body collapse" id="collapseOne">
                                                 <div class="accordion-inner">
                                                     <ul class="nav nav-list">
-                                                        <li class="<?php echo ($this->ID==="survei")?"active":"";?>"><?php echo CHtml::link('Survei', array('#')); ?></li>
+                                                        <li class="nav-header">Survey</li>
+                                                        <li class="<?php echo ($this->ID==="survei")?"active":"";?>"><?php echo CHtml::link('Survey Toko', array('#')); ?></li>
+                                                        <li class="<?php echo ($this->ID==="survei")?"active":"";?>"><?php echo CHtml::link('Survey End User', array('#')); ?></li>
                                                     </ul>
 
                                                 </div>

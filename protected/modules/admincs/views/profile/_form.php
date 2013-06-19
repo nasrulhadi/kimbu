@@ -11,6 +11,8 @@
 	'enableAjaxValidation'=>false,
 )); ?>
     
+    <p class="note">Isian dengan tanda <span class="required">*</span> harus diisi.</p>
+    
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
@@ -38,7 +40,7 @@
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Simpan' : 'Simpan Perubahan',array('class'=>'btn btn-success')); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Simpan' : 'Simpan Perubahan',array('class'=>'btn btn-danger')); ?>
         <?php echo CHtml::button('Batal',array('onclick'=>'history.go(-1)','class'=>'btn'));?>
 	</div>
 

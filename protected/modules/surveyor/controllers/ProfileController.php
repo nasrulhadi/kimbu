@@ -65,27 +65,6 @@ class ProfileController extends Controller
 			'model'=>$model,
 		));
 	}
-    
-    public function actionUbahPassword() {
-        $model = new UbahPasswordForm;
-        if (isset($_POST['UbahPasswordForm'])) {
-            $model->attributes = $_POST['UbahPasswordForm'];
-            if ($model->validate()) {
-                if ($model->cekOldPassword($model->OLD)) {
-                    if ($model->savePassword($model->NEW)) {
-                        Yii::app()->user->setFlash('info', MyFormatter::alertSuccess('<strong>Selamat!</strong> Password telah berhasil diubah.'));
-                        $this->refresh();
-                    }
-                    else
-                        Yii::app()->user->setFlash('info', MyFormatter::alertError('<strong>Error!</strong> Password gagal diubah.'));
-                }
-                else {
-                    Yii::app()->user->setFlash('info', MyFormatter::alertError('<strong>Error!</strong> Password lama salah.'));
-                }
-            }
-        }
-        $this->render('ubahpassword/ubahpassword', array('model' => $model));
-    }
 
     public function actionEditFoto()
 	{

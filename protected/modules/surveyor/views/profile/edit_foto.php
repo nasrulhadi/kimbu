@@ -1,7 +1,7 @@
 <div class="row-fluid">
     <div class="span5 center">
         <div align="center"><?php echo $model->displayPicture($model->FOTO);?></div>
-        <small>Skala foto 3x4</small>
+        <small>Skala foto 3x4 | Ukuran maks 500 KB</small>
 <!--        <div style="height: 250px; width: 100%; border: 1px solid #DDD;">
             <div align="center" style="margin-top: 120px;"><small>Skala foto 3x4</small></div>
         </div>-->

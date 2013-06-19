@@ -41,7 +41,14 @@ class Divisi extends CActiveRecord
 			array('ID_PERUSAHAAN', 'numerical', 'integerOnly'=>true),
             array('NAMA, ID_PERUSAHAAN', 'required', 'message'=>'{attribute} harus diisi'),
 			array('NAMA', 'length', 'max'=>45),
-            array('LOGO', 'file', 'types'=>'jpeg, jpg, png', 'allowEmpty' => true),
+            array(
+                'LOGO',
+                'file',
+                'types'=>'jpg, jpeg, png',
+                'allowEmpty' => true,
+                'maxSize'=>1024 * 500,//500kb
+				'tooLarge'=>'Ukuran maksimal 500 KB',
+            ),
 			array('KETERANGAN', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.

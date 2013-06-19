@@ -11,6 +11,10 @@ class UserIdentity extends CUserIdentity
 	{
         //$users = User::model()->findByAttributes(array('USERNAME'=>$th));
         $users = User::model()->findByAttributes(array('USERNAME'=>$this->username));
+        $criteria = new CDbCriteria;
+        $criteria->condition = 'ID_DIVISI=:iddivisi';
+        $criteria->params = array(':iddivisi'=>$users->ID_DIVISI);
+        $record = Divisi::model()->find($criteria);
 		if($users === NULL)
 			$this->errorCode=self::ERROR_USERNAME_INVALID;
 		elseif($users->PASSWORD !== md5($this->password))
@@ -21,7 +25,8 @@ class UserIdentity extends CUserIdentity
             $this->setState('name',$users->NAMA);
             $this->setState('type', $users->TYPE);
             $this->setState('idUser',$users->ID_USER);
-            $this->setState('idDivisi',$users->ID_DIVISI);
+            $this->setState('idDivisi', $users->ID_DIVISI);
+            $this->setState('divisi', $record->NAMA);
             $this->setState('email', $users->EMAIL);
 			$this->errorCode=self::ERROR_NONE;
         }

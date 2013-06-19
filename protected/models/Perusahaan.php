@@ -47,7 +47,14 @@ class Perusahaan extends CActiveRecord
 			array('ALAMAT, KETERANGAN, TERAKHIR_UPDATE', 'safe'),
             array('NAMA, EMAIL', 'required'),
             array('EMAIL', 'email'),
-            array('LOGO', 'file', 'types'=>'jpeg, jpg, png', 'allowEmpty'=>true),
+            array(
+                'LOGO',
+                'file',
+                'types'=>'jpg, jpeg, png',
+                'allowEmpty' => true,
+                'maxSize'=>1024 * 500,//500kb
+				'tooLarge'=>'Ukuran maksimal 500 KB',
+            ),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('ID_PERUSAHAAN, NAMA, EMAIL, TLP, FAX, LOGO, ALAMAT, KOTA, KETERANGAN, TERAKHIR_UPDATE', 'safe', 'on'=>'search'),

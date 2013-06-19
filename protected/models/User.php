@@ -63,7 +63,14 @@ class User extends CActiveRecord
             array('EMAIL', 'email'),
             array('TLP, HP', 'length', 'max'=>15),
 			array('TANGGAL_DIBUAT', 'safe'),
-            array('FOTO', 'file', 'types'=>'jpg, jpeg, png', 'allowEmpty' => true),
+            array(
+                'FOTO',
+                'file',
+                'types'=>'jpg, jpeg, png',
+                'allowEmpty' => true,
+                'maxSize'=>1024 * 500,//500kb
+				'tooLarge'=>'Ukuran maksimal 500 KB',
+            ),
             //array('REPEAT', 'compare', 'compareAttribute'=>'PASSWORD'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.

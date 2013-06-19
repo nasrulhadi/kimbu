@@ -15,7 +15,7 @@ $('.search-button').click(function(){
 	return false;
 });
 $('.search-form form').submit(function(){
-	$('#user-grid').yiiGridView('update', {
+	$('#perusahaan-grid').yiiGridView('update', {
 		data: $(this).serialize()
 	});
 	return false;

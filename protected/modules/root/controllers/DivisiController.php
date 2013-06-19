@@ -95,11 +95,55 @@ class DivisiController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Divisi']))
+//		if(isset($_POST['Divisi']))
+//		{
+//			$model->attributes=$_POST['Divisi'];
+//            $model->LOGO = CUploadedFile::getInstance($model, 'LOGO');
+//			if($model->validate())
+//            {
+//                //menyimpan file logo
+//                $imagesPath = realpath(Yii::app()->basePath . '/../file/logo/divisi');
+//                $model->LOGO->saveAs($imagesPath . '/' . $model->LOGO);
+//                if($model->save())
+//                {
+//                    Yii::app()->user->setFlash('info',MyFormatter::alertSuccess('<strong>Selamat!</strong> Perubahan data telah berhasil disimpan.'));
+//                    $this->redirect(array('view','id'=>$model->ID_DIVISI));
+//                }
+//            }
+//		}
+        
+        if(isset($_POST['Divisi']))
 		{
 			$model->attributes=$_POST['Divisi'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->ID_DIVISI));
+            if($model->validate())
+            {
+                if (CUploadedFile::getInstance($model, 'LOGO') != NULL) {
+                    //jika sebelumnya telah mengupload file portofolio
+                    if ($model->LOGO != NULL && file_exists(Yii::app()->basePath . '/../file/logo/divisi/' . $model->FOTO)) {
+                        // maka dihapus filenya, diganti dengan yang baru
+                        unlink(Yii::app()->basePath . '/../file/logo/divisi/' . $model->FOTO);
+                    }
+                    //mengambil value dari fileupload
+                    $model->LOGO = CUploadedFile::getInstance($model, 'LOGO');
+                    if ($model->LOGO) {
+                        $fullImgName = $model->ID_DIVISI.'-logo-'.$model->LOGO;
+                        //mengcopy file ke drive server
+                        $model->LOGO->saveAs(Yii::app()->basePath . '/../file/logo/divisi/' . $fullImgName);
+                        $model->setAttribute('LOGO', $fullImgName); //memberikan nama lampiran sesuai dengan nama file yang diupload
+                    }
+                }
+                if($model->save())
+                {
+                    Yii::app()->user->setFlash('info', MyFormatter::alertSuccess('Perubahan telah disimpan.'));
+                    $this->redirect(array('view','id'=>$model->ID_DIVISI));
+                }
+            }
+            else
+            {
+                Yii::app()->user->setFlash('info',MyFormatter::alertError('<strong>Error!</strong> Pastikan ekstensi foto .jpg/.jpeg/.png dan ukuran foto tidak lebih dari 1 MB'));
+                $this->refresh();
+            }
+//			
 		}
 
 		$this->render('update',array(
