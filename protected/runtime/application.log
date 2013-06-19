@@ -9028,3 +9028,192 @@ Stack trace:
 REQUEST_URI=/kimbu/getmsg/undefined?_=1371663263581
 HTTP_REFERER=http://localhost/kimbu/interaksi/chat
 ---
+2013/06/19 19:36:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('getmsg/undefine...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/getmsg/undefined?_=1371663263582
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat
+---
+2013/06/19 19:36:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('getmsg/undefine...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/getmsg/undefined?_=1371663263583
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat
+---
+2013/06/19 19:36:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('getmsg/undefine...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/getmsg/undefined?_=1371663263584
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat
+---
+2013/06/19 19:36:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('getmsg/undefine...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/getmsg/undefined?_=1371663263585
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat
+---
+2013/06/19 19:36:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('getmsg/undefine...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/getmsg/undefined?_=1371663263586
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat
+---
+2013/06/19 19:37:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('getmsg/undefine...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/getmsg/undefined?_=1371663263587
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat
+---
+2013/06/19 19:37:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('getmsg/undefine...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/getmsg/undefined?_=1371663263588
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat
+---
+2013/06/19 19:37:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('getmsg/undefine...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/getmsg/undefined?_=1371663263589
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat
+---
+2013/06/19 19:37:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('getmsg/undefine...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/getmsg/undefined?_=1371663263590
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat
+---
+2013/06/19 19:37:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('getmsg/undefine...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/getmsg/undefined?_=1371663263591
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat
+---
+2013/06/19 19:37:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('getmsg/undefine...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/getmsg/undefined?_=1371663263592
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat
+---
+2013/06/19 19:37:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('getmsg/undefine...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/getmsg/undefined?_=1371663263593
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat
+---
+2013/06/19 19:37:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('getmsg/undefine...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/getmsg/undefined?_=1371663263594
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat
+---
+2013/06/19 19:38:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('getmsg/undefine...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/getmsg/undefined?_=1371663263595
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat
+---
+2013/06/19 19:38:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('getmsg/undefine...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/getmsg/undefined?_=1371663263596
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat
+---
+2013/06/19 19:38:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('getmsg/undefine...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/getmsg/undefined?_=1371663263597
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat
+---
+2013/06/19 19:38:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('getmsg/undefine...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/getmsg/undefined?_=1371663263598
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat
+---
+2013/06/19 19:38:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('getmsg/undefine...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/getmsg/undefined?_=1371663263599
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat
+---
+2013/06/19 19:38:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('getmsg/undefine...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/getmsg/undefined?_=1371663263600
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat
+---
+2013/06/19 19:38:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('getmsg/undefine...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/getmsg/undefined?_=1371663263601
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat
+---
+2013/06/19 19:39:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('getmsg/undefine...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/getmsg/undefined?_=1371663263602
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat
+---
