@@ -51,28 +51,24 @@ $this->breadcrumbs = array(
             </div>
         </div>
     </div>
-    <div class="w-box">
-        <div class="w-box-content cnt_a">
-            <div class="profilethumb">
-                <?php
-                $this->widget('zii.widgets.jui.CJuiTabs', array(
-                    'tabs' => $tabs,
-                    // additional javascript options for the tabs plugin
-                    'options' => array(
-                        'collapsible' => true,
-                    ),
-                ));
-                ?>
-            </div>
-        </div>
+    <div class="profilethumb" style="margin-top: 20px">
+        <?php
+        $this->widget('zii.widgets.jui.CJuiTabs', array(
+            'tabs' => $tabs,
+            // additional javascript options for the tabs plugin
+            'options' => array(
+                'collapsible' => true,
+            ),
+        ));
+        ?>
     </div>
     <div class="form-actions">
         <button class="btn btn-gebo" type="submit">Simpan</button> 
-<?php echo CHtml::link('Kembali', Yii::app()->createUrl('surveyor/survei/detailsurvei/' . $model->ID_SURVEI), array('class' => 'btn')); ?>
+        <?php echo CHtml::link('Kembali', Yii::app()->createUrl('surveyor/survei/detailsurvei/' . $model->ID_SURVEI), array('class' => 'btn')); ?>
     </div>
 
 
 
-<?php $this->endWidget(); ?>
+    <?php $this->endWidget(); ?>
 
 </div><!-- form -->
