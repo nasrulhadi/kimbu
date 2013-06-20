@@ -60,7 +60,7 @@
 						echo CHtml::FileField($model->ID_SURVEI_FORM.'['.$pertanyaan->ID_SURVEI_PERTANYAAN.']');
 						break;
 					case SurveiPertanyaan::RADIO_FIELD:
-						if(isset($respon_value['FIELD'.$respon_value['RADIO']]){
+						if(isset($respon_value['FIELD'.$respon_value['RADIO']])){
 							echo CHtml::label(str_replace('{input}',$respon_value['FIELD'.$respon_value['RADIO']],SurveiPilihanJawaban::model()->findByPk($respon_value['RADIO'])->JAWABAN),'');
 						}
 						else{
@@ -69,11 +69,11 @@
 						break;
 					case SurveiPertanyaan::CHECKBOX_FIELD:
 						foreach($respon_value['CHECKBOX'] as $jawaban){
-							if(isset($respon_value['FIELD'.$jawaban]){
+							if(isset($respon_value['FIELD'.$jawaban])){
 								echo CHtml::label(str_replace('{input}',$respon_value['FIELD'.$jawaban],SurveiPilihanJawaban::model()->findByPk($jawaban)->JAWABAN),'');
 							}
 							else{
-								echo CHtml::label(str_replace('{input}','',SurveiPilihanJawaban::model()->findByPk($respon_value['RADIO'])->JAWABAN),'');
+								echo CHtml::label(str_replace('{input}','',SurveiPilihanJawaban::model()->findByPk($respon_value['CHECKBOX'])->JAWABAN),'');
 							}
 									
 						}
