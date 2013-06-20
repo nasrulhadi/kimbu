@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Kimbu Admin Panel - Login Page</title>
+        <title><?php echo $this->pageTitle=Yii::app()->name; ?> Admin Panel - Login Page</title>
         <?php $baseUrl = Yii::app()->theme->baseUrl; ?>
         <!-- Bootstrap framework -->
             <link rel="stylesheet" href="<?php echo $baseUrl; ?>/bootstrap/css/bootstrap.min.css" />
@@ -33,7 +33,7 @@
                 'id'=>'login_form',
                 'enableAjaxValidation'=>false,
             )) ?>
-                <div class="top_b">Sign in to Kimbu Admin</div>
+                <div class="top_b">Sign in to <?php echo $this->pageTitle=Yii::app()->name; ?> Admin</div>
                 
                 <?php echo $form->error($model, 'error'); ?>
                 
