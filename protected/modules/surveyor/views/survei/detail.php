@@ -37,10 +37,15 @@ $this->breadcrumbs = array(
             'labelExpression'=>'$data->NAMA',
 			'urlExpression'=>'$data->APPROVAL==0?Yii::app()->createUrl(\'surveyor/survei/update/\'.$data->ID_RESPON):Yii::app()->createUrl(\'surveyor/survei/ViewSurvei/\'.$data->ID_RESPON)',
 		),
-		array(
-		'name'=>'TANGGAL_PENGISIAN',
-		'value'=>'date(\'d-m-Y\',strtotime($data->TANGGAL_PENGISIAN))',
-		),
+//		array(
+//		'name'=>'TANGGAL_PENGISIAN',
+//		'value'=>'date(\'d-m-Y\',strtotime($data->TANGGAL_PENGISIAN))',
+//		),
+        array(
+            'name' => 'TANGGAL_PENGISIAN',
+            'type' => 'dateTimeFormat',
+            'value' => '$data->TANGGAL_PENGISIAN',
+        ),
 		array(
 			'name'=>'APROVAL',
 			'value'=>'$data->APPROVAL==0?"Belum Disetujui":"Approved"',
