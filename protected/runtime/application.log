@@ -9427,3 +9427,411 @@ REQUEST_URI=/kimbu/site/login
 in C:\xampp\htdocs\kimbu\protected\components\UserIdentity.php (17)
 in C:\xampp\htdocs\kimbu\protected\models\LoginForm.php (52)
 in C:\xampp\htdocs\kimbu\protected\controllers\SiteController.php (127)
+2013/06/20 06:05:45 [warning] [application] Failed to set unsafe attribute "LOGO" of "Perusahaan".
+in C:\xampp\htdocs\kimbu\protected\modules\root\controllers\PerusahaanController.php (72)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/20 06:06:24 [warning] [application] Failed to set unsafe attribute "LOGO" of "Perusahaan".
+in C:\xampp\htdocs\kimbu\protected\modules\root\controllers\PerusahaanController.php (72)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/20 06:10:09 [warning] [application] Failed to set unsafe attribute "LOGO" of "Perusahaan".
+in C:\xampp\htdocs\kimbu\protected\modules\root\controllers\PerusahaanController.php (72)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/20 06:10:50 [warning] [application] Failed to set unsafe attribute "LOGO" of "Perusahaan".
+in C:\xampp\htdocs\kimbu\protected\modules\root\controllers\PerusahaanController.php (72)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/20 06:10:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "file/logo/perusahaan/535005_473535926009084_897328877_n.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('file/logo/perus...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/file/logo/perusahaan/535005_473535926009084_897328877_n.jpg
+HTTP_REFERER=http://localhost/kimbu/root/perusahaan/view/3
+---
+2013/06/20 06:10:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "file/logo/perusahaan/535005_473535926009084_897328877_n.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('file/logo/perus...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/file/logo/perusahaan/535005_473535926009084_897328877_n.jpg
+HTTP_REFERER=http://localhost/kimbu/root/perusahaan/view/3
+---
+2013/06/20 06:13:16 [warning] [application] Failed to set unsafe attribute "LOGO" of "Perusahaan".
+in C:\xampp\htdocs\kimbu\protected\modules\root\controllers\PerusahaanController.php (72)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/20 06:13:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "file/logo/perusahaan/200px-postgresql_elephant-svg.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('file/logo/perus...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/file/logo/perusahaan/200px-postgresql_elephant-svg.png
+HTTP_REFERER=http://localhost/kimbu/root/perusahaan/view/4
+---
+2013/06/20 06:14:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "file/logo/perusahaan/200px-postgresql_elephant-svg.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('file/logo/perus...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/file/logo/perusahaan/200px-postgresql_elephant-svg.png
+HTTP_REFERER=http://localhost/kimbu/root/perusahaan/view/4
+---
+2013/06/20 06:25:11 [warning] [application] Failed to set unsafe attribute "LOGO" of "Perusahaan".
+in C:\xampp\htdocs\kimbu\protected\modules\root\controllers\PerusahaanController.php (72)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/20 06:25:21 [warning] [application] Failed to set unsafe attribute "LOGO" of "Perusahaan".
+in C:\xampp\htdocs\kimbu\protected\modules\root\controllers\PerusahaanController.php (72)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/20 06:27:54 [warning] [application] Failed to set unsafe attribute "LOGO" of "Perusahaan".
+in C:\xampp\htdocs\kimbu\protected\modules\root\controllers\PerusahaanController.php (72)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/20 06:28:32 [warning] [application] Failed to set unsafe attribute "LOGO" of "Perusahaan".
+in C:\xampp\htdocs\kimbu\protected\modules\root\controllers\PerusahaanController.php (72)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/20 09:37:45 [error] [php] Undefined variable: dataProvider (C:\xampp\htdocs\kimbu\protected\modules\root\views\divisi\admin.php:54)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): DivisiController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): DivisiController->renderPartial()
+#2 C:\xampp\htdocs\kimbu\protected\modules\root\controllers\DivisiController.php(180): DivisiController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): DivisiController->actionIndex()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): DivisiController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): DivisiController->filterAccessControl()
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): DivisiController->runActionWithFilters()
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): DivisiController->run()
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\kimbu\index.php(13): CWebApplication->run()
+REQUEST_URI=/kimbu/root/divisi
+in C:\xampp\htdocs\kimbu\protected\modules\root\views\divisi\admin.php (54)
+in C:\xampp\htdocs\kimbu\protected\modules\root\controllers\DivisiController.php (180)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/20 09:39:31 [error] [php] Undefined variable: dataProvider (C:\xampp\htdocs\kimbu\protected\modules\root\views\divisi\admin.php:54)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): DivisiController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): DivisiController->renderPartial()
+#2 C:\xampp\htdocs\kimbu\protected\modules\root\controllers\DivisiController.php(180): DivisiController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): DivisiController->actionIndex()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): DivisiController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): DivisiController->filterAccessControl()
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): DivisiController->runActionWithFilters()
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): DivisiController->run()
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\kimbu\index.php(13): CWebApplication->run()
+REQUEST_URI=/kimbu/root/divisi
+in C:\xampp\htdocs\kimbu\protected\modules\root\views\divisi\admin.php (54)
+in C:\xampp\htdocs\kimbu\protected\modules\root\controllers\DivisiController.php (180)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/20 09:39:32 [error] [php] Undefined variable: dataProvider (C:\xampp\htdocs\kimbu\protected\modules\root\views\divisi\admin.php:54)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): DivisiController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): DivisiController->renderPartial()
+#2 C:\xampp\htdocs\kimbu\protected\modules\root\controllers\DivisiController.php(180): DivisiController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): DivisiController->actionIndex()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): DivisiController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): DivisiController->filterAccessControl()
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): DivisiController->runActionWithFilters()
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): DivisiController->run()
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\kimbu\index.php(13): CWebApplication->run()
+REQUEST_URI=/kimbu/root/divisi
+in C:\xampp\htdocs\kimbu\protected\modules\root\views\divisi\admin.php (54)
+in C:\xampp\htdocs\kimbu\protected\modules\root\controllers\DivisiController.php (180)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/20 09:40:13 [error] [php] Undefined variable: dataProvider (C:\xampp\htdocs\kimbu\protected\modules\root\views\divisi\admin.php:54)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): DivisiController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): DivisiController->renderPartial()
+#2 C:\xampp\htdocs\kimbu\protected\modules\root\controllers\DivisiController.php(180): DivisiController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): DivisiController->actionIndex()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): DivisiController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): DivisiController->filterAccessControl()
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): DivisiController->runActionWithFilters()
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): DivisiController->run()
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\kimbu\index.php(13): CWebApplication->run()
+REQUEST_URI=/kimbu/root/divisi
+in C:\xampp\htdocs\kimbu\protected\modules\root\views\divisi\admin.php (54)
+in C:\xampp\htdocs\kimbu\protected\modules\root\controllers\DivisiController.php (180)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/20 09:40:58 [error] [php] Use of undefined constant php - assumed 'php' (C:\xampp\htdocs\kimbu\protected\modules\root\views\divisi\admin.php:80)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): DivisiController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): DivisiController->renderPartial()
+#2 C:\xampp\htdocs\kimbu\protected\modules\root\controllers\DivisiController.php(183): DivisiController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): DivisiController->actionIndex()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): DivisiController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): DivisiController->filterAccessControl()
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): DivisiController->runActionWithFilters()
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): DivisiController->run()
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\kimbu\index.php(13): CWebApplication->run()
+REQUEST_URI=/kimbu/root/divisi
+in C:\xampp\htdocs\kimbu\protected\modules\root\views\divisi\admin.php (80)
+in C:\xampp\htdocs\kimbu\protected\modules\root\controllers\DivisiController.php (183)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/20 09:46:59 [error] [php] Undefined variable: index (C:\xampp\htdocs\kimbu\protected\modules\root\views\divisi\admin.php:37)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): DivisiController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): DivisiController->renderPartial()
+#2 C:\xampp\htdocs\kimbu\protected\modules\root\controllers\DivisiController.php(183): DivisiController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): DivisiController->actionIndex()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): DivisiController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): DivisiController->filterAccessControl()
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): DivisiController->runActionWithFilters()
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): DivisiController->run()
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\kimbu\index.php(13): CWebApplication->run()
+REQUEST_URI=/kimbu/root/divisi
+in C:\xampp\htdocs\kimbu\protected\modules\root\views\divisi\admin.php (37)
+in C:\xampp\htdocs\kimbu\protected\modules\root\controllers\DivisiController.php (183)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/20 09:47:19 [error] [php] Undefined variable: data (C:\xampp\htdocs\kimbu\protected\modules\root\views\divisi\admin.php:38)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): DivisiController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): DivisiController->renderPartial()
+#2 C:\xampp\htdocs\kimbu\protected\modules\root\controllers\DivisiController.php(183): DivisiController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): DivisiController->actionIndex()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): DivisiController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): DivisiController->filterAccessControl()
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): DivisiController->runActionWithFilters()
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): DivisiController->run()
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\kimbu\index.php(13): CWebApplication->run()
+REQUEST_URI=/kimbu/root/divisi
+in C:\xampp\htdocs\kimbu\protected\modules\root\views\divisi\admin.php (38)
+in C:\xampp\htdocs\kimbu\protected\modules\root\controllers\DivisiController.php (183)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/20 09:48:13 [error] [php] Undefined variable: data (C:\xampp\htdocs\kimbu\protected\modules\root\views\divisi\admin.php:43)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): DivisiController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): DivisiController->renderPartial()
+#2 C:\xampp\htdocs\kimbu\protected\modules\root\controllers\DivisiController.php(183): DivisiController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): DivisiController->actionIndex()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): DivisiController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): DivisiController->filterAccessControl()
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): DivisiController->runActionWithFilters()
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): DivisiController->run()
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\kimbu\index.php(13): CWebApplication->run()
+REQUEST_URI=/kimbu/root/divisi
+in C:\xampp\htdocs\kimbu\protected\modules\root\views\divisi\admin.php (43)
+in C:\xampp\htdocs\kimbu\protected\modules\root\controllers\DivisiController.php (183)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/20 09:59:32 [error] [php] Undefined variable: model (C:\xampp\htdocs\kimbu\protected\modules\root\views\divisi\_view.php:10)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\zii\widgets\CListView.php(281): DivisiController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(160): CListView->renderItems()
+#2 unknown(0): CListView->renderSection()
+#3 C:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(143): preg_replace_callback()
+#4 C:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(128): CListView->renderContent()
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(173): CListView->run()
+#6 C:\xampp\htdocs\kimbu\protected\modules\root\views\divisi\admin.php(45): DivisiController->widget()
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#8 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): DivisiController->renderInternal()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(869): DivisiController->renderFile()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(782): DivisiController->renderPartial()
+#11 C:\xampp\htdocs\kimbu\protected\modules\root\controllers\DivisiController.php(183): DivisiController->render()
+#12 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): DivisiController->actionIndex()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): DivisiController->runAction()
+#15 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#17 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): DivisiController->filterAccessControl()
+#18 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#19 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#20 C:\xampp\htdocs\yii\framework\web\CController.php(265): DivisiController->runActionWithFilters()
+#21 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): DivisiController->run()
+#22 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#23 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#24 C:\xampp\htdocs\kimbu\index.php(13): CWebApplication->run()
+REQUEST_URI=/kimbu/root/divisi
+in C:\xampp\htdocs\kimbu\protected\modules\root\views\divisi\_view.php (10)
+in C:\xampp\htdocs\kimbu\protected\modules\root\views\divisi\admin.php (45)
+in C:\xampp\htdocs\kimbu\protected\modules\root\controllers\DivisiController.php (183)
+2013/06/20 10:02:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "file/logo/divisi/tidakadalogo.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('file/logo/divis...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/file/logo/divisi/tidakadalogo.jpg
+HTTP_REFERER=http://localhost/kimbu/root/divisi
+---
+2013/06/20 10:04:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "file/logo/divisi/tidakadalogo.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('file/logo/divis...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/file/logo/divisi/tidakadalogo.jpg
+HTTP_REFERER=http://localhost/kimbu/root/divisi
+---
+2013/06/20 10:06:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "file/logo/divisi/tidakadalogo.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('file/logo/divis...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/file/logo/divisi/tidakadalogo.jpg
+HTTP_REFERER=http://localhost/kimbu/root/divisi
+---
+2013/06/20 10:18:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "file/logo/divisi/tidakadalogo.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('file/logo/divis...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/file/logo/divisi/tidakadalogo.jpg
+HTTP_REFERER=http://localhost/kimbu/root/divisi/index
+---
+2013/06/20 10:19:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "file/logo/divisi/tidakadalogo.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('file/logo/divis...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/file/logo/divisi/tidakadalogo.jpg
+HTTP_REFERER=http://localhost/kimbu/root/divisi/
+---
+2013/06/20 10:19:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "file/logo/divisi/tidakadalogo.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('file/logo/divis...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/file/logo/divisi/tidakadalogo.jpg
+HTTP_REFERER=http://localhost/kimbu/root/divisi/
+---
+2013/06/20 10:19:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "file/logo/divisi/tidakadalogo.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('file/logo/divis...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/file/logo/divisi/tidakadalogo.jpg
+HTTP_REFERER=http://localhost/kimbu/root/divisi/
+---
+2013/06/20 10:19:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "file/logo/divisi/tidakadalogo.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('file/logo/divis...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/file/logo/divisi/tidakadalogo.jpg
+HTTP_REFERER=http://localhost/kimbu/root/divisi/
+---
+2013/06/20 10:19:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "file/logo/divisi/tidakadalogo.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('file/logo/divis...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/file/logo/divisi/tidakadalogo.jpg
+HTTP_REFERER=http://localhost/kimbu/root/divisi/index?Divisi%5BNAMA%5D=sad&yt0=Search
+---
+2013/06/20 10:22:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "file/logo/divisi/tidakadalogo.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('file/logo/divis...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/file/logo/divisi/tidakadalogo.jpg
+HTTP_REFERER=http://localhost/kimbu/root/divisi/index?Divisi%5BNAMA%5D=sad&yt0=Search
+---
+2013/06/20 10:23:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "file/logo/divisi/tidakadalogo.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('file/logo/divis...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/file/logo/divisi/tidakadalogo.jpg
+HTTP_REFERER=http://localhost/kimbu/root/divisi/index
+---
+2013/06/20 11:23:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "file/logo/divisi/tidakadalogo.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('file/logo/divis...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/file/logo/divisi/tidakadalogo.jpg
+HTTP_REFERER=http://localhost/kimbu/root/divisi
+---
+2013/06/20 11:24:10 [warning] [application] Failed to set unsafe attribute "LOGO" of "Divisi".
+in C:\xampp\htdocs\kimbu\protected\modules\root\controllers\DivisiController.php (117)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/20 11:25:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "file/logo/divisi/tidakadalogo.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('file/logo/divis...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/file/logo/divisi/tidakadalogo.jpg
+HTTP_REFERER=http://localhost/kimbu/root/divisi/index
+---
+2013/06/20 11:25:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "file/logo/divisi/tidakadalogo.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('file/logo/divis...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/file/logo/divisi/tidakadalogo.jpg
+HTTP_REFERER=http://localhost/kimbu/root/divisi/index
+---
+2013/06/20 11:25:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "file/logo/divisi/tidakadalogo.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('file/logo/divis...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/file/logo/divisi/tidakadalogo.jpg
+HTTP_REFERER=http://localhost/kimbu/root/divisi/index
+---

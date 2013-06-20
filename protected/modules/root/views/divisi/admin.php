@@ -25,30 +25,38 @@ $('.search-form form').submit(function(){
 
 <h3 class="heading">Manajemen Divisi</h3>
 
-<div class="pull-left" style="margin-bottom: 20px;">
-    <?php echo CHtml::link('<span class="icon-plus icon-white"></span> Tambah Divisi', array('/root/divisi/create'), array('class' => 'btn btn-gebo')); ?>
-    <?php echo CHtml::link('<span class="icon-search"></span> Pencarian','#',array('class'=>'btn search-button')); ?>
+<div class="row-fluid">
+    <div class="span12">
+        <div class="pull-left" style="margin-bottom: 20px;">
+            <?php echo CHtml::link('<span class="icon-plus icon-white"></span> Tambah Divisi', array('/root/divisi/create'), array('class' => 'btn btn-gebo')); ?>
+            <?php echo CHtml::link('<span class="icon-search"></span> Pencarian','#',array('class'=>'btn search-button')); ?>
+        </div>
+        </br>
+        <div class="search-form" style="display:none">
+        <?php $this->renderPartial('_search',array(
+            'model'=>$model,
+        )); ?>
+        </div><!-- search-form -->
+        <div class="clearfix""></div>
+        <table class="table table-bordered table-striped table_vam" id="divisi">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Nama Divisi</th>
+                    <th>Keterangan</th>
+                    <th>Logo</th>
+                    <th>Pilihan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                $this->widget('zii.widgets.CListView', array(
+                    'dataProvider' => $dataProvider,
+                    'itemView' => '_view',
+                    'template' => '{items}',
+                ));
+                ?>
+            </tbody>
+        </table>
+    </div>
 </div>
-</br>
-<div class="search-form" style="display:none">
-<?php $this->renderPartial('_search',array(
-	'model'=>$model,
-)); ?>
-</div><!-- search-form -->
-
-<?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'divisi-grid',
-	'dataProvider'=>$model->search(),
-    'itemsCssClass'=>'table table-striped table-bordered table-hover',
-	'columns'=>array(
-		'NAMA',
-        'KETERANGAN',
-        array(
-            'name'=>'LOGO',
-            'value'=>$model->LOGO,
-        ),
-		array(
-			'class'=>'MyCButtonColumn',
-		),
-	),
-)); ?>

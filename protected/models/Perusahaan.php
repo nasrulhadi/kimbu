@@ -45,7 +45,7 @@ class Perusahaan extends CActiveRecord
 		return array(
 			array('NAMA, EMAIL, TLP, FAX, KOTA', 'length', 'max'=>45),
 			array('ALAMAT, KETERANGAN, TERAKHIR_UPDATE', 'safe'),
-            array('NAMA, EMAIL', 'required'),
+            array('NAMA, EMAIL', 'required', 'message'=>'{attribute} harus diisi'),
             array('EMAIL', 'email'),
             array(
                 'LOGO',

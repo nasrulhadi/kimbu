@@ -170,6 +170,8 @@ class DivisiController extends Controller
 	 */
 	public function actionIndex()
 	{
+        $dataProvider=new CActiveDataProvider('Divisi');
+        
 		$model=new Divisi('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['Divisi']))
@@ -177,6 +179,7 @@ class DivisiController extends Controller
 
 		$this->render('admin',array(
 			'model'=>$model,
+            'dataProvider'=>$dataProvider,
 		));
 	}
 
@@ -187,6 +190,7 @@ class DivisiController extends Controller
 	{
 		$model=new Divisi('search');
 		$model->unsetAttributes();  // clear any default values
+        
 		if(isset($_GET['Divisi']))
 			$model->attributes=$_GET['Divisi'];
 
