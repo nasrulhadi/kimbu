@@ -91,6 +91,7 @@ class Survei extends CActiveRecord
 			'STATUS' => 'Status',
 			'KETERANGAN' => 'Keterangan',
 			'ID_DIVISI' => 'Id Divisi',
+            'TYPE' => 'Tipe Survei',
 			'TANGGAL_DIBUAT' => 'Tanggal Dibuat',
 			'count' => 'Jumlah Survei',
 			'countAll' => 'Jumlah Semua Survei',

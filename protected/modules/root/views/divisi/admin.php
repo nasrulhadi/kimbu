@@ -53,7 +53,7 @@ $('.search-form form').submit(function(){
                 $this->widget('zii.widgets.CListView', array(
                     'dataProvider' => $dataProvider,
                     'itemView' => '_view',
-                    'template' => '{items}',
+                    'template' => '{summary} {items} ',
                 ));
                 ?>
             </tbody>

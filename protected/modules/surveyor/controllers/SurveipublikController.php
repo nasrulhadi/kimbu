@@ -1,12 +1,12 @@
 <?php
 
-class SurveiController extends Controller
+class SurveipublikController extends Controller
 {
 	public function actionIndex()
 	{
 		$this->layout = '//layouts/column1';
-        //$model = new Survei;
-        $type = 1;
+		//$model = new Survei;
+        $type = 2;
 		$model = Survei::model()->findByAttributes(array('TYPE'=>$type));
 		$this->render('admin',array('model'=>$model));
 	}
@@ -33,9 +33,9 @@ class SurveiController extends Controller
 					else{
 					$upload_data = CUploadedFile::getInstanceByName($used_form->ID_SURVEI_FORM.'['.$question->ID_SURVEI_PERTANYAAN.']');
 					if(!is_null($upload_data)){
-							$inputFileName = Yii::app()->basePath.'/../file/survei/'.$upload_data->getName();
+							$inputFileName = Yii::app()->basePath.'/../file/surveipublik/'.$upload_data->getName();
 							$upload_data->saveAs($inputFileName);
-							$respon_detail->RESPON = json_encode(Yii::app()->baseUrl.'file/survei/'.$upload_data->getName());
+							$respon_detail->RESPON = json_encode(Yii::app()->baseUrl.'file/surveipublik/'.$upload_data->getName());
 						}
 					}
 					$respon_detail->ID_PERTANYAAN = $question->ID_SURVEI_PERTANYAAN;
@@ -44,7 +44,7 @@ class SurveiController extends Controller
 				
 				}
 			}
-			$this->redirect(Yii::app()->createUrl('surveyor/survei/detailsurvei/'.$id));
+			$this->redirect(Yii::app()->createUrl('surveyor/surveipublik/detailsurvei/'.$id));
 		}
 		
 		$this->render('input',array('model'=>$survei));
@@ -73,9 +73,9 @@ class SurveiController extends Controller
 					else{
 					$upload_data = CUploadedFile::getInstanceByName($used_form->ID_SURVEI_FORM.'['.$question->ID_SURVEI_PERTANYAAN.']');
 					if(!is_null($upload_data)){
-							$inputFileName = Yii::app()->basePath.'/../file/survei/'.$upload_data->getName();
+							$inputFileName = Yii::app()->basePath.'/../file/surveipublik/'.$upload_data->getName();
 							$upload_data->saveAs($inputFileName);
-							$respon_detail->RESPON = json_encode(Yii::app()->baseUrl.'file/survei/'.$upload_data->getName());
+							$respon_detail->RESPON = json_encode(Yii::app()->baseUrl.'file/surveipublik/'.$upload_data->getName());
 						}
 					}
 					$respon_detail->ID_PERTANYAAN = $question->ID_SURVEI_PERTANYAAN;
@@ -84,7 +84,7 @@ class SurveiController extends Controller
 				
 				}
 			}
-			$this->redirect(Yii::app()->createUrl('surveyor/survei/detailsurvei/'.$survei->ID_SURVEI));
+			$this->redirect(Yii::app()->createUrl('surveyor/surveipublik/detailsurvei/'.$survei->ID_SURVEI));
 		}
 		
 		$this->render('update',array('model'=>$survei,'respon'=>$respon,));
@@ -103,4 +103,5 @@ class SurveiController extends Controller
 		$survei = $respon->iDRESPON;
 		$this->render('view',array('model'=>$survei,'respon'=>$respon,));
 	}
+
 }
