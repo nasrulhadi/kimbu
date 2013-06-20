@@ -34,7 +34,7 @@ $this->breadcrumbs = array(
         </div>
     </div>
     <div class="w-box">
-        <div class="w-box-header">Identitas Toko</div>
+        <div class="w-box-header">Identitas End User</div>
         <div class="w-box-content cnt_a">
             <div class="profilethumb">
                 <?php
