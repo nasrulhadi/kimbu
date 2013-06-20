@@ -170,7 +170,7 @@ class User extends CActiveRecord
         else
             echo '<img src="'.Yii::app()->request->baseUrl.'/file/foto/'.$pictureName.'" alt="" class="img-polaroid"/>';
     }
-    
+        
     //mengirim reset password ke email user
     public function sendEmail()
     {

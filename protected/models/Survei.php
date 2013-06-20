@@ -120,4 +120,13 @@ class Survei extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+        
+        //menampilkan foto statik
+        public static function displayPicture($pictureName)
+        {
+                if($pictureName==null || $pictureName=='tidakadafoto.jpg')
+                    return '<img src="'.Yii::app()->request->baseUrl.'/images/100x100.gif" alt="" class="img-polaroid" />';
+                else
+                    return '<img src="'.Yii::app()->request->baseUrl.'/'.$pictureName.'" alt="" class="img-polaroid" style="height:100px; width:100px"/>';
+        }
 }
