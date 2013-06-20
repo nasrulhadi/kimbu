@@ -35,14 +35,14 @@ $this->breadcrumbs=array(
 			'class'=>'CLinkColumn',
 			'header'=>'NAMA',
             'labelExpression'=>'$data->NAMA',
-			'urlExpression'=>'',
+			'urlExpression'=>'Yii::app()->createUrl(\'surveyor/survei/ViewSurvei/\'.$data->ID_RESPON)',
 		),
 		array(
 		'name'=>'TANGGAL_PENGISIAN',
 		'value'=>'date(\'d-m-Y\',strtotime($data->TANGGAL_PENGISIAN))',
 		),
 		array(
-			'name'=>'APROVAL',
+			'name'=>'APPROVAL',
 			'value'=>'$data->APPROVAL==0?"Belum Disetujui":"Approved"',
 		),
 		'NAMA',

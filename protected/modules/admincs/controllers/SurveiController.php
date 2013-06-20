@@ -43,7 +43,7 @@ class SurveiController extends Controller
 				
 				}
 			}
-			$this->redirect(Yii::app()->createUrl('surveyor/survei/detailsurvei/'.$id));
+			$this->redirect(Yii::app()->createUrl('admincs/survei/detailsurvei/'.$id));
 		}
 		
 		$this->render('input',array('model'=>$survei));
@@ -82,7 +82,7 @@ class SurveiController extends Controller
 				
 				}
 			}
-			$this->redirect(Yii::app()->createUrl('surveyor/admincs/detailsurvei/'.$survei->ID_SURVEI));
+			$this->redirect(Yii::app()->createUrl('admincs/survei/detailsurvei/'.$survei->ID_SURVEI));
 		}
 		
 		$this->render('update',array('model'=>$survei,'respon'=>$respon,));
@@ -92,7 +92,25 @@ class SurveiController extends Controller
 		$this->layout = '//layouts/column1';
 		$model = new Respon;
 		$model->ID_SURVEI = $id;
-		$model->NAMA = Yii::app()->user->name;
+		
 		$this->render('detail',array('model'=>$model));
+	}
+	
+	public function actionViewSurvei($id){
+		$respon = Respon::model()->findByPk($id);
+		$survei = $respon->iDRESPON;
+		$this->render('view',array('model'=>$survei,'respon'=>$respon,));
+	}	
+	
+	public function actionApprove($id){
+		$respon = Respon::model()->findByPk($id);
+		$survei = $respon->iDRESPON;
+		
+		if(!empty($_POST)){
+		$respon->APPROVAL = 1;
+		$respon->save();
+		$this->redirect(Yii::app()->createUrl('admincs/survei/detailsurvei/'.$survei->ID_SURVEI));
+		}
+		$this->render('view',array('model'=>$survei,'respon'=>$respon,));
 	}
 }

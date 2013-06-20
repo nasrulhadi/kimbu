@@ -94,7 +94,7 @@ class Respon extends CActiveRecord
 		$criteria->compare('NAMA',$this->NAMA,false);
 		$criteria->compare('TANGGAL_PENGISIAN',$this->TANGGAL_PENGISIAN,true);
 		$criteria->compare('ID_SURVEI',$this->ID_SURVEI);
-		$criteria->compare('APPROVAL',$this->APPROVAL);
+		$criteria->addSearchCondition('APPROVAL',$this->APPROVAL,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

@@ -95,4 +95,10 @@ class SurveiController extends Controller
 		$model->NAMA = Yii::app()->user->name;
 		$this->render('detail',array('model'=>$model));
 	}
+	
+	public function actionViewSurvei($id){
+		$respon = Respon::model()->findByPk($id);
+		$survei = $respon->iDRESPON;
+		$this->render('view',array('model'=>$survei,'respon'=>$respon,));
+	}
 }
