@@ -35,7 +35,7 @@ $this->breadcrumbs = array(
 			'class'=>'CLinkColumn',
 			'header'=>'NAMA',
             'labelExpression'=>'$data->NAMA',
-			'urlExpression'=>'$data->APPROVAL==0?Yii::app()->createUrl(\'surveyor/survei/update/\'.$data->ID_RESPON):"Yii::app()->createUrl(\'surveyor/survei/ViewSurvei/\'.$data->ID_RESPON)"',
+			'urlExpression'=>'$data->APPROVAL==0?Yii::app()->createUrl(\'surveyor/survei/update/\'.$data->ID_RESPON):Yii::app()->createUrl(\'surveyor/survei/ViewSurvei/\'.$data->ID_RESPON)',
 		),
 		array(
 		'name'=>'TANGGAL_PENGISIAN',
