@@ -10,10 +10,13 @@ class UserIdentity extends CUserIdentity
 	public function authenticate()
 	{
         $users = User::model()->findByAttributes(array('USERNAME'=>$this->username));
-        $criteria = new CDbCriteria;
-        $criteria->condition = 'ID_DIVISI=:iddivisi';
-        $criteria->params = array(':iddivisi'=>$users->ID_DIVISI);
-        $record = Divisi::model()->find($criteria);
+        if(isset($users))
+        {
+            $criteria = new CDbCriteria;
+            $criteria->condition = 'ID_DIVISI=:iddivisi';
+            $criteria->params = array(':iddivisi'=>$users->ID_DIVISI);
+            $record = Divisi::model()->find($criteria);
+        }
 		if($users === NULL)
 			$this->errorCode=self::ERROR_USERNAME_INVALID;
 		elseif($users->PASSWORD !== md5($this->password))
