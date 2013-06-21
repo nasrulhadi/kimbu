@@ -1,8 +1,8 @@
 <?php
 $this->breadcrumbs = array(
     'Dashboard' => array('/'),
-    'Survei Publik' => array('/surveyor/survei/'),
-    'Update'
+    'Survei Publik' => array('/admincs/surveipublik/'),
+    'Input'
 );
 ?>
 
@@ -10,7 +10,7 @@ $this->breadcrumbs = array(
 
     <?php
     $form = $this->beginWidget('CActiveForm', array(
-        'id' => 'survei-form',
+        'id' => 'surveipublik-form',
         'enableAjaxValidation' => false,
         'htmlOptions' => array('enctype' => 'multipart/form-data'),
     ));
@@ -42,9 +42,9 @@ $this->breadcrumbs = array(
                 foreach ($model->surveiForms as $form) {
 
                     if ($form->iDSURVEIGRUP->POSITION == SurveiGrup::TOP) {
-                        $this->renderPartial('_form', array('model' => $form, 'respon' => $respon,));
+                        $this->renderPartial('_form', array('model' => $form));
                     } else if ($form->iDSURVEIGRUP->POSITION == SurveiGrup::TAB) {
-                        $tabs[$form->NAMA] = $this->renderPartial('_form', array('model' => $form, 'respon' => $respon,), true);
+                        $tabs[$form->NAMA] = $this->renderPartial('_form', array('model' => $form), true);
                     }
                 }
                 ?>
@@ -64,7 +64,7 @@ $this->breadcrumbs = array(
     </div>
     <div class="form-actions">
         <button class="btn btn-gebo" type="submit">Simpan</button> 
-        <?php echo CHtml::link('Kembali', Yii::app()->createUrl('surveyor/survei/detailsurvei/' . $model->ID_SURVEI), array('class' => 'btn')); ?>
+        <?php echo CHtml::link('Kembali', Yii::app()->createUrl('admincs/surveipublik/detailsurvei/' . $model->ID_SURVEI), array('class' => 'btn')); ?>
     </div>
 
 

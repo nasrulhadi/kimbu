@@ -37,14 +37,14 @@ $('.search-form form').submit(function(){
             'model'=>$model,
         )); ?>
         </div><!-- search-form -->
-        <div class="clearfix""></div>
+        <div class="clearfix"></div>
         <table class="table table-bordered table-striped table_vam" id="divisi">
             <thead>
                 <tr>
                     <th>No.</th>
+                    <th>Logo</th>
                     <th>Nama Divisi</th>
                     <th>Keterangan</th>
-                    <th>Logo</th>
                     <th>Pilihan</th>
                 </tr>
             </thead>
@@ -53,7 +53,7 @@ $('.search-form form').submit(function(){
                 $this->widget('zii.widgets.CListView', array(
                     'dataProvider' => $dataProvider,
                     'itemView' => '_view',
-                    'template' => '{summary} {items} ',
+                    'template' => '{summary} {pager} {items}',
                 ));
                 ?>
             </tbody>

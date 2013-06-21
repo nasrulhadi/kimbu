@@ -114,6 +114,15 @@ class Divisi extends CActiveRecord
             echo '<img src="'.Yii::app()->request->baseUrl.'/file/logo/divisi/'.$pictureName.'" alt="" class="img-polaroid"/>';
     }
     
+    //tampilan logo cilik
+    public function displayLogoPicture($pictureName)
+    {
+        if($pictureName==null || $pictureName=='tidakadalogo.jpg')
+            echo '<img src="'.Yii::app()->theme->baseUrl.'/img/profilethumb.png" alt="" style="height: 50px; width: 50px" />';
+        else
+            echo '<img src="'.Yii::app()->request->baseUrl.'/file/logo/divisi/'.$pictureName.'" alt="" style="height: 50px; width: 50px" />';
+    }
+    
     //mengambil semua list data DIVISI
     public static function getAll()
     {

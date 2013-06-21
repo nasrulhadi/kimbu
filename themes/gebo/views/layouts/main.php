@@ -140,9 +140,10 @@
                                                     <i class="icon-wrench"></i> Pengaturan
                                                 </a>
                                             </div>
-                                            <div class="accordion-body collapse <?php echo ($getModule==="root")?"in":"";?>" id="collapseOne">
+                                            <div class="accordion-body collapse <?php echo ($this->ID==="perusahaan" || $this->ID==="divisi" || $this->ID==="user" )?"in":"";?>" id="collapseOne">
                                                 <div class="accordion-inner">
                                                     <ul class="nav nav-list">
+                                                        <li class="nav-header">Manajemen Sistem</li>
                                                         <li class="<?php echo ($this->ID==="perusahaan")?"active":"";?>"><?php echo CHtml::link('Perusahaan', array('./perusahaan')); ?></li>
                                                         <li class="<?php echo ($this->ID==="divisi")?"active":"";?>"><?php echo CHtml::link('Divisi', array('./divisi')); ?></li>
                                                         <li><?php echo CHtml::link('Survei', array('#')); ?></li>
@@ -166,10 +167,10 @@
                                                     <i class="icon-folder-open"></i> <?php echo Yii::app()->user->divisi; ?>
                                                 </a>
                                             </div>
-                                            <div class="accordion-body collapse <?php echo ($this->ID==="survei")?"in":"";?>" id="collapseOne">
+                                            <div class="accordion-body collapse <?php echo ($this->ID==="survei" || $this->ID==="surveipublik" || $this->ID==="grafik")?"in":"";?>" id="collapseOne">
                                                 <div class="accordion-inner">
                                                     <ul class="nav nav-list">
-                                                        <li><?php echo CHtml::link('User', array('#')); ?></li>
+                                                        <li class="nav-header">Survei</li>
                                                         <li class="<?php echo ($this->ID==="survei")?"active":"";?>"><?php echo CHtml::link('Survei Toko', array('/admincs/survei')); ?></li>
                                                         <li class="<?php echo ($this->ID==="surveipublik")?"active":"";?>"><?php echo CHtml::link('Survei End User', array('/admincs/surveipublik')); ?></li>
                                                         <li><?php echo CHtml::link('Grafik', array('#')); ?></li>
@@ -190,6 +191,22 @@
                                                         <li <?php echo $this->ID==="chat"?"class='active'":""; ?>><?php echo CHtml::link('Chat', array('/interaksi/chat')); ?></li>
                                                     </ul>
 
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-group">
+                                            <div class="accordion-heading">
+                                                <a href="#collapseThree" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+                                                    <i class="icon-wrench"></i> Pengaturan
+                                                </a>
+                                            </div>
+                                            <div class="accordion-body collapse <?php echo ($this->ID==="user")?"in":"";?>" id="collapseThree">
+                                                <div class="accordion-inner">
+                                                    <ul class="nav nav-list">
+                                                        <li class="nav-header">Manajemen Akun</li>
+                                                        <li class="<?php echo ($this->ID==="user")?"active":"";?>"><?php echo CHtml::link('User Surveyor', array('#')); ?></li>
+                                                       
+                                                    </ul>
                                                 </div>
                                             </div>
                                         </div>

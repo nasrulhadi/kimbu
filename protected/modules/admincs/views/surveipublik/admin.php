@@ -1,7 +1,9 @@
+
+
 <?php 
 $this->breadcrumbs=array(
     'Dashboard'=>array('/'),
-    'Survei',
+    'Survei Publik',
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -18,7 +20,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h3 class="heading">Survei Toko</h3>
+<h3 class="heading">Survei End User</h3>
 
 <div class="pull-left" style="margin-bottom: 20px;">
     <?php echo CHtml::link('<span class="icon-search"></span> Pencarian','#',array('class'=>'btn search-button')); ?>
@@ -31,7 +33,7 @@ $('.search-form form').submit(function(){
 </div><!-- search-form -->
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'user-grid',
+	'id'=>'surveipublik-grid',
 	'dataProvider'=>$model->search(),
 	 'itemsCssClass'=>'table table-striped table-bordered table-hover',
 	'columns'=>array(
@@ -39,19 +41,15 @@ $('.search-form form').submit(function(){
         'header'=>'No.',
         'value'=>'$this->grid->dataProvider->pagination->currentPage * $this->grid->dataProvider->pagination->pageSize + ($row+1)',
 		),
+
 		array(
 			'class'=>'CLinkColumn',
-			'header'=>'NAMA_SURVEI',
+			'header'=>'Nama Survei',
             'labelExpression'=>'$data->NAMA_SURVEI',
-			'urlExpression'=>'Yii::app()->createUrl(\'admincs/survei/detailsurvei/\'.$data->ID_SURVEI)',
+			'urlExpression'=>'Yii::app()->createUrl(\'admincs/surveipublik/detailsurvei/\'.$data->ID_SURVEI)',
 		),
 		'KETERANGAN',
-		'countAll',
-		'countNotApproved',
-		array(
-		'name'=>'STATUS',
-		'value'=>'$data->STATUS==0?"Tidak Aktif":"Aktif"',
-		),
+		'count',
 		
 	),
 

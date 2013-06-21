@@ -1,7 +1,7 @@
 <?php
 $this->breadcrumbs = array(
     'Dashboard' => array('/'),
-    'Survei' => array('/surveyor/survei/'),
+    'Survei' => array('/surveyor/surveipublik/'),
     'Input'
 );
 ?>
@@ -64,7 +64,7 @@ $this->breadcrumbs = array(
     </div>
     <div class="form-actions">
         <button class="btn btn-gebo" type="submit">Simpan</button> 
-        <?php echo CHtml::link('Kembali', Yii::app()->createUrl('surveyor/survei/detailsurvei/' . $model->ID_SURVEI), array('class' => 'btn')); ?>
+        <?php echo CHtml::link('Kembali', Yii::app()->createUrl('surveyor/surveipublik/detailsurvei/' . $model->ID_SURVEI), array('class' => 'btn')); ?>
     </div>
 
 

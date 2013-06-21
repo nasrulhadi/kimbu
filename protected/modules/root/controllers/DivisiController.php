@@ -170,7 +170,11 @@ class DivisiController extends Controller
 	 */
 	public function actionIndex()
 	{
-        $dataProvider=new CActiveDataProvider('Divisi');
+        $dataProvider=new CActiveDataProvider('Divisi',array(
+            'pagination'=>array(
+                'pageSize'=>10,
+            ),
+        ));
         
 		$model=new Divisi('search');
 		$model->unsetAttributes();  // clear any default values
