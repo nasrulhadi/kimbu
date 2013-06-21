@@ -1,7 +1,8 @@
 <?php
 $this->breadcrumbs = array(
     'Dashboard' => array('/'),
-    'Survei Publik' => array('/surveyor/survei/'),
+    'Survei' => array('/surveyor/surveipublik/'),
+    'Detail' => array('/surveyor/surveipublik/detailsurvei/'.$model->ID_SURVEI),
     'Update'
 );
 ?>
@@ -34,7 +35,7 @@ $this->breadcrumbs = array(
         </div>
     </div>
     <div class="w-box">
-        <div class="w-box-header">Identitas Toko</div>
+        <div class="w-box-header">Identitas End User</div>
         <div class="w-box-content cnt_a">
             <div class="profilethumb">
                 <?php

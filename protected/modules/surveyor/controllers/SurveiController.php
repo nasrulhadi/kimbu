@@ -20,6 +20,7 @@ class SurveiController extends Controller
 			$respon = new Respon;
 			$respon->ID_SURVEI = $survei->ID_SURVEI;
 			$respon->NAMA = Yii::app()->user->name;
+                        $respon->TANGGAL_PENGISIAN = date("Y-m-d H:i:s");
 			$respon->save();
 			$respon->ID_RESPON;
 			foreach($survei->surveiForms as $used_form){

@@ -66,7 +66,8 @@
             <?php echo CHtml::label($pertanyaan->PERTANYAAN, ''); ?>
             <?php
             $pertanyaan_respon = ResponDetail::model()->findByAttributes(array('ID_PERTANYAAN' => $pertanyaan->ID_SURVEI_PERTANYAAN, 'ID_RESPON' => $respon->ID_RESPON,));
-            if (!is_null($pertanyaan_respon)) {
+            $respon_value = null;
+			if (!is_null($pertanyaan_respon)) {
                 $respon_value = json_decode($pertanyaan_respon->RESPON);
                 if (is_object($respon_value)) {
                     $respon_value = (array) $respon_value;
@@ -100,7 +101,7 @@
 
                             foreach ($pertanyaan->surveiPilihanJawabans as $jawaban) {
                                 if (isset($respon_value['FIELD' . $jawaban->ID_SURVEI_JAWABAN])) {
-                                    $options[$jawaban->ID_SURVEI_JAWABAN] = str_replace('{input}', CHtml::TextField($model->ID_SURVEI_FORM . '[' . $pertanyaan->ID_SURVEI_PERTANYAAN . '][FIELD' . $jawaban->ID_SURVEI_JAWABAN . ']', $respon_value['FIELD' . $jawaban->ID_SURVEI_JAWABAN], array('class'=>'input-small')), $jawaban->JAWABAN);
+                                    $options[$jawaban->ID_SURVEI_JAWABAN] = str_replace('{input}', CHtml::TextField($model->ID_SURVEI_FORM . '[' . $pertanyaan->ID_SURVEI_PERTANYAAN . '][FIELD' . $jawaban->ID_SURVEI_JAWABAN . ']', $respon_value['FIELD' . $jawaban->ID_SURVEI_JAWABAN], array('class'=>'')), $jawaban->JAWABAN);
                                 } else {
                                     $options[$jawaban->ID_SURVEI_JAWABAN] = str_replace('{input}', CHtml::TextField($model->ID_SURVEI_FORM . '[' . $pertanyaan->ID_SURVEI_PERTANYAAN . '][FIELD' . $jawaban->ID_SURVEI_JAWABAN . ']', '', array('class'=>'')), $jawaban->JAWABAN);
                                 }
@@ -113,7 +114,7 @@
                             foreach ($pertanyaan->surveiPilihanJawabans as $jawaban) {
 
                                 if (isset($respon_value['FIELD' . $jawaban->ID_SURVEI_JAWABAN])) {
-                                    $options[$jawaban->ID_SURVEI_JAWABAN] = str_replace('{input}', CHtml::TextField($model->ID_SURVEI_FORM . '[' . $pertanyaan->ID_SURVEI_PERTANYAAN . '][FIELD' . $jawaban->ID_SURVEI_JAWABAN . ']', $respon_value['FIELD' . $jawaban->ID_SURVEI_JAWABAN], array('class'=>'input-small')), $jawaban->JAWABAN);
+                                    $options[$jawaban->ID_SURVEI_JAWABAN] = str_replace('{input}', CHtml::TextField($model->ID_SURVEI_FORM . '[' . $pertanyaan->ID_SURVEI_PERTANYAAN . '][FIELD' . $jawaban->ID_SURVEI_JAWABAN . ']', $respon_value['FIELD' . $jawaban->ID_SURVEI_JAWABAN], array('class'=>'')), $jawaban->JAWABAN);
                                 } else {
                                     $options[$jawaban->ID_SURVEI_JAWABAN] = str_replace('{input}', CHtml::TextField($model->ID_SURVEI_FORM . '[' . $pertanyaan->ID_SURVEI_PERTANYAAN . '][FIELD' . $jawaban->ID_SURVEI_JAWABAN . ']', '', array('class'=>'')), $jawaban->JAWABAN);
                                 }
