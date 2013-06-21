@@ -14,7 +14,8 @@
                 <?php echo CHtml::label($pertanyaan->PERTANYAAN, ''); ?>
                 <?php
                 $pertanyaan_respon = ResponDetail::model()->findByAttributes(array('ID_PERTANYAAN' => $pertanyaan->ID_SURVEI_PERTANYAAN, 'ID_RESPON' => $respon->ID_RESPON,));
-                if (!is_null($pertanyaan_respon)) {
+                $respon_value = null;
+				if (!is_null($pertanyaan_respon)) {
                     $respon_value = json_decode($pertanyaan_respon->RESPON);
                     if (is_object($respon_value)) {
                         $respon_value = (array) $respon_value;
