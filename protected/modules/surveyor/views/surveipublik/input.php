@@ -2,6 +2,7 @@
 $this->breadcrumbs = array(
     'Dashboard' => array('/'),
     'Survei Publik' => array('/surveyor/surveipublik/'),
+    'Detail' => array('/surveyor/surveipublik/detailsurvei/'.$model->ID_SURVEI),
     'Input'
 );
 ?>
