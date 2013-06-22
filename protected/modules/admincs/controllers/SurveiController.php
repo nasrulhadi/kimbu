@@ -6,7 +6,7 @@ class SurveiController extends Controller
 	{
 		$this->layout = '//layouts/column1';
 //		$model = new Survei;
-        $type = 2;
+        $type = 1;
 		$model = Survei::model()->findByAttributes(array('TYPE'=>$type));
 		$this->render('admin',array('model'=>$model));
 	}
