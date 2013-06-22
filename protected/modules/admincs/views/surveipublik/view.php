@@ -65,7 +65,7 @@ $this->breadcrumbs = array(
             </div>
         </div>
     </div>
-    <div class="form-actions">
+    <div class="form-actions"> 
 <?php echo CHtml::link('Kembali', Yii::app()->createUrl('admincs/surveipublik/detailsurvei/' . $model->ID_SURVEI), array('class' => 'btn')); ?>
     </div>
 

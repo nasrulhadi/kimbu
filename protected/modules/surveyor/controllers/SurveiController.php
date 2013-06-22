@@ -21,6 +21,7 @@ class SurveiController extends Controller
 			$respon->ID_SURVEI = $survei->ID_SURVEI;
 			$respon->NAMA = Yii::app()->user->name;
                         $respon->TANGGAL_PENGISIAN = date("Y-m-d H:i:s");
+                        $respon->ID_USER = Yii::app()->user->idUser;
 			$respon->save();
 			$respon->ID_RESPON;
 			foreach($survei->surveiForms as $used_form){
@@ -39,6 +40,10 @@ class SurveiController extends Controller
 							$respon_detail->RESPON = json_encode(Yii::app()->baseUrl.'file/survei/'.$upload_data->getName());
 						}
 					}
+                                        // get nama toko atau nama user end
+                                        if(isset($question->HINT) && $question->HINT == "NAMA"){
+                                            Respon::model()->updateByPk($respon->ID_RESPON, array('NAMA' => $_POST[$used_form->ID_SURVEI_FORM][$question->ID_SURVEI_PERTANYAAN]));
+                                        }
 					$respon_detail->ID_PERTANYAAN = $question->ID_SURVEI_PERTANYAAN;
 					$respon_detail->ID_RESPON = $respon->ID_RESPON;
 					$respon_detail->save();
@@ -79,6 +84,9 @@ class SurveiController extends Controller
 							$respon_detail->RESPON = json_encode(Yii::app()->baseUrl.'file/survei/'.$upload_data->getName());
 						}
 					}
+                                        if(isset($question->HINT) && $question->HINT == "NAMA"){
+                                            Respon::model()->updateByPk($respon->ID_RESPON, array('NAMA' => $_POST[$used_form->ID_SURVEI_FORM][$question->ID_SURVEI_PERTANYAAN]));
+                                        }
 					$respon_detail->ID_PERTANYAAN = $question->ID_SURVEI_PERTANYAAN;
 					$respon_detail->ID_RESPON = $respon->ID_RESPON;
 					$respon_detail->save();
@@ -95,7 +103,7 @@ class SurveiController extends Controller
 		$this->layout = '//layouts/column1';
 		$model = new Respon;
 		$model->ID_SURVEI = $id;
-		$model->NAMA = Yii::app()->user->name;
+		//$model->NAMA = Yii::app()->user->name;
 		$this->render('detail',array('model'=>$model));
 	}
 	

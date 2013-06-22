@@ -42,8 +42,8 @@ class Respon extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('ID_SURVEI', 'required'),
-			array('ID_SURVEI, APPROVAL', 'numerical', 'integerOnly'=>true),
+			array('ID_SURVEI, ID_USER', 'required'),
+			array('ID_SURVEI, ID_USER, APPROVAL', 'numerical', 'integerOnly'=>true),
 			array('NAMA', 'length', 'max'=>255),
 			array('TANGGAL_PENGISIAN', 'safe'),
 			// The following rule is used by search().
@@ -61,6 +61,7 @@ class Respon extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'iDRESPON' => array(self::BELONGS_TO, 'Survei', 'ID_SURVEI'),
+			'iDUSER' => array(self::BELONGS_TO, 'User', 'ID_USER'),
 			'responDetails' => array(self::HAS_MANY, 'ResponDetail', 'ID_RESPON'),
 		);
 	}
@@ -76,6 +77,7 @@ class Respon extends CActiveRecord
 			'TANGGAL_PENGISIAN' => 'Tanggal Pengisian',
 			'ID_SURVEI' => 'Id Survei',
 			'APPROVAL' => 'Approval',
+                        'SURVEYOR' => 'Surveyor',
 		);
 	}
 

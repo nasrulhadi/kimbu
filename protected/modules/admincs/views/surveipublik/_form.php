@@ -97,6 +97,12 @@
                             break;
                         case SurveiPertanyaan::RADIO_FIELD:
                             $options = array();
+                            
+                            if (isset($respon_value['RADIO'])) {
+                                $responValue = $respon_value['RADIO'];
+                            } else {
+                                $responValue = '';
+                            }
 
                             foreach ($pertanyaan->surveiPilihanJawabans as $jawaban) {
                                 if (isset($respon_value['FIELD' . $jawaban->ID_SURVEI_JAWABAN])) {
@@ -109,6 +115,12 @@
                             break;
                         case SurveiPertanyaan::CHECKBOX_FIELD:
                             $options = array();
+                            
+                            if (isset($respon_value['CHECKBOX'])) {
+                                $responValue = $respon_value['CHECKBOX'];
+                            } else {
+                                $responValue = '';
+                            }
 
                             foreach ($pertanyaan->surveiPilihanJawabans as $jawaban) {
 
