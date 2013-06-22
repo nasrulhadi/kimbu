@@ -119,7 +119,7 @@ class SurveiController extends Controller
 //        }
         //if(!empty($_POST)){
             Respon::model()->updateByPk($id, array('APPROVAL'=>1));
-            Yii::app()->user->setFlash('info',  MyFormatter::alertSuccess('<strong>Sukses!</strong> Proses approve telah berhasil dilakukan.'));
+            Yii::app()->user->setFlash('info',  MyFormatter::alertSuccess('<strong>Sukses!</strong> Proses approve telah berhasil.'));
             $this->redirect(Yii::app()->createUrl('admincs/survei/detailsurvei/'.$survei->ID_SURVEI));
         //}
 		$this->render('view',array('model'=>$survei,'respon'=>$respon,));
@@ -135,7 +135,7 @@ class SurveiController extends Controller
 //		$this->redirect(Yii::app()->createUrl('admincs/survei/detailsurvei/'.$survei->ID_SURVEI));
 //		}
         Respon::model()->updateByPk($id, array('APPROVAL'=>0));
-            Yii::app()->user->setFlash('info',  MyFormatter::alertSuccess('<strong>Sukses!</strong> Proses pembatalan telah berhasil dilakukan.'));
+            Yii::app()->user->setFlash('info',  MyFormatter::alertSuccess('<strong>Sukses!</strong> Proses pembatalan telah berhasil.'));
             $this->redirect(Yii::app()->createUrl('admincs/survei/detailsurvei/'.$survei->ID_SURVEI));
 		$this->render('view',array('model'=>$survei,'respon'=>$respon,));
 	}

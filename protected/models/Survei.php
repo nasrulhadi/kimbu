@@ -95,7 +95,7 @@ class Survei extends CActiveRecord
 			'TANGGAL_DIBUAT' => 'Tanggal Dibuat',
 			'count' => 'Jumlah Survei',
 			'countAll' => 'Jumlah Semua Survei',
-			'countNotApproved' => 'Jumlah Survei Belum Diapprove',
+			'countNotApproved' => 'Jumlah Survei Belum Disetujui',
 		);
 	}
 

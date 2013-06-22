@@ -59,7 +59,7 @@
                         echo CHtml::label(SurveiPilihanJawaban::model()->findByPk($respon_value)->JAWABAN, '');
                         break;
                     case SurveiPertanyaan::UPLOAD:
-                        echo CHtml::link(Survei::displayPicture($respon_value), Yii::app()->createUrl(Yii::app()->request->baseUrl."/".$respon_value), array('class' => 'cboxElement', 'rel' => 'gallery'));
+                        echo CHtml::link(Survei::displayPicture($respon_value), Yii::app()->createUrl(Yii::app()->request->baseUrl . "/" . $respon_value), array('class' => 'cboxElement', 'rel' => 'gallery'));
                         break;
                     case SurveiPertanyaan::RADIO_FIELD:
                         if (isset($respon_value['FIELD' . $respon_value['RADIO']])) {
@@ -86,6 +86,5 @@
             </td>
         </tr>
 
-                <?php }
-            ?>
+    <?php } ?>
 </table>

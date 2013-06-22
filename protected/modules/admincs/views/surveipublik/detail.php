@@ -7,6 +7,7 @@ $this->breadcrumbs = array(
 ?>
 
 <h3 class="heading">Detail Survei</h3>
+<?php echo @Yii::app()->user->getFlash('info'); ?>
 <div class="pull-left" style="margin-bottom: 20px;">
     <table>
         <tr>
@@ -35,7 +36,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
             'class' => 'CLinkColumn',
             'header' => 'NAMA',
             'labelExpression' => '$data->NAMA',
-            'urlExpression' => '$data->APPROVAL==0?Yii::app()->createUrl(\'admincs/surveipublik/update/\'.$data->ID_RESPON):Yii::app()->createUrl(\'admincs/survei/ViewSurvei/\'.$data->ID_RESPON)',
+            'urlExpression' => 'Yii::app()->createUrl(\'admincs/surveipublik/ViewSurvei/\'.$data->ID_RESPON)',
         ),
         array(
             'name' => 'SURVEYOR',

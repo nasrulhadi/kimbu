@@ -1,8 +1,8 @@
 <?php
 $this->breadcrumbs = array(
     'Dashboard' => array('/'),
-    'Survei Publik' => array('/admincs/surveipublik/'),
-    'Detail'
+    'Survei' => array('/admincs/survei/'),
+    'Input'
 );
 ?>
 
@@ -34,6 +34,7 @@ $this->breadcrumbs = array(
         </div>
     </div>
     <div class="w-box">
+        <div class="w-box-header">Identitas Toko</div>
         <div class="w-box-content cnt_a">
             <div class="profilethumb">
                 <?php
@@ -50,27 +51,34 @@ $this->breadcrumbs = array(
             </div>
         </div>
     </div>
-    <div class="w-box">
-        <div class="w-box-content cnt_a">
-            <div class="profilethumb">
-                <?php
-                $this->widget('zii.widgets.jui.CJuiTabs', array(
-                    'tabs' => $tabs,
-                    // additional javascript options for the tabs plugin
-                    'options' => array(
-                        'collapsible' => true,
-                    ),
-                ));
-                ?>
-            </div>
-        </div>
+    <div class="profilethumb" style="margin-top: 20px">
+        <?php
+        $this->widget('zii.widgets.jui.CJuiTabs', array(
+            'tabs' => $tabs,
+            // additional javascript options for the tabs plugin
+            'options' => array(
+                'collapsible' => true,
+            ),
+        ));
+        ?>
     </div>
-    <div class="form-actions"> 
-<?php echo CHtml::link('Kembali', Yii::app()->createUrl('admincs/surveipublik/detailsurvei/' . $model->ID_SURVEI), array('class' => 'btn')); ?>
+    <div class="form-actions">
+        <!-- <input type="hidden" name="approve" value="1">
+        <button class="btn btn-gebo" type="submit">Approve</button> -->
+        <?php
+        if ($respon->APPROVAL == 0) {
+            echo CHtml::link('<span class="icon-check icon-white"></span> Disetujui', array('surveipublik/approve/' . $respon->ID_RESPON), array('class' => 'btn btn-gebo'));
+        } else {
+            echo CHtml::link('<span class="icon-ban-circle icon-white"></span> Batal Disetujui', array('surveipublik/unapprove/' . $respon->ID_RESPON), array('class' => 'btn btn-danger'));
+        }
+        
+        echo " ";
+        echo CHtml::link('Kembali', Yii::app()->createUrl('admincs/surveipublik/detailsurvei/' . $model->ID_SURVEI), array('class' => 'btn'));
+        ?>
     </div>
 
 
 
-<?php $this->endWidget(); ?>
+    <?php $this->endWidget(); ?>
 
 </div><!-- form -->

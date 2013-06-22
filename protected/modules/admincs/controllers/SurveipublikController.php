@@ -103,5 +103,28 @@ class SurveipublikController extends Controller
 		$survei = $respon->iDRESPON;
 		$this->render('view',array('model'=>$survei,'respon'=>$respon,));
 	}
+        
+        public function actionApprove($id){
+		$respon = Respon::model()->findByPk($id);
+		$survei = $respon->iDRESPON;
+		
+                Respon::model()->updateByPk($id, array('APPROVAL'=>1));
+                Yii::app()->user->setFlash('info',  MyFormatter::alertSuccess('<strong>Sukses!</strong> Proses approve telah berhasil.'));
+                $this->redirect(Yii::app()->createUrl('admincs/surveipublik/detailsurvei/'.$survei->ID_SURVEI));
+
+		$this->render('view',array('model'=>$survei,'respon'=>$respon,));
+	}
+    
+        public function actionUnApprove($id){
+		$respon = Respon::model()->findByPk($id);
+		$survei = $respon->iDRESPON;
+
+                Respon::model()->updateByPk($id, array('APPROVAL'=>0));
+                Yii::app()->user->setFlash('info',  MyFormatter::alertSuccess('<strong>Sukses!</strong> Proses pembatalan telah berhasil.'));
+                
+                $this->redirect(Yii::app()->createUrl('admincs/surveipublik/detailsurvei/'.$survei->ID_SURVEI));
+                
+		$this->render('view',array('model'=>$survei,'respon'=>$respon,));
+	}
 
 }
