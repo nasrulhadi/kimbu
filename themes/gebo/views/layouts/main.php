@@ -173,7 +173,7 @@
                                                         <li class="nav-header">Survei</li>
                                                         <li class="<?php echo ($this->ID==="survei")?"active":"";?>"><?php echo CHtml::link('Survei Toko', array('/admincs/survei')); ?></li>
                                                         <li class="<?php echo ($this->ID==="surveipublik")?"active":"";?>"><?php echo CHtml::link('Survei End User', array('/admincs/surveipublik')); ?></li>
-                                                        <li><?php echo CHtml::link('Grafik', array('#')); ?></li>
+                                                        <!--<li><?php echo CHtml::link('Grafik', array('#')); ?></li>-->
                                                     </ul>
 
                                                 </div>
