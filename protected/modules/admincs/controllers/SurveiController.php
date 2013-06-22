@@ -108,11 +108,35 @@ class SurveiController extends Controller
 		$respon = Respon::model()->findByPk($id);
 		$survei = $respon->iDRESPON;
 		
-		if(!empty($_POST)){
-		$respon->APPROVAL = 1;
-		$respon->save();
-		$this->redirect(Yii::app()->createUrl('admincs/survei/detailsurvei/'.$survei->ID_SURVEI));
-		}
+//		if(!empty($_POST)){
+//            //$model->setAttribute('STATUS_USER',User::ACTIVE);
+//            $respon->setAttribute('APPROVAL', 1);
+//            if($respon->save())
+//            {
+//                echo 'BERHASI!!';
+//                $this->redirect(Yii::app()->createUrl('admincs/survei/detailsurvei/'.$survei->ID_SURVEI));
+//		    }
+//        }
+        //if(!empty($_POST)){
+            Respon::model()->updateByPk($id, array('APPROVAL'=>1));
+            Yii::app()->user->setFlash('info',  MyFormatter::alertSuccess('<strong>Sukses!</strong> Proses approve telah berhasil dilakukan.'));
+            $this->redirect(Yii::app()->createUrl('admincs/survei/detailsurvei/'.$survei->ID_SURVEI));
+        //}
+		$this->render('view',array('model'=>$survei,'respon'=>$respon,));
+	}
+    
+    public function actionUnApprove($id){
+		$respon = Respon::model()->findByPk($id);
+		$survei = $respon->iDRESPON;
+		
+//		if(!empty($_POST)){
+//		$respon->APPROVAL = 0;
+//		$respon->save();
+//		$this->redirect(Yii::app()->createUrl('admincs/survei/detailsurvei/'.$survei->ID_SURVEI));
+//		}
+        Respon::model()->updateByPk($id, array('APPROVAL'=>0));
+            Yii::app()->user->setFlash('info',  MyFormatter::alertSuccess('<strong>Sukses!</strong> Proses pembatalan telah berhasil dilakukan.'));
+            $this->redirect(Yii::app()->createUrl('admincs/survei/detailsurvei/'.$survei->ID_SURVEI));
 		$this->render('view',array('model'=>$survei,'respon'=>$respon,));
 	}
 }

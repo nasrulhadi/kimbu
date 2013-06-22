@@ -65,8 +65,12 @@ $this->breadcrumbs=array(
 		</div>
 	</div>
 <div class="form-actions">
-	<input type="hidden" name="approve" value="1">
-    <button class="btn btn-gebo" type="submit">Approve</button> 
+<!--	<input type="hidden" name="approve" value="1">
+    <button class="btn btn-gebo" type="submit">Approve</button> -->
+    <?php if($respon->APPROVAL==0) { ?> 
+    <?php echo CHtml::link('<span class="icon-check icon-white"></span> Disetujui', array('survei/approve/'.$respon->ID_RESPON), array('class' => 'btn btn-gebo')); ?>
+    <?php } else { ?>
+    <?php echo CHtml::link('<span class="icon-ban-circle icon-white"></span> Batal Disetujui', array('survei/unapprove/'.$respon->ID_RESPON), array('class' => 'btn btn-danger')); } ?>
    <?php echo CHtml::link('Kembali',Yii::app()->createUrl('admincs/survei/detailsurvei/'.$model->ID_SURVEI), array('class' => 'btn')); ?>
 </div>
 

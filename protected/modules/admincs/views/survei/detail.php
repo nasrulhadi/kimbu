@@ -7,6 +7,7 @@ $this->breadcrumbs=array(
 ?>
 
 <h3 class="heading">Detail Survei</h3>
+<?php echo @Yii::app()->user->getFlash('info');?>
 <div class="pull-left" style="margin-bottom: 20px;">
    <table>
 	   <tr>
