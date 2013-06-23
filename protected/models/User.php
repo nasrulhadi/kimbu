@@ -55,11 +55,11 @@ class User extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('ID_DIVISI, TYPE, STATUS', 'numerical', 'integerOnly'=>true),
-            array('NAMA, ID_DIVISI, USERNAME, PASSWORD, TYPE', 'required', 'message'=>'{attribute} harus diisi'),
+            array('NAMA, ID_DIVISI, USERNAME, PASSWORD', 'required', 'message'=>'{attribute} harus diisi'),
             array('USERNAME', 'unique'),
             array('USERNAME', 'length', 'max'=>20),
             array('PASSWORD', 'length', 'min'=>6, 'max'=>255),
-            array('EMAIL', 'length', 'max'=>20),
+            array('EMAIL', 'length', 'max'=>45),
             array('EMAIL', 'email'),
             array('TLP, HP', 'length', 'max'=>15),
 			array('TANGGAL_DIBUAT', 'safe'),

@@ -204,7 +204,7 @@
                                                 <div class="accordion-inner">
                                                     <ul class="nav nav-list">
                                                         <li class="nav-header">Manajemen Akun</li>
-                                                        <li class="<?php echo ($this->ID==="user")?"active":"";?>"><?php echo CHtml::link('User Surveyor', array('#')); ?></li>
+                                                        <li class="<?php echo ($this->ID==="user")?"active":"";?>"><?php echo CHtml::link('User Surveyor', array('/admincs/user')); ?></li>
                                                        
                                                     </ul>
                                                 </div>
