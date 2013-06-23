@@ -2,7 +2,6 @@
 $this->breadcrumbs = array(
     'Dashboard' => array('/'),
     'Survei' => array('/surveyor/surveipublik/'),
-    'Detail' => array('/surveyor/surveipublik/detailsurvei/'.$model->ID_SURVEI),
     'Update'
 );
 ?>

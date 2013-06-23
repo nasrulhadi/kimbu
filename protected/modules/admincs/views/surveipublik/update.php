@@ -16,6 +16,8 @@ $this->breadcrumbs = array(
     ));
     ?>
 
+    <?php echo @Yii::app()->user->getFlash('info'); ?>
+    
     <div class="w-box">
         <div class="w-box-header">Survei</div>
         <div class="w-box-content cnt_a">
@@ -63,7 +65,8 @@ $this->breadcrumbs = array(
         ?>
     </div>
     <div class="form-actions">
-        <button class="btn btn-gebo" type="submit">Simpan</button> 
+        <?php echo CHtml::link('<span class="icon-ban-circle icon-white"></span> Batal Disetujui', array('/admincs/surveipublik/unapprove/' . $respon->ID_RESPON), array('class' => 'btn btn-danger')); ?>
+        &nbsp; <button class="btn btn-gebo" type="submit">Update</button> &nbsp;
         <?php echo CHtml::link('Kembali', Yii::app()->createUrl('admincs/surveipublik/detailsurvei/' . $model->ID_SURVEI), array('class' => 'btn')); ?>
     </div>
 

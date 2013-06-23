@@ -78,13 +78,17 @@ class SurveipublikController extends Controller
 							$respon_detail->RESPON = json_encode(Yii::app()->baseUrl.'file/surveipublik/'.$upload_data->getName());
 						}
 					}
+                                        if(isset($question->HINT) && $question->HINT == "NAMA"){
+                                            Respon::model()->updateByPk($respon->ID_RESPON, array('NAMA' => $_POST[$used_form->ID_SURVEI_FORM][$question->ID_SURVEI_PERTANYAAN]));
+                                        }
 					$respon_detail->ID_PERTANYAAN = $question->ID_SURVEI_PERTANYAAN;
 					$respon_detail->ID_RESPON = $respon->ID_RESPON;
 					$respon_detail->save();
 				
 				}
 			}
-			$this->redirect(Yii::app()->createUrl('surveyor/surveipublik/detailsurvei/'.$survei->ID_SURVEI));
+                        Yii::app()->user->setFlash('info',  MyFormatter::alertSuccess('<strong>Sukses!</strong> Update data berhasil.'));
+			$this->redirect(Yii::app()->createUrl('admincs/surveipublik/update/'.$respon->ID_RESPON));
 		}
 		
 		$this->render('update',array('model'=>$survei,'respon'=>$respon,));
@@ -110,7 +114,7 @@ class SurveipublikController extends Controller
 		
                 Respon::model()->updateByPk($id, array('APPROVAL'=>1));
                 Yii::app()->user->setFlash('info',  MyFormatter::alertSuccess('<strong>Sukses!</strong> Proses approve telah berhasil.'));
-                $this->redirect(Yii::app()->createUrl('admincs/surveipublik/detailsurvei/'.$survei->ID_SURVEI));
+                $this->redirect(Yii::app()->createUrl('admincs/surveipublik/update/'.$respon->ID_RESPON));
 
 		$this->render('view',array('model'=>$survei,'respon'=>$respon,));
 	}
@@ -122,7 +126,7 @@ class SurveipublikController extends Controller
                 Respon::model()->updateByPk($id, array('APPROVAL'=>0));
                 Yii::app()->user->setFlash('info',  MyFormatter::alertSuccess('<strong>Sukses!</strong> Proses pembatalan telah berhasil.'));
                 
-                $this->redirect(Yii::app()->createUrl('admincs/surveipublik/detailsurvei/'.$survei->ID_SURVEI));
+                $this->redirect(Yii::app()->createUrl('admincs/surveipublik/ViewSurvei/'.$respon->ID_RESPON));
                 
 		$this->render('view',array('model'=>$survei,'respon'=>$respon,));
 	}

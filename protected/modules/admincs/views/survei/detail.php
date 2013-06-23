@@ -35,7 +35,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
             'class' => 'CLinkColumn',
             'header' => 'NAMA',
             'labelExpression' => '$data->NAMA',
-            'urlExpression' => 'Yii::app()->createUrl(\'admincs/survei/ViewSurvei/\'.$data->ID_RESPON)',
+            'urlExpression' => '$data->APPROVAL==0?"/admincs/survei/ViewSurvei/$data->ID_RESPON":"/admincs/survei/update/$data->ID_RESPON"',
         ),
         array(
             'name' => 'SURVEYOR',
@@ -52,7 +52,8 @@ $this->widget('zii.widgets.grid.CGridView', array(
         ),
         array(
             'name' => 'APPROVAL',
-            'value' => '$data->APPROVAL==0?"Belum Disetujui":"Approved"',
+            'type'=>'raw',
+            'value' => '$data->APPROVAL==0?"<span class=\"label label-warning\">Belum Disetujui</span>":"<span class=\"label label-success\">Disetujui</span>"',
         ),
     ),
     'htmlOptions' => array(

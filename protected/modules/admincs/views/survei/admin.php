@@ -53,7 +53,8 @@ $this->widget('zii.widgets.grid.CGridView', array(
         'countNotApproved',
         array(
             'name' => 'STATUS',
-            'value' => '$data->STATUS==0?"Tidak Aktif":"Aktif"',
+            'type'=>'raw',
+            'value' => '$data->STATUS==0?"<span class=\"label label-warning\">Tidak Aktif</span>":"<span class=\"label label-success\">Aktif</span>"',
         ),
     ),
 ));

@@ -76,7 +76,7 @@ class Respon extends CActiveRecord
 			'NAMA' => 'Nama',
 			'TANGGAL_PENGISIAN' => 'Tanggal Pengisian',
 			'ID_SURVEI' => 'Id Survei',
-			'APPROVAL' => 'Approval',
+			'APPROVAL' => 'Status',
                         'SURVEYOR' => 'Surveyor',
 		);
 	}
