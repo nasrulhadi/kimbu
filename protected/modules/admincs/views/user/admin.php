@@ -51,11 +51,11 @@ $this->widget('zii.widgets.grid.CGridView', array(
         'NAMA',
         'USERNAME',
         'HP',
-        array(
-            'name' => 'TERAKHIR_LOGIN',
-            'type' => 'dateTimeFormat',
-            'value' => '$data->TERAKHIR_LOGIN',
-        ),
+//        array(
+//            'name' => 'TERAKHIR_LOGIN',
+//            'type' => 'dateTimeFormat',
+//            'value' => '$data->TERAKHIR_LOGIN',
+//        ),
         array(
             'name' => 'STATUS',
             'type' => 'statusAktif',

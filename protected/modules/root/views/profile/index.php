@@ -19,7 +19,6 @@ $this->breadcrumbs=array(
             <a href="<?php echo Yii::app()->createUrl('root/profile/editfoto');?>" data-toggle="modal" data-backdrop="static" onclick="showOnModal(jQuery(this).attr('href'))" class="btn btn-small btn-success"><i class="icon-folder-open icon-white"></i> Ubah Foto</a>
             <?php echo CHtml::link('<span class="icon-pencil"></span> Edit Profile', array('profile/setting'), array('class' => 'btn btn-small')); ?>
         </div>
-            
     </div>
     <div class="span9">
         <div class="w-box">
