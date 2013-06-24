@@ -61,7 +61,6 @@ class UserController extends Controller {
         if (isset($_POST['User'])) {
             $model->attributes = $_POST['User'];
             $model->FOTO = CUploadedFile::getInstance($model, 'FOTO');
-            $model->TYPE = 3;
             //$model->setAttribute('PASSWORD', $model->generatePassword());
             if ($model->validate()) {
                 //menyimpan file foto
@@ -71,6 +70,7 @@ class UserController extends Controller {
                 $model->setAttribute('PASSWORD', md5($model->PASSWORD));
                 $model->setAttribute('REPEAT', md5($model->REPEAT));
                 if ($model->save()) {
+                    //User::model()->updateByPk($model->ID_USER, array('TYPE' => 3));
                     Yii::app()->user->setFlash('info', MyFormatter::alertSuccess('<strong>Selamat!</strong> Data telah berhasil disimpan.'));
                     $this->redirect(array('view', 'id' => $model->ID_USER));
                 }

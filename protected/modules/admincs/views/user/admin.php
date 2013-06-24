@@ -2,7 +2,7 @@
 /* @var $this UserController */
 /* @var $model User */
 
-$this->pageTitle = Yii::app()->name . ' - Manajemen User';
+$this->pageTitle = Yii::app()->name . ' - Manajemen User Surveyor';
 
 $this->breadcrumbs = array(
     'Dashboard' => array('/'),
@@ -50,8 +50,12 @@ $this->widget('zii.widgets.grid.CGridView', array(
         ),
         'NAMA',
         'USERNAME',
-        'EMAIL',
         'HP',
+        array(
+            'name' => 'TERAKHIR_LOGIN',
+            'type' => 'dateTimeFormat',
+            'value' => '$data->TERAKHIR_LOGIN',
+        ),
         array(
             'name' => 'STATUS',
             'type' => 'statusAktif',
@@ -63,6 +67,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
             'value' => $model->TERAKHIR_LOGIN,
         ),
         array(
+            'header' => 'Pilihan',
             'class' => 'MyCButtonColumn',
         ),
     ),
