@@ -76,6 +76,7 @@ class Respon extends CActiveRecord
 			'NAMA' => 'Nama',
 			'TANGGAL_PENGISIAN' => 'Tanggal Pengisian',
 			'ID_SURVEI' => 'Id Survei',
+			'ID_USER' => 'Id Surveyor',
 			'APPROVAL' => 'Status',
                         'SURVEYOR' => 'Surveyor',
 		);
@@ -96,6 +97,7 @@ class Respon extends CActiveRecord
 		$criteria->compare('NAMA',$this->NAMA,false);
 		$criteria->compare('TANGGAL_PENGISIAN',$this->TANGGAL_PENGISIAN,true);
 		$criteria->compare('ID_SURVEI',$this->ID_SURVEI);
+		$criteria->compare('ID_USER',$this->ID_USER);
 		$criteria->addSearchCondition('APPROVAL',$this->APPROVAL,true);
 
 		return new CActiveDataProvider($this, array(

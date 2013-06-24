@@ -102,6 +102,7 @@ class SurveipublikController extends Controller
 		$this->layout = '//layouts/column1';
 		$model = new Respon;
 		$model->ID_SURVEI = $id;
+                $model->ID_USER = Yii::app()->user->idUser;
 		//$model->NAMA = Yii::app()->user->name;
 		$this->render('detail',array('model'=>$model));
 	}
