@@ -101,9 +101,9 @@ class SurveiController extends Controller
 	
 	public function actionDetailSurvei($id){
 		$this->layout = '//layouts/column1';
-		$model = new Respon;
+		$model = new Respon('search');
 		$model->ID_SURVEI = $id;
-                $model->ID_USER = Yii::app()->user->idUser;
+        $model->ID_USER = Yii::app()->user->idUser;
 		//$model->NAMA = Yii::app()->user->name;
 		$this->render('detail',array('model'=>$model));
 	}

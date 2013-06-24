@@ -21,6 +21,10 @@ class Respon extends CActiveRecord
 	 * @param string $className active record class name.
 	 * @return Respon the static model class
 	 */
+    //STATUS TOKO
+    const DISETUJUI=1;
+    const BELUM_DISETUJUI=0;
+    
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);

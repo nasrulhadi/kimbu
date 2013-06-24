@@ -12099,3 +12099,698 @@ HTTP_REFERER=http://localhost/kimbu/admincs/user/view/3
 2013/06/24 10:22:31 [warning] [application] Failed to set unsafe attribute "FOTO" of "User".
 in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (218)
 in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/24 11:40:06 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ID_USER' in 'where clause'. The SQL statement executed was: SELECT `ID_SURVEI` AS `c`, count(*) AS `s` FROM `respon` `t` WHERE (ID_USER = :idUser) AND (`t`.`ID_SURVEI`=1) GROUP BY `ID_SURVEI`.
+in C:\xampp\htdocs\kimbu\protected\modules\surveyor\views\survei\admin.php (57)
+in C:\xampp\htdocs\kimbu\protected\modules\surveyor\controllers\SurveiController.php (11)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/24 11:40:06 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ID_USER' in 'where clause'. The SQL statement executed was: SELECT `ID_SURVEI` AS `c`, count(*) AS `s` FROM `respon` `t` WHERE (ID_USER = :idUser) AND (`t`.`ID_SURVEI`=1) GROUP BY `ID_SURVEI`' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:541
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveFinder.php(1410): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\yii\framework\db\ar\CActiveFinder.php(1341): CStatElement->queryOneMany()
+#3 C:\xampp\htdocs\yii\framework\db\ar\CActiveFinder.php(457): CStatElement->query()
+#4 C:\xampp\htdocs\yii\framework\db\ar\CActiveFinder.php(163): CJoinElement->lazyFind(Object(Survei))
+#5 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(272): CActiveFinder->lazyFind(Object(Survei))
+#6 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(179): CActiveRecord->getRelated('count')
+#7 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1898): CActiveRecord->__isset('count')
+#8 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CDataColumn.php(133): CHtml::value(Object(Survei), 'count')
+#9 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridColumn.php(144): CDataColumn->renderDataCellContent(0, Object(Survei))
+#10 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridView.php(589): CGridColumn->renderDataCell(0)
+#11 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridView.php(545): CGridView->renderTableRow(0)
+#12 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridView.php(455): CGridView->renderTableBody()
+#13 C:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(160): CGridView->renderItems()
+#14 [internal function]: CBaseListView->renderSection(Array)
+#15 C:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(143): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{item...')
+#16 C:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(128): CBaseListView->renderContent()
+#17 C:\xampp\htdocs\yii\framework\web\CBaseController.php(173): CBaseListView->run()
+#18 C:\xampp\htdocs\kimbu\protected\modules\surveyor\views\survei\admin.php(57): CBaseController->widget('zii.widgets.gri...', Array)
+#19 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#20 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#21 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#22 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#23 C:\xampp\htdocs\kimbu\protected\modules\surveyor\controllers\SurveiController.php(11): CController->render('admin', Array)
+#24 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SurveiController->actionIndex()
+#25 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#26 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#27 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#28 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('')
+#29 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('surveyor/survei')
+#30 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#31 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#32 {main}
+REQUEST_URI=/kimbu/surveyor/survei
+HTTP_REFERER=http://localhost/kimbu/surveyor
+---
+2013/06/24 11:40:21 [error] [exception.CException] exception 'CException' with message 'Property "Respon.ID_USER" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(159): CComponent->__set('ID_USER', '2')
+#1 C:\xampp\htdocs\kimbu\protected\modules\surveyor\controllers\SurveiController.php(106): CActiveRecord->__set('ID_USER', '2')
+#2 [internal function]: SurveiController->actionDetailSurvei('1')
+#3 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(SurveiController), Array)
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SurveiController), Object(ReflectionMethod), Array)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('detailsurvei')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('surveyor/survei...')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/kimbu/surveyor/survei/detailsurvei/1
+---
+2013/06/24 11:43:46 [error] [exception.CException] exception 'CException' with message 'Property "Respon.NAMA_SURVEI" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('NAMA_SURVEI')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2255): CActiveRecord->__get('NAMA_SURVEI')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1980): CHtml::resolveValue(Object(Respon), 'NAMA_SURVEI')
+#3 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1257): CHtml::activeInputField('text', Object(Respon), 'NAMA_SURVEI', Array)
+#4 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(657): CHtml::activeTextField(Object(Respon), 'NAMA_SURVEI', Array)
+#5 C:\xampp\htdocs\kimbu\protected\modules\surveyor\views\survei\_search.php(17): CActiveForm->textField(Object(Respon), 'NAMA_SURVEI')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\kimbu\protected\modules\surveyor\views\survei\detail.php(30): CController->renderPartial('_search', Array)
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#11 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('detail', Array, true)
+#14 C:\xampp\htdocs\kimbu\protected\modules\surveyor\controllers\SurveiController.php(108): CController->render('detail', Array)
+#15 [internal function]: SurveiController->actionDetailSurvei('1')
+#16 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(SurveiController), Array)
+#17 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SurveiController), Object(ReflectionMethod), Array)
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#20 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('detailsurvei')
+#22 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('surveyor/survei...')
+#23 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#24 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/kimbu/surveyor/survei/detailsurvei/1
+---
+2013/06/24 11:45:48 [error] [exception.CException] exception 'CException' with message 'Property "Respon.STATUS" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('STATUS')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2255): CActiveRecord->__get('STATUS')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1565): CHtml::resolveValue(Object(Respon), 'STATUS')
+#3 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(763): CHtml::activeDropDownList(Object(Respon), 'STATUS', Array, Array)
+#4 C:\xampp\htdocs\kimbu\protected\modules\surveyor\views\survei\_search.php(22): CActiveForm->dropDownList(Object(Respon), 'STATUS', Array)
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\kimbu\protected\modules\surveyor\views\survei\detail.php(30): CController->renderPartial('_search', Array)
+#9 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('detail', Array, true)
+#13 C:\xampp\htdocs\kimbu\protected\modules\surveyor\controllers\SurveiController.php(108): CController->render('detail', Array)
+#14 [internal function]: SurveiController->actionDetailSurvei('1')
+#15 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(SurveiController), Array)
+#16 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SurveiController), Object(ReflectionMethod), Array)
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('detailsurvei')
+#21 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('surveyor/survei...')
+#22 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/kimbu/surveyor/survei/detailsurvei/1
+---
+2013/06/24 11:58:40 [error] [exception.CException] exception 'CException' with message 'Property "Survei.NAMA" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('NAMA')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2255): CActiveRecord->__get('NAMA')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1980): CHtml::resolveValue(Object(Survei), 'NAMA')
+#3 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1257): CHtml::activeInputField('text', Object(Survei), 'NAMA', Array)
+#4 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(657): CHtml::activeTextField(Object(Survei), 'NAMA', Array)
+#5 C:\xampp\htdocs\kimbu\protected\modules\surveyor\views\surveipublik\_search.php(17): CActiveForm->textField(Object(Survei), 'NAMA')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\kimbu\protected\modules\surveyor\views\surveipublik\admin.php(32): CController->renderPartial('_search', Array)
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#11 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#14 C:\xampp\htdocs\kimbu\protected\modules\surveyor\controllers\SurveipublikController.php(11): CController->render('admin', Array)
+#15 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SurveipublikController->actionIndex()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('')
+#20 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('surveyor/survei...')
+#21 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/kimbu/surveyor/surveipublik
+HTTP_REFERER=http://localhost/kimbu/surveyor/survei/detailsurvei/1
+---
+2013/06/24 12:01:24 [error] [exception.CException] exception 'CException' with message 'Property "Survei.NAMA" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('NAMA')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2255): CActiveRecord->__get('NAMA')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1980): CHtml::resolveValue(Object(Survei), 'NAMA')
+#3 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1257): CHtml::activeInputField('text', Object(Survei), 'NAMA', Array)
+#4 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(657): CHtml::activeTextField(Object(Survei), 'NAMA', Array)
+#5 C:\xampp\htdocs\kimbu\protected\modules\surveyor\views\surveipublik\_search.php(17): CActiveForm->textField(Object(Survei), 'NAMA')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\kimbu\protected\modules\surveyor\views\surveipublik\admin.php(32): CController->renderPartial('_search', Array)
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#11 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#14 C:\xampp\htdocs\kimbu\protected\modules\surveyor\controllers\SurveipublikController.php(11): CController->render('admin', Array)
+#15 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SurveipublikController->actionIndex()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('')
+#20 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('surveyor/survei...')
+#21 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/kimbu/surveyor/surveipublik
+HTTP_REFERER=http://localhost/kimbu/surveyor/survei/detailsurvei/1
+---
+2013/06/24 12:01:29 [error] [exception.CException] exception 'CException' with message 'Property "Survei.NAMA" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('NAMA')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2255): CActiveRecord->__get('NAMA')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1980): CHtml::resolveValue(Object(Survei), 'NAMA')
+#3 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1257): CHtml::activeInputField('text', Object(Survei), 'NAMA', Array)
+#4 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(657): CHtml::activeTextField(Object(Survei), 'NAMA', Array)
+#5 C:\xampp\htdocs\kimbu\protected\modules\surveyor\views\surveipublik\_search.php(17): CActiveForm->textField(Object(Survei), 'NAMA')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\kimbu\protected\modules\surveyor\views\surveipublik\admin.php(32): CController->renderPartial('_search', Array)
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#11 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#14 C:\xampp\htdocs\kimbu\protected\modules\surveyor\controllers\SurveipublikController.php(11): CController->render('admin', Array)
+#15 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SurveipublikController->actionIndex()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('')
+#20 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('surveyor/survei...')
+#21 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/kimbu/surveyor/surveipublik
+---
+2013/06/24 12:01:44 [error] [exception.CException] exception 'CException' with message 'Property "Survei.NAMA" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('NAMA')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2255): CActiveRecord->__get('NAMA')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1980): CHtml::resolveValue(Object(Survei), 'NAMA')
+#3 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1257): CHtml::activeInputField('text', Object(Survei), 'NAMA', Array)
+#4 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(657): CHtml::activeTextField(Object(Survei), 'NAMA', Array)
+#5 C:\xampp\htdocs\kimbu\protected\modules\surveyor\views\surveipublik\_search.php(17): CActiveForm->textField(Object(Survei), 'NAMA')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\kimbu\protected\modules\surveyor\views\surveipublik\admin.php(32): CController->renderPartial('_search', Array)
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#11 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#14 C:\xampp\htdocs\kimbu\protected\modules\surveyor\controllers\SurveipublikController.php(11): CController->render('admin', Array)
+#15 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SurveipublikController->actionIndex()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('')
+#20 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('surveyor/survei...')
+#21 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/kimbu/surveyor/surveipublik
+HTTP_REFERER=http://localhost/kimbu/surveyor/survei/detailsurvei/1
+---
+2013/06/24 12:07:04 [error] [exception.CException] exception 'CException' with message 'Property "Survei.NAMA" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('NAMA')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2255): CActiveRecord->__get('NAMA')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1980): CHtml::resolveValue(Object(Survei), 'NAMA')
+#3 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1257): CHtml::activeInputField('text', Object(Survei), 'NAMA', Array)
+#4 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(657): CHtml::activeTextField(Object(Survei), 'NAMA', Array)
+#5 C:\xampp\htdocs\kimbu\protected\modules\surveyor\views\surveipublik\_search.php(17): CActiveForm->textField(Object(Survei), 'NAMA')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\kimbu\protected\modules\surveyor\views\surveipublik\admin.php(32): CController->renderPartial('_search', Array)
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#11 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#14 C:\xampp\htdocs\kimbu\protected\modules\surveyor\controllers\SurveipublikController.php(11): CController->render('admin', Array)
+#15 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SurveipublikController->actionIndex()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('')
+#20 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('surveyor/survei...')
+#21 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/kimbu/surveyor/surveipublik
+---
+2013/06/24 12:10:11 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('detailsurvei')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('surveyor/survei...')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/kimbu/surveyor/survei/detailsurvei?Respon%5BNAMA%5D=sdasd&Respon%5BAPPROVAL%5D=0&yt0=Tampilkan+Hasil
+HTTP_REFERER=http://localhost/kimbu/surveyor/survei/detailsurvei/1
+---
+2013/06/24 12:10:34 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('detailsurvei')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('surveyor/survei...')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/kimbu/surveyor/survei/detailsurvei?Respon%5BNAMA%5D=sdasd&Respon%5BAPPROVAL%5D=1&yt0=Tampilkan+Hasil
+HTTP_REFERER=http://localhost/kimbu/surveyor/survei/detailsurvei/1
+---
+2013/06/24 12:11:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interaksi/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('interaksi/getms...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/interaksi/getmsg/undefined?_=1372068654028
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat/index?Chat%5BSTATUS%5D=1&yt0=Tampilkan+Hasil
+---
+2013/06/24 12:11:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interaksi/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('interaksi/getms...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/interaksi/getmsg/undefined?_=1372068654029
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat/index?Chat%5BSTATUS%5D=1&yt0=Tampilkan+Hasil
+---
+2013/06/24 12:11:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interaksi/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('interaksi/getms...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/interaksi/getmsg/undefined?_=1372068654030
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat/index?Chat%5BSTATUS%5D=1&yt0=Tampilkan+Hasil
+---
+2013/06/24 12:11:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interaksi/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('interaksi/getms...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/interaksi/getmsg/undefined?_=1372068654031
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat/index?Chat%5BSTATUS%5D=1&yt0=Tampilkan+Hasil
+---
+2013/06/24 12:11:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interaksi/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('interaksi/getms...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/interaksi/getmsg/undefined?_=1372068654032
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat/index?Chat%5BSTATUS%5D=1&yt0=Tampilkan+Hasil
+---
+2013/06/24 12:11:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interaksi/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('interaksi/getms...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/interaksi/getmsg/undefined?_=1372068654033
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat/index?Chat%5BSTATUS%5D=1&yt0=Tampilkan+Hasil
+---
+2013/06/24 12:12:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interaksi/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('interaksi/getms...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/interaksi/getmsg/undefined?_=1372068654034
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat/index?Chat%5BSTATUS%5D=1&yt0=Tampilkan+Hasil
+---
+2013/06/24 12:12:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interaksi/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('interaksi/getms...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/interaksi/getmsg/undefined?_=1372068654035
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat/index?Chat%5BSTATUS%5D=1&yt0=Tampilkan+Hasil
+---
+2013/06/24 12:12:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interaksi/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('interaksi/getms...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/interaksi/getmsg/undefined?_=1372068654036
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat/index?Chat%5BSTATUS%5D=1&yt0=Tampilkan+Hasil
+---
+2013/06/24 12:12:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interaksi/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('interaksi/getms...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/interaksi/getmsg/undefined?_=1372068654037
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat/index?Chat%5BSTATUS%5D=1&yt0=Tampilkan+Hasil
+---
+2013/06/24 12:12:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interaksi/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('interaksi/getms...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/interaksi/getmsg/undefined?_=1372068654038
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat/index?Chat%5BSTATUS%5D=1&yt0=Tampilkan+Hasil
+---
+2013/06/24 12:12:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interaksi/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('interaksi/getms...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/interaksi/getmsg/undefined?_=1372068654039
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat/index?Chat%5BSTATUS%5D=1&yt0=Tampilkan+Hasil
+---
+2013/06/24 12:13:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interaksi/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('interaksi/getms...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/interaksi/getmsg/undefined?_=1372068654040
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat/index?Chat%5BSTATUS%5D=1&yt0=Tampilkan+Hasil
+---
+2013/06/24 12:13:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interaksi/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('interaksi/getms...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/interaksi/getmsg/undefined?_=1372068654041
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat/index?Chat%5BSTATUS%5D=1&yt0=Tampilkan+Hasil
+---
+2013/06/24 12:13:18 [error] [exception.CException] exception 'CException' with message 'Property "Survei.NAMA" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('NAMA')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2255): CActiveRecord->__get('NAMA')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1980): CHtml::resolveValue(Object(Survei), 'NAMA')
+#3 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1257): CHtml::activeInputField('text', Object(Survei), 'NAMA', Array)
+#4 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(657): CHtml::activeTextField(Object(Survei), 'NAMA', Array)
+#5 C:\xampp\htdocs\kimbu\protected\modules\surveyor\views\survei\_search.php(17): CActiveForm->textField(Object(Survei), 'NAMA')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\kimbu\protected\modules\surveyor\views\survei\admin.php(32): CController->renderPartial('_search', Array)
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#11 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#14 C:\xampp\htdocs\kimbu\protected\modules\surveyor\controllers\SurveiController.php(11): CController->render('admin', Array)
+#15 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SurveiController->actionIndex()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('')
+#20 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('surveyor/survei')
+#21 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/kimbu/surveyor/survei
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat/index?Chat%5BSTATUS%5D=1&yt0=Tampilkan+Hasil
+---
+2013/06/24 12:13:31 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('detailsurvei')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('surveyor/survei...')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/kimbu/surveyor/survei/detailsurvei?Respon%5BNAMA%5D=&Respon%5BAPPROVAL%5D=1&yt0=Tampilkan+Hasil
+HTTP_REFERER=http://localhost/kimbu/surveyor/survei/detailsurvei/1
+---
+2013/06/24 12:14:19 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('detailsurvei')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('surveyor/survei...')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/kimbu/surveyor/survei/detailsurvei?Respon%5BNAMA%5D=&Respon%5BAPPROVAL%5D=1&yt0=Tampilkan+Hasil
+HTTP_REFERER=http://localhost/kimbu/surveyor/survei/detailsurvei/1
+---
+2013/06/24 12:14:41 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('detailsurvei')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('surveyor/survei...')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/kimbu/surveyor/survei/detailsurvei?Respon%5BNAMA%5D=as&Respon%5BAPPROVAL%5D=0&yt0=Tampilkan+Hasil
+HTTP_REFERER=http://localhost/kimbu/surveyor/survei/detailsurvei/1
+---
+2013/06/24 12:16:36 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('detailsurvei')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('surveyor/survei...')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/kimbu/surveyor/survei/detailsurvei?Respon%5BNAMA%5D=as&Respon%5BAPPROVAL%5D=0&yt0=Tampilkan+Hasil
+HTTP_REFERER=http://localhost/kimbu/surveyor/survei/detailsurvei/1
+---
+2013/06/24 12:16:52 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('detailsurvei')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('surveyor/survei...')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/kimbu/surveyor/surveipublik/detailsurvei?Respon%5BNAMA%5D=&Respon%5BAPPROVAL%5D=1&yt0=Tampilkan+Hasil
+HTTP_REFERER=http://localhost/kimbu/surveyor/surveipublik/detailsurvei/1
+---
+2013/06/24 12:17:27 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('detailsurvei')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('surveyor/survei...')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/kimbu/surveyor/surveipublik/detailsurvei?Respon%5BNAMA%5D=sdd&Respon%5BAPPROVAL%5D=0&yt0=Tampilkan+Hasil
+HTTP_REFERER=http://localhost/kimbu/surveyor/surveipublik/detailsurvei/1
+---
+2013/06/24 12:17:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interaksi/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('interaksi/getms...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/interaksi/getmsg/undefined?_=1372069038036
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat/index?Chat%5BSTATUS%5D=2&yt0=Tampilkan+Hasil
+---
+2013/06/24 12:17:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interaksi/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('interaksi/getms...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/interaksi/getmsg/undefined?_=1372069038037
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat/index?Chat%5BSTATUS%5D=2&yt0=Tampilkan+Hasil
+---
+2013/06/24 12:17:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interaksi/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('interaksi/getms...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/interaksi/getmsg/undefined?_=1372069038038
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat/index?Chat%5BSTATUS%5D=2&yt0=Tampilkan+Hasil
+---
+2013/06/24 12:17:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interaksi/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('interaksi/getms...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/interaksi/getmsg/undefined?_=1372069038039
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat/index?Chat%5BSTATUS%5D=2&yt0=Tampilkan+Hasil
+---
+2013/06/24 12:18:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interaksi/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('interaksi/getms...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/interaksi/getmsg/undefined?_=1372069038040
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat/index?Chat%5BSTATUS%5D=2&yt0=Tampilkan+Hasil
+---
+2013/06/24 12:18:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interaksi/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('interaksi/getms...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/interaksi/getmsg/undefined?_=1372069038041
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat/index?Chat%5BSTATUS%5D=2&yt0=Tampilkan+Hasil
+---
+2013/06/24 12:18:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interaksi/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('interaksi/getms...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/interaksi/getmsg/undefined?_=1372069038042
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat/index?Chat%5BSTATUS%5D=2&yt0=Tampilkan+Hasil
+---
+2013/06/24 12:18:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interaksi/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('interaksi/getms...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/interaksi/getmsg/undefined?_=1372069038043
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat/index?Chat%5BSTATUS%5D=2&yt0=Tampilkan+Hasil
+---
+2013/06/24 12:18:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interaksi/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('interaksi/getms...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/interaksi/getmsg/undefined?_=1372069038044
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat/index?Chat%5BSTATUS%5D=2&yt0=Tampilkan+Hasil
+---
+2013/06/24 12:19:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interaksi/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('interaksi/getms...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/interaksi/getmsg/undefined?_=1372069038045
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat/index?Chat%5BSTATUS%5D=2&yt0=Tampilkan+Hasil
+---
+2013/06/24 12:19:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interaksi/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('interaksi/getms...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/interaksi/getmsg/undefined?_=1372069038046
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat/index?Chat%5BSTATUS%5D=2&yt0=Tampilkan+Hasil
+---
+2013/06/24 12:19:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interaksi/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('interaksi/getms...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/interaksi/getmsg/undefined?_=1372069038047
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat/index?Chat%5BSTATUS%5D=2&yt0=Tampilkan+Hasil
+---
+2013/06/24 12:19:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interaksi/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('interaksi/getms...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/interaksi/getmsg/undefined?_=1372069038048
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat/index?Chat%5BSTATUS%5D=2&yt0=Tampilkan+Hasil
+---
+2013/06/24 12:19:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interaksi/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('interaksi/getms...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/interaksi/getmsg/undefined?_=1372069038049
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat/index?Chat%5BSTATUS%5D=2&yt0=Tampilkan+Hasil
+---
+2013/06/24 12:19:45 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('detailsurvei')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('surveyor/survei...')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/kimbu/surveyor/surveipublik/detailsurvei?Respon%5BNAMA%5D=d&Respon%5BAPPROVAL%5D=0&yt0=Tampilkan+Hasil
+HTTP_REFERER=http://localhost/kimbu/surveyor/surveipublik/detailsurvei/1/?Respon%5BNAMA%5D=sdd&Respon%5BAPPROVAL%5D=0&yt0=Tampilkan+Hasil
+---
+2013/06/24 12:19:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interaksi/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('interaksi/getms...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/interaksi/getmsg/undefined?_=1372069038050
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat/index?Chat%5BSTATUS%5D=2&yt0=Tampilkan+Hasil
+---
+2013/06/24 12:19:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interaksi/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('interaksi/getms...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/interaksi/getmsg/undefined?_=1372069038051
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat/index?Chat%5BSTATUS%5D=2&yt0=Tampilkan+Hasil
+---
+2013/06/24 12:20:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interaksi/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('interaksi/getms...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/interaksi/getmsg/undefined?_=1372069038052
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat/index?Chat%5BSTATUS%5D=2&yt0=Tampilkan+Hasil
+---
+2013/06/24 12:20:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interaksi/getmsg/undefined".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('interaksi/getms...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/interaksi/getmsg/undefined?_=1372069038053
+HTTP_REFERER=http://localhost/kimbu/interaksi/chat/index?Chat%5BSTATUS%5D=2&yt0=Tampilkan+Hasil
+---

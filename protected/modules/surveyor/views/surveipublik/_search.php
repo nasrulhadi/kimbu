@@ -13,17 +13,17 @@
     <div class="row-fluid">
         <div class="span12">
             <div class="row">
-                <?php echo $form->label($model,'NAMA_SURVEI'); ?>
-                <?php echo $form->textField($model,'NAMA_SURVEI'); ?>
+                <?php echo $form->label($model,'NAMA'); ?>
+                <?php echo $form->textField($model,'NAMA'); ?>
             </div>
 
             <div class="row">
-                <?php echo $form->labelEx($model,'STATUS'); ?><br>
-                <?php echo $form->dropDownList($model,'STATUS',array(User::STATUS_AKTIF=>'Aktif', User::STATUS_NON_AKTIF=>'Tidak Aktif')); ?>
+                <?php echo $form->labelEx($model,'APPROVAL'); ?><br>
+                <?php echo $form->dropDownList($model,'APPROVAL',array(Respon::DISETUJUI=>'Disetujui', Respon::BELUM_DISETUJUI=>'Belum Disetujui')); ?>
             </div>
 
             <div class="row buttons">
-                <?php echo CHtml::submitButton('Tampilkan Hasil', array('class' => 'btn btn-warning')); ?>
+                <?php echo CHtml::submitButton('Tampilkan Hasil', array('class' => 'btn btn-danger')); ?>
             </div>
         </div>
     </div>

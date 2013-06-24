@@ -4,6 +4,19 @@ $this->breadcrumbs = array(
     'Survei Publik' => array('/surveyor/surveipublik/'),
     'Detail'
 );
+
+Yii::app()->clientScript->registerScript('search', "
+$('.search-button').click(function(){
+	$('.search-form').toggle();
+	return false;
+});
+$('.search-form form').submit(function(){
+	$('#survei-grid').yiiGridView('update', {
+		data: $(this).serialize()
+	});
+	return false;
+});
+");
 ?>
 
 <h3 class="heading">Detail Survei End User</h3>
@@ -20,10 +33,18 @@ $this->breadcrumbs = array(
     </table>
 </div>
 </br>
-
+<div class="pull-right" style="margin-bottom: 20px;">
+    <?php echo CHtml::link('<span class="icon-search"></span> Pencarian','#',array('class'=>'btn search-button')); ?>
+</div>
+</br>
+<div class="search-form" style="display:none">
+<?php $this->renderPartial('_search',array(
+	'model'=>$model,
+)); ?>
+</div><!-- search-form -->
 <?php
 $this->widget('zii.widgets.grid.CGridView', array(
-    'id' => 'user-grid',
+    'id' => 'survei-grid',
     'dataProvider' => $model->search(),
     'itemsCssClass' => 'table table-striped table-bordered table-hover',
     'columns' => array(
