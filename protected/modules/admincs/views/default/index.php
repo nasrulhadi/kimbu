@@ -8,7 +8,7 @@ $this->breadcrumbs = array(
 $baseUrl = Yii::app()->theme->baseUrl;
 $siteUrl = Yii::app()->baseUrl;
 ?>
-<h3 class="heading">Dashboard</h3>
+<h3 class="heading">Hai <?php echo Yii::app()->user->name; ?>, Selamat Datang Kembali :)</h3>
 <?php 
 $getDivisi = Divisi::model()->findByPk(Yii::app()->user->idDivisi);
 ?>
