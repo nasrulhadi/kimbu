@@ -50,7 +50,11 @@ $this->widget('zii.widgets.grid.CGridView', array(
         ),
         'NAMA',
         'USERNAME',
-        'HP',
+        array(
+            'name' => 'TERAKHIR_LOGIN',
+            'type' => 'dateTimeFormat',
+            'value' => $model->TERAKHIR_LOGIN,
+        ),
 //        array(
 //            'name' => 'TERAKHIR_LOGIN',
 //            'type' => 'dateTimeFormat',
@@ -60,11 +64,6 @@ $this->widget('zii.widgets.grid.CGridView', array(
             'name' => 'STATUS',
             'type' => 'statusAktif',
             'value' => $model->STATUS,
-        ),
-        array(
-            'name' => 'TERAKHIR_LOGIN',
-            'type' => 'dateFormat',
-            'value' => $model->TERAKHIR_LOGIN,
         ),
         array(
             'header' => 'Pilihan',

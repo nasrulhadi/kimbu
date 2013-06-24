@@ -6,21 +6,24 @@ $this->breadcrumbs = array(
     'Dashboard',
 );
 $baseUrl = Yii::app()->theme->baseUrl;
+$siteUrl = Yii::app()->baseUrl;
 ?>
 <h3 class="heading">Dashboard</h3>
-<div class="alert alert-info">
-    <button type="button" class="close" data-dismiss="alert">×</button>
-    <strong>Selamat datang!</strong> Anda dapat mengelola halaman Admnistrator Kimbu.
-</div>
-
+<?php 
+$getDivisi = Divisi::model()->findByPk(Yii::app()->user->idDivisi);
+?>
 <div class="row-fluid">
     <div class="span12">
+        <div class="dshb_icoNav tac" style="margin-bottom: 30px;">
+            <?php if($getDivisi->LOGO != "" && $getDivisi->LOGO != NULL && $getDivisi->LOGO != "tidakadalogo.jpg"){ ?>
+            <img src="<?php echo $siteUrl."/file/logo/divisi/".$getDivisi->LOGO ?>" class="" style="width:300px;" align="middle" alt="<?php echo $getDivisi->NAMA; ?>">
+            <?php } ?>
+        </div>
         <ul class="dshb_icoNav tac">
-            <li><a href="javascript:void(0)" style="background-image: url(<?php echo $baseUrl; ?>/img/gCons/multi-agents.png)"><span class="label label-info">+10</span> Users</a></li>
-            <li><a href="javascript:void(0)" style="background-image: url(<?php echo $baseUrl; ?>/img/gCons/world.png)">Map</a></li>
-            <li><a href="javascript:void(0)" style="background-image: url(<?php echo $baseUrl; ?>/img/gCons/configuration.png)">Settings</a></li>
-            <li><a href="javascript:void(0)" style="background-image: url(<?php echo $baseUrl; ?>/img/gCons/lab.png)">Lab</a>
-            <li><a href="javascript:void(0)" style="background-image: url(<?php echo $baseUrl; ?>/img/gCons/van.png)"><span class="label label-success">$2851</span> Delivery</a></li>
+            <li><a href="./admincs/user" style="background-image: url(<?php echo $baseUrl; ?>/img/gCons/multi-agents.png)">Users Surveyor</a></li>
+            <li><a href="./interaksi/chat" style="background-image: url(<?php echo $baseUrl; ?>/img/gCons/chat-.png)">Obrolan</a></li>
+            <li><a href="./admincs/survei" style="background-image: url(<?php echo $baseUrl; ?>/img/gCons/add-item.png)">Survei Toko</a></li>
+            <li><a href="./admincs/surveipublik" style="background-image: url(<?php echo $baseUrl; ?>/img/gCons/next-item.png)">Survei Publik</a></li>
         </ul>
     </div>
 </div>
