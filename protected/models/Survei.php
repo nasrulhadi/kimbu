@@ -67,8 +67,8 @@ class Survei extends CActiveRecord
 			'surveiForms' => array(self::HAS_MANY, 'SurveiForm', 'ID_SURVEI'),
 			'count' => array(self::STAT,'Respon','ID_SURVEI',
                                                 'select'=>'count(*)',
-                                                'condition'=>'NAMA = :nama',
-                                                'params'=>array(':nama'=>Yii::app()->user->name,),
+                                                'condition'=>'ID_USER = :idUser',
+                                                'params'=>array(':idUser'=>Yii::app()->user->idUser,),
                                                 ),	
 			'countNotApproved' => array(self::STAT,'Respon','ID_SURVEI',
                                                 'select'=>'count(*)',
@@ -94,8 +94,8 @@ class Survei extends CActiveRecord
             'TYPE' => 'Tipe Survei',
 			'TANGGAL_DIBUAT' => 'Tanggal Dibuat',
 			'count' => 'Jumlah Survei',
-			'countAll' => 'Jumlah Semua Survei',
-			'countNotApproved' => 'Jumlah Survei Belum Diapprove',
+			'countAll' => 'Total Semua Survei',
+			'countNotApproved' => 'Total Survei Belum Disetujui',
 		);
 	}
 

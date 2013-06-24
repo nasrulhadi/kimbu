@@ -1,9 +1,12 @@
-
-
 <?php
+/* @var $this UserController */
+/* @var $model User */
+
+$this->pageTitle = Yii::app()->name . ' - Manajemen User';
+
 $this->breadcrumbs = array(
     'Dashboard' => array('/'),
-    'Survei Publik',
+    'User Surveyor',
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -12,7 +15,7 @@ $('.search-button').click(function(){
 	return false;
 });
 $('.search-form form').submit(function(){
-	$('#surveipublik-grid').yiiGridView('update', {
+	$('#user-grid').yiiGridView('update', {
 		data: $(this).serialize()
 	});
 	return false;
@@ -20,9 +23,10 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h3 class="heading">Survei End User</h3>
+<h3 class="heading">User Surveyor</h3>
 
 <div class="pull-left" style="margin-bottom: 20px;">
+    <?php echo CHtml::link('<span class="icon-plus icon-white"></span> Buat User', array('/admincs/user/create'), array('class' => 'btn btn-gebo')); ?>
     <?php echo CHtml::link('<span class="icon-search"></span> Pencarian', '#', array('class' => 'btn search-button')); ?>
 </div>
 </br>
@@ -36,27 +40,30 @@ $('.search-form form').submit(function(){
 
 <?php
 $this->widget('zii.widgets.grid.CGridView', array(
-    'id' => 'surveipublik-grid',
+    'id' => 'user-grid',
     'dataProvider' => $model->search(),
     'itemsCssClass' => 'table table-striped table-bordered table-hover',
     'columns' => array(
-        array(
-            'header' => 'No.',
-            'value' => '$this->grid->dataProvider->pagination->currentPage * $this->grid->dataProvider->pagination->pageSize + ($row+1)',
-        ),
-        array(
-            'class' => 'CLinkColumn',
-            'header' => 'Nama Survei',
-            'labelExpression' => '$data->NAMA_SURVEI',
-            'urlExpression' => 'Yii::app()->createUrl(\'admincs/surveipublik/detailsurvei/\'.$data->ID_SURVEI)',
-        ),
-        'KETERANGAN',
-        'countAll',
-        'countNotApproved',
+        'NAMA',
+//        array(
+//            'name'=>'DIVISI',
+//            'value'=>$model->Divisi->NAMA,
+//        ),
+//        array(
+//            'name' => 'PERUSAHAAN',
+//            'value' => $model->Perusahaan->NAMA,
+//        ),
+        'USERNAME',
+        'EMAIL',
+        'HP',
         array(
             'name' => 'STATUS',
-            'type'=>'raw',
-            'value' => '$data->STATUS==0?"<span class=\"label label-warning\">Tidak Aktif</span>":"<span class=\"label label-success\">Aktif</span>"',
+            'type' => 'statusAktif',
+            'value' => $model->STATUS,
+        ),
+        'TERAKHIR_LOGIN',
+        array(
+            'class' => 'MyCButtonColumn',
         ),
     ),
 ));

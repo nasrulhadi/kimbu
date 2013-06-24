@@ -47,8 +47,9 @@ $this->widget('zii.widgets.grid.CGridView', array(
             'value' => '$data->TANGGAL_PENGISIAN',
         ),
         array(
-            'name' => 'APROVAL',
-            'value' => '$data->APPROVAL==0?"Belum Disetujui":"Approved"',
+            'name' => 'Status',
+            'type' => 'raw',
+            'value' => '$data->APPROVAL==0?"<span class=\"label label-warning\">Belum Disetujui</span>":"<span class=\"label label-success\">Disetujui</span>"',
         ),
     ),
     'htmlOptions' => array(

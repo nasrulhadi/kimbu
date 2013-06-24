@@ -15,7 +15,7 @@
         if (!isset($respon)) {
             ?>
             <tr>
-                <td>
+                <td width="40%">
             <?php echo CHtml::label($pertanyaan->PERTANYAAN, ''); ?>
                 </td>
                 <td>
@@ -62,7 +62,7 @@
     } else {
         ?>
             <tr>
-                <td>
+                <td width="40%">
             <?php echo CHtml::label($pertanyaan->PERTANYAAN, ''); ?>
             <?php
             $pertanyaan_respon = ResponDetail::model()->findByAttributes(array('ID_PERTANYAAN' => $pertanyaan->ID_SURVEI_PERTANYAAN, 'ID_RESPON' => $respon->ID_RESPON,));
@@ -98,6 +98,12 @@
                             break;
                         case SurveiPertanyaan::RADIO_FIELD:
                             $options = array();
+                            
+                            if (isset($respon_value['RADIO'])) {
+                                $responValue = $respon_value['RADIO'];
+                            } else {
+                                $responValue = '';
+                            }
 
                             foreach ($pertanyaan->surveiPilihanJawabans as $jawaban) {
                                 if (isset($respon_value['FIELD' . $jawaban->ID_SURVEI_JAWABAN])) {
@@ -110,6 +116,12 @@
                             break;
                         case SurveiPertanyaan::CHECKBOX_FIELD:
                             $options = array();
+                            
+                            if (isset($respon_value['CHECKBOX'])) {
+                                $responValue = $respon_value['CHECKBOX'];
+                            } else {
+                                $responValue = '';
+                            }
 
                             foreach ($pertanyaan->surveiPilihanJawabans as $jawaban) {
 
@@ -119,7 +131,7 @@
                                     $options[$jawaban->ID_SURVEI_JAWABAN] = str_replace('{input}', CHtml::TextField($model->ID_SURVEI_FORM . '[' . $pertanyaan->ID_SURVEI_PERTANYAAN . '][FIELD' . $jawaban->ID_SURVEI_JAWABAN . ']', '', array('class'=>'')), $jawaban->JAWABAN);
                                 }
                             }
-                            echo CHtml::checkBoxList($model->ID_SURVEI_FORM . '[' . $pertanyaan->ID_SURVEI_PERTANYAAN . '][CHECKBOX]', $respon_value['CHECKBOX'], $options, array('template'=>'<label class="checkbox">{input}{label}</label>', 'separator'=>''));
+                            echo CHtml::checkBoxList($model->ID_SURVEI_FORM . '[' . $pertanyaan->ID_SURVEI_PERTANYAAN . '][CHECKBOX]', $responValue, $options, array('template'=>'<label class="checkbox">{input}{label}</label>', 'separator'=>''));
                             break;
                     }
                     ?>

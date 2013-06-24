@@ -1,6 +1,6 @@
-<?php 
-$this->breadcrumbs=array(
-    'Dashboard'=>array('/'),
+<?php
+$this->breadcrumbs = array(
+    'Dashboard' => array('/'),
     'Survei',
 );
 
@@ -21,39 +21,41 @@ $('.search-form form').submit(function(){
 <h3 class="heading">Survei Toko</h3>
 
 <div class="pull-left" style="margin-bottom: 20px;">
-    <?php echo CHtml::link('<span class="icon-search"></span> Pencarian','#',array('class'=>'btn search-button')); ?>
+    <?php echo CHtml::link('<span class="icon-search"></span> Pencarian', '#', array('class' => 'btn search-button')); ?>
 </div>
 </br>
 <div class="search-form" style="display:none">
-<?php $this->renderPartial('_search',array(
-	'model'=>$model,
-)); ?>
+    <?php
+    $this->renderPartial('_search', array(
+        'model' => $model,
+    ));
+    ?>
 </div><!-- search-form -->
 
-<?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'user-grid',
-	'dataProvider'=>$model->search(),
-	 'itemsCssClass'=>'table table-striped table-bordered table-hover',
-	'columns'=>array(
-		array(
-        'header'=>'No.',
-        'value'=>'$this->grid->dataProvider->pagination->currentPage * $this->grid->dataProvider->pagination->pageSize + ($row+1)',
-		),
-		array(
-			'class'=>'CLinkColumn',
-			'header'=>'NAMA_SURVEI',
-            'labelExpression'=>'$data->NAMA_SURVEI',
-			'urlExpression'=>'Yii::app()->createUrl(\'admincs/survei/detailsurvei/\'.$data->ID_SURVEI)',
-		),
-		'KETERANGAN',
-		'countAll',
-		'countNotApproved',
-		array(
-		'name'=>'STATUS',
-		'value'=>'$data->STATUS==0?"Tidak Aktif":"Aktif"',
-		),
-		
-	),
-
-
-)); ?>
+<?php
+$this->widget('zii.widgets.grid.CGridView', array(
+    'id' => 'user-grid',
+    'dataProvider' => $model->search(),
+    'itemsCssClass' => 'table table-striped table-bordered table-hover',
+    'columns' => array(
+        array(
+            'header' => 'No.',
+            'value' => '$this->grid->dataProvider->pagination->currentPage * $this->grid->dataProvider->pagination->pageSize + ($row+1)',
+        ),
+        array(
+            'class' => 'CLinkColumn',
+            'header' => 'Nama Survei',
+            'labelExpression' => '$data->NAMA_SURVEI',
+            'urlExpression' => 'Yii::app()->createUrl(\'admincs/survei/detailsurvei/\'.$data->ID_SURVEI)',
+        ),
+        'KETERANGAN',
+        'countAll',
+        'countNotApproved',
+        array(
+            'name' => 'STATUS',
+            'type'=>'raw',
+            'value' => '$data->STATUS==0?"<span class=\"label label-warning\">Tidak Aktif</span>":"<span class=\"label label-success\">Aktif</span>"',
+        ),
+    ),
+));
+?>
