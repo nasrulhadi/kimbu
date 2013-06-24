@@ -97,6 +97,7 @@ echo $form->radioButtonList($model, 'STATUS', array(User::STATUS_AKTIF => 'Aktif
     </div>
 
     <div class="form-actions">
+        <?php echo $form->hiddenField($model,'TYPE',array('value'=>3)); ?>
         <?php echo CHtml::submitButton($model->isNewRecord ? 'Simpan' : 'Simpan Perubahan', array('class' => 'btn btn-gebo')); ?>
         <?php echo CHtml::link('Kembali', Yii::app()->createUrl('/admincs/user'), array('class' => 'btn')); ?>
     </div>
