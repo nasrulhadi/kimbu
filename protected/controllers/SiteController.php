@@ -129,7 +129,7 @@ class SiteController extends Controller
                 {
                     //mengupdate login terakkhir user
                     $userid = Yii::app ()->user->idUser;
-                    $timestamp = date('Y-m-d H:i:s');
+                    $timestamp = date('Y-m-d');
                     User::model()->updateByPk($userid, array('TERAKHIR_LOGIN'=>$timestamp));
 
                     $this->redirect(Yii::app()->user->returnUrl);

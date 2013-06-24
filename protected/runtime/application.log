@@ -11479,3 +11479,464 @@ in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\SurveiController.
 2013/06/24 04:18:47 [warning] [application] Failed to set unsafe attribute "FOTO" of "User".
 in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\ProfileController.php (102)
 in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/24 04:30:42 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in C:\xampp\htdocs\yii\framework\db\CDbConnection.php:381
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\yii\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\yii\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(438): CModule->getComponent('db')
+#4 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#5 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(User))
+#7 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(402): CActiveRecord::model('User')
+#8 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(77): CActiveRecord->getMetaData()
+#9 C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\DefaultController.php(35): CActiveRecord->__construct()
+#10 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('')
+#20 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs')
+#21 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/kimbu/admincs
+---
+2013/06/24 04:37:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/echo $baseUrl;".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/echo $b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/echo%20$baseUrl;
+HTTP_REFERER=http://localhost/kimbu/admincs/user
+---
+2013/06/24 04:37:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "echo $baseurl;".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('echo $baseurl;')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('echo $baseurl;')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/user/ec...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/kimbu/admincs/user/echo%20$baseUrl;
+HTTP_REFERER=http://localhost/kimbu/admincs/user/create
+---
+2013/06/24 04:37:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/echo $baseUrl;".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/echo $b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/echo%20$baseUrl;
+HTTP_REFERER=http://localhost/kimbu/admincs/user
+---
+2013/06/24 04:38:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/echo $baseUrl;".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/echo $b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/echo%20$baseUrl;
+HTTP_REFERER=http://localhost/kimbu/admincs/user
+---
+2013/06/24 06:08:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admincs/echo $baseUrl;".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/echo $b...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/admincs/echo%20$baseUrl;
+HTTP_REFERER=http://localhost/kimbu/admincs/user
+---
+2013/06/24 06:19:59 [error] [php] Undefined offset: 1 (C:\xampp\htdocs\kimbu\protected\components\MyFormatter.php:55)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridColumn.php(144): CDataColumn->renderDataCellContent()
+#1 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridView.php(589): CDataColumn->renderDataCell()
+#2 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridView.php(545): CGridView->renderTableRow()
+#3 C:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridView.php(455): CGridView->renderTableBody()
+#4 C:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(160): CGridView->renderItems()
+#5 unknown(0): CGridView->renderSection()
+#6 C:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(143): preg_replace_callback()
+#7 C:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(128): CGridView->renderContent()
+#8 C:\xampp\htdocs\yii\framework\web\CBaseController.php(173): CGridView->run()
+#9 C:\xampp\htdocs\kimbu\protected\modules\root\views\user\admin.php(75): UserController->widget()
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#11 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): UserController->renderInternal()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(869): UserController->renderFile()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(782): UserController->renderPartial()
+#14 C:\xampp\htdocs\kimbu\protected\modules\root\controllers\UserController.php(152): UserController->render()
+#15 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): UserController->actionIndex()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#17 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#18 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#20 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#21 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#22 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#23 C:\xampp\htdocs\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#24 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): UserController->run()
+#25 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#26 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#27 C:\xampp\htdocs\kimbu\index.php(13): CWebApplication->run()
+REQUEST_URI=/kimbu/root/user
+in C:\xampp\htdocs\kimbu\protected\components\MyFormatter.php (55)
+in C:\xampp\htdocs\kimbu\protected\modules\root\views\user\admin.php (75)
+in C:\xampp\htdocs\kimbu\protected\modules\root\controllers\UserController.php (152)
+2013/06/24 06:21:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "root/search_page.html".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('root/search_pag...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/root/search_page.html
+HTTP_REFERER=http://localhost/kimbu/root/user
+---
+2013/06/24 06:21:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/kimbu/user
+HTTP_REFERER=http://localhost/kimbu/root/search_page.html
+---
+2013/06/24 06:47:23 [error] [php] Undefined variable: id (C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php:195)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): UserController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\kimbu\index.php(13): CWebApplication->run()
+REQUEST_URI=/kimbu/admincs/user/ubahpassword
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (195)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/24 06:48:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php:171
+Stack trace:
+#0 C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php(50): UserController->loadModel('admindemo')
+#1 [internal function]: UserController->actionView('admindemo')
+#2 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/user/vi...')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/kimbu/admincs/user/view/id/admindemo
+HTTP_REFERER=http://localhost/kimbu/admincs/user/ubahpassword
+---
+2013/06/24 07:07:30 [error] [php] Undefined variable: model (C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php:205)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): UserController->run()
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\kimbu\index.php(13): CWebApplication->run()
+REQUEST_URI=/kimbu/admincs/user/ubahpassword/3
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (205)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/24 07:27:34 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'kimbu_db.ubahpasswordform' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `UbahPasswordForm`.
+in C:\xampp\htdocs\kimbu\protected\models\UbahPasswordForm.php (10)
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (189)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/24 07:27:34 [error] [exception.CDbException] exception 'CDbException' with message 'The table "UbahPasswordForm" for active record class "UbahPasswordForm" cannot be found in the database.' in C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php:2310
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(UbahPasswordForm))
+#1 C:\xampp\htdocs\kimbu\protected\models\UbahPasswordForm.php(10): CActiveRecord::model('UbahPasswordFor...')
+#2 C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php(189): UbahPasswordForm::model()
+#3 [internal function]: UserController->actionUbahPassword('2')
+#4 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('ubahpassword')
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/user/ub...')
+#16 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/kimbu/admincs/user/ubahpassword/2
+---
+2013/06/24 07:28:37 [error] [exception.CException] exception 'CException' with message 'Property "User.OLD" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('OLD')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2255): CActiveRecord->__get('OLD')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1980): CHtml::resolveValue(Object(User), 'OLD')
+#3 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1391): CHtml::activeInputField('password', Object(User), 'OLD', Array)
+#4 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(687): CHtml::activePasswordField(Object(User), 'OLD', Array)
+#5 C:\xampp\htdocs\kimbu\protected\modules\admincs\views\user\ubahpassword\_form.php(13): CActiveForm->passwordField(Object(User), 'OLD', Array)
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\kimbu\protected\modules\admincs\views\user\ubahpassword\ubahpassword.php(16): CController->renderPartial('ubahpassword/_f...', Array)
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#11 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('ubahpassword/ub...', Array, true)
+#14 C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php(206): CController->render('ubahpassword/ub...', Array)
+#15 [internal function]: UserController->actionUbahPassword('2')
+#16 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#17 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#25 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('ubahpassword')
+#27 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/user/ub...')
+#28 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#29 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/kimbu/admincs/user/ubahpassword/2
+---
+2013/06/24 07:31:26 [error] [exception.CException] exception 'CException' with message 'Property "User.OLD" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('OLD')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2255): CActiveRecord->__get('OLD')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1980): CHtml::resolveValue(Object(User), 'OLD')
+#3 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1391): CHtml::activeInputField('password', Object(User), 'OLD', Array)
+#4 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(687): CHtml::activePasswordField(Object(User), 'OLD', Array)
+#5 C:\xampp\htdocs\kimbu\protected\modules\admincs\views\user\ubahpassword\_form.php(13): CActiveForm->passwordField(Object(User), 'OLD', Array)
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\kimbu\protected\modules\admincs\views\user\ubahpassword\ubahpassword.php(16): CController->renderPartial('ubahpassword/_f...', Array)
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#11 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('ubahpassword/ub...', Array, true)
+#14 C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php(206): CController->render('ubahpassword/ub...', Array)
+#15 [internal function]: UserController->actionUbahPassword('3')
+#16 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#17 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#25 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('ubahpassword')
+#27 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/user/ub...')
+#28 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#29 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/kimbu/admincs/user/ubahpassword/3
+---
+2013/06/24 07:35:49 [error] [exception.CException] exception 'CException' with message 'Property "UbahPasswordForm.idUser" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\kimbu\protected\modules\admincs\views\user\ubahpassword\ubahpassword.php(14): CComponent->__get('idUser')
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('ubahpassword/ub...', Array, true)
+#5 C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php(206): CController->render('ubahpassword/ub...', Array)
+#6 [internal function]: UserController->actionUbahPassword('3')
+#7 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#8 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('ubahpassword')
+#18 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/user/ub...')
+#19 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/kimbu/admincs/user/ubahpassword/3
+---
+2013/06/24 07:36:20 [error] [exception.CException] exception 'CException' with message 'Property "User.idUser" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('idUser')
+#1 C:\xampp\htdocs\kimbu\protected\modules\admincs\views\user\ubahpassword\ubahpassword.php(14): CActiveRecord->__get('idUser')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('ubahpassword/ub...', Array, true)
+#6 C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php(206): CController->render('ubahpassword/ub...', Array)
+#7 [internal function]: UserController->actionUbahPassword('3')
+#8 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#9 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('ubahpassword')
+#19 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/user/ub...')
+#20 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/kimbu/admincs/user/ubahpassword/3
+---
+2013/06/24 07:38:39 [error] [exception.CException] exception 'CException' with message 'Property "UbahPasswordForm.ID_USER" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\kimbu\protected\modules\admincs\views\user\ubahpassword\ubahpassword.php(10): CComponent->__get('ID_USER')
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('ubahpassword/ub...', Array, true)
+#5 C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php(206): CController->render('ubahpassword/ub...', Array)
+#6 [internal function]: UserController->actionUbahPassword('3')
+#7 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#8 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('ubahpassword')
+#18 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/user/ub...')
+#19 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/kimbu/admincs/user/ubahpassword/3
+---
+2013/06/24 07:55:40 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admincs/user/vi...')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/kimbu/admincs/user/view/0%5Bid%5D/2
+HTTP_REFERER=http://localhost/kimbu/admincs/user/ubahpassword/2
+---
+2013/06/24 07:56:35 [error] [php] urlencode() expects parameter 1 to be string, object given (C:\xampp\htdocs\yii\framework\web\CUrlManager.php:437)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CUrlManager.php(324): CUrlManager->createPathInfo()
+#1 C:\xampp\htdocs\yii\framework\web\CUrlManager.php(307): CUrlManager->createUrlDefault()
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(531): CUrlManager->createUrl()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(967): CWebApplication->createUrl()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(1028): UserController->createUrl()
+#5 C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php(197): UserController->redirect()
+#6 unknown(0): UserController->actionUbahPassword()
+#7 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#8 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#10 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#13 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#14 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#17 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): UserController->run()
+#18 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#19 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\kimbu\index.php(13): CWebApplication->run()
+REQUEST_URI=/kimbu/admincs/user/ubahpassword/2
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (197)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/24 09:27:25 [error] [php] urlencode() expects parameter 1 to be string, object given (C:\xampp\htdocs\yii\framework\web\CUrlManager.php:437)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CUrlManager.php(324): CUrlManager->createPathInfo()
+#1 C:\xampp\htdocs\yii\framework\web\CUrlManager.php(307): CUrlManager->createUrlDefault()
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(531): CUrlManager->createUrl()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(967): CWebApplication->createUrl()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(1028): ProfileController->createUrl()
+#5 C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\ProfileController.php(78): ProfileController->redirect()
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): ProfileController->actionUbahPassword()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): ProfileController->runAction()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): ProfileController->runActionWithFilters()
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): ProfileController->run()
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\kimbu\index.php(13): CWebApplication->run()
+REQUEST_URI=/kimbu/admincs/profile/ubahpassword
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\ProfileController.php (78)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/24 09:29:21 [error] [php] urlencode() expects parameter 1 to be string, object given (C:\xampp\htdocs\yii\framework\web\CUrlManager.php:437)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CUrlManager.php(324): CUrlManager->createPathInfo()
+#1 C:\xampp\htdocs\yii\framework\web\CUrlManager.php(307): CUrlManager->createUrlDefault()
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(531): CUrlManager->createUrl()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(967): CWebApplication->createUrl()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(1028): ProfileController->createUrl()
+#5 C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\ProfileController.php(78): ProfileController->redirect()
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): ProfileController->actionUbahPassword()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): ProfileController->runAction()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): ProfileController->runActionWithFilters()
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): ProfileController->run()
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\kimbu\index.php(13): CWebApplication->run()
+REQUEST_URI=/kimbu/admincs/profile/ubahpassword
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\ProfileController.php (78)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/24 09:45:29 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('ubahpassword')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('root/user/ubahp...')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/kimbu/root/user/ubahpassword
+HTTP_REFERER=http://localhost/kimbu/root/user/view/5
+---

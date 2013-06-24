@@ -44,15 +44,11 @@ $this->widget('zii.widgets.grid.CGridView', array(
     'dataProvider' => $model->search(),
     'itemsCssClass' => 'table table-striped table-bordered table-hover',
     'columns' => array(
+        array(
+            'header' => 'No.',
+            'value' => '$this->grid->dataProvider->pagination->currentPage * $this->grid->dataProvider->pagination->pageSize + ($row+1)',
+        ),
         'NAMA',
-//        array(
-//            'name'=>'DIVISI',
-//            'value'=>$model->Divisi->NAMA,
-//        ),
-//        array(
-//            'name' => 'PERUSAHAAN',
-//            'value' => $model->Perusahaan->NAMA,
-//        ),
         'USERNAME',
         'EMAIL',
         'HP',
@@ -61,7 +57,11 @@ $this->widget('zii.widgets.grid.CGridView', array(
             'type' => 'statusAktif',
             'value' => $model->STATUS,
         ),
-        'TERAKHIR_LOGIN',
+        array(
+            'name' => 'TERAKHIR_LOGIN',
+            'type' => 'dateFormat',
+            'value' => $model->TERAKHIR_LOGIN,
+        ),
         array(
             'class' => 'MyCButtonColumn',
         ),

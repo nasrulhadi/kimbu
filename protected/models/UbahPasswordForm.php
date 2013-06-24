@@ -48,5 +48,24 @@ class UbahPasswordForm extends CFormModel
 		else
 			return false;
 	}
+    
+    public function cekOldPass($id, $password)
+    {
+        $model=User::model()->findByPk($id);
+		if(md5($password)!=$model->PASSWORD)
+			return false;
+		else
+			return true;
+    }
+    
+    public function savePass($id, $password)
+    {
+        $model=User::model()->findByPk($id);
+		$model->setAttribute('PASSWORD',md5($password));
+		if($model->save())
+			return true;
+		else
+			return false;
+    }
 }
 ?>

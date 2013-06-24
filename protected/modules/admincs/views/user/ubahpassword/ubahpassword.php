@@ -5,11 +5,11 @@
 
 $this->pageTitle=Yii::app()->name . ' - Ubah Password';
 $this->breadcrumbs=array(
-    'Manajemen User'=>array('./user'),
-     Yii::app()->user->id=>array('./user/view/id/'.Yii::app()->user->id),
+    'Dashboard'=>array('./'),
+    'Manajemen Akun'=>array('./user'),
+     $user->USERNAME=>array('./user/view/'.$user->ID_USER),
 	'Ubah Password',
 );
 ?>
-<div class="pagetitle"><h1>Ubah Kode Akses | <?php echo Yii::app()->user->id; ?></h1></div>
-<?php echo @Yii::app()->user->getFlash('info');?>
+<h3 class="heading">Ubah Password | <?php echo $user->USERNAME; ?></h3>
 <?php echo $this->renderPartial('ubahpassword/_form', array('model'=>$model)); ?>

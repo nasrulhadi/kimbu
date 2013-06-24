@@ -196,20 +196,16 @@ class UserController extends Controller
 	}
     
     //fungsi ubah password user
-    public function actionUbahPassword()
-    {
+    public function actionUbahPassword($id) {
+        $user = $this->loadModel($id);
         $model = new UbahPasswordForm;
-        if(isset($_POST['UbahPasswordForm']))
-        {
+        if (isset($_POST['UbahPasswordForm'])) {
             $model->attributes = $_POST['UbahPasswordForm'];
-            if($model->validate())
-            {
-                if($model->cekOldPassword($model->OLD))
-                {
-                    if($model->savePassword($model->NEW))
-                    {
+            if ($model->validate()) {
+                if ($model->cekOldPass($id, $model->OLD)) {
+                    if ($model->savePass($id, $model->NEW)) {
                         Yii::app()->user->setFlash('info', MyFormatter::alertSuccess('<strong>Selamat!</strong> Password telah berhasil diubah.'));
-                        $this->redirect(array('index'));
+                        $this->redirect(array('view', 'id' => $user->ID_USER));
                     }
                     else
                         Yii::app()->user->setFlash('info', MyFormatter::alertError('<strong>Error!</strong> Password gagal diubah.'));
@@ -218,6 +214,6 @@ class UserController extends Controller
                     Yii::app()->user->setFlash('info', MyFormatter::alertError('<strong>Error!</strong> Password lama salah.'));
             }
         }
-        $this->render('ubahpassword/ubahpassword', array('model' => $model));
+        $this->render('ubahpassword/ubahpassword', array('id'=>$id, 'model' => $model, 'user'=>$user));
     }
 }

@@ -4,7 +4,7 @@
     'enableAjaxValidation'=>false,
 )); ?>
 
-    <p class="note">Fields with <span class="required">*</span> are required.</p>
+    <p class="note">Isian dengan tanda <span class="required">*</span> harus diisi.</p>
 
     <?php echo $form->errorSummary($model); ?>
 
@@ -28,7 +28,7 @@
 
 
     <div class="row buttons">
-        <?php echo CHtml::submitButton('Simpan Perubahan',array('class'=>'btn btn-success')); ?>
+        <?php echo CHtml::submitButton('Simpan Perubahan',array('class'=>'btn btn-primary')); ?>
         <?php echo CHtml::button('Batal',array('class'=>'btn','onclick'=>'history.go(-1)')); ?>
     </div>
 

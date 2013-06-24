@@ -74,7 +74,7 @@ class ProfileController extends Controller
                 if ($model->cekOldPassword($model->OLD)) {
                     if ($model->savePassword($model->NEW)) {
                         Yii::app()->user->setFlash('info', MyFormatter::alertSuccess('<strong>Selamat!</strong> Password telah berhasil diubah.'));
-                        $this->refresh();
+                        $this->redirect(array('index'));
                     }
                     else
                         Yii::app()->user->setFlash('info', MyFormatter::alertError('<strong>Error!</strong> Password gagal diubah.'));

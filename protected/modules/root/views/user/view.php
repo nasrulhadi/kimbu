@@ -36,9 +36,9 @@ $this->breadcrumbs=array(
                 ),
                 'USERNAME',
                 array(
-                    'name'=>'PASSWORD',
-                    'type'=>'raw',
-                    'value'=>CHtml::link('Ubah Password?',array('./user/ubahpassword')),
+                    'name' => 'PASSWORD',
+                    'type' => 'raw',
+                    'value' => CHtml::link('Ubah Password?', array('ubahpassword', 'id'=>$model->ID_USER),array('class'=>'btn btn-gebo btn-small')),
                 ),
                 array(
                     'name'=>'TYPE',
