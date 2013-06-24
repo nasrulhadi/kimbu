@@ -11476,3 +11476,6 @@ REQUEST_URI=/kimbu/admincs/survei/ViewSurvei/4
 in C:\xampp\htdocs\kimbu\protected\modules\admincs\views\survei\_view.php (53)
 in C:\xampp\htdocs\kimbu\protected\modules\admincs\views\survei\view.php (45)
 in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\SurveiController.php (104)
+2013/06/24 04:18:47 [warning] [application] Failed to set unsafe attribute "FOTO" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\ProfileController.php (102)
+in C:\xampp\htdocs\kimbu\index.php (13)
