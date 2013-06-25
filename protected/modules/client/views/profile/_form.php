@@ -40,7 +40,7 @@
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Simpan' : 'Simpan Perubahan',array('class'=>'btn btn-warning')); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Simpan' : 'Simpan Perubahan',array('class'=>'btn btn-danger')); ?>
         <?php echo CHtml::button('Batal',array('onclick'=>'history.go(-1)','class'=>'btn'));?>
 	</div>
 

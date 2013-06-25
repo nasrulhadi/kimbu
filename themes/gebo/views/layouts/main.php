@@ -261,14 +261,17 @@
                                         <div class="accordion-group">
                                             <div class="accordion-heading">
                                                 <a href="#collapseOne" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
-                                                    <i class="icon-folder-open"></i> Divisi
+                                                    <i class="icon-folder-open"></i> <?php echo Yii::app()->user->divisi; ?>
                                                 </a>
                                             </div>
-                                            <div class="accordion-body collapse" id="collapseOne">
+                                            <div class="accordion-body collapse <?php echo ($this->ID==="survei" || $this->ID==="surveipublik" )?"in":"";?>" id="collapseOne">
                                                 <div class="accordion-inner">
                                                     <ul class="nav nav-list">
-                                                        <li><?php echo CHtml::link('Lihat Survei', array('#')); ?></li>
-                                                        <li><?php echo CHtml::link('Lihat Grafik', array('#')); ?></li>
+                                                        <li class="nav-header">Survei</li>
+                                                        <li class="<?php echo ($this->ID==="survei")?"active":"";?>"><?php echo CHtml::link('Survei Toko', array('/client/survei')); ?></li>
+                                                        <li class="<?php echo ($this->ID==="surveipublik")?"active":"";?>"><?php echo CHtml::link('Survei End User', array('/client/surveipublik')); ?></li>
+                                                        <li class="nav-header">Laporan</li>
+                                                        <li class="<?php echo ($this->ID==="grafik")?"active":"";?>"><?php echo CHtml::link('Grafik', array('#')); ?></li>
                                                     </ul>
 
                                                 </div>
