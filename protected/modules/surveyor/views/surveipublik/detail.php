@@ -38,7 +38,7 @@ $('.search-form form').submit(function(){
 </div>
 </br>
 <div class="search-form" style="display:none">
-<?php $this->renderPartial('_search',array(
+<?php $this->renderPartial('_searchSurvei',array(
 	'model'=>$model,
 )); ?>
 </div><!-- search-form -->
