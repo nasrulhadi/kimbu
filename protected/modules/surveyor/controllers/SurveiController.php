@@ -20,8 +20,8 @@ class SurveiController extends Controller
 			$respon = new Respon;
 			$respon->ID_SURVEI = $survei->ID_SURVEI;
 			$respon->NAMA = Yii::app()->user->name;
-                        $respon->TANGGAL_PENGISIAN = date("Y-m-d H:i:s");
-                        $respon->ID_USER = Yii::app()->user->idUser;
+            $respon->TANGGAL_PENGISIAN = date("Y-m-d H:i:s");
+            $respon->ID_USER = Yii::app()->user->idUser;
 			$respon->save();
 			$respon->ID_RESPON;
 			foreach($survei->surveiForms as $used_form){
@@ -102,10 +102,15 @@ class SurveiController extends Controller
 	public function actionDetailSurvei($id){
 		$this->layout = '//layouts/column1';
 		$model = new Respon('search');
+        $model->unsetAttributes();  // clear any default values
+        if (isset($_GET['Respon'])) {
+            $model->attributes = $_GET['Respon'];
+        }
+        
 		$model->ID_SURVEI = $id;
         $model->ID_USER = Yii::app()->user->idUser;
 		//$model->NAMA = Yii::app()->user->name;
-		$this->render('detail',array('model'=>$model));
+		$this->render('detail', array('model'=>$model));
 	}
 	
 	public function actionViewSurvei($id){

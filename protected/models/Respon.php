@@ -82,7 +82,7 @@ class Respon extends CActiveRecord
 			'ID_SURVEI' => 'Id Survei',
 			'ID_USER' => 'Id Surveyor',
 			'APPROVAL' => 'Status',
-                        'SURVEYOR' => 'Surveyor',
+            'SURVEYOR' => 'Surveyor',
 		);
 	}
 

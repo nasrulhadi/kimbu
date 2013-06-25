@@ -1,4 +1,6 @@
 <?php
+$this->pageTitle=Yii::app()->name . ' - Detil Survei';
+
 $this->breadcrumbs = array(
     'Dashboard' => array('/'),
     'Survei' => array('/surveyor/survei/'),
@@ -47,6 +49,7 @@ $('.search-form form').submit(function(){
 $this->widget('zii.widgets.grid.CGridView', array(
     'id' => 'survei-grid',
     'dataProvider' => $model->search(),
+    //'filter'=>$model,
     'itemsCssClass' => 'table table-striped table-bordered table-hover',
     'columns' => array(
         array(
@@ -69,7 +72,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
             'value' => '$data->TANGGAL_PENGISIAN',
         ),
         array(
-            'name' => 'Status',
+            'name' => 'APPROVAL',
             'type' => 'raw',
             'value' => '$data->APPROVAL==0?"<span class=\"label label-warning\">Belum Disetujui</span>":"<span class=\"label label-success\">Disetujui</span>"',
         ),

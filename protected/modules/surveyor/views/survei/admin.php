@@ -1,5 +1,3 @@
-
-
 <?php 
 $this->breadcrumbs=array(
     'Dashboard'=>array('/'),
