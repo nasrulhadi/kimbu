@@ -13,7 +13,7 @@ $('.search-button').click(function(){
 	return false;
 });
 $('.search-form form').submit(function(){
-	$('#survei-grid').yiiGridView('update', {
+	$.fn.yiiGridView.update('survei-grid', {
 		data: $(this).serialize()
 	});
 	return false;
@@ -41,15 +41,12 @@ $('.search-form form').submit(function(){
 </div>
 </br>
 <div class="search-form" style="display:none">
-<?php $this->renderPartial('_searchSurvei',array(
-	'model'=>$model,
-)); ?>
+<?php $this->renderPartial('_searchSurvei',array('model'=>$model, false, true)); ?>
 </div><!-- search-form -->
 <?php
 $this->widget('zii.widgets.grid.CGridView', array(
     'id' => 'survei-grid',
     'dataProvider' => $model->search(),
-    //'filter'=>$model,
     'itemsCssClass' => 'table table-striped table-bordered table-hover',
     'columns' => array(
         array(
@@ -78,7 +75,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
         ),
     ),
     'htmlOptions' => array(
-        'class' => ''
+        'class' => 'grid-view'
     ),
     'template' => '{items}{summary}{pager}',
 ));

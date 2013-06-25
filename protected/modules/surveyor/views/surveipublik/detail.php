@@ -1,4 +1,6 @@
 <?php
+$this->pageTitle=Yii::app()->name . ' - Detil Survei Publik';
+
 $this->breadcrumbs = array(
     'Dashboard' => array('/'),
     'Survei Publik' => array('/surveyor/surveipublik/'),
@@ -11,7 +13,7 @@ $('.search-button').click(function(){
 	return false;
 });
 $('.search-form form').submit(function(){
-	$('#survei-grid').yiiGridView('update', {
+	$.fn.yiiGridView.update('survei-grid', {
 		data: $(this).serialize()
 	});
 	return false;
@@ -19,7 +21,8 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h3 class="heading">Detail Survei End User</h3>
+<h3 class="heading">Detail Survei</h3>
+
 <div class="pull-left" style="margin-bottom: 20px;">
     <table>
         <tr>
@@ -38,9 +41,7 @@ $('.search-form form').submit(function(){
 </div>
 </br>
 <div class="search-form" style="display:none">
-<?php $this->renderPartial('_searchSurvei',array(
-	'model'=>$model,
-)); ?>
+<?php $this->renderPartial('_searchSurvei',array('model'=>$model, false, true)); ?>
 </div><!-- search-form -->
 <?php
 $this->widget('zii.widgets.grid.CGridView', array(
@@ -56,7 +57,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
             'class' => 'CLinkColumn',
             'header' => 'NAMA',
             'labelExpression' => '$data->NAMA',
-            'urlExpression' => '$data->APPROVAL==0?Yii::app()->createUrl(\'surveyor/surveipublik/update/\'.$data->ID_RESPON):Yii::app()->createUrl(\'surveyor/survei/ViewSurvei/\'.$data->ID_RESPON)',
+            'urlExpression' => '$data->APPROVAL==0?Yii::app()->createUrl(\'surveyor/survei/update/\'.$data->ID_RESPON):Yii::app()->createUrl(\'surveyor/survei/ViewSurvei/\'.$data->ID_RESPON)',
         ),
 //		array(
 //		'name'=>'TANGGAL_PENGISIAN',
@@ -68,13 +69,13 @@ $this->widget('zii.widgets.grid.CGridView', array(
             'value' => '$data->TANGGAL_PENGISIAN',
         ),
         array(
-            'name' => 'Status',
+            'name' => 'APPROVAL',
             'type' => 'raw',
             'value' => '$data->APPROVAL==0?"<span class=\"label label-warning\">Belum Disetujui</span>":"<span class=\"label label-success\">Disetujui</span>"',
         ),
     ),
     'htmlOptions' => array(
-        'class' => ''
+        'class' => 'grid-view'
     ),
     'template' => '{items}{summary}{pager}',
 ));

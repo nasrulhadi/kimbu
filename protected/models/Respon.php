@@ -98,7 +98,7 @@ class Respon extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('ID_RESPON',$this->ID_RESPON);
-		$criteria->compare('NAMA',$this->NAMA,false);
+		$criteria->compare('NAMA',$this->NAMA,true);
 		$criteria->compare('TANGGAL_PENGISIAN',$this->TANGGAL_PENGISIAN,true);
 		$criteria->compare('ID_SURVEI',$this->ID_SURVEI);
 		$criteria->compare('ID_USER',$this->ID_USER);
@@ -108,4 +108,12 @@ class Respon extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+    
+    public function optionsApproval()
+    {
+        return array(
+            self::DISETUJUI=>'Disetujui',
+            self::BELUM_DISETUJUI=>'Belum Disetujui',
+        );
+    }
 }
