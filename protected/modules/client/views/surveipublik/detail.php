@@ -34,9 +34,9 @@ $('.search-form form').submit(function(){
     </table>
 </div>
 </br>
-<div class="pull-right" style="margin-bottom: 20px;">
+<!--<div class="pull-right" style="margin-bottom: 20px;">
     <?php echo CHtml::link('<span class="icon-search"></span> Pencarian','#',array('class'=>'btn search-button')); ?>
-</div>
+</div>-->
 </br>
 <div class="search-form" style="display:none">
 <?php $this->renderPartial('_searchSurvei',array(
