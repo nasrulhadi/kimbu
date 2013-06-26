@@ -2199,3 +2199,363 @@ Stack trace:
 REQUEST_URI=/kimbu/surveyor/surveipublik/detailsurvei?Respon%5BNAMA%5D=&Respon%5BAPPROVAL%5D=0&yt0=Tampilkan+Hasil
 HTTP_REFERER=http://localhost/kimbu/surveyor/surveipublik/detailsurvei/2
 ---
+2013/06/26 05:20:14 [warning] [application] Failed to set unsafe attribute "REPEAT" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (63)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 05:20:14 [warning] [application] Failed to set unsafe attribute "FOTO" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (63)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 05:26:17 [warning] [application] Failed to set unsafe attribute "REPEAT" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\root\controllers\UserController.php (69)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 05:26:17 [warning] [application] Failed to set unsafe attribute "FOTO" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\root\controllers\UserController.php (69)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 05:27:42 [warning] [application] Failed to set unsafe attribute "LOGO" of "Divisi".
+in C:\xampp\htdocs\kimbu\protected\modules\root\controllers\DivisiController.php (66)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 05:37:16 [warning] [application] Failed to set unsafe attribute "LOGO" of "Divisi".
+in C:\xampp\htdocs\kimbu\protected\modules\root\controllers\DivisiController.php (66)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 05:39:36 [warning] [application] Failed to set unsafe attribute "LOGO" of "Divisi".
+in C:\xampp\htdocs\kimbu\protected\modules\root\controllers\DivisiController.php (66)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 05:40:10 [warning] [application] Failed to set unsafe attribute "LOGO" of "Divisi".
+in C:\xampp\htdocs\kimbu\protected\modules\root\controllers\DivisiController.php (66)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 05:40:42 [warning] [application] Failed to set unsafe attribute "REPEAT" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\root\controllers\UserController.php (69)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 05:40:42 [warning] [application] Failed to set unsafe attribute "FOTO" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\root\controllers\UserController.php (69)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 05:41:02 [warning] [application] Failed to set unsafe attribute "REPEAT" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (63)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 05:41:02 [warning] [application] Failed to set unsafe attribute "FOTO" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (63)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 05:42:30 [warning] [application] Failed to set unsafe attribute "FOTO" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (234)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 05:43:41 [warning] [application] Failed to set unsafe attribute "REPEAT" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (63)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 05:43:41 [warning] [application] Failed to set unsafe attribute "FOTO" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (63)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 05:52:52 [warning] [application] Failed to set unsafe attribute "FOTO" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (236)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 05:53:43 [warning] [application] Failed to set unsafe attribute "REPEAT" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (63)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 05:53:43 [warning] [application] Failed to set unsafe attribute "FOTO" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (63)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 05:53:43 [error] [php] move_uploaded_file(/2q9m.jpg) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: Permission denied (C:\xampp\htdocs\yii\framework\web\CUploadedFile.php:196)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): UserController->actionCreate()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): UserController->run()
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\kimbu\index.php(13): CWebApplication->run()
+REQUEST_URI=/kimbu/admincs/user/create
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (79)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 05:56:17 [warning] [application] Failed to set unsafe attribute "REPEAT" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (63)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 05:56:17 [warning] [application] Failed to set unsafe attribute "FOTO" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (63)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 05:56:17 [error] [php] move_uploaded_file(/2q9m.jpg) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: Permission denied (C:\xampp\htdocs\yii\framework\web\CUploadedFile.php:196)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): UserController->actionCreate()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): UserController->run()
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\kimbu\index.php(13): CWebApplication->run()
+REQUEST_URI=/kimbu/admincs/user/create
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (79)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 05:59:50 [warning] [application] Failed to set unsafe attribute "REPEAT" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (63)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 05:59:50 [warning] [application] Failed to set unsafe attribute "FOTO" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (63)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 05:59:50 [error] [php] move_uploaded_file(/2q9m.jpg) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: Permission denied (C:\xampp\htdocs\yii\framework\web\CUploadedFile.php:196)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): UserController->actionCreate()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): UserController->run()
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\kimbu\index.php(13): CWebApplication->run()
+REQUEST_URI=/kimbu/admincs/user/create
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (79)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 06:00:36 [warning] [application] Failed to set unsafe attribute "REPEAT" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (63)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 06:00:36 [warning] [application] Failed to set unsafe attribute "FOTO" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (63)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 06:01:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "file/foto/tidakadafoto.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('file/foto/tidak...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/file/foto/tidakadafoto.jpg
+HTTP_REFERER=http://localhost/kimbu/admincs/user/view/8
+---
+2013/06/26 06:03:45 [warning] [application] Failed to set unsafe attribute "LOGO" of "Divisi".
+in C:\xampp\htdocs\kimbu\protected\modules\root\controllers\DivisiController.php (66)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 06:04:57 [warning] [application] Failed to set unsafe attribute "REPEAT" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (63)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 06:04:57 [warning] [application] Failed to set unsafe attribute "FOTO" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (63)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 06:04:57 [error] [php] move_uploaded_file(/3j26.jpg) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: Permission denied (C:\xampp\htdocs\yii\framework\web\CUploadedFile.php:196)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): UserController->actionCreate()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): UserController->run()
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\kimbu\index.php(13): CWebApplication->run()
+REQUEST_URI=/kimbu/admincs/user/create
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (79)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 06:07:01 [warning] [application] Failed to set unsafe attribute "REPEAT" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (63)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 06:07:01 [warning] [application] Failed to set unsafe attribute "FOTO" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (63)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 06:08:12 [warning] [application] Failed to set unsafe attribute "REPEAT" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (63)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 06:08:12 [warning] [application] Failed to set unsafe attribute "FOTO" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (63)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 06:09:30 [warning] [application] Failed to set unsafe attribute "REPEAT" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (63)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 06:09:30 [warning] [application] Failed to set unsafe attribute "FOTO" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (63)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 06:34:25 [warning] [application] Failed to set unsafe attribute "REPEAT" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (63)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 06:34:25 [warning] [application] Failed to set unsafe attribute "FOTO" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (63)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 06:34:51 [warning] [application] Failed to set unsafe attribute "REPEAT" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (63)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 06:34:51 [warning] [application] Failed to set unsafe attribute "FOTO" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (63)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 06:35:29 [warning] [application] Failed to set unsafe attribute "REPEAT" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (63)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 06:35:29 [warning] [application] Failed to set unsafe attribute "FOTO" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (63)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 06:35:29 [error] [php] move_uploaded_file(/2q9m.jpg) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: Permission denied (C:\xampp\htdocs\yii\framework\web\CUploadedFile.php:196)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): UserController->actionCreate()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): UserController->run()
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\kimbu\index.php(13): CWebApplication->run()
+REQUEST_URI=/kimbu/admincs/user/create
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (79)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 06:48:45 [warning] [application] Failed to set unsafe attribute "REPEAT" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (63)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 06:48:45 [warning] [application] Failed to set unsafe attribute "FOTO" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (63)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 06:48:45 [error] [php] move_uploaded_file(/3j26.jpg) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: Permission denied (C:\xampp\htdocs\yii\framework\web\CUploadedFile.php:196)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): UserController->actionCreate()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): UserController->run()
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\kimbu\index.php(13): CWebApplication->run()
+REQUEST_URI=/kimbu/admincs/user/create
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (79)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 06:50:47 [warning] [application] Failed to set unsafe attribute "REPEAT" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (63)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 06:50:47 [warning] [application] Failed to set unsafe attribute "FOTO" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (63)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 06:51:17 [warning] [application] Failed to set unsafe attribute "REPEAT" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (63)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 06:51:17 [warning] [application] Failed to set unsafe attribute "FOTO" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (63)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 07:01:22 [warning] [application] Failed to set unsafe attribute "REPEAT" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (63)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 07:01:22 [warning] [application] Failed to set unsafe attribute "FOTO" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (63)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 07:02:27 [warning] [application] Failed to set unsafe attribute "REPEAT" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (63)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 07:02:27 [warning] [application] Failed to set unsafe attribute "FOTO" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (63)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 07:02:57 [warning] [application] Failed to set unsafe attribute "REPEAT" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (63)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 07:02:57 [warning] [application] Failed to set unsafe attribute "FOTO" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (63)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 07:03:10 [warning] [application] Failed to set unsafe attribute "REPEAT" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (63)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 07:03:10 [warning] [application] Failed to set unsafe attribute "FOTO" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (63)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 07:03:10 [error] [php] move_uploaded_file(/3j26.jpg) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: Permission denied (C:\xampp\htdocs\yii\framework\web\CUploadedFile.php:196)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): UserController->actionCreate()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): UserController->run()
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\kimbu\index.php(13): CWebApplication->run()
+REQUEST_URI=/kimbu/admincs/user/create
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (70)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 07:03:56 [warning] [application] Failed to set unsafe attribute "REPEAT" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (63)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 07:03:56 [warning] [application] Failed to set unsafe attribute "FOTO" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (63)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 07:06:36 [warning] [application] Failed to set unsafe attribute "REPEAT" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (63)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 07:06:36 [warning] [application] Failed to set unsafe attribute "FOTO" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (63)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 07:07:02 [warning] [application] Failed to set unsafe attribute "REPEAT" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (63)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 07:07:02 [warning] [application] Failed to set unsafe attribute "FOTO" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\admincs\controllers\UserController.php (63)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 07:15:44 [warning] [application] Failed to set unsafe attribute "LOGO" of "Divisi".
+in C:\xampp\htdocs\kimbu\protected\modules\root\controllers\DivisiController.php (66)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 07:15:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "file/logo/divisi/tidakadalogo.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('file/logo/divis...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/file/logo/divisi/tidakadalogo.jpg
+HTTP_REFERER=http://localhost/kimbu/root/divisi/view/4
+---
+2013/06/26 07:16:40 [warning] [application] Failed to set unsafe attribute "LOGO" of "Divisi".
+in C:\xampp\htdocs\kimbu\protected\modules\root\controllers\DivisiController.php (66)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 07:16:48 [warning] [application] Failed to set unsafe attribute "LOGO" of "Divisi".
+in C:\xampp\htdocs\kimbu\protected\modules\root\controllers\DivisiController.php (66)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 07:17:36 [warning] [application] Failed to set unsafe attribute "LOGO" of "Divisi".
+in C:\xampp\htdocs\kimbu\protected\modules\root\controllers\DivisiController.php (66)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 07:19:19 [warning] [application] Failed to set unsafe attribute "LOGO" of "Perusahaan".
+in C:\xampp\htdocs\kimbu\protected\modules\root\controllers\PerusahaanController.php (72)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 07:19:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "file/logo/perusahaan/tidakadalogo.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('file/logo/perus...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\kimbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/kimbu/file/logo/perusahaan/tidakadalogo.jpg
+HTTP_REFERER=http://localhost/kimbu/root/perusahaan/view/5
+---
+2013/06/26 07:21:17 [warning] [application] Failed to set unsafe attribute "LOGO" of "Perusahaan".
+in C:\xampp\htdocs\kimbu\protected\modules\root\controllers\PerusahaanController.php (72)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 07:24:39 [warning] [application] Failed to set unsafe attribute "REPEAT" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\root\controllers\UserController.php (69)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 07:24:39 [warning] [application] Failed to set unsafe attribute "FOTO" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\root\controllers\UserController.php (69)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 07:25:08 [warning] [application] Failed to set unsafe attribute "REPEAT" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\root\controllers\UserController.php (69)
+in C:\xampp\htdocs\kimbu\index.php (13)
+2013/06/26 07:25:08 [warning] [application] Failed to set unsafe attribute "FOTO" of "User".
+in C:\xampp\htdocs\kimbu\protected\modules\root\controllers\UserController.php (69)
+in C:\xampp\htdocs\kimbu\index.php (13)

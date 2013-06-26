@@ -71,9 +71,21 @@ class UserController extends Controller
             //$model->setAttribute('PASSWORD', $model->generatePassword());
 			if($model->validate())
             {
-                //menyimpan file foto
-                $imagesPath = realpath(Yii::app()->basePath . '/../file/foto/');
-                $model->FOTO->saveAs($imagesPath . '/' . $model->FOTO);
+                if (CUploadedFile::getInstance($model, 'FOTO') != NULL) {
+                    //jika sebelumnya telah mengupload file portofolio
+                    if ($model->FOTO != NULL && file_exists(Yii::app()->basePath . '/../file/foto/' . $model->FOTO)) {
+                        // maka dihapus filenya, diganti dengan yang baru
+                        unlink(Yii::app()->basePath . '/../file/foto/' . $model->FOTO);
+                    }
+                    //mengambil value dari fileupload
+                    $model->FOTO = CUploadedFile::getInstance($model, 'FOTO');
+                    if ($model->FOTO) {
+                        //menyimpan file foto
+                        //$fullImgName = 'user'.$model->ID_USER.'-'.$model->FOTO;
+                        $imagesPath = realpath(Yii::app()->basePath . '/../file/foto/');
+                        $model->FOTO->saveAs($imagesPath . '/' . $model->FOTO);
+                    }
+                }
                 //set password
                 $model->setAttribute('PASSWORD', md5($model->PASSWORD));
                 $model->setAttribute('REPEAT', md5($model->REPEAT));

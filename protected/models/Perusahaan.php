@@ -121,7 +121,7 @@ class Perusahaan extends CActiveRecord
     //menampilkan logo perusahaan
     public function displayPicture($pictureName)
     {
-        if($pictureName==null || $pictureName=='')
+        if($pictureName==null || $pictureName=='tidakadalogo.jpg')
             echo '<img src="'.Yii::app()->theme->baseUrl.'/img/profilethumb.png" alt="" class="img-polaroid" />';
         else
             echo '<img src="'.Yii::app()->request->baseUrl.'/file/logo/perusahaan/'.$pictureName.'" alt="" class="img-polaroid"/>';

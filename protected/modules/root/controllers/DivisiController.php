@@ -64,12 +64,25 @@ class DivisiController extends Controller
 		if(isset($_POST['Divisi']))
 		{
 			$model->attributes=$_POST['Divisi'];
-			$model->LOGO = CUploadedFile::getInstance($model, 'LOGO');
+			//$model->LOGO = CUploadedFile::getInstance($model, 'LOGO');
 			if($model->validate())
             {
-                //menyimpan file logo
-                $imagesPath = realpath(Yii::app()->basePath . '/../file/logo/divisi');
-                $model->LOGO->saveAs($imagesPath . '/' . $model->LOGO);
+                if (CUploadedFile::getInstance($model, 'LOGO') != NULL) {
+                    //jika sebelumnya telah mengupload file portofolio
+                    if ($model->LOGO != NULL && file_exists(Yii::app()->basePath . '/../file/logo/divisi/' . $model->LOGO)) {
+                        // maka dihapus filenya, diganti dengan yang baru
+                        unlink(Yii::app()->basePath . '/../file/logo/divisi/' . $model->LOGO);
+                    }
+                    //mengambil value dari fileupload
+                    $model->LOGO = CUploadedFile::getInstance($model, 'LOGO');
+                    if ($model->LOGO) {
+                        //menyimpan file foto
+                        //$fullImgName = 'user'.$model->ID_USER.'-'.$model->FOTO;
+                        $imagesPath = realpath(Yii::app()->basePath . '/../file/logo/divisi');
+                        $model->LOGO->saveAs($imagesPath . '/' . $model->LOGO);
+                    }
+                }
+                
                 if($model->save())
                 {
                     Yii::app()->user->setFlash('info',MyFormatter::alertSuccess('<strong>Selamat!</strong> Data telah berhasil disimpan.'));

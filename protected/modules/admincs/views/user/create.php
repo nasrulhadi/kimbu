@@ -12,6 +12,7 @@ $this->breadcrumbs=array(
 ?>
 
 <h3 class="heading">Buat User Baru</h3>
+<?php echo @Yii::app()->user->getFlash('info'); ?>
 <div class="row-fluid">
     <div class="span12">
         <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
