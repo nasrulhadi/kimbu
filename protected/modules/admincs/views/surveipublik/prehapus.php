@@ -1,8 +1,10 @@
 <?php
+$this->pageTitle = Yii::app()->name ." Konfirmasi Hapus";
+
 $this->breadcrumbs = array(
     'Dashboard' => array('/'),
     'Survei Publik' => array('/admincs/surveipublik/'),
-    'Update'
+    'Hapus'
 );
 ?>
 
@@ -16,10 +18,8 @@ $this->breadcrumbs = array(
     ));
     ?>
 
-    <?php echo @Yii::app()->user->getFlash('info'); ?>
-    
     <div class="w-box">
-        <div class="w-box-header">Survei</div>
+        <div class="w-box-header">Detail Survei</div>
         <div class="w-box-content cnt_a">
             <div class="profilethumb">
                 <table>
@@ -44,33 +44,19 @@ $this->breadcrumbs = array(
                 foreach ($model->surveiForms as $form) {
 
                     if ($form->iDSURVEIGRUP->POSITION == SurveiGrup::TOP) {
-                        $this->renderPartial('_form', array('model' => $form, 'respon' => $respon,));
-                    } else if ($form->iDSURVEIGRUP->POSITION == SurveiGrup::TAB) {
-                        $tabs[$form->NAMA] = $this->renderPartial('_form', array('model' => $form, 'respon' => $respon,), true);
+                        $this->renderPartial('_prehapus', array('model' => $form, 'respon' => $respon,));
                     }
                 }
                 ?>
             </div>
         </div>
     </div>
-    <div class="profilethumb" style="margin-top: 20px">
-        <?php
-        $this->widget('zii.widgets.jui.CJuiTabs', array(
-            'tabs' => $tabs,
-            // additional javascript options for the tabs plugin
-            'options' => array(
-                'collapsible' => true,
-            ),
-        ));
-        ?>
-    </div>
     <div class="form-actions">
-        <?php echo CHtml::link('<span class="icon-ban-circle icon-white"></span> Batal Disetujui', array('/admincs/surveipublik/unapprove/' . $respon->ID_RESPON), array('class' => 'btn btn-danger')); 
+        <?php
+        echo CHtml::link('<span class="icon-trash icon-white"></span> Hapus Survei', array('surveipublik/hapus/' . $respon->ID_RESPON), array('class' => 'btn btn-inverse'));
         echo " ";
-        echo CHtml::link('<span class="icon-trash icon-white"></span> Konfirmasi Hapus', array('/admincs/surveipublik/prehapus/' . $respon->ID_RESPON), array('class' => 'btn btn-inverse'));
+        echo CHtml::link('Kembali', Yii::app()->createUrl('admincs/surveipublik/update/' . $respon->ID_RESPON), array('class' => 'btn'));
         ?>
-        &nbsp; <button class="btn btn-gebo" type="submit">Update</button> &nbsp;
-        <?php echo CHtml::link('Kembali', Yii::app()->createUrl('admincs/surveipublik/detailsurvei/' . $model->ID_SURVEI), array('class' => 'btn')); ?>
     </div>
 
 

@@ -96,14 +96,11 @@ class SurveiController extends Controller
 	
 	public function actionDetailSurvei($id){
 		$this->layout = '//layouts/column1';
-		//$model = new Respon;
-		//$model->ID_SURVEI = $id;
                 $model = new Respon('search');
                 $model->unsetAttributes();
-                //$model->setAttributes(array('APPROVAL' => array(2)));
 		$model->ID_SURVEI = $id;
                 $model->dbCriteria->order='ID_RESPON DESC';
-                //$model->addInCondition('APPROVAL',array(0,1));	
+                $model->dbCriteria->condition = 'APPROVAL <> 2';
                 
 		$this->render('detail',array('model'=>$model));
 	}

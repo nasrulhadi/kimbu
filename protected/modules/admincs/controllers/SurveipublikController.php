@@ -96,9 +96,12 @@ class SurveipublikController extends Controller
 	
 	public function actionDetailSurvei($id){
 		$this->layout = '//layouts/column1';
-		$model = new Respon;
+                $model = new Respon('search');
+                $model->unsetAttributes();
 		$model->ID_SURVEI = $id;
-		//$model->NAMA = Yii::app()->user->name;
+                $model->dbCriteria->order='ID_RESPON DESC';
+                $model->dbCriteria->condition = 'APPROVAL <> 2';
+                
 		$this->render('detail',array('model'=>$model));
 	}
 	
@@ -130,5 +133,19 @@ class SurveipublikController extends Controller
                 
 		$this->render('view',array('model'=>$survei,'respon'=>$respon,));
 	}
+        
+        public function actionPreHapus($id){
+                $respon = Respon::model()->findByPk($id);
+		$survei = $respon->iDRESPON;
+		$this->render('prehapus',array('model'=>$survei,'respon'=>$respon,));
+        }
+        
+        public function actionHapus($id){
+                Respon::model()->updateByPk($id, array('APPROVAL'=>2));
+                $respon = Respon::model()->findByPk($id);
+		$survei = $respon->iDRESPON;
+                Yii::app()->user->setFlash('info',  MyFormatter::alertSuccess('<strong>Sukses!</strong> Proses hapus data berhasil.'));
+                $this->redirect(Yii::app()->createUrl('admincs/surveipublik/detailsurvei/'.$survei->ID_SURVEI));
+        }
 
 }

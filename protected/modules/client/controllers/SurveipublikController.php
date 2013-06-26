@@ -101,6 +101,7 @@ class SurveipublikController extends Controller
 	public function actionDetailSurvei($id){
 		$this->layout = '//layouts/column1';
 		$model = new Respon('search');
+                $model->unsetAttributes();
 		$model->ID_SURVEI = $id;
                 $model->APPROVAL = 1;
                 //$model->ID_USER = Yii::app()->user->idUser;
