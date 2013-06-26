@@ -22,10 +22,11 @@ return array(
 	'modules'=>array(
 		'pengaturan',
 		'interaksi',
-        'root',
-        'admincs',
-        'surveyor',
-        'client',
+                'root',
+                'admincs',
+                'surveyor',
+                'client',
+                'laporan',
 		
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',

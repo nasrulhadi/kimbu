@@ -167,13 +167,14 @@
                                                     <i class="icon-folder-open"></i> <?php echo Yii::app()->user->divisi; ?>
                                                 </a>
                                             </div>
-                                            <div class="accordion-body collapse <?php echo ($this->ID==="survei" || $this->ID==="surveipublik" || $this->ID==="grafik")?"in":"";?>" id="collapseOne">
+                                            <div class="accordion-body collapse <?php echo ($this->ID==="survei" || $this->ID==="surveipublik" || $this->ID==="chart")?"in":"";?>" id="collapseOne">
                                                 <div class="accordion-inner">
                                                     <ul class="nav nav-list">
                                                         <li class="nav-header">Survei</li>
                                                         <li class="<?php echo ($this->ID==="survei")?"active":"";?>"><?php echo CHtml::link('Survei Toko', array('/admincs/survei')); ?></li>
                                                         <li class="<?php echo ($this->ID==="surveipublik")?"active":"";?>"><?php echo CHtml::link('Survei End User', array('/admincs/surveipublik')); ?></li>
-                                                        <!--<li><?php echo CHtml::link('Grafik', array('#')); ?></li>-->
+                                                        <li class="nav-header">Laporan</li>
+                                                        <li class="<?php echo ($this->ID==="chart")?"active":"";?>"><?php echo CHtml::link('Grafik', array('/laporan/chart')); ?></li>
                                                     </ul>
 
                                                 </div>
@@ -383,6 +384,21 @@
             <!-- multi-column layout -->
             <script src="<?php echo $baseUrl; ?>/js/jquery.imagesloaded.min.js"></script>
             <script src="<?php echo $baseUrl; ?>/js/jquery.wookmark.js"></script>
+            
+            <?php if($this->ID=="chart"){?>
+             <!-- charts -->
+            <script src="<?php echo $baseUrl; ?>/lib/flot/jquery.flot.min.js"></script>
+            <script src="<?php echo $baseUrl; ?>/lib/flot/jquery.flot.resize.min.js"></script>
+            <script src="<?php echo $baseUrl; ?>/lib/flot/jquery.flot.pie.min.js"></script>
+            <script src="<?php echo $baseUrl; ?>/lib/flot/jquery.flot.curvedLines.min.js"></script>
+            <script src="<?php echo $baseUrl; ?>/lib/flot/jquery.flot.orderBars.min.js"></script>
+            <script src="<?php echo $baseUrl; ?>/lib/flot/jquery.flot.multihighlight.min.js"></script>
+            <script src="<?php echo $baseUrl; ?>/lib/flot/jquery.flot.pyramid.min.js"></script>
+            <script src="<?php echo $baseUrl; ?>/lib/moment_js/moment.min.js"></script>
+            <!-- charts functions -->
+            <script src="<?php echo Yii::app()->baseUrl; ?>/laporan/chart/JsChart"></script>
+            <? } ?>
+
             
 			<script>
 				$(document).ready(function() {
