@@ -67,7 +67,7 @@ class Survei extends CActiveRecord
 			'surveiForms' => array(self::HAS_MANY, 'SurveiForm', 'ID_SURVEI'),
 			'count' => array(self::STAT,'Respon','ID_SURVEI',
                                                 'select'=>'count(*)',
-                                                'condition'=>'ID_USER = :idUser',
+                                                'condition'=>'ID_USER = :idUser AND APPROVAL != 2',
                                                 'params'=>array(':idUser'=>Yii::app()->user->idUser,),
                                                 ),
                         'countClient' => array(self::STAT,'Respon','ID_SURVEI',
@@ -80,6 +80,7 @@ class Survei extends CActiveRecord
                                                 ),			
 			'countAll' => array(self::STAT,'Respon','ID_SURVEI',
                                                 'select'=>'count(*)',
+                                                'condition'=>'APPROVAL != 2',
                                                 ),
 		);
 	}

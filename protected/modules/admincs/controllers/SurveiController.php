@@ -96,9 +96,15 @@ class SurveiController extends Controller
 	
 	public function actionDetailSurvei($id){
 		$this->layout = '//layouts/column1';
-		$model = new Respon;
+		//$model = new Respon;
+		//$model->ID_SURVEI = $id;
+                $model = new Respon('search');
+                $model->unsetAttributes();
+                //$model->setAttributes(array('APPROVAL' => array(2)));
 		$model->ID_SURVEI = $id;
-		
+                $model->dbCriteria->order='ID_RESPON DESC';
+                //$model->addInCondition('APPROVAL',array(0,1));	
+                
 		$this->render('detail',array('model'=>$model));
 	}
 	
@@ -143,4 +149,18 @@ class SurveiController extends Controller
             $this->redirect(Yii::app()->createUrl('admincs/survei/ViewSurvei/'.$respon->ID_RESPON));
 		$this->render('view',array('model'=>$survei,'respon'=>$respon,));
 	}
+        
+        public function actionPreHapus($id){
+                $respon = Respon::model()->findByPk($id);
+		$survei = $respon->iDRESPON;
+		$this->render('prehapus',array('model'=>$survei,'respon'=>$respon,));
+        }
+        
+        public function actionHapus($id){
+                Respon::model()->updateByPk($id, array('APPROVAL'=>2));
+                $respon = Respon::model()->findByPk($id);
+		$survei = $respon->iDRESPON;
+                Yii::app()->user->setFlash('info',  MyFormatter::alertSuccess('<strong>Sukses!</strong> Proses hapus data berhasil.'));
+                $this->redirect(Yii::app()->createUrl('admincs/survei/detailsurvei/'.$survei->ID_SURVEI));
+        }
 }

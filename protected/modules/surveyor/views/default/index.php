@@ -20,10 +20,10 @@ $getDivisi = Divisi::model()->findByPk(Yii::app()->user->idDivisi);
             <?php } ?>
         </div>
         <ul class="dshb_icoNav tac">
-            <li><a href="./surveyor/profile" style="background-image: url(<?php echo $baseUrl; ?>/img/gCons/male-user.png)">Profil Surveyor</a></li>
-            <li><a href="./interaksi/chat" style="background-image: url(<?php echo $baseUrl; ?>/img/gCons/chat-.png)">Obrolan</a></li>
-            <li><a href="./surveyor/survei" style="background-image: url(<?php echo $baseUrl; ?>/img/gCons/add-item.png)">Survei Toko</a></li>
-            <li><a href="./surveyor/surveipublik" style="background-image: url(<?php echo $baseUrl; ?>/img/gCons/next-item.png)">Survei Publik</a></li>
+            <li><a href="<?php echo $siteUrl; ?>/surveyor/profile" style="background-image: url(<?php echo $baseUrl; ?>/img/gCons/male-user.png)">Profil Surveyor</a></li>
+            <li><a href="<?php echo $siteUrl; ?>/interaksi/chat" style="background-image: url(<?php echo $baseUrl; ?>/img/gCons/chat-.png)">Obrolan</a></li>
+            <li><a href="<?php echo $siteUrl; ?>/surveyor/survei" style="background-image: url(<?php echo $baseUrl; ?>/img/gCons/add-item.png)">Survei Toko</a></li>
+            <li><a href="<?php echo $siteUrl; ?>/surveyor/surveipublik" style="background-image: url(<?php echo $baseUrl; ?>/img/gCons/next-item.png)">Survei Publik</a></li>
         </ul>
     </div>
 </div>
