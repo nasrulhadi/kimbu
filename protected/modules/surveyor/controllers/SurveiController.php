@@ -108,8 +108,9 @@ class SurveiController extends Controller
         }
         
 		$model->ID_SURVEI = $id;
-        $model->ID_USER = Yii::app()->user->idUser;
-		//$model->NAMA = Yii::app()->user->name;
+                $model->ID_USER = Yii::app()->user->idUser;
+                $model->dbCriteria->order='ID_RESPON DESC';
+                $model->dbCriteria->condition = 'APPROVAL <> 2';
 		$this->render('detail', array('model'=>$model));
 	}
 	
