@@ -27,6 +27,7 @@ return array(
                 'surveyor',
                 'client',
                 'laporan',
+                'survei',
 		
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',

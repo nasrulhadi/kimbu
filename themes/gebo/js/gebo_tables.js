@@ -103,19 +103,32 @@
     //* gallery table view
     gebo_galery_table = {
         init: function() {
-           $('#pengaturanAkun').dataTable({
-				"sDom": "<'row'<'span6'<'dt_actions'>l><'span6'f>r>t<'row'<'span6'i><'span6'p>>",
+           $('#surveiIndex').dataTable({
+		"sDom": "<'row'<'span6'<'dt_actions'>l><'span6'f>r>t<'row'<'span6'i><'span6'p>>",
                 "sPaginationType": "bootstrap",
                 "aaSorting": [[ 2, "asc" ]],
-				"aoColumns": [
-					{ "bSortable": false},
-					{ "sType": "string" },
-					{ "sType": "string" },
-					{ "sType": "string" },
-					{ "sType": "string" },
-					{ "bSortable": false }
-				]
-			});
+                "aoColumns": [
+                        { "bSortable": false},
+                        { "sType": "string" },
+                        { "sType": "string" },
+                        { "bSortable": false },
+                        { "bSortable": false },
+                        { "bSortable": false }
+                ]
+            });
+            
+            $('#surveiDetail').dataTable({
+		"sDom": "<'row'<'span6'<'dt_actions'>l><'span6'f>r>t<'row'<'span6'i><'span6'p>>",
+                "sPaginationType": "bootstrap",
+                "aaSorting": [[ 0, "asc" ]],
+                "aoColumns": [
+                        { "bSortable": false},
+                        { "sType": "string" },
+                        { "sType": "string" },
+                        { "bSortable": false },
+                        { "bSortable": false }
+                ]
+            });
                         
            $('#pengaturanPegawai').dataTable({
 				"sDom": "<'row'<'span6'<'dt_actions'>l><'span6'f>r>t<'row'<'span6'i><'span6'p>>",
