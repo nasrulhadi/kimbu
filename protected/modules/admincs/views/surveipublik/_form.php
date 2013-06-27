@@ -90,6 +90,8 @@
                             echo CHtml::checkBoxList($model->ID_SURVEI_FORM . '[' . $pertanyaan->ID_SURVEI_PERTANYAAN . ']', $respon_value, CHtml::ListData($pertanyaan->surveiPilihanJawabans, 'ID_SURVEI_JAWABAN', 'JAWABAN'), array('template'=>'<label class="checkbox">{input}{label}</label>', 'separator'=>''));
                             break;
                         case SurveiPertanyaan::DROPDOWN:
+                            echo CHtml::link(Survei::displayPicture($respon_value), Yii::app()->createUrl(Yii::app()->request->baseUrl."/".$respon_value), array('class' => 'cboxElement', 'rel' => 'gallery'));
+                            echo "<div class='clearfix' style='margin-top:10px;'></div>";
                             echo CHtml::dropDownList($model->ID_SURVEI_FORM . '[' . $pertanyaan->ID_SURVEI_PERTANYAAN . ']', $respon_value, CHtml::ListData($pertanyaan->surveiPilihanJawabans, 'ID_SURVEI_JAWABAN', 'JAWABAN'));
                             break;
                         case SurveiPertanyaan::UPLOAD:
