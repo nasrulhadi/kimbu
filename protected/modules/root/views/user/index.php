@@ -10,14 +10,15 @@ $this->breadcrumbs=array(
 ?>
 
 <h3 class="heading">Pengaturan User</h3>
+<?php echo @Yii::app()->user->getFlash('info'); ?>
+<div class="pull-left" style="margin-bottom: 20px;">
+    <?php echo CHtml::link('<span class="icon-plus icon-white"></span> Buat User', array('/root/user/create'), array('class' => 'btn btn-gebo')); ?>
+</div>
 <div class="row-fluid">
     <div class="span12">
-        <div class="pull-left" style="margin-bottom: 20px;">
-            <?php echo CHtml::link('<span class="icon-plus icon-white"></span> Buat User', array('/pengaturan/user/create'), array('class' => 'btn btn-primary')); ?>
-            <?php echo CHtml::link('<span class="icon-search"></span> Pencarian','#',array('class'=>'btn search-button')); ?>
-        </div>
-        <div class="clearfix""></div>
-        <table class="table table-bordered table-striped table_vam" id="user">
+        
+        <div class="clearfix"></div>
+        <table class="table table-bordered table-striped table_vam" id="userGrid">
             <thead>
                 <tr>
                     <th>No.</th>

@@ -14,7 +14,7 @@ class UserController extends Controller
 	{
 		return array(
 			'accessControl', // perform access control for CRUD operations
-			'postOnly + delete', // we only allow deletion via POST request
+			//'postOnly + delete', // we only allow deletion via POST request
 		);
 	}
 
@@ -131,38 +131,40 @@ class UserController extends Controller
 	 * If deletion is successful, the browser will be redirected to the 'admin' page.
 	 * @param integer $id the ID of the model to be deleted
 	 */
-	public function actionDelete($id)
-	{
-		$this->loadModel($id)->delete();
+	public function actionDelete($id) {
+        $this->loadModel($id)->delete();
 
-		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
-	}
+        // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
+        if (!isset($_GET['ajax']))
+        {
+            Yii::app()->user->setFlash('info', MyFormatter::alertSuccess('<strong>Selamat!</strong> Data telah berhasil dihapus.'));
+            $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('index'));
+        }
+    }
 
 	/**
 	 * Lists all models.
 	 */
 	public function actionIndex()
 	{
-//		$dataProvider=new CActiveDataProvider('User');
-//        $model=new User('search');
-//		$model->unsetAttributes();  // clear any default values
-//		if(isset($_GET['User']))
-//			$model->attributes=$_GET['User'];
-//        
-//		$this->render('index',array(
-//			'dataProvider'=>$dataProvider,
-//            'model'=>$model,
-//		));
+		$dataProvider=new CActiveDataProvider('User', array('pagination'=>false));
         $model=new User('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['User']))
 			$model->attributes=$_GET['User'];
-
-		$this->render('admin',array(
-			'model'=>$model,
+        
+		$this->render('index',array(
+			'dataProvider'=>$dataProvider,
+            'model'=>$model,
 		));
+//        $model=new User('search');
+//		$model->unsetAttributes();  // clear any default values
+//		if(isset($_GET['User']))
+//			$model->attributes=$_GET['User'];
+//
+//		$this->render('admin',array(
+//			'model'=>$model,
+//		));
 	}
 
 	/**

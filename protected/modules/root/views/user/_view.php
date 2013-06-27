@@ -7,6 +7,6 @@
     <td>
         <?php echo CHtml::link('<i class="icon-eye-open"></i>', array('view','id'=>$data->ID_USER), array('title' => 'Detail', 'class' => 'sepV_a')); ?>
         <?php echo CHtml::link('<i class="icon-pencil"></i>', array('update','id'=>$data->ID_USER), array('title' => 'Edit', 'class' => 'sepV_a')); ?>
-        <?php echo CHtml::link('<i class="icon-trash"></i>','#',array('submit'=>array('delete','id'=>$data->ID_USER),'confirm'=>'Anda yakin akan menghapus '.ucwords(strtolower($data->NAMA)).' dari data pegawai?')); ?>
+        <?php echo CHtml::link('<i class="icon-trash"></i>',array('delete','id'=>$data->ID_USER), array('submit'=>array('delete','id'=>$data->ID_USER),'confirm'=>'Anda yakin akan menghapus '.ucwords(strtolower($data->NAMA)).' dari data pegawai?')); ?>
     </td>
 </tr>

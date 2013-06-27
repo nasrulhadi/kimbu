@@ -24,7 +24,7 @@ $('.search-form form').submit(function(){
 ?>
 
 <h3 class="heading">Manajemen Perusahaan</h3>
-
+<?php echo @Yii::app()->user->getFlash('info'); ?>
 <div class="pull-left" style="margin-bottom: 20px;">
     <?php echo CHtml::link('<span class="icon-plus icon-white"></span> Tambah Perusahaan', array('/root/perusahaan/create'), array('class' => 'btn btn-gebo')); ?>
     <?php echo CHtml::link('<span class="icon-search"></span> Pencarian','#',array('class'=>'btn search-button')); ?>

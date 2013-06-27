@@ -24,7 +24,7 @@ $('.search-form form').submit(function(){
 ?>
 
 <h3 class="heading">Manajemen Divisi</h3>
-
+<?php echo @Yii::app()->user->getFlash('info'); ?>
 <div class="row-fluid">
     <div class="span12">
         <div class="pull-left" style="margin-bottom: 20px;">

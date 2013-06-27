@@ -39,7 +39,7 @@ class MyCButtonColumn extends CButtonColumn {
         if ($this->deleteIcon === null)
             $this->deleteIcon = '<i class="icon-trash"></i>';
         if ($this->deleteConfirmation === null)
-            $this->deleteConfirmation = Yii::t('zii', 'Are you sure you want to delete this item?');
+            $this->deleteConfirmation = Yii::t('zii', 'Apakah anda yakin untuk menghapus data ini?');
 
         foreach (array('view', 'update', 'delete') as $id) {
             $button = array(
