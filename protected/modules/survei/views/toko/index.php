@@ -25,9 +25,15 @@ $getListMsg = $dataProvider->getData();
                     <th>No.</th>
                     <th>Nama Survei</th>
                     <th>Keterangan</th>
+                    <?php if(!WebUser::isClient()) { ?>
                     <th>Survei Disetujui</th>
                     <th>Survei Belum Disetujui</th>
                     <th>Semua Survei</th>
+                    <?php } else { ?>
+                    <th>Divisi</th>
+                    <th>Model</th>
+                    <th>Total Survei</th>
+                    <?php } ?>
                 </tr>
             </thead>
             <tbody>
