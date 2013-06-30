@@ -8,19 +8,31 @@ $this->breadcrumbs = array(
 );
 
 $spanHeading = "span12";
+$disetujui = null;
+$belumDisetujui = null;
+$w20 = "20%";
+$w30 = "30%";
 
 if(WebUser::isAdmin()){
     $conditions = "ID_SURVEI = :idSurvei AND APPROVAL <> 2";
     $params = array(':idSurvei' => $model->ID_SURVEI);
+    $total = $model->iDRESPON->countAll." Survei";
+    $disetujui = $model->iDRESPON->countClient." Survei";
+    $belumDisetujui = $model->iDRESPON->countNotApproved." Survei";
 } elseif (WebUser::isSurveyor()) {
     $conditions = "ID_SURVEI = :idSurvei AND APPROVAL <> 2 AND ID_USER = :idSurveyor";
     $params = array(':idSurvei' => $model->ID_SURVEI, ':idSurveyor' => Yii::app()->user->idUser);
+    $total = $model->iDRESPON->count." Survei";
+    $disetujui = $model->iDRESPON->countApprovedSurveyor." Survei";
+    $belumDisetujui = $model->iDRESPON->countNotApprovedSurveyor." Survei";
     $spanHeading = "span8";
 } elseif ((WebUser::isClient())) {
     $conditions = "ID_SURVEI = :idSurvei AND APPROVAL = 1";
     $params = array(':idSurvei' => $model->ID_SURVEI);
+    $total = $model->iDRESPON->countClient." Survei";
+    $w30 = null;
 } else {
-    $this->redirect('/site/logout');
+    $this->redirect('/site');
 }
 
 $dataProvider = new CActiveDataProvider('Respon', array(
@@ -36,18 +48,34 @@ $getListMsg = $dataProvider->getData();
 ?>
 
 <h3 class="heading">Detail Survei Toko & Penjualan</h3>
-
+<?php echo @Yii::app()->user->getFlash('info'); ?>
 <div class="row-fluid" style="margin-bottom: 20px;">
     <div class="<?php echo $spanHeading; ?> pull-left">
-        <table class="table table-bordered table-striped" id="user">
+        <table class="table table-bordered table-striped">
             <tbody> 
                 <tr>         
-                    <td width="20%">Nama Survei</td>
-                    <td><strong><?php echo $model->iDRESPON->NAMA_SURVEI; ?></strong></td>
+                    <td width="<?php echo $w20; ?>">Nama Survei</td>
+                    <td width="<?php echo $w30; ?>"><strong><?php echo $model->iDRESPON->NAMA_SURVEI; ?></strong></td>
+                    <?php if(!WebUser::isClient()) { ?>
+                    <td width="<?php echo $w20; ?>">Disetujui</td>
+                    <td width="<?php echo $w30; ?>"><strong><?php echo $disetujui; ?></strong></td>
+                    <?php } ?>
                 </tr>
                 <tr>         
-                    <td>Keterangan</td>
-                    <td><strong><?php echo $model->iDRESPON->KETERANGAN; ?></strong></td>
+                    <td width="<?php echo $w20; ?>">Keterangan</td>
+                    <td width="<?php echo $w30; ?>"><strong><?php echo $model->iDRESPON->KETERANGAN; ?></strong></td>
+                    <?php if(!WebUser::isClient()) { ?>
+                    <td width="<?php echo $w20; ?>">Belum Disetujui</td>
+                    <td width="<?php echo $w30; ?>"><strong><?php echo $belumDisetujui; ?></strong></td>
+                    <?php } ?>
+                </tr>
+                <tr>         
+                    <?php if(!WebUser::isClient()) { ?>
+                    <td width="<?php echo $w20; ?>">Status</td>
+                    <td width="<?php echo $w30; ?>"><strong><?php echo $model->iDRESPON->STATUS==1?"Aktif":"Tidak Aktif"; ?></strong></td>
+                    <?php }  ?>
+                    <td width="<?php echo $w20; ?>">Total</td>
+                    <td width="<?php echo $w30; ?>"><strong><?php echo $total; ?></strong></td>
                 </tr>                     
             </tbody>
         </table>
@@ -55,7 +83,7 @@ $getListMsg = $dataProvider->getData();
     <?php if(WebUser::isSurveyor()){ ?>
     <div class="span4">
         <ul class="ov_boxes pull-right">
-            <a href="<?php echo Yii::app()->createUrl('/survei/input/' . $model->ID_SURVEI); ?>">
+            <a href="<?php echo Yii::app()->createUrl('/survei/toko/input/' . $model->ID_SURVEI); ?>">
                 <li>
                     <div class="p_bar_up p_canvas" style="padding: 10px 14px 10px 4px;"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/img/chart-up.png"></div>
                     <div class="ov_text">

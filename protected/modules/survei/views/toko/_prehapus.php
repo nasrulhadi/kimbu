@@ -17,13 +17,16 @@
             </td>
         </tr>
     <?php } ?>
-
+        
     <?php
     $respon_detail_objects = array();
+    $no = 1;
     foreach ($model->surveiPertanyaans as $pertanyaan) {
+        
+        if($no <= 5){
         ?>
         <tr>
-            <td width="40%" <?php echo $intop===true?"":"style=\"border-right: 1px solid #ddd\""; ?>>
+            <td width="40%">
                 <?php echo CHtml::label($pertanyaan->PERTANYAAN, ''); ?>
                 <?php
                 $pertanyaan_respon = ResponDetail::model()->findByAttributes(array('ID_PERTANYAAN' => $pertanyaan->ID_SURVEI_PERTANYAAN, 'ID_RESPON' => $respon->ID_RESPON,));
@@ -54,7 +57,6 @@
                         } else {
                             echo CHtml::label('-', '');
                         }
-                        break;
                         break;
                     case SurveiPertanyaan::RADIO:
                         if ($respon_value != null) {
@@ -111,5 +113,6 @@
                 ?>
             </td>
         </tr>
-    <?php } ?>
+
+        <?php } $no++; } ?>
 </table>
