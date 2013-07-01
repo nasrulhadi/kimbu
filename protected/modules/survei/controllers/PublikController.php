@@ -1,6 +1,6 @@
 <?php
 
-class TokoController extends Controller
+class PublikController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -124,7 +124,7 @@ class TokoController extends Controller
                                 }
                                 
                                 Yii::app()->user->setFlash('info',  MyFormatter::alertSuccess('<strong>Sukses!</strong> Data survei berhasil di input.'));
-                                $this->redirect(Yii::app()->createUrl('/survei/toko/update/'.$respon->ID_RESPON));
+                                $this->redirect(Yii::app()->createUrl('/survei/publik/update/'.$respon->ID_RESPON));
                         }
 
                         $this->render('input',array('model'=>$survei));
@@ -186,7 +186,7 @@ class TokoController extends Controller
                                         }
                                 }
                                 Yii::app()->user->setFlash('info',  MyFormatter::alertSuccess('<strong>Sukses!</strong> Update data survei berhasil.'));
-                                $this->redirect(Yii::app()->createUrl('/survei/toko/update/'.$respon->ID_RESPON));
+                                $this->redirect(Yii::app()->createUrl('/survei/publik/update/'.$respon->ID_RESPON));
                         }
 
                         $this->render('update',array('model'=>$survei,'respon'=>$respon,));
@@ -250,7 +250,7 @@ class TokoController extends Controller
                 
 		$respon = Respon::model()->findByPk($id);
                 Yii::app()->user->setFlash('info',  MyFormatter::alertSuccess('<strong>Sukses!</strong> Survei berhasil disetujui.'));
-                $this->redirect(Yii::app()->createUrl('/survei/toko/update/'.$respon->ID_RESPON));
+                $this->redirect(Yii::app()->createUrl('/survei/publik/update/'.$respon->ID_RESPON));
 	}
         
     
@@ -260,7 +260,7 @@ class TokoController extends Controller
                 
 		$respon = Respon::model()->findByPk($id);
                 Yii::app()->user->setFlash('info',  MyFormatter::alertSuccess('<strong>Sukses!</strong> Persetujuan survei berhasil dibatalkan.'));
-                $this->redirect(Yii::app()->createUrl('/survei/toko/view/'.$respon->ID_RESPON));
+                $this->redirect(Yii::app()->createUrl('/survei/publik/view/'.$respon->ID_RESPON));
 	}
         
         
@@ -280,6 +280,6 @@ class TokoController extends Controller
                 $respon = Respon::model()->findByPk($id);
 		$survei = $respon->iDRESPON;
                 Yii::app()->user->setFlash('info',  MyFormatter::alertSuccess('<strong>Sukses!</strong> Proses hapus data berhasil.'));
-                $this->redirect(Yii::app()->createUrl('/survei/toko/detailsurvei/'.$survei->ID_SURVEI));
+                $this->redirect(Yii::app()->createUrl('/survei/publik/detailsurvei/'.$survei->ID_SURVEI));
         }
 }

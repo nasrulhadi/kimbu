@@ -3,13 +3,13 @@ $this->pageTitle = Yii::app()->name . ' - Update Survei';
 
 $this->breadcrumbs = array(
     'Dashboard' => array('/'),
-    'Survei' => array('/survei'),
-    'Detail' => array('/survei/toko/detailsurvei/'.$model->ID_SURVEI),
+    'Survei' => array('/survei/publik'),
+    'Detail' => array('/survei/publik/detailsurvei/'.$model->ID_SURVEI),
     'Update'
 );
 ?>
 
-<h3 class="heading">Update Data Survei Toko & Penjualan</h3>
+<h3 class="heading">Update Data Survei End User</h3>
 <?php echo @Yii::app()->user->getFlash('info'); ?>
 <div class="row-fluid" style="margin-bottom: 20px;">
     <?php
@@ -44,13 +44,13 @@ $this->breadcrumbs = array(
         if ($respon->APPROVAL == 1) {
             if(WebUser::isAdmin()){
                 echo " ";
-                echo CHtml::link('<i class="icon-ban-circle icon-white" style="margin-top: 0px"></i> Batal Disetujui', array('/survei/toko/unapprove/' . $respon->ID_RESPON), array('class' => 'btn btn-danger btn-large'));
+                echo CHtml::link('<i class="icon-ban-circle icon-white" style="margin-top: 0px"></i> Batal Disetujui', array('/survei/publik/unapprove/' . $respon->ID_RESPON), array('class' => 'btn btn-danger btn-large'));
                 echo " ";
-                echo CHtml::link('<i class="icon-trash icon-white" style="margin-top: 0px"></i> Konfirmasi Hapus', array('/survei/toko/prehapus/' . $respon->ID_RESPON), array('class' => 'btn btn-inverse btn-large'));
+                echo CHtml::link('<i class="icon-trash icon-white" style="margin-top: 0px"></i> Konfirmasi Hapus', array('/survei/publik/prehapus/' . $respon->ID_RESPON), array('class' => 'btn btn-inverse btn-large'));
             }
         }
         echo "</div>";
-        echo CHtml::link('<i class="icon-share-alt" style="margin-top: 0px" ></i> Kembali', Yii::app()->createUrl('/survei/toko/detailsurvei/' . $model->ID_SURVEI), array('class' => 'btn btn-large'));
+        echo CHtml::link('<i class="icon-share-alt" style="margin-top: 0px" ></i> Kembali', Yii::app()->createUrl('/survei/publik/detailsurvei/' . $model->ID_SURVEI), array('class' => 'btn btn-large'));
         ?>
     </div>
     <?php $this->endWidget(); ?>

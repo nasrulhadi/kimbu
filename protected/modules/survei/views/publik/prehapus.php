@@ -3,13 +3,13 @@ $this->pageTitle = Yii::app()->name . ' - Konfirmasi Hapus';
 
 $this->breadcrumbs = array(
     'Dashboard' => array('/'),
-    'Survei' => array('/survei'),
-    'Detail' => array('/survei/toko/detailsurvei/'.$model->ID_SURVEI),
+    'Survei' => array('/survei/publik'),
+    'Detail' => array('/survei/publik/detailsurvei/'.$model->ID_SURVEI),
     'Hapus'
 );
 ?>
 
-<h3 class="heading">Konfirmasi Hapus Data Survei Toko & Penjualan</h3>
+<h3 class="heading">Konfirmasi Hapus Data Survei End User</h3>
 <?php echo @Yii::app()->user->getFlash('info'); ?>
 <div class="row-fluid" style="margin-bottom: 20px;">
     <?php
@@ -31,10 +31,10 @@ $this->breadcrumbs = array(
         <div class="pull-right">
         <?php
         if(WebUser::isAdmin() && $respon->APPROVAL == 1){
-            echo CHtml::link('<i class="icon-check icon-white" style="margin-top: 0px"></i> Hapus Survei', array('/survei/toko/hapus/' . $respon->ID_RESPON), array('class' => 'btn btn-inverse btn-large'));
+            echo CHtml::link('<i class="icon-check icon-white" style="margin-top: 0px"></i> Hapus Survei', array('/survei/publik/hapus/' . $respon->ID_RESPON), array('class' => 'btn btn-inverse btn-large'));
         }
         echo "</div>";
-        echo CHtml::link('<i class="icon-share-alt" style="margin-top: 0px" ></i> Kembali', Yii::app()->createUrl('/survei/toko/update/' . $respon->ID_RESPON), array('class' => 'btn btn-large'));
+        echo CHtml::link('<i class="icon-share-alt" style="margin-top: 0px" ></i> Kembali', Yii::app()->createUrl('/survei/publik/update/' . $respon->ID_RESPON), array('class' => 'btn btn-large'));
         ?>
     </div>
     <?php $this->endWidget(); ?>

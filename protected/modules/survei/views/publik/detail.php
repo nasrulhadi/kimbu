@@ -3,7 +3,7 @@ $this->pageTitle = Yii::app()->name . ' - Detil Survei';
 
 $this->breadcrumbs = array(
     'Dashboard' => array('/'),
-    'Survei' => array('/survei'),
+    'Survei' => array('/survei/publik'),
     'Detail'
 );
 
@@ -47,7 +47,7 @@ $dataProvider = new CActiveDataProvider('Respon', array(
 $getListMsg = $dataProvider->getData();
 ?>
 
-<h3 class="heading">Detail Survei Toko & Penjualan</h3>
+<h3 class="heading">Detail Survei  End User</h3>
 <?php echo @Yii::app()->user->getFlash('info'); ?>
 <div class="row-fluid" style="margin-bottom: 20px;">
     <div class="<?php echo $spanHeading; ?> pull-left">
@@ -83,12 +83,12 @@ $getListMsg = $dataProvider->getData();
     <?php if(WebUser::isSurveyor()){ ?>
     <div class="span4">
         <ul class="ov_boxes pull-right">
-            <a href="<?php echo Yii::app()->createUrl('/survei/toko/input/' . $model->ID_SURVEI); ?>">
+            <a href="<?php echo Yii::app()->createUrl('/survei/publik/input/' . $model->ID_SURVEI); ?>">
                 <li>
                     <div class="p_bar_up p_canvas" style="padding: 10px 14px 10px 4px;"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/img/chart-up.png"></div>
                     <div class="ov_text">
                         <strong style="color:#70A415">Mulai Survei</strong>
-                        <span style="color:#000000">toko dan penjualan</span>
+                        <span style="color:#000000">end user</span>
                     </div>
                 </li>
             </a>

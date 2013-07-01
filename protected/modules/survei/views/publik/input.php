@@ -3,13 +3,13 @@ $this->pageTitle = Yii::app()->name . ' - Input Survei';
 
 $this->breadcrumbs = array(
     'Dashboard' => array('/'),
-    'Survei' => array('/survei'),
-    'Detail' => array('/survei/toko/detailsurvei/'.$model->ID_SURVEI),
+    'Survei' => array('/survei/publik'),
+    'Detail' => array('/survei/publik/detailsurvei/'.$model->ID_SURVEI),
     'Input'
 );
 ?>
 
-<h3 class="heading">Input Data Survei Toko & Penjualan</h3>
+<h3 class="heading">Input Data Survei End User</h3>
 <?php echo @Yii::app()->user->getFlash('info'); ?>
 <div class="row-fluid" style="margin-bottom: 20px;">
     <?php
@@ -42,7 +42,7 @@ $this->breadcrumbs = array(
         <?php
         echo "<button class=\"btn btn-gebo btn-large\" type=\"submit\"><i class=\"icon-trash icon-white\" style=\"margin-top: 0px\"></i> Simpan Survei</button>";
         echo "</div>";
-        echo CHtml::link('<i class="icon-share-alt" style="margin-top: 0px" ></i> Kembali', Yii::app()->createUrl('/survei/toko/detailsurvei/' . $model->ID_SURVEI), array('class' => 'btn btn-large'));
+        echo CHtml::link('<i class="icon-share-alt" style="margin-top: 0px" ></i> Kembali', Yii::app()->createUrl('/survei/publik/detailsurvei/' . $model->ID_SURVEI), array('class' => 'btn btn-large'));
         ?>
     </div>
     <?php $this->endWidget(); ?>
