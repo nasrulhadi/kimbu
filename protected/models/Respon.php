@@ -50,7 +50,7 @@ class Respon extends CActiveRecord
 			array('ID_SURVEI, ID_USER', 'required'),
 			array('ID_SURVEI, ID_USER, APPROVAL', 'numerical', 'integerOnly'=>true),
 			array('NAMA', 'length', 'max'=>255),
-			array('TANGGAL_PENGISIAN', 'safe'),
+			array('TANGGAL_PENGISIAN, TANGGAL_APPROVAL', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('ID_RESPON, NAMA, TANGGAL_PENGISIAN, ID_SURVEI, APPROVAL', 'safe', 'on'=>'search'),

@@ -104,7 +104,11 @@ $getListMsg = $dataProvider->getData();
                     <th>No.</th>
                     <th>Nama Toko</th>
                     <th>Surveyor</th>
+                    <?php if(WebUser::isClient()) { ?>
+                    <th>Tanggal Disetujui</th>
+                    <?php } else { ?>
                     <th>Tanggal Pengisian</th>
+                    <?PHP } ?>
                     <th>Status</th>
                 </tr>
             </thead>

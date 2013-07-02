@@ -267,14 +267,14 @@
                                                     <i class="icon-folder-open"></i> <?php echo Yii::app()->user->divisi; ?>
                                                 </a>
                                             </div>
-                                            <div class="accordion-body collapse <?php echo ($this->ID==="toko" || $this->ID==="publik" )?"in":"";?>" id="collapseOne">
+                                            <div class="accordion-body collapse <?php echo ($this->ID==="toko" || $this->ID==="publik" || $this->ID==="chart")?"in":"";?>" id="collapseOne">
                                                 <div class="accordion-inner">
                                                     <ul class="nav nav-list">
                                                         <li class="nav-header">Survei</li>
                                                         <li class="<?php echo ($this->ID==="toko")?"active":"";?>"><?php echo CHtml::link('Survei Toko', array('/survei/toko')); ?></li>
                                                         <li class="<?php echo ($this->ID==="publik")?"active":"";?>"><?php echo CHtml::link('Survei End User', array('/survei/publik')); ?></li>
                                                         <li class="nav-header">Laporan</li>
-                                                        <li class="<?php echo ($this->ID==="grafik")?"active":"";?>"><?php echo CHtml::link('Grafik', array('#')); ?></li>
+                                                        <li class="<?php echo ($this->ID==="chart")?"active":"";?>"><?php echo CHtml::link('Grafik', array('/laporan/chart')); ?></li>
                                                     </ul>
 
                                                 </div>

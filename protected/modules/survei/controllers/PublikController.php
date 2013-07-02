@@ -93,6 +93,7 @@ class PublikController extends Controller
                                 $respon->ID_SURVEI = $survei->ID_SURVEI;
                                 $respon->NAMA = Yii::app()->user->name;
                                 $respon->TANGGAL_PENGISIAN = date("Y-m-d H:i:s");
+                                $respon->TANGGAL_APPROVAL = date("Y-m-d H:i:s");
                                 $respon->ID_USER = Yii::app()->user->idUser;
                                 $respon->save();
                                 $respon->ID_RESPON;
@@ -246,7 +247,7 @@ class PublikController extends Controller
         
         public function actionApprove($id)
         {
-                Respon::model()->updateByPk($id, array('APPROVAL'=>1));
+                Respon::model()->updateByPk($id, array('APPROVAL'=>1, 'TANGGAL_APPROVAL' => date("Y-m-d H:i:s")));
                 
 		$respon = Respon::model()->findByPk($id);
                 Yii::app()->user->setFlash('info',  MyFormatter::alertSuccess('<strong>Sukses!</strong> Survei berhasil disetujui.'));

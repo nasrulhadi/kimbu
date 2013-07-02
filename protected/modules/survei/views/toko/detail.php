@@ -49,7 +49,6 @@ $getListMsg = $dataProvider->getData();
 ?>
 
 <h3 class="heading">Detail Survei Toko & Penjualan</h3>
-<<<<<<< HEAD
 <?php echo @Yii::app()->user->getFlash('info'); ?>
 <div class="row-fluid" style="margin-bottom: 20px;">
     <div class="<?php echo $spanHeading; ?> pull-left">
@@ -86,21 +85,6 @@ $getListMsg = $dataProvider->getData();
     <div class="span4">
         <ul class="ov_boxes pull-right">
             <a href="<?php echo Yii::app()->createUrl('/survei/toko/input/' . $model->ID_SURVEI); ?>">
-=======
-
-<div class="row-fluid" style="margin-bottom: 20px;">
-    <div class="span8 pull-left">
-        <div style="margin-bottom: 10px; margin-top: 10px">
-            <span class="muted sepV_b">Nama Survei </span><strong><?php echo $model->iDRESPON->NAMA_SURVEI; ?></strong>
-        </div>
-        <div style="">
-            <span class="muted sepV_b">Keterangan </span><strong><?php echo $model->iDRESPON->KETERANGAN; ?></strong>
-        </div>
-    </div>
-    <div class="span4">
-        <ul class="ov_boxes pull-right">
-            <a href="<?php echo Yii::app()->createUrl('surveyor/survei/input/' . $model->ID_SURVEI); ?>">
->>>>>>> 22d2eb1... Highcharts
                 <li>
                     <div class="p_bar_up p_canvas" style="padding: 10px 14px 10px 4px;"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/img/chart-up.png"></div>
                     <div class="ov_text">
@@ -111,10 +95,7 @@ $getListMsg = $dataProvider->getData();
             </a>
         </ul>
     </div>
-<<<<<<< HEAD
     <?php } ?>
-=======
->>>>>>> 22d2eb1... Highcharts
 </div>
 <div class="row-fluid">
     <div class="span12">
@@ -124,7 +105,11 @@ $getListMsg = $dataProvider->getData();
                     <th>No.</th>
                     <th>Nama Toko</th>
                     <th>Surveyor</th>
+                    <?php if(WebUser::isClient()) { ?>
+                    <th>Tanggal Disetujui</th>
+                    <?php } else { ?>
                     <th>Tanggal Pengisian</th>
+                    <?PHP } ?>
                     <th>Status</th>
                 </tr>
             </thead>
