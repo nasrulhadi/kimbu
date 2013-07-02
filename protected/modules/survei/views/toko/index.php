@@ -5,11 +5,11 @@ $this->breadcrumbs = array(
 );
 
 $dataProvider = new CActiveDataProvider('Survei', array(
-            'criteria' => array(
-                'condition' => 'TYPE = :type AND ID_DIVISI = :divisi',
-                'params' => array(':type' => 1, ':divisi' => Yii::app()->user->idDivisi),
-            ),
-            'pagination' => false,
+    'criteria' => array(
+        'condition' => 'TYPE = :type AND ID_DIVISI = :divisi',
+        'params' => array(':type' => 1, ':divisi' => Yii::app()->user->idDivisi),
+    ),
+    'pagination' => false,
         ));
 
 $getListMsg = $dataProvider->getData();

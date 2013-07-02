@@ -24,6 +24,7 @@ class Respon extends CActiveRecord
     //STATUS TOKO
     const DISETUJUI=1;
     const BELUM_DISETUJUI=0;
+	
     
 	public static function model($className=__CLASS__)
 	{

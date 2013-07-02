@@ -1,3 +1,4 @@
+
 <table class="table table-striped <?php echo $intop === true ? "table-bordered" : ""; ?>">
     <?php if ($intop) { ?>
         <tr>
@@ -113,3 +114,4 @@
         </tr>
     <?php } ?>
 </table>
+
