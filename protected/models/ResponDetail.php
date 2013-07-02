@@ -61,6 +61,7 @@ class ResponDetail extends CActiveRecord
 		return array(
 			'iDRESPON' => array(self::BELONGS_TO, 'Respon', 'ID_RESPON'),
 			'iDPERTANYAAN' => array(self::BELONGS_TO, 'SurveiPertanyaan', 'ID_PERTANYAAN'),
+			
 		);
 	}
 
