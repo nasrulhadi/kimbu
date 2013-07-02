@@ -55,7 +55,7 @@
                 <div class="navbar navbar-fixed-top">
                     <div class="navbar-inner">
                         <div class="container-fluid">
-                            <?php if(isset(Yii::app()->user)) echo CHtml::link(Yii::app()->user->perusahaan . ' - ' . ucwords(strtolower(Yii::app()->user->divisi)), array('./'), array('class' => 'brand')); ?>
+                            <?php if(isset(Yii::app()->user)) echo CHtml::link(Yii::app()->user->perusahaan . ' - ' . ucwords(strtolower(Yii::app()->user->divisi)), array('/'.WebUser::getModuleByRole()), array('class' => 'brand')); ?>
                             <ul class="nav user_menu pull-right">
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="icon-user icon-white"></span> <?php echo ucwords(strtolower(Yii::app()->user->name)); ?> <b class="caret"></b></a>
@@ -167,12 +167,12 @@
                                                     <i class="icon-folder-open"></i> <?php echo Yii::app()->user->divisi; ?>
                                                 </a>
                                             </div>
-                                            <div class="accordion-body collapse <?php echo ($this->ID==="survei" || $this->ID==="surveipublik" || $this->ID==="chart")?"in":"";?>" id="collapseOne">
+                                            <div class="accordion-body collapse <?php echo ($this->ID==="toko" || $this->ID==="publik" || $this->ID==="chart")?"in":"";?>" id="collapseOne">
                                                 <div class="accordion-inner">
                                                     <ul class="nav nav-list">
                                                         <li class="nav-header">Survei</li>
-                                                        <li class="<?php echo ($this->ID==="survei")?"active":"";?>"><?php echo CHtml::link('Survei Toko', array('/admincs/survei')); ?></li>
-                                                        <li class="<?php echo ($this->ID==="surveipublik")?"active":"";?>"><?php echo CHtml::link('Survei End User', array('/admincs/surveipublik')); ?></li>
+                                                        <li class="<?php echo ($this->ID==="toko")?"active":"";?>"><?php echo CHtml::link('Survei Toko', array('/survei/toko')); ?></li>
+                                                        <li class="<?php echo ($this->ID==="publik")?"active":"";?>"><?php echo CHtml::link('Survei End User', array('/survei/publik')); ?></li>
                                                         <li class="nav-header">Laporan</li>
                                                         <li class="<?php echo ($this->ID==="chart")?"active":"";?>"><?php echo CHtml::link('Grafik', array('/laporan/chart')); ?></li>
                                                     </ul>
@@ -225,12 +225,12 @@
                                                     <i class="icon-folder-open"></i> <?php echo Yii::app()->user->divisi; ?>
                                                 </a>
                                             </div>
-                                            <div class="accordion-body collapse <?php echo ($this->ID==="survei" || $this->ID==="surveipublik" )?"in":"";?>" id="collapseOne">
+                                            <div class="accordion-body collapse <?php echo ($this->ID==="toko" || $this->ID==="publik" )?"in":"";?>" id="collapseOne">
                                                 <div class="accordion-inner">
                                                     <ul class="nav nav-list">
                                                         <li class="nav-header">Survei</li>
-                                                        <li class="<?php echo ($this->ID==="survei")?"active":"";?>"><?php echo CHtml::link('Survei Toko', array('/surveyor/survei')); ?></li>
-                                                        <li class="<?php echo ($this->ID==="surveipublik")?"active":"";?>"><?php echo CHtml::link('Survei End User', array('/surveyor/surveipublik')); ?></li>
+                                                        <li class="<?php echo ($this->ID==="toko")?"active":"";?>"><?php echo CHtml::link('Survei Toko', array('/survei/toko')); ?></li>
+                                                        <li class="<?php echo ($this->ID==="publik")?"active":"";?>"><?php echo CHtml::link('Survei End User', array('/survei/publik')); ?></li>
                                                     </ul>
 
                                                 </div>
@@ -265,12 +265,12 @@
                                                     <i class="icon-folder-open"></i> <?php echo Yii::app()->user->divisi; ?>
                                                 </a>
                                             </div>
-                                            <div class="accordion-body collapse <?php echo ($this->ID==="survei" || $this->ID==="surveipublik" )?"in":"";?>" id="collapseOne">
+                                            <div class="accordion-body collapse <?php echo ($this->ID==="toko" || $this->ID==="publik" )?"in":"";?>" id="collapseOne">
                                                 <div class="accordion-inner">
                                                     <ul class="nav nav-list">
                                                         <li class="nav-header">Survei</li>
-                                                        <li class="<?php echo ($this->ID==="survei")?"active":"";?>"><?php echo CHtml::link('Survei Toko', array('/client/survei')); ?></li>
-                                                        <li class="<?php echo ($this->ID==="surveipublik")?"active":"";?>"><?php echo CHtml::link('Survei End User', array('/client/surveipublik')); ?></li>
+                                                        <li class="<?php echo ($this->ID==="toko")?"active":"";?>"><?php echo CHtml::link('Survei Toko', array('/survei/toko')); ?></li>
+                                                        <li class="<?php echo ($this->ID==="publik")?"active":"";?>"><?php echo CHtml::link('Survei End User', array('/survei/publik')); ?></li>
                                                         <li class="nav-header">Laporan</li>
                                                         <li class="<?php echo ($this->ID==="grafik")?"active":"";?>"><?php echo CHtml::link('Grafik', array('#')); ?></li>
                                                     </ul>

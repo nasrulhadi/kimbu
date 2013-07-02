@@ -22,8 +22,8 @@ $getPerusahaan = Perusahaan::model()->findByPk($getDivisi->ID_PERUSAHAAN);
         </div>
         <ul class="dshb_icoNav tac">
             <li><a href="<?php echo $siteUrl; ?>/client/grafik" style="background-image: url(<?php echo $baseUrl; ?>/img/gCons/bar-chart.png)">Grafik</a></li>
-            <li><a href="<?php echo $siteUrl; ?>/client/survei" style="background-image: url(<?php echo $baseUrl; ?>/img/gCons/add-item.png)">Survei Toko</a></li>
-            <li><a href="<?php echo $siteUrl; ?>/client/surveipublik" style="background-image: url(<?php echo $baseUrl; ?>/img/gCons/next-item.png)">Survei Publik</a></li>
+            <li><a href="<?php echo $siteUrl; ?>/survei/toko" style="background-image: url(<?php echo $baseUrl; ?>/img/gCons/add-item.png)">Survei Toko</a></li>
+            <li><a href="<?php echo $siteUrl; ?>/survei/publik" style="background-image: url(<?php echo $baseUrl; ?>/img/gCons/next-item.png)">Survei Publik</a></li>
         </ul>
     </div>
 </div>
