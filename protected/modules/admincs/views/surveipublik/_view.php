@@ -62,14 +62,10 @@
                         echo CHtml::link(Survei::displayPicture($respon_value), Yii::app()->createUrl(Yii::app()->request->baseUrl . "/" . $respon_value), array('class' => 'cboxElement', 'rel' => 'gallery'));
                         break;
                     case SurveiPertanyaan::RADIO_FIELD:
-                        if(isset($respon_value['RADIO'])){
-                            if (isset($respon_value['FIELD' . $respon_value['RADIO']])) {
-                                echo CHtml::label(str_replace('{input}', $respon_value['FIELD' . $respon_value['RADIO']], SurveiPilihanJawaban::model()->findByPk($respon_value['RADIO'])->JAWABAN), '');
-                            } else {
-                                echo CHtml::label(str_replace('{input}', '', SurveiPilihanJawaban::model()->findByPk($respon_value['RADIO'])->JAWABAN), '');
-                            }
-                        }else{
-                            echo CHtml::label('-', '');
+                        if (isset($respon_value['FIELD' . $respon_value['RADIO']])) {
+                            echo CHtml::label(str_replace('{input}', $respon_value['FIELD' . $respon_value['RADIO']], SurveiPilihanJawaban::model()->findByPk($respon_value['RADIO'])->JAWABAN), '');
+                        } else {
+                            echo CHtml::label(str_replace('{input}', '', SurveiPilihanJawaban::model()->findByPk($respon_value['RADIO'])->JAWABAN), '');
                         }
                         break;
                     case SurveiPertanyaan::CHECKBOX_FIELD:

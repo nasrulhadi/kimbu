@@ -15,6 +15,8 @@
  */
 class ResponDetail extends CActiveRecord
 {
+
+	public $JUMLAH;
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -59,6 +61,7 @@ class ResponDetail extends CActiveRecord
 		return array(
 			'iDRESPON' => array(self::BELONGS_TO, 'Respon', 'ID_RESPON'),
 			'iDPERTANYAAN' => array(self::BELONGS_TO, 'SurveiPertanyaan', 'ID_PERTANYAAN'),
+			
 		);
 	}
 

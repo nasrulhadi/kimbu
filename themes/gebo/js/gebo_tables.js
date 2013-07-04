@@ -104,8 +104,8 @@
     gebo_galery_table = {
         init: function() {
            $('#surveiIndex').dataTable({
-                "sDom": "<'row'<'span6'<'dt_actions'>l><'span6'f>r>t<'row'<'span6'i><'span6'p>>",
-                "sPaginationType": "bootstrap",
+		"sDom": "<t>",
+                //"sPaginationType": "bootstrap",
                 "aaSorting": [[ 2, "asc" ]],
                 "aoColumns": [
                         { "bSortable": false},
@@ -118,29 +118,15 @@
             });
             
             $('#surveiDetail').dataTable({
-                "sDom": "<'row'<'span6'<'dt_actions'>l><'span6'f>r>t<'row'<'span6'i><'span6'p>>",
-                "sPaginationType": "bootstrap",
+		"sDom": "<'row'<'span6'<'dt_actions'>l><'span6'f>r>t<'row'<'span6'i><'span6'p>>",
+                "sPaginationType": "bootstrap_alt",
                 "aaSorting": [[ 0, "asc" ]],
                 "aoColumns": [
                         { "bSortable": false},
                         { "sType": "string" },
                         { "sType": "string" },
-                        { "bSortable": false },
-                        { "bSortable": false }
-                ]
-            });
-            
-            $('#userGrid').dataTable({
-                "sDom": "<'row'<'span6'<'dt_actions'>l><'span6'f>r>t<'row'<'span6'i><'span6'p>>",
-                "sPaginationType": "bootstrap",
-                "aaSorting": [[ 2, "asc" ]],
-                "aoColumns": [
-                        { "bSortable": false},
                         { "sType": "string" },
-                        { "sType": "string" },
-                        { "sType": "string" },
-                        { "sType": "string" },
-                        { "bSortable": false }
+                        { "sType": "string" }
                 ]
             });
                         

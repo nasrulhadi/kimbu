@@ -81,6 +81,16 @@ class Survei extends CActiveRecord
 			'countAll' => array(self::STAT,'Respon','ID_SURVEI',
                                                 'select'=>'count(*)',
                                                 'condition'=>'APPROVAL != 2',
+                                                ),	
+			'countNotApprovedSurveyor' => array(self::STAT,'Respon','ID_SURVEI',
+                                                'select'=>'count(*)',
+                                                'condition'=>'ID_USER = :idUser AND APPROVAL = 0',
+                                                'params'=>array(':idUser'=>Yii::app()->user->idUser,),
+                                                ),	
+			'countApprovedSurveyor' => array(self::STAT,'Respon','ID_SURVEI',
+                                                'select'=>'count(*)',
+                                                'condition'=>'ID_USER = :idUser AND APPROVAL = 1',
+                                                'params'=>array(':idUser'=>Yii::app()->user->idUser,),
                                                 ),
 		);
 	}

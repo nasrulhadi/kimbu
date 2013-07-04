@@ -28,6 +28,8 @@ class User extends CActiveRecord
     public $username;
     public $password;
     public $REPEAT;
+    public $COUNT;
+
     
     //STATUS USER
     const STATUS_AKTIF=1;
@@ -87,7 +89,8 @@ class User extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
             'Divisi' => array(self::BELONGS_TO, 'Divisi', 'ID_DIVISI'),
-            'Perusahaan' => array(self::HAS_MANY, 'Perusahaan', 'ID_DIVISI')
+            'Perusahaan' => array(self::HAS_MANY, 'Perusahaan', 'ID_DIVISI'),
+			// 'COUNT_RESPON' => array(self::STAT, 'Respon', 'ID_USER','join'=>'JOIN respon_detail on t.ID_RESPON = respon_detail.ID_RESPON','condition'=>'ID_PERTANYAAN = :id_pertanyaan AND RESPON like \'%:respon%\'','params'=>array('id_pertanyaan'=>$this->PERTANYAAN,'respon'=>$this->RESPON)),
 		);
 	}
 
