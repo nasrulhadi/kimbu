@@ -1,51 +1,13 @@
-<?php
-/* @var $this PerusahaanController */
-/* @var $data Perusahaan */
-?>
-
-<div class="view">
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('ID_PERUSAHAAN')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->ID_PERUSAHAAN), array('view', 'id'=>$data->ID_PERUSAHAAN)); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('NAMA')); ?>:</b>
-	<?php echo CHtml::encode($data->NAMA); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('EMAIL')); ?>:</b>
-	<?php echo CHtml::encode($data->EMAIL); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('TLP')); ?>:</b>
-	<?php echo CHtml::encode($data->TLP); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('FAX')); ?>:</b>
-	<?php echo CHtml::encode($data->FAX); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('LOGO')); ?>:</b>
-	<?php echo CHtml::encode($data->LOGO); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('ALAMAT')); ?>:</b>
-	<?php echo CHtml::encode($data->ALAMAT); ?>
-	<br />
-
-	<?php /*
-	<b><?php echo CHtml::encode($data->getAttributeLabel('KOTA')); ?>:</b>
-	<?php echo CHtml::encode($data->KOTA); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('KETERANGAN')); ?>:</b>
-	<?php echo CHtml::encode($data->KETERANGAN); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('TERAKHIR_UPDATE')); ?>:</b>
-	<?php echo CHtml::encode($data->TERAKHIR_UPDATE); ?>
-	<br />
-
-	*/ ?>
-
-</div>
+<tr>
+    <td width="5%"><?php echo $index+1; ?></td>
+    <td width="20%"><?php echo CHtml::encode($data->NAMA); ?></td>
+    <td width="8%"><a href="<?php echo $data->LOGO=='tidakadalogo.jpg' ? Yii::app()->theme->baseUrl.'/img/tidakadalogo.jpg' : Yii::app()->request->baseUrl.'/file/logo/perusahaan/'.$data->LOGO; ?>" class="cbox_single thumbnail cboxElement"><?php echo $data->displayLogoPicture($data->LOGO); ?></a></td>
+    <td width="10%"><?php echo CHtml::encode($data->EMAIL); ?></td>
+    <td width="25%"><?php echo CHtml::encode($data->ALAMAT); ?></td>
+    <td width="10%"><?php echo CHtml::encode($data->KOTA); ?></td>
+    <td width="10%">
+        <?php echo CHtml::link('<i class="icon-eye-open"></i>', array('view','id'=>$data->ID_PERUSAHAAN), array('title' => 'Detail', 'class' => 'sepV_a')); ?>
+        <?php echo CHtml::link('<i class="icon-pencil"></i>', array('update','id'=>$data->ID_PERUSAHAAN), array('title' => 'Edit', 'class' => 'sepV_a')); ?>
+        <?php echo CHtml::link('<i class="icon-trash"></i>',array('delete','id'=>$data->ID_PERUSAHAAN), array('submit'=>array('delete','id'=>$data->ID_PERUSAHAAN),'confirm'=>'Anda yakin akan menghapus '.$data->NAMA.'?')); ?>
+    </td>
+</tr>

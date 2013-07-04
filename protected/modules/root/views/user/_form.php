@@ -103,7 +103,7 @@
 	</div>
     
 	<div class="row">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Simpan' : 'Simpan Perubahan',array('class' => 'btn btn-warning')); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Simpan' : 'Simpan Perubahan',array('class' => 'btn btn-gebo')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

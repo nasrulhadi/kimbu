@@ -104,7 +104,7 @@
     gebo_galery_table = {
         init: function() {
            $('#surveiIndex').dataTable({
-		"sDom": "<t>",
+                "sDom": "<t>",
                 //"sPaginationType": "bootstrap",
                 "aaSorting": [[ 2, "asc" ]],
                 "aoColumns": [
@@ -118,7 +118,7 @@
             });
             
             $('#surveiDetail').dataTable({
-		"sDom": "<'row'<'span6'<'dt_actions'>l><'span6'f>r>t<'row'<'span6'i><'span6'p>>",
+                "sDom": "<'row'<'span6'<'dt_actions'>l><'span6'f>r>t<'row'<'span6'i><'span6'p>>",
                 "sPaginationType": "bootstrap_alt",
                 "aaSorting": [[ 0, "asc" ]],
                 "aoColumns": [
@@ -130,16 +130,46 @@
                 ]
             });
                         
-           $('#pengaturanPegawai').dataTable({
+           $('#userGrid').dataTable({
 				"sDom": "<'row'<'span6'<'dt_actions'>l><'span6'f>r>t<'row'<'span6'i><'span6'p>>",
                 "sPaginationType": "bootstrap",
-                "aaSorting": [[ 2, "desc" ]],
+                "aaSorting": [[ 0, "asc" ]],
 				"aoColumns": [
 					{ "bSortable": false},
 					{ "sType": "string" },
 					{ "sType": "string" },
 					{ "sType": "string" },
+					{ "bSortable": false },
+					{ "bSortable": false },
+                    { "sType": "string" },
+					{ "bSortable": false }
+				]
+			});
+            
+            $('#perusahaanGrid').dataTable({
+				"sDom": "<'row'<'span6'<'dt_actions'>l><'span6'f>r>t<'row'<'span6'i><'span6'p>>",
+                "sPaginationType": "bootstrap",
+                "aaSorting": [[ 0, "asc" ]],
+				"aoColumns": [
+					{ "bSortable": false},
 					{ "sType": "string" },
+					{ "bSortable": false },
+					{ "bSortable": false },
+					{ "bSortable": false },
+					{ "bSortable": false },
+					{ "bSortable": false }
+				]
+			});
+            
+            $('#divisiGrid').dataTable({
+				"sDom": "<'row'<'span6'<'dt_actions'>l><'span6'f>r>t<'row'<'span6'i><'span6'p>>",
+                "sPaginationType": "bootstrap",
+                "aaSorting": [[ 0, "asc" ]],
+				"aoColumns": [
+					{ "bSortable": false},
+					{ "sType": "string" },
+					{ "bSortable": false },
+					{ "bSortable": false },
 					{ "bSortable": false }
 				]
 			});

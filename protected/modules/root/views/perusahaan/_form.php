@@ -39,12 +39,13 @@
 		<?php echo $form->textField($model,'FAX',array('size'=>45,'maxlength'=>45)); ?>
 		<?php echo $form->error($model,'FAX'); ?>
 	</div>
-
+    
+    <?php if($model->isNewRecord) { ?>
 	<div class="row">
 		<?php echo $form->labelEx($model,'LOGO'); ?>
 		<?php echo $form->fileField($model,'LOGO'); ?>
 		<?php echo $form->error($model,'LOGO'); ?>
-	</div>
+	</div><?php } ?>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'ALAMAT'); ?>

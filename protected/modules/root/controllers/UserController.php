@@ -26,6 +26,12 @@ class UserController extends Controller
     public function accessRules()
 	{
 		return array(
+            array('allow',
+				'actions'=>array(
+                    'error',
+				),
+				'users'=>array('*'),
+			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				'actions'=>array(
                     'create',
@@ -148,14 +154,9 @@ class UserController extends Controller
 	public function actionIndex()
 	{
 		$dataProvider=new CActiveDataProvider('User', array('pagination'=>false));
-        $model=new User('search');
-		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['User']))
-			$model->attributes=$_GET['User'];
         
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
-            'model'=>$model,
 		));
 //        $model=new User('search');
 //		$model->unsetAttributes();  // clear any default values

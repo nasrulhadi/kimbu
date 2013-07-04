@@ -138,27 +138,24 @@ class UserController extends Controller {
      * Lists all models.
      */
     public function actionIndex() {
-//		$dataProvider=new CActiveDataProvider('User');
-//        $model=new User('search');
-//		$model->unsetAttributes();  // clear any default values
-//		if(isset($_GET['User']))
-//			$model->attributes=$_GET['User'];
-//        
-//		$this->render('index',array(
-//			'dataProvider'=>$dataProvider,
-//            'model'=>$model,
-//		));
+		$dataProvider=new CActiveDataProvider('User', array(
+            'criteria'=>array('condition'=>'TYPE = 3'), 
+            'pagination'=>false
+        ));
+		$this->render('index',array(
+			'dataProvider'=>$dataProvider,
+		));
 //        $model = new User('search');
 //        $model->unsetAttributes();  // clear any default values
-        $model = new User('search');
-        $model->unsetAttributes();  // clear any default values
-        $model->TYPE = 3;
-        if (isset($_GET['User']))
-            $model->attributes = $_GET['User'];
-
-        $this->render('admin', array(
-            'model' => $model,
-        ));
+//        $model = new User('search');
+//        $model->unsetAttributes();  // clear any default values
+//        $model->TYPE = 3;
+//        if (isset($_GET['User']))
+//            $model->attributes = $_GET['User'];
+//
+//        $this->render('admin', array(
+//            'model' => $model,
+//        ));
     }
 
     /**

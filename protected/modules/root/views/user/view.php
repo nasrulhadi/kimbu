@@ -16,7 +16,7 @@ $this->breadcrumbs=array(
 <div class="row-fluid">
     <div class="span3">
         <h4 class="heading">Foto User</h4>
-            <a href="<?php echo Yii::app()->request->baseUrl; ?>/file/foto/<?php echo $model->FOTO; ?>" rel="gallery" class="cboxElement"><?php echo $model->displayPicture($model->FOTO);?></a>
+            <a href="<?php echo $model->FOTO==NULL || $model->FOTO=='tidakadafoto.jpg' ? Yii::app()->theme->baseUrl.'/img/profilethumb.png' : Yii::app()->request->baseUrl.'/file/foto/'.$model->FOTO; ?>" rel="gallery" class="cboxElement"><?php echo $model->displayPicture($model->FOTO);?></a>
             </br>
         <div style="margin: 20px 15px 20px 15px">
             <a href="<?php echo Yii::app()->createUrl('root/user/editfoto/'.$model->ID_USER);?>" data-toggle="modal" data-backdrop="static" onclick="showOnModal(jQuery(this).attr('href'))" class="btn btn-small btn-success"><i class="icon-folder-open icon-white"></i> Ubah Foto</a>

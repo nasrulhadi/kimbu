@@ -7,6 +7,7 @@ $this->pageTitle=Yii::app()->name . ' - Update User';
 $this->breadcrumbs=array(
     'Dashboard'=>array('/'),
 	'User Surveyor' => array('index'),
+    ucwords(strtolower($model->NAMA)) => array('view', 'id'=>$model->ID_USER),
 	'Update',
 );
 ?>

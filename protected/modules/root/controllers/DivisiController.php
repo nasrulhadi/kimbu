@@ -21,17 +21,23 @@ class DivisiController extends Controller
 	public function accessRules()
 	{
 		return array(
-			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+            array('allow',
+				'actions'=>array(
+                    'error',
+				),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array(
+                    'create',
+                    'update',
+                    'delete',
+                    'index',
+                    'view',
+                    'editlogo',
+                ),
 				'users'=>array('@'),
-			),
-			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
+                //'roles'=>array(WebUser::ROLE_SUPER_ADMIN),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -186,18 +192,10 @@ class DivisiController extends Controller
 	public function actionIndex()
 	{
         $dataProvider=new CActiveDataProvider('Divisi',array(
-            'pagination'=>array(
-                'pageSize'=>10,
-            ),
+            'pagination'=>false,
         ));
         
-		$model=new Divisi('search');
-		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Divisi']))
-			$model->attributes=$_GET['Divisi'];
-
-		$this->render('admin',array(
-			'model'=>$model,
+		$this->render('index',array(
             'dataProvider'=>$dataProvider,
 		));
 	}
@@ -244,5 +242,50 @@ class DivisiController extends Controller
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
+	}
+    
+    //edit foto user
+    public function actionEditLogo($id)
+	{
+        $this->layout = '//layouts/blankLayout';
+		$model=$this->loadModel($id);
+        $model->scenario = 'editlogo';
+
+		if(isset($_POST['Divisi']))
+		{
+			$model->attributes=$_POST['Divisi'];
+            if($model->validate())
+            {
+                if (CUploadedFile::getInstance($model, 'LOGO') != NULL) {
+                    //jika sebelumnya telah mengupload file portofolio
+                    if ($model->LOGO != NULL && file_exists(Yii::app()->basePath . '/../file/logo/divisi/' . $model->LOGO)) {
+                        // maka dihapus filenya, diganti dengan yang baru
+                        unlink(Yii::app()->basePath . '/../file/logo/divisi/' . $model->LOGO);
+                    }
+                    //mengambil value dari fileupload
+                    $model->LOGO = CUploadedFile::getInstance($model, 'LOGO');
+                    if ($model->LOGO) {
+                        $fullImgName = $model->ID_PERUSAHAAN.'-logo-'.$model->LOGO;
+                        //mengcopy file ke drive server
+                        $model->LOGO->saveAs(Yii::app()->basePath . '/../file/logo/divisi/' . $fullImgName);
+                        $model->setAttribute('LOGO', $fullImgName); //memberikan nama lampiran sesuai dengan nama file yang diupload
+                    }
+                }
+                if($model->save())
+                {
+                    Yii::app()->user->setFlash('info', MyFormatter::alertSuccess('<strong>Selamat!</strong> Perubahan logo telah disimpan.'));
+                    $this->redirect(array('view', 'id'=>$id));
+                }
+            }
+            else
+            {
+                Yii::app()->user->setFlash('info',MyFormatter::alertError('<strong>Error!</strong> Pastikan ekstensi foto .jpg/.jpeg/.png dan ukuran foto tidak lebih dari 500 KB'));
+                $this->redirect(array('index'));
+            }
+		}
+
+		$this->render('edit_logo',array(
+			'model'=>$model,
+		));
 	}
 }

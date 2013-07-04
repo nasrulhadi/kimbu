@@ -29,9 +29,9 @@ class MyFormatter extends CFormatter
     public function formatStatusAktif($value)
     {
         if($value==User::STATUS_AKTIF)
-            return '<span class="label label-warning">Active</span>';
+            return '<span class="label label-success">Aktif</span>';
         else
-            return '<span class="label label-danger">Disabled</span>';
+            return '<span class="label label-warning">Non Aktif</span>';
     }
     
     public function formatRole($value)
@@ -48,54 +48,56 @@ class MyFormatter extends CFormatter
             return '<span class="label label-danger">Unknown</span>';
     }
     
-    public function formatDateFormat($value)
+    public static function formatDateFormat($value)
 	{
-		$date = explode('-',$value);
-		$bulan = '';
-		switch($date[1])
-		{
-			case '01':
-				$bulan = 'Januari';
-				break;
-			case '02':
-				$bulan = 'Februari';
-				break;
-			case '03':
-				$bulan = 'Maret';
-				break;
-			case '04':
-				$bulan = 'April';
-				break;
-			case '05':
-				$bulan = 'Mei';
-				break;
-			case '06':
-				$bulan = 'Juni';
-				break;
-			case '07':
-				$bulan = 'Juli';
-				break;
-			case '08':
-				$bulan = 'Agustus';
-				break;
-			case '09':
-				$bulan = 'September';
-				break;
-			case '10':
-				$bulan = 'Oktober';
-				break;
-			case '11':
-				$bulan = 'Nopember';
-				break;
-			case '12':
-				$bulan = 'Desember';
-				break;
-		}
-		
-		return substr($date[2],0,2).' '.$bulan.' '.$date[0];
+        if($value != NULL) {
+            $date = explode('-',$value);
+            $bulan = '';
+            switch($date[1])
+            {
+                case '01':
+                    $bulan = 'Januari';
+                    break;
+                case '02':
+                    $bulan = 'Februari';
+                    break;
+                case '03':
+                    $bulan = 'Maret';
+                    break;
+                case '04':
+                    $bulan = 'April';
+                    break;
+                case '05':
+                    $bulan = 'Mei';
+                    break;
+                case '06':
+                    $bulan = 'Juni';
+                    break;
+                case '07':
+                    $bulan = 'Juli';
+                    break;
+                case '08':
+                    $bulan = 'Agustus';
+                    break;
+                case '09':
+                    $bulan = 'September';
+                    break;
+                case '10':
+                    $bulan = 'Oktober';
+                    break;
+                case '11':
+                    $bulan = 'Nopember';
+                    break;
+                case '12':
+                    $bulan = 'Desember';
+                    break;
+            }
+
+            return substr($date[2],0,2).' '.$bulan.' '.$date[0];
+        }
 	}
     
-    public function formatDateTimeFormat($value)
+    public static function formatDateTimeFormat($value)
 	{
 		$date = explode('-',$value);
 		$bulan = '';

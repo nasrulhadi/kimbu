@@ -2,6 +2,8 @@
 /* @var $this UserController */
 /* @var $dataProvider CActiveDataProvider */
 
+$this->pageTitle = Yii::app()->name . ' - Manajemen User';
+
 $this->breadcrumbs=array(
 	'Dashboard'=>array('/'),
     'Users',
@@ -23,9 +25,11 @@ $this->breadcrumbs=array(
                 <tr>
                     <th>No.</th>
                     <th>Nama Lengkap</th>
+                    <th>Username</th>
                     <th>Email</th>
                     <th>No. Telpon</th>
-                    <th>Username</th>
+                    <th>Terakhir Login</th>
+                    <th>Status</th>
                     <th>Pilihan</th>
                 </tr>
             </thead>

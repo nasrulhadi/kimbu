@@ -7,7 +7,7 @@ $this->pageTitle = Yii::app()->name . ' - Detil User';
 $this->breadcrumbs = array(
     'Dashboard' => array('/'),
     'User Surveyor' => array('index'),
-    'Detil',
+    'Detil User',
 );
 ?>
 

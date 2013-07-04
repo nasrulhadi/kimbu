@@ -122,9 +122,18 @@ class Perusahaan extends CActiveRecord
     public function displayPicture($pictureName)
     {
         if($pictureName==null || $pictureName=='tidakadalogo.jpg')
-            echo '<img src="'.Yii::app()->theme->baseUrl.'/img/profilethumb.png" alt="" class="img-polaroid" />';
+            echo '<img src="'.Yii::app()->theme->baseUrl.'/img/tidakadalogo.jpg" alt="" class="img-polaroid" />';
         else
             echo '<img src="'.Yii::app()->request->baseUrl.'/file/logo/perusahaan/'.$pictureName.'" alt="" class="img-polaroid"/>';
+    }
+    
+    //tampilan logo cilik
+    public function displayLogoPicture($pictureName)
+    {
+        if($pictureName==null || $pictureName=='tidakadalogo.jpg')
+            echo '<img src="'.Yii::app()->theme->baseUrl.'/img/tidakadalogo.jpg" alt="" style="height: 50px; width: 70px" />';
+        else
+            echo '<img src="'.Yii::app()->request->baseUrl.'/file/logo/perusahaan/'.$pictureName.'" alt="" style="height: 50px; width: 50px" />';
     }
     
     //mengambil semua list data PERUSAHAAN

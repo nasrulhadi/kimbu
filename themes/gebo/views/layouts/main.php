@@ -46,6 +46,7 @@
 			document.documentElement.className += 'js';
 		</script>
     </head>
+	
     <body class="ptrn_c">
 		<div id="loading_layer" style="display:none"><img src="<?php echo $baseUrl; ?>/img/ajax_loader.gif" alt="" /></div>
 				
@@ -55,7 +56,8 @@
                 <div class="navbar navbar-fixed-top">
                     <div class="navbar-inner">
                         <div class="container-fluid">
-                            <?php if(isset(Yii::app()->user)) echo CHtml::link(Yii::app()->user->perusahaan . ' - ' . ucwords(strtolower(Yii::app()->user->divisi)), array('./'), array('class' => 'brand')); ?>
+                            <?php if(isset(Yii::app()->user)) echo CHtml::link(Yii::app()->user->perusahaan . ' - ' . ucwords(strtolower(Yii::app()->user->divisi)), array('/'.WebUser::getModuleByRole()), array('class' => 'brand')); ?>
+
                             <ul class="nav user_menu pull-right">
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="icon-user icon-white"></span> <?php echo ucwords(strtolower(Yii::app()->user->name)); ?> <b class="caret"></b></a>
@@ -167,12 +169,12 @@
                                                     <i class="icon-folder-open"></i> <?php echo Yii::app()->user->divisi; ?>
                                                 </a>
                                             </div>
-                                            <div class="accordion-body collapse <?php echo ($this->ID==="survei" || $this->ID==="surveipublik" || $this->ID==="chart")?"in":"";?>" id="collapseOne">
+                                            <div class="accordion-body collapse <?php echo ($this->ID==="toko" || $this->ID==="publik" || $this->ID==="chart")?"in":"";?>" id="collapseOne">
                                                 <div class="accordion-inner">
                                                     <ul class="nav nav-list">
                                                         <li class="nav-header">Survei</li>
-                                                        <li class="<?php echo ($this->ID==="survei")?"active":"";?>"><?php echo CHtml::link('Survei Toko', array('/admincs/survei')); ?></li>
-                                                        <li class="<?php echo ($this->ID==="surveipublik")?"active":"";?>"><?php echo CHtml::link('Survei End User', array('/admincs/surveipublik')); ?></li>
+                                                        <li class="<?php echo ($this->ID==="toko")?"active":"";?>"><?php echo CHtml::link('Survei Toko', array('/survei/toko')); ?></li>
+                                                        <li class="<?php echo ($this->ID==="publik")?"active":"";?>"><?php echo CHtml::link('Survei End User', array('/survei/publik')); ?></li>
                                                         <li class="nav-header">Laporan</li>
                                                         <li class="<?php echo ($this->ID==="chart")?"active":"";?>"><?php echo CHtml::link('Grafik', array('/laporan/chart')); ?></li>
                                                     </ul>
@@ -225,12 +227,12 @@
                                                     <i class="icon-folder-open"></i> <?php echo Yii::app()->user->divisi; ?>
                                                 </a>
                                             </div>
-                                            <div class="accordion-body collapse <?php echo ($this->ID==="survei" || $this->ID==="surveipublik" )?"in":"";?>" id="collapseOne">
+                                            <div class="accordion-body collapse <?php echo ($this->ID==="toko" || $this->ID==="publik" )?"in":"";?>" id="collapseOne">
                                                 <div class="accordion-inner">
                                                     <ul class="nav nav-list">
                                                         <li class="nav-header">Survei</li>
-                                                        <li class="<?php echo ($this->ID==="survei")?"active":"";?>"><?php echo CHtml::link('Survei Toko', array('/surveyor/survei')); ?></li>
-                                                        <li class="<?php echo ($this->ID==="surveipublik")?"active":"";?>"><?php echo CHtml::link('Survei End User', array('/surveyor/surveipublik')); ?></li>
+                                                        <li class="<?php echo ($this->ID==="toko")?"active":"";?>"><?php echo CHtml::link('Survei Toko', array('/survei/toko')); ?></li>
+                                                        <li class="<?php echo ($this->ID==="publik")?"active":"";?>"><?php echo CHtml::link('Survei End User', array('/survei/publik')); ?></li>
                                                     </ul>
 
                                                 </div>
@@ -265,14 +267,14 @@
                                                     <i class="icon-folder-open"></i> <?php echo Yii::app()->user->divisi; ?>
                                                 </a>
                                             </div>
-                                            <div class="accordion-body collapse <?php echo ($this->ID==="survei" || $this->ID==="surveipublik" )?"in":"";?>" id="collapseOne">
+                                            <div class="accordion-body collapse <?php echo ($this->ID==="toko" || $this->ID==="publik" || $this->ID==="chart")?"in":"";?>" id="collapseOne">
                                                 <div class="accordion-inner">
                                                     <ul class="nav nav-list">
                                                         <li class="nav-header">Survei</li>
-                                                        <li class="<?php echo ($this->ID==="survei")?"active":"";?>"><?php echo CHtml::link('Survei Toko', array('/client/survei')); ?></li>
-                                                        <li class="<?php echo ($this->ID==="surveipublik")?"active":"";?>"><?php echo CHtml::link('Survei End User', array('/client/surveipublik')); ?></li>
+                                                        <li class="<?php echo ($this->ID==="toko")?"active":"";?>"><?php echo CHtml::link('Survei Toko', array('/survei/toko')); ?></li>
+                                                        <li class="<?php echo ($this->ID==="publik")?"active":"";?>"><?php echo CHtml::link('Survei End User', array('/survei/publik')); ?></li>
                                                         <li class="nav-header">Laporan</li>
-                                                        <li class="<?php echo ($this->ID==="grafik")?"active":"";?>"><?php echo CHtml::link('Grafik', array('#')); ?></li>
+                                                        <li class="<?php echo ($this->ID==="chart")?"active":"";?>"><?php echo CHtml::link('Grafik', array('/laporan/chart')); ?></li>
                                                     </ul>
 
                                                 </div>
@@ -387,19 +389,22 @@
             
             <?php if($this->ID=="chart"){?>
              <!-- charts -->
-            <script src="<?php echo $baseUrl; ?>/lib/flot/jquery.flot.min.js"></script>
-            <script src="<?php echo $baseUrl; ?>/lib/flot/jquery.flot.resize.min.js"></script>
-            <script src="<?php echo $baseUrl; ?>/lib/flot/jquery.flot.pie.min.js"></script>
-            <script src="<?php echo $baseUrl; ?>/lib/flot/jquery.flot.curvedLines.min.js"></script>
-            <script src="<?php echo $baseUrl; ?>/lib/flot/jquery.flot.orderBars.min.js"></script>
-            <script src="<?php echo $baseUrl; ?>/lib/flot/jquery.flot.multihighlight.min.js"></script>
-            <script src="<?php echo $baseUrl; ?>/lib/flot/jquery.flot.pyramid.min.js"></script>
-            <script src="<?php echo $baseUrl; ?>/lib/moment_js/moment.min.js"></script>
-            <!-- charts functions -->
-            <script src="<?php echo Yii::app()->baseUrl; ?>/laporan/chart/JsChart"></script>
-            <? } ?>
+          
+			<script src="<?php echo $baseUrl; ?>/js/highcharts.js"></script>
+			<script src="<?php echo $baseUrl; ?>/js/modules/exporting.js"></script>
+			
+            <?php } ?>
 
-            
+                        <script>
+                            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+                            ga('create', 'UA-42106410-1', 'teamwork.co.id');
+                            ga('send', 'pageview');
+
+                        </script>
 			<script>
 				$(document).ready(function() {
 					//* show all elements & remove preloader

@@ -75,7 +75,7 @@ class SiteController extends Controller
                // User::model()->updateByPk($id, array('PASSWORD'=>$model->generatePassword()));
                 
                 $model->sendEmail();
-                Yii::app()->user->setFlash('info',MyFormatter::alertForgot('Silahkan dicek pada Email Anda.'));
+                Yii::app()->user->setFlash('info',MyFormatter::alertForgot('Instruksi untuk me-reset password telah dikirimkan ke email Anda.'));
                 $this->refresh();
 //            }
         }
