@@ -147,22 +147,11 @@ class ChatController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$criteria = new CDbCriteria();
-        $criteria->condition = "STATUS = :statusUser AND DIBUAT_OLEH = :userOnline";
-        $criteria->params = array(':userOnline' => Yii::app()->user->getState('idUser'),
-                                  ':statusUser' => 1);
-
-        $dataProvider=new CActiveDataProvider('Chat', array('criteria' => $criteria));
-        
-        $model=new Chat('search');
-		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Chat']))
-			$model->attributes=$_GET['Chat'];
-        
-		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
-            'model'=>$model,
-		));
+		if(WebUser::isAdmin() || WebUser::isSurveyor()){
+                    $this->render('index');
+                }else{
+                    $this->redirect('/'.WebUser::getModuleByRole());
+                }
 	}
 
 	/**
@@ -208,29 +197,15 @@ class ChatController extends Controller
 		}
 	}
         
-        public function actionCoba() 
-        {
-                $this->layout = '//layouts/blankLayout';
-                $username = 'rico';
-                $Criteria = new CDbCriteria();
-                $Criteria->condition = "USERNAME = :username";
-                $Criteria->params = array(':username' => $username);
-                $UserOut = User::model()->find($Criteria);
-                
-                echo $UserOut->NAMA;
-                
-                
-                $UserOut->setAttribute('TLP', '081222');
-                $UserOut->save();
-        }
-        
-        
         public function actionSetmsg($id)
         {
                 $modelUserOnline = new ChatPesan;
                 
                 if(isset($_POST['text'])){
                     
+                        ChatUser::model()->updateAll(array('NOTIFIKASI' => 1, "ID_CHAT = ".$id." AND ID_USER <> ".Yii::app()->user->idUser));
+                        Chat::model()->updateByPk($id, array('TERAKHIR_UPDATE' => date("Y-m-d H:i:s")));
+                        
                         $text = $_POST['text'];
                         $modelUserOnline->ID_CHAT = $id;
                         $modelUserOnline->ID_USER = Yii::app()->user->getState('idUser');

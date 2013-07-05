@@ -2,12 +2,12 @@
 $this->breadcrumbs = array(
     'Dashboard' => array('/'),
     'Interaksi' => array('/interaksi'),
-    'Obrolan' => array('/interaksi/chat'),
-    ucwords($model->NAMA),
+    'Diskusi' => array('/interaksi/chat'),
+    'Riwayat',
 );
 ?>
 
-<h3 class="heading">Detail Obrolan</h3>
+<h3 class="heading">Riwayat Diskusi</h3>
 
 <div class="row-fluid">
     <div class="span12">
@@ -53,7 +53,7 @@ $this->breadcrumbs = array(
                 <div class="span4">
                     <div class="chat_sidebar">
                         <div class="chat_heading clearfix">
-                            User Dalam Obrolan
+                            User Dalam Topik
                         </div>
                         <ul class="chat_user_list clearfix">
                             <?php
@@ -74,10 +74,46 @@ $this->breadcrumbs = array(
                         </ul>
                     </div>
                     <div style="margin-top: 20px">
-                        <?php if($model->DIBUAT_OLEH == Yii::app()->user->getState('isUser')){ ?>
-                        <?php echo CHtml::link('<span class="icon-remove icon-white"></span> Keluar dan Hapus Obrolan', array('#'), array('class' => 'btn btn-danger')); ?>
-                        <?php }else{ ?>
-                        <?php echo CHtml::link('<span class="icon-remove icon-white"></span> Keluar Obrolan', array('#'), array('class' => 'btn btn-danger')); ?>
+                        <?php if(WebUser::isAdmin()){ ?>
+                        <div>
+                            <ul class="ov_boxes pull-right">
+                                <a href="<?php echo Yii::app()->createUrl('/interaksi/chat/update/'.$model->ID_CHAT); ?>">
+                                    <li>
+                                        <div class="p_bar_up p_canvas" style="padding: 10px 14px 10px 4px;"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/img/comment-edit.png"></div>
+                                        <div class="ov_text">
+                                            <strong style="color:#2f96b4">Update Topik</strong>
+                                            <span style="color:#000000">diskusi antar user</span>
+                                        </div>
+                                    </li>
+                                </a>
+                            </ul>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div style="margin-top: 20px">
+                            <ul class="ov_boxes pull-right">
+                                <a href="<?php echo Yii::app()->createUrl('/interaksi/chat/prehapus/'.$model->ID_CHAT); ?>">
+                                    <li>
+                                        <div class="p_bar_up p_canvas" style="padding: 10px 14px 10px 4px;"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/img/comment-remove.png"></div>
+                                        <div class="ov_text">
+                                            <strong style="color:#E2150B">Hapus Topik</strong>
+                                            <span style="color:#000000">diskusi antar user</span>
+                                        </div>
+                                    </li>
+                                </a>
+                            </ul>
+                        </div>
+                        <?php } elseif (WebUser::isSurveyor()) { ?>
+                        <ul class="ov_boxes pull-right">
+                            <a href="<?php echo Yii::app()->createUrl('/interaksi/chat/prehapus/'.$model->ID_CHAT); ?>">
+                                <li>
+                                    <div class="p_bar_up p_canvas" style="padding: 10px 14px 10px 4px;"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/img/comment-remove.png"></div>
+                                    <div class="ov_text">
+                                        <strong style="color:#E2150B">Keluar Topik</strong>
+                                        <span style="color:#000000">diskusi antar user</span>
+                                    </div>
+                                </li>
+                            </a>
+                        </ul>
                         <?php } ?>
                     </div>
                 </div>

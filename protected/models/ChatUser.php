@@ -37,7 +37,7 @@ class ChatUser extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('ID_CHAT, ID_USER, STATUS', 'numerical', 'integerOnly'=>true),
+			array('ID_CHAT, ID_USER, STATUS, NOTIFIKASI', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('ID_CHAT_USER, ID_CHAT, ID_USER, STATUS', 'safe', 'on'=>'search'),

@@ -117,6 +117,19 @@
                 ]
             });
             
+            $('#chatIndex').dataTable({
+		"sDom": "<t>",
+                //"sPaginationType": "bootstrap",
+                "aaSorting": [[ 0, "asc" ]],
+                "aoColumns": [
+                        { "bSortable": false},
+                        { "sType": "string" },
+                        { "bSortable": false },
+                        { "bSortable": false },
+                        { "bSortable": false }
+                ]
+            });
+            
             $('#surveiDetail').dataTable({
                 "sDom": "<'row'<'span6'<'dt_actions'>l><'span6'f>r>t<'row'<'span6'i><'span6'p>>",
                 "sPaginationType": "bootstrap_alt",
