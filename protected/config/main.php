@@ -22,12 +22,12 @@ return array(
 	'modules'=>array(
 		'pengaturan',
 		'interaksi',
-                'root',
-                'admincs',
-                'surveyor',
-                'client',
-                'laporan',
-                'survei',
+        'root',
+        'admincs',
+        'surveyor',
+        'client',
+        'laporan',
+        'survei',
 		
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
@@ -44,6 +44,7 @@ return array(
 			'class'=>'MyFormatter'
 		),
 		'user'=>array(
+            'class' => 'WebUser',
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
 		),
