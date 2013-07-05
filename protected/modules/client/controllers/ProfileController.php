@@ -18,7 +18,7 @@ class ProfileController extends Controller
                     'ubahpassword',
                 ),
 				'users'=>array('@'),
-                'roles'=>array(WebUser::ROLE_ADMIN),
+                'roles'=>array(WebUser::ROLE_CLIENT),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),

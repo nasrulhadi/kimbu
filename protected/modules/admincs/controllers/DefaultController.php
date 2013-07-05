@@ -14,15 +14,10 @@ class DefaultController extends Controller
 		return array(
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				'actions'=>array(
-                    'create',
-                    'update',
-                    'delete',
-                    'ubahpassword',
                     'index',
-                    'view',
                 ),
 				'users'=>array('@'),
-                //'roles'=>array(WebUser::ROLE_ADMIN),
+                'roles'=>array(WebUser::ROLE_ADMIN),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
