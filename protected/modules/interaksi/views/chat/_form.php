@@ -27,7 +27,14 @@ $form = $this->beginWidget('CActiveForm', array(
     <?php } ?>
 </fieldset>
 <div class="form-actions">
-    <button class="btn btn-gebo" type="submit">Simpan</button> 
-        <?php echo CHtml::link('Kembali', array('/interaksi/chat'), array('class' => 'btn')); ?>
+    <?php 
+    if($model->isNewRecord){ 
+        echo CHtml::link('<i class="icon-share-alt" style="margin-top: 0px" ></i> Kembali', array('/interaksi/chat'), array('class' => 'btn btn-large'));
+    } else {
+        echo CHtml::link('<i class="icon-share-alt" style="margin-top: 0px" ></i> Kembali', array('/interaksi/chat/view/'.$model->ID_CHAT), array('class' => 'btn btn-large'));
+    }
+    ?>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <button class="btn btn-gebo btn-large" type="submit"><i class="icon-trash icon-white" style="margin-top: 0px"></i> Simpan</button>
 </div>
 <?php $this->endWidget(); ?>

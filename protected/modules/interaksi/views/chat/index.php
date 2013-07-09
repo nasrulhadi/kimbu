@@ -2,59 +2,61 @@
 $this->breadcrumbs = array(
     'Dashboard' => array('/'),
     'Interaksi' => array('/interaksi/chat'),
-    'Obrolan'
+    'Diskusi'
 );
 
-Yii::app()->clientScript->registerScript('search', "
-$('.search-button').click(function(){
-	$('.search-form').toggle();
-	return false;
-});
-$('.search-form form').submit(function(){
-	$('#user-grid').yiiGridView('update', {
-		data: $(this).serialize()
-	});
-	return false;
-});
-");
+$dataProvider = new CActiveDataProvider('Chat', array(
+            'criteria' => array(
+                'condition' => 'STATUS = :status',
+                'params' => array(':status' => 1),
+                'order' => "ID_CHAT DESC",
+            ),
+            'pagination' => false,
+        ));
+
+$getListMsg = $dataProvider->getData();
 ?>
 
-<h3 class="heading">Obrolan</h3>
-<div class="pull-left" style="margin-bottom: 20px;">
-    <?php if(WebUser::isAdmin()) { ?>
-    <?php echo CHtml::link('<span class="icon-plus icon-white"></span> Buat Topik', array('/interaksi/chat/create'), array('class' => 'btn btn-gebo')); ?>
-    <?php } ?>
-    <?php echo CHtml::link('<span class="icon-search"></span> Pencarian', '#', array('class' => 'btn search-button')); ?>
+<h3 class="heading">Tempat Diskusi</h3>
+<?php echo @Yii::app()->user->getFlash('info'); ?>
+<div class="row-fluid">
+    <div class="pull-right">
+        <?php if (WebUser::isAdmin()) { ?>
+                <ul class="ov_boxes pull-right">
+                    <a href="<?php echo Yii::app()->createUrl('/interaksi/chat/create/'); ?>">
+                        <li>
+                            <div class="p_bar_up p_canvas" style="padding: 10px 14px 10px 4px;"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/img/chart-up.png"></div>
+                            <div class="ov_text">
+                                <strong style="color:#70A415">Buat Topik</strong>
+                                <span style="color:#000000">diskusi antar user</span>
+                            </div>
+                        </li>
+                    </a>
+                </ul>
+        <?php } ?>
+    </div>
 </div>
-</br>
-<div class="search-form" style="display:none">
-    <?php
-    $this->renderPartial('_search', array(
-        'model' => $model,
-    ));
-    ?>
-</div><!-- search-form -->
-
-<?php
-$this->widget('zii.widgets.grid.CGridView', array(
-    'id' => 'user-grid',
-    'dataProvider' => $model->search(),
-    'itemsCssClass' => 'table table-striped table-bordered table-hover',
-    'columns' => array(
-        array(
-        'header'=>'No.',
-        'value'=>'$this->grid->dataProvider->pagination->currentPage * $this->grid->dataProvider->pagination->pageSize + ($row+1)',
-		),
-        'NAMA',
-        array(
-            'name' => 'STATUS',
-            'type' => 'statusAktif',
-            'value' => $model->STATUS,
-        ),
-        array(
-            'class' => 'MyCButtonColumn',
-            'template'=>'{view} {update}',
-        ),
-    ),
-));
-?>
+<div class="row-fluid">
+    <div class="span12">
+        <table class="table table-bordered table-striped table_vam" id="chatIndex">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Nama Topik</th>
+                    <th>Dibuat Tanggal</th>
+                    <th>Diskusi Terakhir</th>
+                    <th>Jumlah User</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                $this->widget('zii.widgets.CListView', array(
+                    'dataProvider' => $dataProvider,
+                    'itemView' => '_index',
+                    'template' => '{items}',
+                ));
+                ?>
+            </tbody>
+        </table>
+    </div>
+</div>
