@@ -11,17 +11,17 @@ $this->breadcrumbs=array(
 <h3 class="heading">Profile User</h3>
 <?php echo @Yii::app()->user->getFlash('info');?>
 <div class="row-fluid">
-    <div class="span3">
+    <div class="span4">
         <h4 class="heading">Foto User</h4>
-        <a href="<?php echo Yii::app()->request->baseUrl; ?>/file/foto/<?php echo $model->FOTO; ?>" rel="gallery" class="cboxElement"><?php echo $model->displayPicture($model->FOTO);?></a>
+        <a href="<?php echo $model->FOTO=='tidakadafoto.jpg' ? Yii::app()->theme->baseUrl.'/img/profilethumb.png' : Yii::app()->request->baseUrl.'/file/foto/'.$model->FOTO; ?>" rel="gallery" class="cboxElement"><?php echo $model->displayPicture($model->FOTO);?></a>
             </br>
-        <div style="margin: 20px 15px 20px 15px">
-            <a href="<?php echo Yii::app()->createUrl('admincs/profile/editfoto');?>" data-toggle="modal" data-backdrop="static" onclick="showOnModal(jQuery(this).attr('href'))" class="btn btn-small btn-success"><i class="icon-folder-open icon-white"></i> Ubah Foto</a>
-            <?php echo CHtml::link('<span class="icon-pencil"></span> Edit Profile', array('profile/setting'), array('class' => 'btn btn-small')); ?>
+            <div style="margin-top: 20px;">
+            <a href="<?php echo Yii::app()->createUrl('admincs/profile/editfoto');?>" data-toggle="modal" data-backdrop="static" onclick="showOnModal(jQuery(this).attr('href'))" class="btn btn-large btn-success"><i class="icon-folder-open icon-white"></i> Ubah Foto</a>
+            <?php echo CHtml::link('<span class="icon-pencil"></span> Edit Profile', array('profile/setting'), array('class' => 'btn btn-large')); ?>
         </div>
             
     </div>
-    <div class="span9">
+    <div class="span8">
         <div class="w-box">
             <div class="w-box-header">
                 Identitas
@@ -57,7 +57,7 @@ $this->breadcrumbs=array(
                 </tr>
                 <tr>
                     <td>Password</td>
-                    <td><?php echo CHtml::link('Ubah Password?',array('profile/ubahpassword'),array('class'=>'btn btn-mini btn-gebo'))?></td>
+                    <td><?php echo CHtml::link('Ubah Password?',array('profile/ubahpassword'),array('class'=>'btn btn-gebo'))?></td>
                 </tr>
                 <tr>
                     <td>Status</td>

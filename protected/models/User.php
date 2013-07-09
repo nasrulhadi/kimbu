@@ -169,7 +169,7 @@ class User extends CActiveRecord
     public function displayPicture($pictureName)
     {
         if($pictureName==null || $pictureName=='tidakadafoto.jpg')
-            echo '<img src="'.Yii::app()->theme->baseUrl.'/img/profilethumb.png" alt="" class="img-polaroid" style="margin: 0 20px 0 20px" />';
+            echo '<img src="'.Yii::app()->theme->baseUrl.'/img/profilethumb.png" alt="" class="img-polaroid" />';
         else
             echo '<img src="'.Yii::app()->request->baseUrl.'/file/foto/'.$pictureName.'" alt="" class="img-polaroid"/>';
     }
