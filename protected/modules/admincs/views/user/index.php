@@ -14,7 +14,7 @@ $this->breadcrumbs=array(
 <h3 class="heading">Pengaturan User</h3>
 <?php echo @Yii::app()->user->getFlash('info'); ?>
 <div class="pull-left" style="margin-bottom: 20px;">
-    <?php echo CHtml::link('<span class="icon-plus icon-white"></span> Buat User', array('/root/user/create'), array('class' => 'btn btn-gebo')); ?>
+    <?php echo CHtml::link('<span class="icon-plus icon-white"></span> Buat User', array('/admincs/user/create'), array('class' => 'btn btn-gebo')); ?>
 </div>
 <div class="row-fluid">
     <div class="span12">
