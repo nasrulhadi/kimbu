@@ -14,7 +14,7 @@ class ChartController extends Controller
         public function actionView($id)
         {
                if(WebUser::isAdmin() || WebUser::isClient()){
-                    $this->render('view');
+                    $this->render('view', array('idsurvei' => $id));
                 }else{
                     $this->redirect(array('/'.WebUser::getModuleByRole()));
                 } 

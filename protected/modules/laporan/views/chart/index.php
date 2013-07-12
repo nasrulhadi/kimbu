@@ -6,8 +6,8 @@ $this->breadcrumbs = array(
 
 $dataProvider = new CActiveDataProvider('Survei', array(
     'criteria' => array(
-        'condition' => 'TYPE = :type AND ID_DIVISI = :divisi',
-        'params' => array(':type' => 1, ':divisi' => Yii::app()->user->idDivisi),
+        'condition' => 'STATUS = :status AND ID_DIVISI = :divisi',
+        'params' => array(':status' => 1, ':divisi' => Yii::app()->user->idDivisi),
     ),
     'pagination' => false,
         ));
@@ -15,7 +15,7 @@ $dataProvider = new CActiveDataProvider('Survei', array(
 $getListMsg = $dataProvider->getData();
 ?>
 
-<h3 class="heading">Grafik Survei Toko & Penjualan</h3>
+<h3 class="heading">Grafik Survei</h3>
 </br>
 <div class="row-fluid">
     <div class="span12">
@@ -25,15 +25,9 @@ $getListMsg = $dataProvider->getData();
                     <th>No.</th>
                     <th>Nama Survei</th>
                     <th>Keterangan</th>
-                    <?php if(!WebUser::isClient()) { ?>
-                    <th>Survei Disetujui</th>
-                    <th>Survei Belum Disetujui</th>
-                    <th>Semua Survei</th>
-                    <?php } else { ?>
                     <th>Divisi</th>
                     <th>Model</th>
                     <th>Total Survei</th>
-                    <?php } ?>
                 </tr>
             </thead>
             <tbody>
