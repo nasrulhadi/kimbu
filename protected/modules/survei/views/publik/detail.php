@@ -8,6 +8,7 @@ $this->breadcrumbs = array(
 );
 
 $spanHeading = "span12";
+$orderBy = "ID_RESPON DESC";
 $disetujui = null;
 $belumDisetujui = null;
 $w20 = "20%";
@@ -30,6 +31,7 @@ if(WebUser::isAdmin()){
     $conditions = "ID_SURVEI = :idSurvei AND APPROVAL = 1";
     $params = array(':idSurvei' => $model->ID_SURVEI);
     $total = $model->iDRESPON->countClient." Survei";
+    $orderBy = "TANGGAL_APPROVAL DESC";
     $w30 = null;
 } else {
     $this->redirect('/site');
@@ -39,7 +41,7 @@ $dataProvider = new CActiveDataProvider('Respon', array(
     'criteria' => array(
         'condition' => $conditions,
         'params' => $params,
-        'order' => 'ID_RESPON DESC',
+        'order' => $orderBy,
     ),
     'pagination' => false,
         ));
@@ -98,7 +100,7 @@ $getListMsg = $dataProvider->getData();
 </div>
 <div class="row-fluid">
     <div class="span12">
-        <table class="table table-bordered table-striped table_vam" id="surveiDetail">
+        <table class="table table-bordered table-striped table_vam" id="<?php echo WebUser::isClient()===true?"surveiDetailClient":"surveiDetail"; ?>">
             <thead>
                 <tr>
                     <th>No.</th>
