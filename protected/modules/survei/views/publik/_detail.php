@@ -17,7 +17,7 @@ if(WebUser::isAdmin()){
 } elseif (WebUser::isClient()) {
     if($data->APPROVAL == 1 || $data->APPROVAL == 0){
         $linkNamaSurvei = CHtml::link($data->NAMA===""?"belum di definisikan":$data->NAMA, array('view', 'id' => $data->ID_RESPON));
-        $tanggalPengisian = date("d/m/Y", strtotime($data->TANGGAL_APPROVAL));
+        $tanggalPengisian = CHtml::encode(MyFormatter::formatDateTimeFormat($data->TANGGAL_APPROVAL));
     }
 }
 ?>

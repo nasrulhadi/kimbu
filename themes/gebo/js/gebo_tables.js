@@ -146,13 +146,13 @@
             $('#surveiDetailClient').dataTable({
                 "sDom": "<'row'<'span6'<'dt_actions'>l><'span6'f>r>t<'row'<'span6'i><'span6'p>>",
                 "sPaginationType": "bootstrap_alt",
-                "aaSorting": [[ 3, "desc" ]],
+             //   "aaSorting": [[ 3, "desc" ]],
                 "aoColumns": [
                         { "bSortable": false},
                         { "sType": "string" },
                         { "sType": "string" },
-                        { "sType": "eu_date" },
-                        { "sType": "string" }
+                        { "bSortable": false },
+                        { "bSortable": false }
                 ]
             });
                         
