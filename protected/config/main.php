@@ -75,7 +75,7 @@ return array(
 			'connectionString' => 'mysql:host=localhost;dbname=kimbu_db',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => 'root',
+			'password' => '',
 			'charset' => 'utf8',
 		),
 		
@@ -105,5 +105,6 @@ return array(
 	'params'=>array(
 		// this is used in contact page
 		'adminEmail'=>'webmaster@example.com',
+        'tahun'=> date('Y'),
 	),
 );
